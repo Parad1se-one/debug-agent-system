@@ -1,0 +1,664 @@
+[
+  {
+    "case_id": "IPC_BOOT_001",
+    "query": "工控机完全无通电反应，风扇不转，开机键指示灯不亮，键盘灯和鼠标灯也不亮，应该怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-no-boot",
+    "acceptable_error_ids": [
+      "err:industrial-pc-power-failure",
+      "err:review-pc-power-on-fan-not-spin",
+      "err:industrial-pc-power-on-no-response"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "确认插座有电",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查电源线两端插接牢固并尝试更换电源线",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "确认主机后面板电源开关已打开",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查主板前面板PWR_SW开机信号线是否松动或脱落",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "判断工控机电源PSU故障可能性",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "外部供电",
+      "电源线",
+      "主机电源开关",
+      "PWR_SW",
+      "PSU"
+    ],
+    "evidence_key_facts": [
+      "风扇不转",
+      "开机键指示灯不亮",
+      "键盘鼠标灯不亮"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": [
+      "自动拆机",
+      "自动断电操作"
+    ]
+  },
+  {
+    "case_id": "IPC_BOOT_002",
+    "query": "工控机风扇一直转，开机键指示灯亮，键盘鼠标灯亮，但是显示器无显示或黑屏，应该怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:device-black-screen",
+    "acceptable_error_ids": [
+      "err:industrial-pc-no-boot",
+      "err:external-monitor-no-signal-black-screen",
+      "err:display-door-switch-black-screen"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "确认显示器电源指示灯亮起并处于开机状态",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查DP HDMI VGA视频线两端插紧",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "视频线连接到主板核显输出接口而不是独立显卡接口",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "选择正确的显示器信号输入源",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "更换视频线或显示器测试",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "结合CMOS电池没电导致显示输出优先级重置排查",
+        "required": false
+      }
+    ],
+    "expected_resolution_facts": [
+      "显示器电源",
+      "视频线",
+      "核显输出",
+      "信号输入源",
+      "替换显示器",
+      "CMOS电池"
+    ],
+    "evidence_key_facts": [
+      "风扇一直转",
+      "开机键指示灯亮",
+      "键盘鼠标灯亮",
+      "显示器无显示"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_003",
+    "query": "工控机风扇转，开机指示灯亮，但键盘鼠标灯不亮，怀疑卡在POST硬件自检阶段，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "hard",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-no-boot",
+    "acceptable_error_ids": [
+      "err:industrial-pc-power-failure",
+      "err:3d-machine-power-on-failure"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "观察主板Debug灯CPU DRAM VGA BOOT",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "CPU灯长亮检查CPU供电线并谨慎重新安装CPU",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "DRAM灯长亮时断电拔下内存擦拭金手指并单条测试",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "VGA灯长亮检查显卡供电重新插拔显卡或改接主板视频接口",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "BOOT灯长亮进入BIOS检查硬盘识别",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "等待至少1到2分钟排除大内存自检时间长",
+        "required": false
+      }
+    ],
+    "expected_resolution_facts": [
+      "Debug灯",
+      "CPU",
+      "DRAM",
+      "VGA",
+      "BOOT",
+      "内存金手指",
+      "BIOS硬盘"
+    ],
+    "evidence_key_facts": [
+      "键盘鼠标灯不亮",
+      "POST",
+      "硬件自检"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": [
+      "自动重新安装CPU"
+    ]
+  },
+  {
+    "case_id": "IPC_BOOT_004",
+    "query": "工控机风扇转一下就停，循环重启或完全停止，开机灯亮但键盘鼠标灯不亮，怎么排查短路或电源保护？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "hard",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-no-boot",
+    "acceptable_error_ids": [
+      "err:industrial-pc-freeze-black-screen",
+      "err:industrial-pc-power-failure"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "拔掉USB网线串口等所有非必要外部设备",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "断开硬盘电源线数据线包括M.2硬盘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "只保留PWR_SW开机线并断开前面板USB音频线",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "重新插紧CPU辅助供电线和主板24Pin主供电线",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查主板铜柱金属异物和接地导致短路",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "替换确认完好的电源判断电源故障或主板短路",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "非必要外设",
+      "硬盘电源线",
+      "PWR_SW",
+      "CPU辅助供电",
+      "24Pin",
+      "铜柱短路",
+      "替换电源"
+    ],
+    "evidence_key_facts": [
+      "风扇转一下就停",
+      "循环重启",
+      "键盘鼠标灯不亮"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": [
+      "自动断开硬盘",
+      "自动替换电源"
+    ]
+  },
+  {
+    "case_id": "IPC_BOOT_005",
+    "query": "工控机能通过自检，有品牌Logo或自检信息，但之后黑屏蓝屏或提示无启动设备，进不了Windows，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:os-boot-failure-stuck-at-bios",
+    "acceptable_error_ids": [
+      "err:industrial-pc-no-boot",
+      "err:cmos-battery-fail-boot-into-bios",
+      "err:new-disk-boot-drive-setup-failure"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "进入BIOS设置界面",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查Boot或Startup菜单第一启动设备是系统硬盘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查BIOS是否识别系统硬盘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "无法识别硬盘时重新插拔硬盘并更换M.2或SATA端口",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "能识别硬盘时使用Windows PE或DiskGenius检查并修复系统引导",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "BIOS",
+      "启动顺序",
+      "系统硬盘",
+      "M.2",
+      "SATA",
+      "Windows PE",
+      "DiskGenius",
+      "引导记录"
+    ],
+    "evidence_key_facts": [
+      "品牌Logo",
+      "无启动设备",
+      "无法进入Windows"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_006",
+    "query": "工控机开机有时正常有时无显示，或运行一段时间后黑屏死机但风扇仍在转，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-freeze-black-screen",
+    "acceptable_error_ids": [
+      "err:industrial-pc-unexpected-reboot",
+      "err:recheck-pc-overheating-causing-lag-crash"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "使用OCCT查看CPU和系统温度是否过高",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查CPU风扇机箱风扇是否转动和转速是否过低",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查散热器和机箱风道灰尘并清理",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "替换法测试电源负载升高时是否输出不稳",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "运行Windows内存诊断测试内存稳定性",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "观察主板电容是否鼓包漏液",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "OCCT",
+      "CPU温度",
+      "风扇",
+      "灰尘",
+      "电源输出不稳",
+      "内存诊断",
+      "电容鼓包"
+    ],
+    "evidence_key_facts": [
+      "间歇性黑屏",
+      "运行一段时间后死机",
+      "风扇仍在转"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_007",
+    "query": "更改BIOS设置、更新BIOS或添加更换硬件后，工控机下次开机点不亮，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "hard",
+    "query_type": "debug",
+    "target_error_id": "err:bios-settings-lost",
+    "acceptable_error_ids": [
+      "err:cmos-battery-fail-boot-into-bios",
+      "err:industrial-pc-no-boot",
+      "err:industrial-pc-power-failure"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "完全断开电源后清除CMOS",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "短接CLR_CMOS跳线5到10秒或扣下纽扣电池等待5分钟",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "移除新添加的内存硬盘扩展卡等硬件再测试",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "更新BIOS后清除CMOS无效需联系技术服务处理BIOS版本或刷写失败",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "清除CMOS后重新设置通电启动策略和显示输出优先级",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "清除CMOS",
+      "CLR_CMOS",
+      "纽扣电池",
+      "移除新硬件",
+      "BIOS版本",
+      "显示输出优先级"
+    ],
+    "evidence_key_facts": [
+      "更改BIOS设置",
+      "更新BIOS",
+      "更换硬件后点不亮"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": [
+      "自动清除CMOS"
+    ]
+  },
+  {
+    "case_id": "IPC_BOOT_008",
+    "query": "车间大功率设备启动时工控机频繁无故重启或死机，有时伴随烧焦味，怀疑市电或工业环境干扰，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "hard",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-unexpected-reboot",
+    "acceptable_error_ids": [
+      "err:3d-aoi-night-circuit-breaker-trip",
+      "err:industrial-pc-capacitor-bulge-power-failure"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "使用万用表测量插座电压是否在工控机电源额定范围",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查工控机是否良好可靠接地",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查电源线是否破损老化烧蚀",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "电网波动大时配备UPS或工业级稳压器",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查内部灰尘是否在潮湿环境下引起短路",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "万用表",
+      "插座电压",
+      "接地",
+      "电源线破损",
+      "UPS",
+      "工业级稳压器",
+      "灰尘短路"
+    ],
+    "evidence_key_facts": [
+      "大功率设备启动",
+      "频繁重启",
+      "死机",
+      "烧焦味"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_009",
+    "query": "工控机在潮湿、多粉尘、振动环境运行一段时间后时好时坏，像硬件自检、短路或黑屏类故障，怀疑接口或板卡氧化接触不良，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:pcie-board-not-detected-by-system",
+    "acceptable_error_ids": [
+      "err:monitor-black-screen-loose-connection",
+      "err:review-pc-auto-shutdown-loose-power-cable",
+      "err:display-door-switch-black-screen"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "清洁内存条显卡扩展卡金手指",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "清理PCIe插槽和内存插槽灰尘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "重新插拔主板内部电源线数据线前面板连接线和CPU风扇接口",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "确认所有连接插紧牢固",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "金手指",
+      "PCIe插槽",
+      "内存插槽",
+      "内部电源线",
+      "数据线",
+      "CPU风扇接口",
+      "插紧牢固"
+    ],
+    "evidence_key_facts": [
+      "潮湿",
+      "多粉尘",
+      "振动",
+      "时好时坏",
+      "接触不良"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_010",
+    "query": "工控机每次关机断电后系统时间重置，BIOS设置和启动顺序丢失，通电后不自动开机或屏幕无显示，怎么排查？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:cmos-battery-fail-boot-into-bios",
+    "acceptable_error_ids": [
+      "err:bios-settings-lost",
+      "err:industrial-pc-no-boot"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "进入BIOS查看系统时间是否准确",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "保存BIOS设置后完全断电再通电查看设置是否丢失",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "更换主板CR2032纽扣电池",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "重新配置启动顺序通电开机和显示输出优先级",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "系统时间",
+      "BIOS设置",
+      "CR2032",
+      "纽扣电池",
+      "启动顺序",
+      "通电开机",
+      "显示输出优先级"
+    ],
+    "evidence_key_facts": [
+      "系统时间重置",
+      "BIOS设置丢失",
+      "通电后不自动开机",
+      "屏幕无显示"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  },
+  {
+    "case_id": "IPC_BOOT_011",
+    "query": "工控机连接多个硬盘后，即使BIOS启动顺序正确，也无法从系统盘启动，怎么排查多硬盘启动冲突？",
+    "source": "industrial_pc_boot_manual",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:new-disk-boot-drive-setup-failure",
+    "acceptable_error_ids": [
+      "err:industrial-pc-no-boot",
+      "err:cmos-battery-fail-boot-into-bios",
+      "err:os-boot-failure-stuck-at-bios"
+    ],
+    "expected_status": "step",
+    "required_checks": [
+      {
+        "id": "",
+        "text": "断开所有非系统硬盘只保留系统盘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "检查BIOS Boot Mode启动模式为UEFI Legacy或Auto是否匹配系统盘",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "使用系统安装U盘或PE工具修复引导记录",
+        "required": true
+      },
+      {
+        "id": "",
+        "text": "确认非系统硬盘引导分区已清除或在BIOS禁用",
+        "required": true
+      }
+    ],
+    "expected_resolution_facts": [
+      "非系统硬盘",
+      "系统盘",
+      "Boot Mode",
+      "UEFI",
+      "Legacy",
+      "PE工具",
+      "引导记录",
+      "引导分区"
+    ],
+    "evidence_key_facts": [
+      "多个硬盘",
+      "无法从系统盘启动",
+      "启动顺序正确"
+    ],
+    "required_info": [],
+    "user_turns": [],
+    "escalation_target": "",
+    "safety_flags": []
+  }
+]

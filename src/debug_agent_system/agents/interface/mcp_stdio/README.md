@@ -1,0 +1,28 @@
+# Interface MCP Stdio Agent
+
+- id: `I-MCP-STDIO`
+- type: Interface placeholder
+- owner: `src/debug_agent_system/agents/interface/mcp_stdio`
+- responsibility: reserve a stable MCP stdio boundary for exposing read-side diagnosis as tools while keeping internal agent contracts unchanged.
+- current_status: placeholder contract; runtime implementation is not active yet.
+- inputs:
+  - MCP tool call payloads mapping to `DebugAgentSystem.start/step/diagnose`.
+  - `query`, `interactive`, optional `session_id`, optional structured evidence/log summary.
+  - Transport metadata required for request correlation.
+- outputs:
+  - JSON-compatible `AgentResponse` with `schema_version=debug_agent_system.response.v1`.
+  - Explicit `session_id`, public status, answer/check/escalation payload, and observability metadata.
+  - MCP error response for malformed requests before runtime dispatch.
+- failure_modes:
+  - Unknown tool/malformed JSON -> MCP error response.
+  - Unknown session -> `status=failed`, `failure_type=unknown_session`.
+  - Missing KG/config -> startup failure, not silent fallback.
+- observability:
+  - Must forward `observability.session_id`, `agent_id`, `status`, `top_error_id`, and `failure_type`.
+  - Transport logs must not hide runtime failure types.
+- non_goals:
+  - No KG writes.
+  - No LLM routing layer.
+  - No schema changes; MCP is a transport wrapper only.
+- strategy_validity:
+  - Public transport shape must remain a thin adapter over runtime APIs, not a second diagnosis implementation.

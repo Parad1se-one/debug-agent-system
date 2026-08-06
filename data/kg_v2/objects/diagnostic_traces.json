@@ -1,0 +1,1837 @@
+[
+  {
+    "trace_id": "trace:67a3e151c0b8",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:5ca3e5d66c93",
+    "source_case_id": "case:f484f4362a9a",
+    "summary": "先确认模板管理无模板且创建失败，再核对版本升级路径，随后运行 useraccess_restore 恢复权限，最后重开 Buddy 验证。",
+    "recommended_action_ids": [
+      "action:5eca6ddec326",
+      "action:dfa29875da07",
+      "action:651834a6b50b",
+      "action:74d7e2ebea33"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:93c916779ad2"
+    ]
+  },
+  {
+    "trace_id": "trace:650eade9cfbf",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:4910bcd7768c",
+    "source_case_id": "case:b8cad43218da",
+    "summary": "先确认模板损坏项目，再读取 Buddy 本地接口中的项目元数据，覆盖本地 meta.json，最后重新打开模板管理验证恢复情况。",
+    "recommended_action_ids": [
+      "action:69d110e27ba8",
+      "action:e1e19410132e",
+      "action:1a1c6d513826",
+      "action:58aa590a8e8c"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:f7b24529347c"
+    ]
+  },
+  {
+    "trace_id": "trace:1c92f2010834",
+    "family_id": "family:b231d1b8a380",
+    "variant_id": "variant:e2f87ec2fcb9",
+    "source_case_id": "case:b03dc72e6623",
+    "summary": "先确认错误提示，再备份并清空 conf，随后检查日志与 user.cfg.toml，最后用历史正常配置替换验证。",
+    "recommended_action_ids": [
+      "action:cbefb7921af3",
+      "action:4c5909cf3007",
+      "action:7d579362edaf",
+      "action:9fbfdbe96349"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:9846bca31ef8"
+    ]
+  },
+  {
+    "trace_id": "trace:fc4756e47b18",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:ec9afd3830c5",
+    "source_case_id": "case:03655ec630a6",
+    "summary": "先取 put res / get res 时间差，再判断 saving result 与传输时长占比，之后排查链路和双轨缓存竞争。",
+    "recommended_action_ids": [
+      "action:7cd6a79a4a4f",
+      "action:861a9e545a25",
+      "action:09d88e93a278",
+      "action:129f4c69af9e"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "trace_id": "trace:ad9b07f81052",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:a44985cc325f",
+    "source_case_id": "case:f6b1fd1a6433",
+    "summary": "先看日志是否网络超时，再测网络速度，最后查复判站 IP 配置。",
+    "recommended_action_ids": [
+      "action:b655801d114e",
+      "action:e93c79067594",
+      "action:0f1af50b5d06"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d2328b725a97"
+    ]
+  },
+  {
+    "trace_id": "trace:9bc2807a3a9a",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:991505498404",
+    "source_case_id": "case:39c69402fdbc",
+    "summary": "先确认错误提示，再备份并清空 conf，随后检查日志与 user.cfg.toml，最后用历史正常配置替换验证。",
+    "recommended_action_ids": [
+      "action:3efb5766a7e6",
+      "action:cde32d749854",
+      "action:d0d49cd144a1",
+      "action:40b5416dcc46"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:0e1a65b97844"
+    ]
+  },
+  {
+    "trace_id": "trace:05bdd8c88078",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:16d3c3752ef8",
+    "source_case_id": "case:08c8dce04187",
+    "summary": "先收集日志并检查 500 报错，再删除异常 json 文件，最后重载模板确认参考图是否恢复。",
+    "recommended_action_ids": [
+      "action:2acb1d3c459e",
+      "action:e70ded5383e8",
+      "action:21431a2aac98",
+      "action:f5f073d4d7cb"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:4afe9ffd7307"
+    ]
+  },
+  {
+    "trace_id": "trace:26bd059765da",
+    "family_id": "family:70a64345e97b",
+    "variant_id": "variant:04ab6350a693",
+    "source_case_id": "case:f9a10dc3fb98",
+    "summary": "先回流数据并在最新版本验证，再判断识别框是否准确；准确则做现场调试，不准确则提交标注团队 Jira。",
+    "recommended_action_ids": [
+      "action:39d7cc9942e9",
+      "action:1ca57904805d",
+      "action:65caa5920fbf",
+      "action:57052a017885"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:cd1034b06196"
+    ]
+  },
+  {
+    "trace_id": "trace:be42b46b1763",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:98ccc4341275",
+    "source_case_id": "case:5cdd21562cfb",
+    "summary": "先断电重启，再插拔光控，之后检查 ARM/IP/防火墙，最后收集日志升级硬件。",
+    "recommended_action_ids": [
+      "action:dbd0d2b16bb2",
+      "action:e6999b04624f",
+      "action:7af89ca778fa",
+      "action:7356447d8ed9"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:adc19d9cd88e"
+    ]
+  },
+  {
+    "trace_id": "trace:5f5622834ffd",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:ed05a6492d6c",
+    "source_case_id": "case:0bbcf6e9d914",
+    "summary": "先查板弯、轨道和顶升，再查挡块反光和器件本体差异。",
+    "recommended_action_ids": [
+      "action:dd069e4a1dbe",
+      "action:6f54a0a01f16",
+      "action:23f1c77f7486",
+      "action:62f67b518f27",
+      "action:244bedc19075"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:8c9311abfdba"
+    ]
+  },
+  {
+    "trace_id": "trace:ec7e4ce31438",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:bd2c4a483c6c",
+    "source_case_id": "case:3762c0860fa0",
+    "summary": "先确认相机处于自动获取 IP 且无法识别，再改成固定 0 网段地址，最后复测初始化。",
+    "recommended_action_ids": [
+      "action:bc6ab594163d",
+      "action:86fd87aa2ad6",
+      "action:4d762e72290a"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:666fbfc14d43"
+    ]
+  },
+  {
+    "trace_id": "trace:ee5c41f5dfcf",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:9e8b05952fe8",
+    "source_case_id": "case:037e6da73c79",
+    "summary": "先查近远轨挡块位置是否一致，再确认板边 Mark 点是否被遮挡，最后统一挡块位置或改成板内 Mark 点。",
+    "recommended_action_ids": [
+      "action:db28efaad4e7",
+      "action:941ab7c4d2f0",
+      "action:29aeaaf248b7",
+      "action:97a80bd2d4c9"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:0bf154fbdb23"
+    ]
+  },
+  {
+    "trace_id": "trace:32078a3723c8",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:bcb288ac578d",
+    "source_case_id": "case:280b5b5433f5",
+    "summary": "先分解 CT 构成，再依次排查模板匹配、焊盘框、OK 小图、异物检测、资源占用、替代料与双轨缓存机制。",
+    "recommended_action_ids": [
+      "action:8ccbef151d06",
+      "action:6cb334d0e865",
+      "action:af191572a92e",
+      "action:58d5a6717372",
+      "action:ee0ffae5dd78",
+      "action:b88a731a3538",
+      "action:8b983fbda426",
+      "action:e40508d8c84d"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "trace_id": "trace:b4251f065a26",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:2a60b79c87b9",
+    "source_case_id": "case:d6dff7149f80",
+    "summary": "先确认编码格式，再检查 XY/角度、文字空格、特殊符号、拼版坐标与尺寸范围。",
+    "recommended_action_ids": [
+      "action:a6e77934b52d",
+      "action:7e21411444d1",
+      "action:0f248ff49748",
+      "action:1c24e008fd65",
+      "action:3c1a1fa2b559",
+      "action:e4076eee3f17"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:3dfa1538faf4"
+    ]
+  },
+  {
+    "trace_id": "trace:d0b51eab666b",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:c2cd584776e4",
+    "source_case_id": "case:420dab95d3c6",
+    "summary": "先按顺时针/逆时针切换导 CAD，再检查行列设置是否反，最后确认是否存在版本差异。",
+    "recommended_action_ids": [
+      "action:2e325ccaf46c",
+      "action:ff702ffd7038",
+      "action:5fb3beeb2b73",
+      "action:0860b8b283bb",
+      "action:551a7a9f1c50",
+      "action:d0c705d4e0a1"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:19968959df4e"
+    ]
+  },
+  {
+    "trace_id": "trace:df72f961fb9c",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:373e5c2af9ae",
+    "source_case_id": "case:a577d1ff34a1",
+    "summary": "先切到模板匹配算法，再选择非圆点特征部位作为 Mark 匹配对象。",
+    "recommended_action_ids": [
+      "action:a81b1c1252c4",
+      "action:a97234a05c6f"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d620d598adde"
+    ]
+  },
+  {
+    "trace_id": "trace:cb54b6431621",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:5ad5d9efd01d",
+    "source_case_id": "case:2dd115de2813",
+    "summary": "先看 Mark 点选择与参数，再优先用形状匹配算法调阈值，必要时切模板匹配，最后排板卡方向和进板不到位。",
+    "recommended_action_ids": [
+      "action:954653fb444b",
+      "action:e9103844fba1",
+      "action:bb0b3d5df898",
+      "action:197000356448",
+      "action:561bc0745d26"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:3786a93b965b"
+    ]
+  },
+  {
+    "trace_id": "trace:b16f34a1a8d2",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:1536a6b6dd8a",
+    "source_case_id": "case:782c5b50e4a6",
+    "summary": "替代料配置时，封装、OCR、极性需要同时进入模板库。",
+    "recommended_action_ids": [
+      "action:4552f83367e6",
+      "action:1a58dbad6fe0",
+      "action:5184869bffbb"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:67c76e1758da"
+    ]
+  },
+  {
+    "trace_id": "trace:28d20a4cef54",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:560b45b5a5a5",
+    "source_case_id": "case:c5266de68d39",
+    "summary": "先确认侧立/翘脚漏报样本，再调 XY 阈值与角度阈值，最后复测确认是否收敛。",
+    "recommended_action_ids": [
+      "action:78c6ec7f48bc",
+      "action:2b264300ecc8",
+      "action:666587fa2633",
+      "action:f586f6dd7951"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:5bc4f627a718"
+    ]
+  },
+  {
+    "trace_id": "trace:aacbfbbddc2f",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:e85a44f4ff62",
+    "source_case_id": "case:a7ee2dba064a",
+    "summary": "先评估板弯补偿是否适用，再结合标记点区域进行编程补偿。",
+    "recommended_action_ids": [
+      "action:eed7d9c031f2",
+      "action:00c3045670e3"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:7d0f54d6f063"
+    ]
+  },
+  {
+    "trace_id": "trace:791b65816634",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:99015b4dd02d",
+    "source_case_id": "case:54fc258944c0",
+    "summary": "先收集日志并查运控报错，再用 MotionPanel 看运控卡状态，最后确认 9014 与 e450demo 的对应关系。",
+    "recommended_action_ids": [
+      "action:33843f8472f3",
+      "action:5e12a681ea56",
+      "action:3d8032e71a6a"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:4c21071d0982"
+    ]
+  },
+  {
+    "trace_id": "trace:921b0319aa34",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:9790cdd90279",
+    "source_case_id": "case:468622871b0d",
+    "summary": "先看运控日志，再查网卡是否 100M，必要时改 Speed & Duplex，最后复测初始化。",
+    "recommended_action_ids": [
+      "action:a1e1ac2011aa",
+      "action:23bf7353c2c9",
+      "action:97ac49564b04",
+      "action:daeca09cca69"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:61036cd3693a"
+    ]
+  },
+  {
+    "trace_id": "trace:2f2465271289",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:e306ddb8b23e",
+    "source_case_id": "case:831896365f21",
+    "summary": "先确认日志中的FOV图片缺失，再在断电条件下处理CXP线。",
+    "recommended_action_ids": [
+      "action:345e62faff73",
+      "action:6500d9af4087"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:35e3a3ac3aa4"
+    ]
+  },
+  {
+    "trace_id": "trace:fa921ff7d868",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:3b454c501d13",
+    "source_case_id": "case:5d253979c7b5",
+    "summary": "优先确认3D相机自动曝光是否关闭。",
+    "recommended_action_ids": [
+      "action:394d01a275f8"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e4b2cb465b51"
+    ]
+  },
+  {
+    "trace_id": "trace:9bdc0544f1b2",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:92c2169ab7f8",
+    "source_case_id": "case:49d32e1bea37",
+    "summary": "先确认 exposure end 超时日志，再核对 timeout_wait_for_camera_event 参数。",
+    "recommended_action_ids": [
+      "action:3491adde2a55",
+      "action:e3aed87c2ab1"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:33a197f77b1b"
+    ]
+  },
+  {
+    "trace_id": "trace:323dc7940b5d",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:6119e37f7937",
+    "source_case_id": "case:2dd8020a1ee2",
+    "summary": "先检查系统时间，再做系统文件修复，最后更新显卡驱动。",
+    "recommended_action_ids": [
+      "action:1787fa4fd298",
+      "action:072cbfb5887f",
+      "action:08126e858fe1"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:09743bf03bff"
+    ]
+  },
+  {
+    "trace_id": "trace:2c42fc4ee99c",
+    "family_id": "family:fba7eb4346e5",
+    "variant_id": "variant:34457dc94ba8",
+    "source_case_id": "case:1690bca87c7c",
+    "summary": "先看dx/dy范围，再决定是否重新角度标定。",
+    "recommended_action_ids": [
+      "action:342e696ac3d4",
+      "action:2c7754dbe967"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:26dd70563830"
+    ]
+  },
+  {
+    "trace_id": "trace:64cb90f544ba",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:788cb5c529da",
+    "source_case_id": "case:71e9655bad47",
+    "summary": "先检查相机上电，再查2D相机IP，最后查光源控制器状态。",
+    "recommended_action_ids": [
+      "action:62097e5bb3c1",
+      "action:dd8797895804",
+      "action:56f5a95a5fd2"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:0b940c51b1ca"
+    ]
+  },
+  {
+    "trace_id": "trace:0fe42493f215",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:5aea4ca1a28c",
+    "source_case_id": "case:b49ff8972454",
+    "summary": "先查SDK版本，再查网口配置/电源模式，最后升级FAE排查物理接口。",
+    "recommended_action_ids": [
+      "action:692fdfa34d6c",
+      "action:c023aa94ec8a",
+      "action:6a962e06ce25"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:6b223c88ef0b"
+    ]
+  },
+  {
+    "trace_id": "trace:ffdd157330b3",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:976060e31d65",
+    "source_case_id": "case:b4336d9f98d5",
+    "summary": "先按日志区分超时类型，再走固件升级或绑核分支。",
+    "recommended_action_ids": [
+      "action:8f7b49d2f726",
+      "action:f62adb448c41",
+      "action:94d43db73033"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:3f1b95da1035"
+    ]
+  },
+  {
+    "trace_id": "trace:f311e0adbf68",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:85ccacc7d116",
+    "source_case_id": "case:847f31d14bf5",
+    "summary": "block discarded 时优先检查网口配置并开启巨帧。",
+    "recommended_action_ids": [
+      "action:f660f2e6de3d"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:a628731ce4f9"
+    ]
+  },
+  {
+    "trace_id": "trace:ace21eb9ee88",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fd608c7d45f3",
+    "source_case_id": "case:53758163472a",
+    "summary": "先确认白图/RGB错位表现，再排查伺服模式，最后排查伺服电机硬件故障。",
+    "recommended_action_ids": [
+      "action:59c26725979c",
+      "action:ea2c378bf0dc",
+      "action:6ff4f2d87316"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:7aa292bd3c6f"
+    ]
+  },
+  {
+    "trace_id": "trace:e93232cd4ca8",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:2b0ee6654ea6",
+    "source_case_id": "case:fea5d19e3a59",
+    "summary": "先看 Camera steady costs，再联系FAE排查伺服参数。",
+    "recommended_action_ids": [
+      "action:1033e846ddb0",
+      "action:0431bad4898c"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:093e11249844"
+    ]
+  },
+  {
+    "trace_id": "trace:6526cbd0a78b",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:735b95484ecc",
+    "source_case_id": "case:ed8669accf36",
+    "summary": "先确认 NOT_ALLOWED，再查限位/原点/门状态，最后查板宽轴复位。",
+    "recommended_action_ids": [
+      "action:172e9b9f1d63",
+      "action:3d1d7e6d6ac4",
+      "action:e895712473be",
+      "action:07e5dff132ea"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:1cbd366f2846"
+    ]
+  },
+  {
+    "trace_id": "trace:ca91af078153",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:a8e0e16aa8de",
+    "source_case_id": "case:0977c33c2ff1",
+    "summary": "先看码和扫码枪位置，再查网络，最后查外部触发感应器。",
+    "recommended_action_ids": [
+      "action:9a164c7a170e",
+      "action:06860b1e93f1",
+      "action:632b2fa48592",
+      "action:e268d4677733"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:0e10bab7403d"
+    ]
+  },
+  {
+    "trace_id": "trace:648cb5eed75b",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:25e22d02e5c3",
+    "source_case_id": "case:7930b54c085c",
+    "summary": "先查传感器平衡，再查触发情况，最后查扫码枪配置。",
+    "recommended_action_ids": [
+      "action:43944cb7fa31",
+      "action:7e0f6c8a832e",
+      "action:5264493502fa"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:7831046adc1f"
+    ]
+  },
+  {
+    "trace_id": "trace:ce8861aed0d3",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:eb2a7fdf6c4e",
+    "source_case_id": "case:fe9244cf7d78",
+    "summary": "先确认轨道边干涉，再调上位送板机水平位置，最后标定轨道宽度。",
+    "recommended_action_ids": [
+      "action:bf20b2db61f6",
+      "action:292b0f6a1325",
+      "action:41c621f7c472"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:ca088ed1c0b9"
+    ]
+  },
+  {
+    "trace_id": "trace:8e95813a0899",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fc5bfb5b91d1",
+    "source_case_id": "case:ad03308b2e1d",
+    "summary": "先查异物和皮带状态，再查板宽参数，之后手动拉动清洁，最后查动力线。",
+    "recommended_action_ids": [
+      "action:32aab514d3db",
+      "action:b3ebe384dc01",
+      "action:1e533a368950",
+      "action:0e2feb72d61b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:56e4282c9b9b"
+    ]
+  },
+  {
+    "trace_id": "trace:109e623433a6",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:d5eea319cb98",
+    "source_case_id": "case:1880673ed990",
+    "summary": "先看感应器状态灯，再清洁感应器和异物。",
+    "recommended_action_ids": [
+      "action:61a62e8eb199",
+      "action:cebaa08a5329"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e07e7bbb7fcd"
+    ]
+  },
+  {
+    "trace_id": "trace:c0daef170618",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:1bb6990ef791",
+    "source_case_id": "case:c87abe53d3d4",
+    "summary": "先看轨道传感器状态，再排镂空板触发问题，最后加挡片。",
+    "recommended_action_ids": [
+      "action:d941ea3d0723",
+      "action:064c2512f8e4",
+      "action:47ce4053ed5c"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:72c14e5c1ef3"
+    ]
+  },
+  {
+    "trace_id": "trace:6c024a90c70d",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a1d4742f8c90",
+    "source_case_id": "case:961c14556f3b",
+    "summary": "先查流道和喇叭口，再查薄板/弯板，再查减速传感器距离，最后查皮带阻力。",
+    "recommended_action_ids": [
+      "action:36a03ef4bd0e",
+      "action:669513fbdefe",
+      "action:a2813c5132ae",
+      "action:2d953f5089e9"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:10978bb5510d"
+    ]
+  },
+  {
+    "trace_id": "trace:d9c747b01cf8",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:f8e19a97b578",
+    "source_case_id": "case:45371aea128e",
+    "summary": "先确认镂空板，再装挡片；无挡片时用接料带辅助触发。",
+    "recommended_action_ids": [
+      "action:ac4c5af0e036",
+      "action:3b7cae2a148f",
+      "action:69ec14b05625"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:c9a5a1442f32"
+    ]
+  },
+  {
+    "trace_id": "trace:fdbeb6e3064c",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:dd978de9a776",
+    "source_case_id": "case:c7e8b51a624f",
+    "summary": "优先走运控配置页面，界面不可用时再走 machine.toml。",
+    "recommended_action_ids": [
+      "action:c9d53cadf484",
+      "action:bb620921c246"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:61494e63f49d"
+    ]
+  },
+  {
+    "trace_id": "trace:24f9ede57c90",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:e26711065a0d",
+    "source_case_id": "case:35dc9cf7f7b7",
+    "summary": "先删除异常文件，再重启检测验证固定轨位置是否恢复。",
+    "recommended_action_ids": [
+      "action:e2fcf6a928a5",
+      "action:b5590ae1de56"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:8a84c145656a"
+    ]
+  },
+  {
+    "trace_id": "trace:7e40b473d6c4",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:ccaa2ab2fdd4",
+    "source_case_id": "case:58cdd65a3635",
+    "summary": "先看减速传感器是否触发，再查距离标定，最后改 machine.toml。",
+    "recommended_action_ids": [
+      "action:33a18673e9e2",
+      "action:0297ccc39c8d",
+      "action:88a34714df71"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:95a7b8955f13"
+    ]
+  },
+  {
+    "trace_id": "trace:f668f6f686ea",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:578de50facb0",
+    "source_case_id": "case:1f9eb1366f0d",
+    "summary": "先确认门状态，再做硬件复位，最后重开软件验证。",
+    "recommended_action_ids": [
+      "action:5b526ec7a890",
+      "action:394028517045",
+      "action:eb8b461980b8"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:55b505cc2831"
+    ]
+  },
+  {
+    "trace_id": "trace:cad70ad48b9b",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a62b48ef1b39",
+    "source_case_id": "case:7659f74cb200",
+    "summary": "先排镂空板触发问题，再装挡片/接料带，最后按板长调整超时。",
+    "recommended_action_ids": [
+      "action:7e28ce11e0c6",
+      "action:a207364f9353",
+      "action:7126b01aa7eb"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d9cf40787a5c"
+    ]
+  },
+  {
+    "trace_id": "trace:9a7ee192d08e",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a32cda57eedf",
+    "source_case_id": "case:0201171525cc",
+    "summary": "先看挡块下压与皮带状态，再排查传感器误触发。",
+    "recommended_action_ids": [
+      "action:ea09122801c9",
+      "action:10accf2088ae"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:b2e3ea03d7ab"
+    ]
+  },
+  {
+    "trace_id": "trace:23e54f807bea",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:0338d170a1d3",
+    "source_case_id": "case:5e0c0e1c9661",
+    "summary": "先查出板口占板，再查进板传感器，再查皮带、IO点位，最后查电机线。",
+    "recommended_action_ids": [
+      "action:43189f7c1f19",
+      "action:db905b5af65f",
+      "action:067f7227cb5e",
+      "action:54a1a9ff1629",
+      "action:bbe2107bff74"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:ddccf90609cc"
+    ]
+  },
+  {
+    "trace_id": "trace:4ae8a42ffa40",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:3f3f4a8c59f7",
+    "source_case_id": "case:c8d0ae7d6214",
+    "summary": "先调传感器灵敏度，再加过滤延迟，再调皮带参数，最后装挡片并标记位置。",
+    "recommended_action_ids": [
+      "action:a5b969de2a10",
+      "action:8d990786e04b",
+      "action:79ff37d94726",
+      "action:6cc3108bf2c6"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:5e9b2f428f55"
+    ]
+  },
+  {
+    "trace_id": "trace:8115a55f58b2",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:1356d0150d41",
+    "source_case_id": "case:1cf7b4bb512b",
+    "summary": "通过调整出板延迟参数处理收板机位置误报卡板。",
+    "recommended_action_ids": [
+      "action:9092a6f3c9fb"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:84811cbc6d82"
+    ]
+  },
+  {
+    "trace_id": "trace:9cc9ca8f63e0",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:0a5f62a8947f",
+    "source_case_id": "case:50b71775fb2a",
+    "summary": "先看实际气压值，再把报警阈值调到低于实际气压值。",
+    "recommended_action_ids": [
+      "action:0064c2cbfeca",
+      "action:48972c27dc59"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:71d9cef83d6c"
+    ]
+  },
+  {
+    "trace_id": "trace:e655ec8b3a0b",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:2e556d119eee",
+    "source_case_id": "case:d15748d2c4c4",
+    "summary": "先清理水油污，再看气压值，必要时更换气缸，最后建议加前置过滤器。",
+    "recommended_action_ids": [
+      "action:cee79491309e",
+      "action:fb2f0ce7b899",
+      "action:9bec4f80be72",
+      "action:32e4bcf37617"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:9e56db13a82d"
+    ]
+  },
+  {
+    "trace_id": "trace:686f7fcc79a0",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:29957728725e",
+    "source_case_id": "case:b39db0a26b2a",
+    "summary": "先看挡块是否卡顿，再看气缸回弹，再检查气缸推拉和气管排水。",
+    "recommended_action_ids": [
+      "action:301eea9a7815",
+      "action:625de3ba5b6b",
+      "action:1978c65346f8",
+      "action:118befc3cec2"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:ab579c5bab6e"
+    ]
+  },
+  {
+    "trace_id": "trace:ba4146dd3377",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:4e468df11ac4",
+    "source_case_id": "case:199ae685e296",
+    "summary": "先做SPC文件清理，再收集db文件，最后用DB Browser检查proj/res状态。",
+    "recommended_action_ids": [
+      "action:22595a926f54",
+      "action:62dadd568516",
+      "action:8b254cf89cf1"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:ea7acd7f2e38"
+    ]
+  },
+  {
+    "trace_id": "trace:cfa3f40d4c35",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:af862bdacdc0",
+    "source_case_id": "case:22a3e3c3680b",
+    "summary": "先F1进系统Esc退出，再查主板电池，最后按无视频输入分支完全断电重试。",
+    "recommended_action_ids": [
+      "action:538340b2bf04",
+      "action:6ee2c89d71ea",
+      "action:3cdab9c4f2c0"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:0488832925c4"
+    ]
+  },
+  {
+    "trace_id": "trace:a520d500f8f3",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:7c84534ea195",
+    "source_case_id": "case:f782ddd38bd9",
+    "summary": "先查buddy-data，再查热存储，再查用户/导出/MES目录，最后全盘定位异常占用。",
+    "recommended_action_ids": [
+      "action:56c8aedb74d0",
+      "action:5f6834751f41",
+      "action:dd71b0790fdd",
+      "action:e70440b5ba05",
+      "action:fe5bb50fc290"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:c8e93714866b"
+    ]
+  },
+  {
+    "trace_id": "trace:4a99af2b0592",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:2545bf73ac53",
+    "source_case_id": "case:155cac70cba7",
+    "summary": "先确认D盘用途，再通过SPC做文件清理。",
+    "recommended_action_ids": [
+      "action:c13bc33f3b41",
+      "action:f9c27ea15cd4"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:31b96a7161bd"
+    ]
+  },
+  {
+    "trace_id": "trace:468ee246d022",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:14c2cb5e766c",
+    "source_case_id": "case:3a00b526c703",
+    "summary": "先分配新盘符，再迁移原D盘数据，最后交换盘符并重启。",
+    "recommended_action_ids": [
+      "action:48945f7a6308",
+      "action:f7ec5a3c0c8d",
+      "action:755a8bb2a6b1"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e8c6882b85f9"
+    ]
+  },
+  {
+    "trace_id": "trace:c52c04bc5530",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:085961f0d893",
+    "source_case_id": "case:7be504947156",
+    "summary": "先拿到客户授权和保留天数，再执行清理脚本，最后删除脚本并同步SPC清理。",
+    "recommended_action_ids": [
+      "action:9b7695c0dbb0",
+      "action:15209b7e151a",
+      "action:ad73f4c5f124"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:19d471772d10"
+    ]
+  },
+  {
+    "trace_id": "trace:135921acdae7",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e331eddf4c58",
+    "source_case_id": "case:4edbea2a64e4",
+    "summary": "先装新SSD到副插槽，再在PE里克隆，最后交换到主插槽并校验BIOS启动项。",
+    "recommended_action_ids": [
+      "action:7c7f8dc3455f",
+      "action:cfe7e198dcea",
+      "action:d197cbe7376f"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:65396e2d0900"
+    ]
+  },
+  {
+    "trace_id": "trace:beebf0962eae",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:b2151957490b",
+    "source_case_id": "case:487c3df2bf65",
+    "summary": "先装WinDbg，再收DMP，最后配置symbols并做!analyze -v。",
+    "recommended_action_ids": [
+      "action:601ed9c20ca6",
+      "action:8e1c3ae23394",
+      "action:ac0e32bc2989"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d516c8c3db2f"
+    ]
+  },
+  {
+    "trace_id": "trace:9553f4d64276",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:c418362a09e0",
+    "source_case_id": "case:b3454704def9",
+    "summary": "先看日志，再交换光控/加密狗位置，最后查USB2.0一分四拓扑。",
+    "recommended_action_ids": [
+      "action:ec7b04c05a47",
+      "action:183232f173b3",
+      "action:5df7e51d9743"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:44cbce940c9f"
+    ]
+  },
+  {
+    "trace_id": "trace:a291d478bdfe",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:c2b563dfa419",
+    "source_case_id": "case:368a9d6fe533",
+    "summary": "先确认虚拟内存设置，再增大页面文件，必要时更新版本。",
+    "recommended_action_ids": [
+      "action:9a1a10eacdb6",
+      "action:19e66ff4273e",
+      "action:8846ef89db53"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:fd66fbd3488d"
+    ]
+  },
+  {
+    "trace_id": "trace:ffebfff86e7d",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:bf9cfce95b8b",
+    "source_case_id": "case:b664987f240e",
+    "summary": "先拔插显卡清洁金手指，再看系统日志，最后重装驱动并关闭快速启动。",
+    "recommended_action_ids": [
+      "action:ef9974bca5b7",
+      "action:8a3b0cc19256",
+      "action:2b01ba052507"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:179ae119cdfa"
+    ]
+  },
+  {
+    "trace_id": "trace:4536d81b2b29",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e832a165e16b",
+    "source_case_id": "case:84022a493409",
+    "summary": "先进组策略，再关闭Defender实时防护，最后重启验证耗时。",
+    "recommended_action_ids": [
+      "action:e940227e7355",
+      "action:0bcf558b52c7",
+      "action:a0661b62dfe0"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:39b229df6533"
+    ]
+  },
+  {
+    "trace_id": "trace:85875195ced0",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:640f1b149bcf",
+    "source_case_id": "case:21f434ab6a0e",
+    "summary": "先运行DMP收集工具，再压缩ABC文件夹回收。",
+    "recommended_action_ids": [
+      "action:c81fac773608",
+      "action:42f4e4136dec"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d8ffa51b3cb2"
+    ]
+  },
+  {
+    "trace_id": "trace:83e207992cc4",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:b1ccecf6657a",
+    "source_case_id": "case:cb348b37cb09",
+    "summary": "先尝试关闭安全防护，再看资源浮窗，最后回收指标日志。",
+    "recommended_action_ids": [
+      "action:e49894a933d2",
+      "action:96dc22251294",
+      "action:9a51ae9ba1e3"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:882467805581"
+    ]
+  },
+  {
+    "trace_id": "trace:9ea688afb874",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:442c0ff7b8ca",
+    "source_case_id": "case:67d9c2970631",
+    "summary": "先查电源和内存稳定性，再查无线网卡驱动，最后看系统日志。",
+    "recommended_action_ids": [
+      "action:386f47c4d3ca",
+      "action:38c936faba06",
+      "action:aeda768007d5"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:202c745ea34b"
+    ]
+  },
+  {
+    "trace_id": "trace:057dc35531df",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:39ebe7bfde46",
+    "source_case_id": "case:341f3ec6cfb2",
+    "summary": "先排名称冲突，再看日志中的VSS错误，最后按硬件/驱动/系统修复顺序排查。",
+    "recommended_action_ids": [
+      "action:6d824430dcdf",
+      "action:515a37d0b9ae",
+      "action:94a496db3500"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:b9c7e7cbd80d"
+    ]
+  },
+  {
+    "trace_id": "trace:d47b847ec199",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:74bff08dbf69",
+    "source_case_id": "case:ca0609b2bc54",
+    "summary": "运输后无法开机时，先插拔显卡和内存条。",
+    "recommended_action_ids": [
+      "action:924fbda39e5b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:a6ec04d4cbac"
+    ]
+  },
+  {
+    "trace_id": "trace:321468384360",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:858099d657fb",
+    "source_case_id": "case:3e30cd59c5a1",
+    "summary": "先检查CMD是否管理员，再调UAC，最后重启验证。",
+    "recommended_action_ids": [
+      "action:01b388daf107",
+      "action:fcdb39cf4927",
+      "action:f4a56abf9119"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:9d175d758771"
+    ]
+  },
+  {
+    "trace_id": "trace:f5b47c4e57e7",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:6ada76c47f15",
+    "source_case_id": "case:efd407c8edf2",
+    "summary": "先看资源占用与安装状态，再决定是否重装或更换硬件。",
+    "recommended_action_ids": [
+      "action:04ffabaa68c5",
+      "action:401acaa896bc"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e4ff50702855"
+    ]
+  },
+  {
+    "trace_id": "trace:3cb7dfa1d16e",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e03fd1a0b41b",
+    "source_case_id": "case:dc178631a5fc",
+    "summary": "先查串口线接口，再看设备管理器端口号，最后改machine.toml。",
+    "recommended_action_ids": [
+      "action:040727a4b063",
+      "action:f98ef455db77",
+      "action:f4b00e8dfe94"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:2c296abe3190"
+    ]
+  },
+  {
+    "trace_id": "trace:886c5f676f4d",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:9dad09fd98ca",
+    "source_case_id": "case:9957c9618adf",
+    "summary": "先用鼠标测接口供电，再检查接口物理状态，最后换U盘排除外设短路。",
+    "recommended_action_ids": [
+      "action:1eea9638417a",
+      "action:ac807a9d51b3",
+      "action:b3a31879c319"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e3951ed09fde"
+    ]
+  },
+  {
+    "trace_id": "trace:a04d5c002c3f",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:1c1e5db082d5",
+    "source_case_id": "case:8094cecb3c25",
+    "summary": "先查外供电和显示，再看Debug灯和最小化测试，再查启动盘和散热电源。",
+    "recommended_action_ids": [
+      "action:8dd99f0d02a6",
+      "action:a21a6d50e3d4",
+      "action:72453efbf471",
+      "action:8755a0415358",
+      "action:a8fd7a481dee"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:5472a701e02e"
+    ]
+  },
+  {
+    "trace_id": "trace:1549c27ea1f2",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:94e96f1fd195",
+    "source_case_id": "case:a365fff72edb",
+    "summary": "先查小拼板拼版号，再确认180度旋转导致的异常，再按未旋转程序/重做程序验证。",
+    "recommended_action_ids": [
+      "action:9384d79fbe05",
+      "action:f74b6ab63c93",
+      "action:88593e28eea9",
+      "action:a43037d0bbc2"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:b76486fd32b9"
+    ]
+  },
+  {
+    "trace_id": "trace:e55644388129",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:647a1358fdd9",
+    "source_case_id": "case:0c9d0b38bee1",
+    "summary": "先确认复判站IP与相机IP是否冲突。",
+    "recommended_action_ids": [
+      "action:59dd656a834b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:3d0a9889659c"
+    ]
+  },
+  {
+    "trace_id": "trace:894e9e140baf",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:d38add58c5f3",
+    "source_case_id": "case:a8e22b535ab1",
+    "summary": "先确认res是否损坏，再删报错res并临时过滤，最后排查多模板框和版本配套。",
+    "recommended_action_ids": [
+      "action:56f127b3bc38",
+      "action:1b416b011b14",
+      "action:e51ac4f9190d",
+      "action:ed580e950c4c"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:ff74386b427e"
+    ]
+  },
+  {
+    "trace_id": "trace:6d37dacda98f",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:4562194ba843",
+    "source_case_id": "case:f430f782a32b",
+    "summary": "先拆仪表盘，再缠生料加固，最后装回验证。",
+    "recommended_action_ids": [
+      "action:231930b7197b",
+      "action:f96f9a355f66",
+      "action:f339c7e41530"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e051b530eefc"
+    ]
+  },
+  {
+    "trace_id": "trace:b77317ab8b4b",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:7eaca826258e",
+    "source_case_id": "case:7f22a670dca7",
+    "summary": "先清小瓶，再排气管积水，最后擦电气元件并查气源和三联件。",
+    "recommended_action_ids": [
+      "action:81a443b1e018",
+      "action:92e1ce5344e9",
+      "action:5b7aa4cb388b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:25a7bc5fc1ac"
+    ]
+  },
+  {
+    "trace_id": "trace:87828bfcf7cd",
+    "family_id": "family:fba7eb4346e5",
+    "variant_id": "variant:16ebab0bf75a",
+    "source_case_id": "case:b319cc6bdbf8",
+    "summary": "先确认y轴日志，再重标y轴限位值。",
+    "recommended_action_ids": [
+      "action:670bbdd320ea",
+      "action:81291abe9c1b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:3b65177f1375"
+    ]
+  },
+  {
+    "trace_id": "trace:ee584a971478",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:a4b1c55b5b98",
+    "source_case_id": "case:526f0088fb44",
+    "summary": "先查D盘，再查显卡驱动，最后安装驱动。",
+    "recommended_action_ids": [
+      "action:347155428e48",
+      "action:22216cbe7a00",
+      "action:49a3478d738f"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:e29a3a9278f6"
+    ]
+  },
+  {
+    "trace_id": "trace:a0b6cb277be0",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:ce522a5343b8",
+    "source_case_id": "case:4286e00fd807",
+    "summary": "先按顺序重启软件，再查machine.toml，再查参数或备份。",
+    "recommended_action_ids": [
+      "action:2cc868a65bf0",
+      "action:3ce633a3f75b",
+      "action:bf7cf705658b"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:2e9a92b5f99f"
+    ]
+  },
+  {
+    "trace_id": "trace:6b5200387bb9",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:29e2bdbed992",
+    "source_case_id": "case:ba47331f7617",
+    "summary": "先确定导出目标和版本，再执行整图/SPC/FOV/日志对应流程。",
+    "recommended_action_ids": [
+      "action:784d2b57fe98",
+      "action:439d1aeaea3b",
+      "action:958e615b6b04",
+      "action:8972f7dd4179"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:d899e23ca383"
+    ]
+  },
+  {
+    "trace_id": "trace:f53588a39ae0",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:af6a76a55ec1",
+    "source_case_id": "case:1e17f0559eaa",
+    "summary": "先按版本清理cold_results/缓存，再同步SPC清理数据库，最后检查C盘和MES占用。",
+    "recommended_action_ids": [
+      "action:68c87b0efafc",
+      "action:63928e4d057a",
+      "action:2072e135691a"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:b9513899f7a2"
+    ]
+  },
+  {
+    "trace_id": "trace:f64ca39e8266",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:1fb725ddc3c7",
+    "source_case_id": "case:66f062924241",
+    "summary": "先确认浏览器是否被劫持，再改默认浏览器为edge。",
+    "recommended_action_ids": [
+      "action:d24067588b34",
+      "action:7ee3b8e6d66f"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:1b09600f405c"
+    ]
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "summary": "更换工控机后user.cfg.toml为空或损坏导致配置加载失败；现象支持当前user.cfg.toml为空或损坏；意外重启是可能诱因但未被证明。；使用最近诊断日志中的配置后，主程序可以正常进入。；切换设置、恢复原值并重启后验证正常，进一步确认恢复后的配置链路可用。",
+    "recommended_action_ids": [
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:col-ed44f700a6",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-0203fe9e2c",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-74e665ce3b",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:cha-331b06ec4d",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-6170654e15",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-f9149e523a"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:col-ed44f700a6",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-0203fe9e2c",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-74e665ce3b",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:cha-331b06ec4d",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-6170654e15",
+      "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-f9149e523a"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-5f89ba590d",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-fbfbb1af28",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "summary": "相机链路丢包与事件包不重传导致拍摄失败；网卡参数已按SOP配置，未发现明显配置错误；相机线未装磁环是待核实上下文。；证据显示先发生残帧/丢包，随后相机事件包丢失且不重传。；插回板载主板网口后曾作为临时方案继续使用，但数日后同样拍摄失败再次出现。；重启后观察一小时未再次拍摄失败并暂时生产正常，观察时间不足以认定解决。；…",
+    "recommended_action_ids": [
+      "action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:2db6cbd1b734",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:805a3a016814",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-sop-:f8093f9d5739",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:5a0ad215b003",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:observe:-:d5b9bdab6705",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:380386c2485f",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:a896dc10e491"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:2db6cbd1b734",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:805a3a016814",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-sop-:f8093f9d5739",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:5a0ad215b003",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+      "action:variant:family::5274d74078aa:-:7012dc376b46:observe:-:d5b9bdab6705"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-d8c886ac6c",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "summary": "MEMORY_MANAGEMENT/PFN 不同步蓝屏；确认 MEMORY_MANAGEMENT/0x403/PFN 不同步；smt-aoi.exe 是进程上下文，不足以认定应用为根因。；无线网卡驱动已卸载，当天暂未复发，但缺少长期单变量验证。；已和客户约定连续一周每日关机重启，但样本没有证明该周期已完整执行或长期有…",
+    "recommended_action_ids": [
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-f734a96b16",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-b2d121d8e3",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-72c40b12d3",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-47292802bc",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-73134bda74",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-5b869c362f"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-f734a96b16",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-72c40b12d3",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-47292802bc",
+      "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-73134bda74"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-7b7001d073",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "summary": "0x00000139 关键数据结构损坏蓝屏；转储提供 0x139、驱动加载异常和页缺失信号，但因转储不完整不能锁定根因。；现场已拔除两根内存，但没有后续长期无复发证据。；接地状态和 2400 内存频率被记录，未证明它们是根因。；已执行组合式系统修复，缺少各命令结果和复发观察。；向日葵驱动已清除，但与多项操作同时执行，…",
+    "recommended_action_ids": [
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:collect-2cd37caa39",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a65aed6f7a",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:inspect-60407cff5d",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-9b06a6adcc",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-f46eae1c52",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a4dba6837d",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-c88f389b52",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-94a89ac40d",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-91be27c9c1",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:verify:-9ee50f2990"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:collect-2cd37caa39",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a65aed6f7a",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:inspect-60407cff5d",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-9b06a6adcc",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-f46eae1c52",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a4dba6837d",
+      "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-c88f389b52"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1640721fff",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "summary": "System PTE 耗尽蓝屏；DMP 明确支持 System PTE 耗尽机制，但没有定位到具体泄漏驱动。；调整内存频率后随后连续多日仍发生蓝屏，不能作为最终解决。；升级 1.3.7 后当时正常，次日客户再次反馈蓝屏。；用于避免 DMP 损坏并保留可分析证据；此前多次过早重启导致转储不可读。；现场已更换内存条，样本…",
+    "recommended_action_ids": [
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:inspect-420bc003a9",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:change:-7e1147df7a",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-f2f172633e",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-f411676b20",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-5056f286d7",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-1764bc3eb0",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-377d7e8985"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:inspect-420bc003a9",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:change:-7e1147df7a",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-f411676b20",
+      "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-377d7e8985"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-af9a0a0f43",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-d65ee25851",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-2093c49574",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-999647b67d",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "summary": "离线安装通电测试后光源初始化失败，USB 重新拔插后恢复；重新拔插光源 USB 接口后已恢复正常。；恢复后仍需 1-2 天上线跟线验证确认是否稳定。",
+    "recommended_action_ids": [
+      "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:inspect:-:e92652a54587",
+      "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change:-usb-:-73c7a0d1c0",
+      "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:observe:-:06be8d2b7f21"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change:-usb-:-73c7a0d1c0",
+      "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:observe:-:06be8d2b7f21"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-d1f038b300",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "summary": "Realtek 2.5G扩展网卡反复重置并导致黑屏/断连；发现NDIS 10400、Realtek驱动错误和高频重置，形成网卡驱动或硬件异常的初步判断。；驱动重装后有效数小时，随后重置和断连复发。；扩展网卡承载的相机和云控链路同时断连，进一步支持扩展网卡方向。；更换扩展网卡后设备恢复生产。",
+    "recommended_action_ids": [
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:colle-d8fd578e5a",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-531e5b8ba8",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-fe92e3b660",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-9ef2acec04",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:obser-7d2592ec46",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-311713590e",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-21d5567662",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:verif-ca0725f4ee"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:colle-d8fd578e5a",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-531e5b8ba8",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-fe92e3b660",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-9ef2acec04",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:obser-7d2592ec46",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-311713590e",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-21d5567662",
+      "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:verif-ca0725f4ee"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ccdc1f2ec6",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "summary": "INACCESSIBLE_BOOT_DEVICE启动蓝屏；拔插固态后仍无法进入系统。；拔插内存条后仍无法进入系统。；放电后仍无法进入系统。；可以进入BIOS，说明主机能完成基础自检，问题范围收敛到启动/存储访问链路。；PE系统还原后仍无法正常启动。；修复C盘引导后仍无法正常启动。；可以进入系统，但D盘无法识别。；还原…",
+    "recommended_action_ids": [
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-95218a3ab4",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-759e837706",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-50fbb49aa0",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-499b03649e",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-e1636f1de0",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-0e06eddb84",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f1cc83b174",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-548a2daffa",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-a92b546608",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bf4134fc6"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-95218a3ab4",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-759e837706",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-50fbb49aa0",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-499b03649e",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-e1636f1de0",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-0e06eddb84",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f1cc83b174",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-548a2daffa",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-a92b546608",
+      "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bf4134fc6"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8365bbcb13",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "summary": "D盘消失导致Buddy冷存储写入失败；重启主程序和Buddy后仍持续报Buddy错误。；重启电脑后首次恢复，但两天后保存失败和D盘消失再次发生。；请求到达localhost Buddy Host且CURLE_OK；HTTP 500由mkdir D:\\ACME路径不存在直接触发，而非外部网络不通。；保存失败复发…",
+    "recommended_action_ids": [
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-2c9be1d7a6",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-01a3181d5d",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-fa296972b5",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-1b2996a4cd",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-4b9a3d4182",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-a2c033e194",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-85338ebd1a",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-432a250c34",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-ec6a68a325",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-0da2fefdf5",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3f3c2b6101",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3cd6fee9f7",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:veri-42798e040e"
+    ],
+    "actual_action_ids": [
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-2c9be1d7a6",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-01a3181d5d",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-fa296972b5",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-1b2996a4cd",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-4b9a3d4182",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-a2c033e194",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-85338ebd1a",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-432a250c34",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-ec6a68a325",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-0da2fefdf5",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3f3c2b6101",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3cd6fee9f7",
+      "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:veri-42798e040e"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b3fac20ff",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "summary": "老版本模组电源输出线接口松动导致供电中断；初次重插后部线缆后仍自动重启。；清理内存异物后故障仍存在，不能把异物认定为主根因。；重插内存后仍复发；四根内存和插槽随后可通过自检。；识别到引导损坏迹象，但它更像频繁异常断电的次生结果，不是供电中断根因。；只提出修复引导，没有实际执行和结果证据。；等待后短时可开机但马上再次断…",
+    "recommended_action_ids": [
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:6460a450e019",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:9a6c251b529a",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-cpu-:805c040093ca",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:compare:-pci-:f33edcb9eec8",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:observe:-:945abfa3fba5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:558ee7487bcb",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:125b2570137a"
+    ],
+    "actual_action_ids": [
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:6460a450e019",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:9a6c251b529a",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-cpu-:805c040093ca",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:compare:-pci-:f33edcb9eec8",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:observe:-:945abfa3fba5",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:558ee7487bcb",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+      "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-989054432c",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-2faf5dc8b3",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_id": "trace:f43c56985f6c",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "source_case_id": "case:453ecf1bf543",
+    "summary": "按2.1至2.9建立默认轨迹；发现明确条件时走对应分支，任何修复后跳转老化，验证失败则回到下一未尝试分支。",
+    "recommended_action_ids": [
+      "action:d806ef1cfd61",
+      "action:31bfe15b8b49",
+      "action:085223f171e2",
+      "action:0b398f8374d5",
+      "action:7367a7341eef",
+      "action:8c803ae45afc",
+      "action:a514589a860e",
+      "action:58c1c112a804",
+      "action:a7d64a1b3da0",
+      "action:1616d363bd4f",
+      "action:ead91fff7662",
+      "action:5154bcbb0945",
+      "action:2fcdedca3a10",
+      "action:b3d34750ce25",
+      "action:405099be2b2a",
+      "action:bb29ee8be8a4",
+      "action:0aefa8353a29",
+      "action:ea29f945cf6e",
+      "action:5467da52da8d",
+      "action:4242fa39fa53",
+      "action:a4debb2951d0",
+      "action:38683387ac08",
+      "action:ed3aa4226e4e",
+      "action:1e3d7de4abb8",
+      "action:adc57cea08d3",
+      "action:92b22d7e4632",
+      "action:75c4b7488f33",
+      "action:e5850b5cd56f",
+      "action:8bafbe8045f5",
+      "action:d9cafcec058a",
+      "action:a3fe39166e0f",
+      "action:8210bd9ef062",
+      "action:f1dae8038fa1",
+      "action:3cee47304d7a"
+    ],
+    "actual_action_ids": [],
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  }
+]

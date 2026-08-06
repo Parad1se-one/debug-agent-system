@@ -1,0 +1,919 @@
+{
+  "meta": {
+    "schema_version": "debug_agent_system.chat_replay_seed.v1",
+    "source_run": "data/results/w1_full_20260703_061455/w1",
+    "source_manifest": "data/results/w1_full_20260703_061455/w1/run_manifest.json",
+    "selection_policy": "high-confidence W1 complete/near-complete diagnostic episodes with explicit fault, diagnostic action, result feedback, or missing-info request evidence",
+    "case_count": 8,
+    "default_gate_scope": "seed_review",
+    "notes": [
+      "These cases are curated replay seeds, not yet part of the blocking real/broad gates.",
+      "Target error IDs use current KG/SAG labels only when mapping is stable enough for review.",
+      "metadata.replay_truth is the authoritative annotation surface for real check_results, failure paths, and ask-info evidence."
+    ]
+  },
+  "scenarios": [
+    {
+      "case_id": "CHAT_REPLAY_W1_001_T81_BLUE_SCREEN_BOOT_RECOVERY",
+      "query": "T81白天网卡报错后再次黑屏，蓝屏报错；已拔插固态、内存条并做过放电操作，现在可以进BIOS但进不去系统，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "hard",
+      "query_type": "debug",
+      "target_error_id": "err:industrial-pc-blue-screen",
+      "acceptable_error_ids": [
+        "err:industrial-pc-no-boot",
+        "err:industrial-pc-morning-boot-failure"
+      ],
+      "expected_status": "resolved",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "进入PE系统还原或修复C盘引导",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "检查BIOS中的SATA模式",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "确认切回AHCI后系统和D盘是否恢复",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "PE系统还原和修复C盘引导无效果",
+        "BIOS SATA模式从AHCI切换成RAID后可进系统但识别不到D盘",
+        "SATA模式还原回AHCI后正常启动",
+        "已恢复生产"
+      ],
+      "evidence_key_facts": [
+        "再次黑屏后进不去系统",
+        "蓝屏报错",
+        "拔插过固态和内存条",
+        "放电后可以进BIOS"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "修复",
+          "reply": "进大白菜PE系统还原、修复C盘引导无效果。",
+          "expected_next": "继续检查BIOS SATA模式",
+          "result_type": "ineffective",
+          "source_message_ids": [
+            "om_x100b6da243718cb8b3d4bf7aebeb82a"
+          ]
+        },
+        {
+          "when_check_contains": "SATA",
+          "reply": "最后进BIOS将SATA模式从AHCI切换成RAID成功进入系统但识别不到D盘；回到BIOS将SATA模式还原回AHCI后正常启动，目前已恢复生产。",
+          "expected_next": "resolved",
+          "result_type": "effective",
+          "source_message_ids": [
+            "om_x100b6da243718cb8b3d4bf7aebeb82a"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动断电操作",
+        "自动修改BIOS"
+      ],
+      "max_turns": 5,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_c9806b667c0f9ea243b89461d77abbb2_202606082033000800_202606142230000800_389:episode:5",
+        "source_thread_id": "oc_c9806b667c0f9ea243b89461d77abbb2_202606082033000800_202606142230000800_389",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2026-06-10 20:29",
+          "2026-06-10 21:04"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b6da1c2aafcb0b2a81f4dd7a6646"
+          ],
+          "resolution": [
+            "om_x100b6da243718cb8b3d4bf7aebeb82a"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "failure_path_then_effective",
+          "check_results": [
+            {
+              "check_text": "PE系统还原、修复C盘引导",
+              "result_type": "ineffective",
+              "user_reply": "进大白菜PE系统还原、修复C盘引导无效果。",
+              "evidence_message_ids": [
+                "om_x100b6da243718cb8b3d4bf7aebeb82a"
+              ]
+            },
+            {
+              "check_text": "BIOS SATA模式调整并回退验证",
+              "result_type": "effective",
+              "user_reply": "SATA模式从AHCI切换成RAID后可进系统但识别不到D盘，改回AHCI后正常启动并恢复生产。",
+              "evidence_message_ids": [
+                "om_x100b6da243718cb8b3d4bf7aebeb82a"
+              ]
+            }
+          ],
+          "failure_path": [
+            {
+              "failed_check_text": "PE系统还原、修复C盘引导",
+              "expected_next_check_text": "检查BIOS SATA模式"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_002_IPC_POWER_GROUNDING",
+      "query": "工控机频繁断电，现场怀疑电源或接地问题，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "hard",
+      "query_type": "debug",
+      "target_error_id": "err:industrial-pc-no-boot",
+      "acceptable_error_ids": [
+        "err:industrial-pc-unexpected-reboot",
+        "err:system-blackout-auto-shutdown"
+      ],
+      "expected_status": "resolved",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "重新插拔工控机电源连接线并上电观察",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "检测工控机和整机接地状态",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "临时飞地线后复测对地电阻",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "重新插拔工控机电源后上电观察2.5小时未再断电",
+        "客户恢复正常生产",
+        "现场检测设备接地状态",
+        "临时飞地线后工控机对地电阻稳定"
+      ],
+      "evidence_key_facts": [
+        "工控机频繁断电",
+        "怀疑电源问题",
+        "接地未验证"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "接地",
+          "reply": "工控机接地未验证，设备静止状态对地约3.7欧；临时飞地线后工控机对地电阻稳定在3.8欧。",
+          "expected_next": "继续确认电源连接线和上电观察",
+          "result_type": "info_provided",
+          "source_message_ids": [
+            "om_x100b6f2f479634acb48486120e1bc2d",
+            "om_x100b6f2a17350ca4b2f043a095a0ab5"
+          ]
+        },
+        {
+          "when_check_contains": "电源",
+          "reply": "工控机电源后面的连接线已重新插拔，上电开机观察2.5小时未出现断电，客户已恢复正常生产。",
+          "expected_next": "resolved",
+          "result_type": "effective",
+          "source_message_ids": [
+            "om_x100b6f2a17350ca4b2f043a095a0ab5"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动断电操作",
+        "自动拆机"
+      ],
+      "max_turns": 5,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "medium",
+        "source_episode_id": "oc_06e4e3db99ea15ed360677e02c0786a4_202605101809000800_202605131747000800_461:episode:5",
+        "source_thread_id": "oc_06e4e3db99ea15ed360677e02c0786a4_202605101809000800_202605131747000800_461",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2026-05-11 14:36",
+          "2026-05-12 16:33"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b6f23c1ba8c0cb247f687b37bc10"
+          ],
+          "diagnostic": [
+            "om_x100b6f2ed1974ca0c279d442a92fc9c",
+            "om_x100b6f2f479634acb48486120e1bc2d",
+            "om_x100b6f2f42cf6ca4c2180dcb34a6c92",
+            "om_x100b6f2fd10c60bcb1101b62377cbe0"
+          ],
+          "resolution": [
+            "om_x100b6f2a17350ca4b2f043a095a0ab5"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "effective_after_power_and_grounding_checks",
+          "check_results": [
+            {
+              "check_text": "检查工控机接地状态",
+              "result_type": "info_provided",
+              "user_reply": "工控机接地未验证，后续检测静止状态约3.7欧。",
+              "evidence_message_ids": [
+                "om_x100b6f2f479634acb48486120e1bc2d",
+                "om_x100b6f2a17350ca4b2f043a095a0ab5"
+              ]
+            },
+            {
+              "check_text": "重新插拔工控机电源连接线",
+              "result_type": "effective",
+              "user_reply": "上电观察2.5小时未再断电，客户恢复正常生产。",
+              "evidence_message_ids": [
+                "om_x100b6f2a17350ca4b2f043a095a0ab5"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_003_LIGHT_INIT_POWER_CYCLE",
+      "query": "打开主程序报光源初始化失败，打开工厂程序报运控组件初始化失败；网络适配器还在，也能连上ARM板，运控软件E450能让XY轴正常运动，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "medium",
+      "query_type": "debug",
+      "target_error_id": "err:system-initialization-failure",
+      "acceptable_error_ids": [
+        "err:light-source-init-failure-driver-reinstall",
+        "err:light-source-issue",
+        "err:init-motion-crash"
+      ],
+      "expected_status": "resolved",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "确认网络适配器和ARM板连接状态",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "确认运控软件中XY轴可正常运动",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "关机断电后重新打开验证",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "网络适配器还在",
+        "能连接ARM板",
+        "E450能让XY轴正常运动",
+        "关机断电后可以打开"
+      ],
+      "evidence_key_facts": [
+        "主程序报光源初始化失败",
+        "工厂程序报运控组件初始化失败"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "ARM",
+          "reply": "网络适配器还在，能连接ARM板；在运控软件E450里也能让XY轴正常运动。",
+          "expected_next": "检查光源或运控组件初始化状态",
+          "result_type": "info_provided",
+          "source_message_ids": [
+            "om_x100b44bb25dfd6f80f2627f43d89dd3"
+          ]
+        },
+        {
+          "when_check_contains": "断电",
+          "reply": "关机断电了一下后就可以打开，问题已解决。",
+          "expected_next": "resolved",
+          "result_type": "effective",
+          "source_message_ids": [
+            "om_x100b44bbca5981bc0f18ec752064969"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动断电操作"
+      ],
+      "max_turns": 4,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_5dc919a077fd370de8cbebb59f415126_202509020932000800_202509041222000800_611:episode:10",
+        "source_thread_id": "oc_5dc919a077fd370de8cbebb59f415126_202509020932000800_202509041222000800_611",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2025-09-03 22:07",
+          "2025-09-04 10:24"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b44bb25dfd6f80f2627f43d89dd3"
+          ],
+          "resolution": [
+            "om_x100b44bbca5981bc0f18ec752064969"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "effective_after_power_cycle",
+          "check_results": [
+            {
+              "check_text": "断电重启验证",
+              "result_type": "effective",
+              "user_reply": "关机断电后主程序可以打开。",
+              "evidence_message_ids": [
+                "om_x100b44bbca5981bc0f18ec752064969"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_004_CAMERA_CAPTURE_FAILURE_RECOVERY",
+      "query": "3D设备相机拍摄一半不动，报错拍摄失败，进下一张板仍然报拍摄失败；退出重启软件和运控后可拍摄但软件卡顿严重，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "hard",
+      "query_type": "debug",
+      "target_error_id": "err:camera-capture-failure",
+      "acceptable_error_ids": [
+        "err:3d-camera-capture-timeout",
+        "err:test-lag-capture-failure-slow-display",
+        "err:new-device-camera-capture-stutter-auto-recovery"
+      ],
+      "expected_status": "resolved",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "回退运控版本验证进板是否恢复",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "退出重启软件和运控后复测拍摄",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "重新安装运控和主程序并断电重启",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "回退9.1.0版本后进板测试正常",
+        "重启软件和运控后可以正常拍摄但卡顿依旧",
+        "重新安装运控和主程序",
+        "关机断电重新启动后软件恢复正常",
+        "跟踪至17点无异常"
+      ],
+      "evidence_key_facts": [
+        "相机拍摄一半不动",
+        "报错拍摄失败",
+        "下一张板依然报错拍摄失败",
+        "软件卡顿严重"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "重启",
+          "reply": "退出重启软件和运控后可以正常拍摄，但软件卡顿异常严重，卡顿现象依旧存在。",
+          "expected_next": "继续重装运控和主程序",
+          "result_type": "partially_effective",
+          "source_message_ids": [
+            "om_x100b50061ca094acb295266c0d11773"
+          ]
+        },
+        {
+          "when_check_contains": "重装",
+          "reply": "重新安装运控和主程序，设备关机断电重新启动后软件恢复正常，跟踪至17点无异常。",
+          "expected_next": "resolved",
+          "result_type": "effective",
+          "source_message_ids": [
+            "om_x100b50061ca094acb295266c0d11773"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动断电操作",
+        "自动重装"
+      ],
+      "max_turns": 5,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_3cb0f7e5f532fa52c1114186451da528_202604142151000800_202605022303000800_350:episode:70",
+        "source_thread_id": "oc_3cb0f7e5f532fa52c1114186451da528_202604142151000800_202605022303000800_350",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2026-04-30 17:47",
+          "2026-04-30 18:51"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b50061ca094acb295266c0d11773"
+          ],
+          "diagnostic": [
+            "om_x100b500625f81d0cb293a1fbba02533"
+          ],
+          "resolution": [
+            "om_x100b50061ca094acb295266c0d11773"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "partial_failure_then_effective",
+          "check_results": [
+            {
+              "check_text": "退出重启软件和运控",
+              "result_type": "partially_effective",
+              "user_reply": "可以正常拍摄，但软件卡顿异常严重，卡顿仍存在。",
+              "evidence_message_ids": [
+                "om_x100b50061ca094acb295266c0d11773"
+              ]
+            },
+            {
+              "check_text": "重新安装运控和主程序并断电重启",
+              "result_type": "effective",
+              "user_reply": "软件恢复正常，跟踪至17点无异常。",
+              "evidence_message_ids": [
+                "om_x100b50061ca094acb295266c0d11773"
+              ]
+            }
+          ],
+          "failure_path": [
+            {
+              "failed_check_text": "单纯重启软件和运控",
+              "expected_next_check_text": "重新安装运控和主程序并断电重启"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_005_USB_BLUE_SCREEN_DMP_ASK_INFO",
+      "query": "工控机插无线网卡后USB口不能识别，同时出现电源管理错误蓝屏；需要判断是USB口供电/识别问题还是驱动或硬件导致蓝屏，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "medium",
+      "query_type": "debug",
+      "target_error_id": "err:industrial-pc-blue-screen",
+      "acceptable_error_ids": [
+        "err:wifi-card-bsod-usb-port-unresponsive",
+        "err:industrial-pc-unexpected-reboot"
+      ],
+      "expected_status": "ask_info",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "确认USB口是供电不识别还是完全无连接",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "将无线网卡插到别的电脑或工控机后置USB口交叉验证",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "收集DMP文件确认蓝屏驱动或硬件原因",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "重启后工控机USB和侧边USB都好了",
+        "蓝屏需要DMP文件进一步确认"
+      ],
+      "evidence_key_facts": [
+        "蓝屏错误代码是电源管理错误",
+        "USB口不能识别无线网卡",
+        "需要提供DMP文件"
+      ],
+      "required_info": [
+        "DMP文件",
+        "USB口供电/识别状态",
+        "无线网卡交叉验证结果"
+      ],
+      "user_turns": [
+        {
+          "when_check_contains": "",
+          "reply": "侧面三个USB和工控机两个客户端口当时没有逐一验证，直接关机重启后工控机两个USB、侧边三个USB都好了；蓝屏还需要DMP文件进一步确认。",
+          "expected_next": "ask_info_or_wait_for_dmp",
+          "result_type": "info_provided",
+          "source_message_ids": [
+            "om_x100b5300dd16f08cb3da3a0b27513ef",
+            "om_x100b53013287d87cb27629e87f6c5fa"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动断电操作"
+      ],
+      "max_turns": 3,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_bc35227650b8eb4fc54006b757cf4bd2_202603242056000800_202603271134000800_522:episode:3",
+        "source_thread_id": "oc_bc35227650b8eb4fc54006b757cf4bd2_202603242056000800_202603271134000800_522",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2026-03-25 00:08",
+          "2026-03-27 09:55"
+        ],
+        "source_message_ids": {
+          "diagnostic": [
+            "om_x100b5300dd16f08cb3da3a0b27513ef",
+            "om_x100b5300dd16f08cb3da3a0b27513ef"
+          ],
+          "resolution_or_followup": [
+            "om_x100b53013287d87cb27629e87f6c5fa"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "ask_info_with_partial_usb_resolution",
+          "missing_info_requests": [
+            {
+              "slot": "log_package",
+              "question": "请提供DMP文件进一步确认哪个硬件或驱动导致蓝屏。",
+              "provided_later": true,
+              "evidence_message_ids": [
+                "om_x100b53002fc6c88cb4997a2fda317bb",
+                "om_x100b53013287d87cb27629e87f6c5fa"
+              ]
+            },
+            {
+              "slot": "usb_port_state",
+              "question": "USB口是供电但不识别设备，还是完全未连接且无供电？",
+              "provided_later": true,
+              "evidence_message_ids": [
+                "om_x100b53002fc6c88cb4997a2fda317bb",
+                "om_x100b5300dd16f08cb3da3a0b27513ef"
+              ]
+            }
+          ],
+          "check_results": [
+            {
+              "check_text": "关机重启后验证USB口",
+              "result_type": "effective_for_usb_only",
+              "user_reply": "重启后工控机两个USB、侧边三个USB都好了。",
+              "evidence_message_ids": [
+                "om_x100b5300dd16f08cb3da3a0b27513ef"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_006_BLACK_SCREEN_NO_SYSTEM_REPLACE_PC",
+      "query": "客户夜班反馈使用过程中黑屏，然后进不了系统；远程排查时内存条保留1/3、2/4还是启动不了，并且后续不识别硬盘，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "hard",
+      "query_type": "debug",
+      "target_error_id": "err:industrial-pc-no-boot",
+      "acceptable_error_ids": [
+        "err:system-blackout-auto-shutdown",
+        "err:industrial-pc-blue-screen"
+      ],
+      "expected_status": "resolved",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "按内存插槽组合保留1/3和2/4测试启动",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "确认是否识别硬盘",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "更换工控机并保留原固态、机械硬盘和控制卡验证",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "内存条保留1/3、2/4还是启动不了",
+        "不识别硬盘",
+        "更换工控机",
+        "固态机械硬盘及两张控制卡未更换",
+        "问题已解决，目前正常使用"
+      ],
+      "evidence_key_facts": [
+        "使用过程中黑屏",
+        "进不了系统",
+        "内存组合测试仍启动不了",
+        "不识别硬盘"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "内存",
+          "reply": "内存条保留1/3、2/4还是启动不了，仍然弹出同一页面。",
+          "expected_next": "继续检查硬盘识别和主机硬件",
+          "result_type": "ineffective",
+          "source_message_ids": [
+            "om_x100b5935021124a4b10536d23276697"
+          ]
+        },
+        {
+          "when_check_contains": "硬盘",
+          "reply": "远程指导后目前不识别硬盘。",
+          "expected_next": "考虑工控机硬件故障或更换工控机验证",
+          "result_type": "ineffective",
+          "source_message_ids": [
+            "om_x100b593246356cbcb22aae41bb8d337"
+          ]
+        },
+        {
+          "when_check_contains": "工控机",
+          "reply": "现场已更换工控机，固态、机械硬盘及两张控制卡未更换；已确认问题解决，目前正常使用。",
+          "expected_next": "resolved",
+          "result_type": "effective",
+          "source_message_ids": [
+            "om_x100b59275b87b8a8c3a80b0b798b9b9"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动拆机",
+        "自动更换硬件"
+      ],
+      "max_turns": 6,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_009fc1e0e7ca9b88e8ad35e3ad4efd6d_202601090234000800_202601111404000800_125:episode:1",
+        "source_thread_id": "oc_009fc1e0e7ca9b88e8ad35e3ad4efd6d_202601090234000800_202601111404000800_125",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2026-01-09 04:31",
+          "2026-01-10 00:48"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b5935021124a4b10536d23276697"
+          ],
+          "diagnostic": [
+            "om_x100b593246356cbcb22aae41bb8d337"
+          ],
+          "resolution": [
+            "om_x100b59275b87b8a8c3a80b0b798b9b9"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "failure_path_then_hardware_replacement_effective",
+          "check_results": [
+            {
+              "check_text": "内存组合测试",
+              "result_type": "ineffective",
+              "user_reply": "保留1/3、2/4还是启动不了。",
+              "evidence_message_ids": [
+                "om_x100b5935021124a4b10536d23276697"
+              ]
+            },
+            {
+              "check_text": "硬盘识别检查",
+              "result_type": "ineffective",
+              "user_reply": "远程指导后仍不识别硬盘。",
+              "evidence_message_ids": [
+                "om_x100b593246356cbcb22aae41bb8d337"
+              ]
+            },
+            {
+              "check_text": "更换工控机验证",
+              "result_type": "effective",
+              "user_reply": "更换工控机后问题解决，原固态、机械硬盘和控制卡未更换。",
+              "evidence_message_ids": [
+                "om_x100b59275b87b8a8c3a80b0b798b9b9"
+              ]
+            }
+          ],
+          "failure_path": [
+            {
+              "failed_check_text": "内存组合测试",
+              "expected_next_check_text": "检查硬盘识别"
+            },
+            {
+              "failed_check_text": "硬盘识别检查",
+              "expected_next_check_text": "更换工控机验证"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_007_GPU_DRIVER_BSOD",
+      "query": "工控机蓝屏，分析认为显卡驱动在中断或延迟过程调用上下文中执行时间过长，触发内核看门狗保护性蓝屏，应该怎么处理？",
+      "source": "w1_chat_replay",
+      "difficulty": "medium",
+      "query_type": "debug",
+      "target_error_id": "err:industrial-pc-blue-screen",
+      "acceptable_error_ids": [
+        "err:industrial-pc-unexpected-reboot",
+        "err:3d-software-crash"
+      ],
+      "expected_status": "step",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "卸载并重装显卡驱动",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "必要时回退版本验证",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "显卡驱动有问题",
+        "内核看门狗机制触发保护性蓝屏",
+        "卸载并重装显卡驱动",
+        "先回退版本"
+      ],
+      "evidence_key_facts": [
+        "显卡驱动",
+        "中断或延迟过程调用上下文",
+        "内核看门狗",
+        "蓝屏"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "显卡驱动",
+          "reply": "按显卡驱动问题处理，卸载并重装显卡驱动；现场也提出先回退版本验证。",
+          "expected_next": "monitor_or_resolved",
+          "result_type": "diagnostic_method",
+          "source_message_ids": [
+            "om_x100b5be6ee3904a0b2e68ea8b376ef4",
+            "om_x100b5be753a5b4a4c2c3460a38e2f4c"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [
+        "自动卸载驱动"
+      ],
+      "max_turns": 3,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "high",
+        "source_episode_id": "oc_a5abe0cb1cbef2c2aa649a482838516a_202512301139000800_202601012243000800_743:episode:6",
+        "source_thread_id": "oc_a5abe0cb1cbef2c2aa649a482838516a_202512301139000800_202601012243000800_743",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2025-12-25 20:11",
+          "2025-12-25 20:54"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b5be6ee3904a0b2e68ea8b376ef4"
+          ],
+          "diagnostic": [
+            "om_x100b5be7500568a0c42665bb8c970c8",
+            "om_x100b5be753a5b4a4c2c3460a38e2f4c"
+          ],
+          "resolution_or_method": [
+            "om_x100b5be6ee3904a0b2e68ea8b376ef4"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "diagnostic_method_no_final_outcome",
+          "check_results": [
+            {
+              "check_text": "卸载并重装显卡驱动",
+              "result_type": "diagnostic_method",
+              "user_reply": "解决方案指向卸载并重装显卡驱动，现场也建议先回退版本。",
+              "evidence_message_ids": [
+                "om_x100b5be6ee3904a0b2e68ea8b376ef4",
+                "om_x100b5be753a5b4a4c2c3460a38e2f4c"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "case_id": "CHAT_REPLAY_W1_008_SOFTWARE_AUTO_EXIT_UPGRADE_OBSERVE",
+      "query": "客户反馈设备运行中软件会自动退出，发生时间大约20:40，应该怎么排查？",
+      "source": "w1_chat_replay",
+      "difficulty": "medium",
+      "query_type": "debug",
+      "target_error_id": "err:3d-software-crash",
+      "acceptable_error_ids": [
+        "err:main-ui-freeze-unresponsive",
+        "err:industrial-pc-blue-screen",
+        "err:app-crash-version-0-23-9"
+      ],
+      "expected_status": "step",
+      "required_checks": [
+        {
+          "id": "",
+          "text": "升级到已修复版本验证",
+          "required": true
+        },
+        {
+          "id": "",
+          "text": "升级后继续观察是否复现",
+          "required": true
+        }
+      ],
+      "expected_resolution_facts": [
+        "V0.27.42已修复",
+        "已升级观察中",
+        "貌似新版本解决了",
+        "升级后观察是否再出现"
+      ],
+      "evidence_key_facts": [
+        "设备运行中软件会自动退出",
+        "发生时间20:40"
+      ],
+      "required_info": [],
+      "user_turns": [
+        {
+          "when_check_contains": "升级",
+          "reply": "问题2、3在V0.27.42已修复，现场已升级，正在观察中。",
+          "expected_next": "继续观察是否复现",
+          "result_type": "mitigation_observed",
+          "source_message_ids": [
+            "om_x100b5d485b4110b8c4ecfe14a3e2b5f",
+            "om_x100b5d4b28e878a4c10d8e409caab69"
+          ]
+        },
+        {
+          "when_check_contains": "复现",
+          "reply": "Jira评论反馈貌似新版本解决了，升级后继续观察是否再出现。",
+          "expected_next": "monitor",
+          "result_type": "mitigation_observed",
+          "source_message_ids": [
+            "om_x100b5d4b2a9630a0c36fb45c45873bb"
+          ]
+        }
+      ],
+      "escalation_target": "",
+      "safety_flags": [],
+      "max_turns": 4,
+      "metadata": {
+        "gate_scope": "seed_review",
+        "annotation_confidence": "high",
+        "target_mapping_confidence": "medium",
+        "source_episode_id": "oc_586bf97d0d6b33e1dba10a0152eecba3_202511241224000800_202511272134000800_635:episode:10",
+        "source_thread_id": "oc_586bf97d0d6b33e1dba10a0152eecba3_202511241224000800_202511272134000800_635",
+        "source_completeness": "complete",
+        "source_time_range": [
+          "2025-11-26 23:14",
+          "2025-11-27 17:00"
+        ],
+        "source_message_ids": {
+          "fault": [
+            "om_x100b5d45dd0beca4c44b65f3da24054"
+          ],
+          "diagnostic": [
+            "om_x100b5d485b4110b8c4ecfe14a3e2b5f",
+            "om_x100b5d4b28e878a4c10d8e409caab69"
+          ],
+          "resolution_or_monitoring": [
+            "om_x100b5d4b2a9630a0c36fb45c45873bb"
+          ]
+        },
+        "replay_truth": {
+          "truth_type": "mitigation_observed_not_verified_fix",
+          "check_results": [
+            {
+              "check_text": "升级到V0.27.42",
+              "result_type": "mitigation_observed",
+              "user_reply": "已升级，观察中。",
+              "evidence_message_ids": [
+                "om_x100b5d4b28e878a4c10d8e409caab69"
+              ]
+            }
+          ],
+          "review_note": "This case should not be promoted as verified_fix until no-recurrence evidence is available."
+        }
+      }
+    }
+  ]
+}

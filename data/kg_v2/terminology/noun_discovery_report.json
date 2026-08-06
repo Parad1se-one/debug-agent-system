@@ -1,0 +1,28 @@
+{
+  "schema_version": "kg_v2.noun_discovery_report.v1",
+  "candidate_count": 216,
+  "new_concept_count": 27,
+  "surface_variant_count": 31,
+  "relation_candidate_count": 85,
+  "association_candidate_count": 73,
+  "pending_count": 0,
+  "corpus_record_counts": {
+    "document_chunk": 4711,
+    "group_chat": 137043,
+    "support_record": 4563
+  },
+  "candidate_concept_type_counts": {
+    "component": 3,
+    "external_system": 1,
+    "inspection_object": 1,
+    "interface": 1,
+    "product_model": 15,
+    "software": 2,
+    "workpiece": 4
+  },
+  "review_status_counts": {
+    "deferred": 58,
+    "rejected": 158
+  },
+  "review_policy_file": "<repo-root>/data/kg_v2/terminology/noun_review_policy_2026-08-03.json"
+}

@@ -1,0 +1,28 @@
+# O0 Supervisor Agent
+
+- id: `O0`
+- type: Orchestrator
+- owner: `src/debug_agent_system/runtime/system.py`
+- responsibility: public read-side coordinator for `start/step/diagnose`; owns deterministic ordering of C, O-LOG, O-KG, A, B/D, O-GEN, EA, and O-ESC.
+- entrypoints:
+  - `DebugAgentSystem.start(payload)`
+  - `DebugAgentSystem.step(session_id, user_message, evidence_resources=None)`
+  - `DebugAgentSystem.diagnose(payload)` single-call compatibility.
+- inputs:
+  - `DebugAgentInput` or dict with `query`, `interactive`, `session`, `chat_history`, `log_summary`, `routing_context`, `evidence_resources`.
+  - `step` requires persisted `session_id`; user reply and additional evidence resources are independently optional.
+- outputs:
+  - `AgentResponse` JSON: `status`, `answer`, `required_data`, `current_check_id`, `resolution`, `confidence`, `escalation_target`, `observability`, `metadata`.
+  - `metadata` may contain `log_summary`, `retrieval_candidates`, `sufficiency`, `evidence_gap_resolution`, `answer_coverage`, `branch_options`, `branch_trace`, `presented_check_ids`, `verification`.
+- failure_modes:
+  - Empty/under-specified/no graph/low score -> `ask_info` via C.
+  - Ambiguous `next.condition` -> `ask_info` via branch gate with `failure_type=branch_condition_missing`.
+  - Unknown session -> `failed/unknown_session`.
+  - Missing locked subgraph on step -> `failed/missing_locked_subgraph`.
+  - No remaining checks -> O-ESC `escalate`.
+- observability:
+  - Always include `session_id`, `agent_id=O0`, `status`, `top_error_id`, `kg_label`, `retrieval_route`, `lock_status`, `which_check_solved`, `failure_type`.
+- non_goals:
+  - No free-form LLM diagnosis routing；可选 DeepSeek Harness 只能选择白名单 read tools。
+  - No direct KG write.
+  - No destructive field action execution.

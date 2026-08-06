@@ -1,0 +1,1796 @@
+{
+  "schema_version": "kg_v2.noun_review_decisions.v1",
+  "policy_file": "<repo-root>/data/kg_v2/terminology/noun_review_policy_2026-08-03.json",
+  "reviewed_by": "codex_full_noun_audit_2026-08-03",
+  "reviewed_at": "2026-08-03T00:00:00+00:00",
+  "candidate_count": 216,
+  "status_counts": {
+    "deferred": 58,
+    "rejected": 158
+  },
+  "policy_entries_absent_after_application": [
+    "approved_relations:component:主板电池|part_of|component:主板",
+    "approved_relations:component:固态硬盘|is_a|component:硬盘",
+    "approved_relations:component:无线网卡|is_a|component:网卡",
+    "approved_relations:component:机械硬盘|is_a|component:硬盘",
+    "approved_relations:workpiece:镂空板|is_a|workpiece:pcb",
+    "concept_decisions:CXP",
+    "concept_decisions:DL",
+    "concept_decisions:HDMI",
+    "concept_decisions:M.2",
+    "concept_decisions:OCR",
+    "concept_decisions:ODA",
+    "concept_decisions:ODB",
+    "concept_decisions:PCIe",
+    "concept_decisions:PLC",
+    "concept_decisions:SMEMA",
+    "concept_decisions:USB",
+    "concept_decisions:串口",
+    "concept_decisions:主板电池",
+    "concept_decisions:传感器",
+    "concept_decisions:光控板",
+    "concept_decisions:内存条",
+    "concept_decisions:压块",
+    "concept_decisions:固件",
+    "concept_decisions:固态硬盘",
+    "concept_decisions:挡块",
+    "concept_decisions:无线网卡",
+    "concept_decisions:机械硬盘",
+    "concept_decisions:气缸",
+    "concept_decisions:滚轮",
+    "concept_decisions:电机",
+    "concept_decisions:皮带",
+    "concept_decisions:硬盘",
+    "concept_decisions:网口",
+    "concept_decisions:网线",
+    "concept_decisions:调宽轴",
+    "concept_decisions:采集卡",
+    "concept_decisions:金板",
+    "concept_decisions:锡膏",
+    "concept_decisions:镂空板",
+    "concept_decisions:风扇",
+    "concept_decisions:驱动",
+    "variant_decisions:AOI",
+    "variant_decisions:CXP接口",
+    "variant_decisions:Defender",
+    "variant_decisions:SI-1020E",
+    "variant_decisions:SI-2020D",
+    "variant_decisions:SI-2020T",
+    "variant_decisions:SI-2030",
+    "variant_decisions:SSD",
+    "variant_decisions:USB口",
+    "variant_decisions:USB接口",
+    "variant_decisions:感应器",
+    "variant_decisions:运控卡"
+  ],
+  "decisions": [
+    {
+      "review_id": "noun-discovery:ebc28b46a6c6f635",
+      "candidate_kind": "new_noun_concept",
+      "identity": "板卡",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "仅在AOI待测工件上下文映射PCB；排除出板卡住和扩展板卡语境。"
+    },
+    {
+      "review_id": "noun-discovery:7b332db4b05ea28e",
+      "candidate_kind": "new_noun_concept",
+      "identity": "Qt",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "同时命中Qt框架、日志命名空间和团队称呼，需拆义。"
+    },
+    {
+      "review_id": "noun-discovery:7fff490f6debcce8",
+      "candidate_kind": "new_noun_concept",
+      "identity": "大板",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "可能表示大尺寸PCB、设备大板模式或标定语境，需拆义。"
+    },
+    {
+      "review_id": "noun-discovery:9ad9b195ce8c97cb",
+      "candidate_kind": "new_noun_concept",
+      "identity": "电源",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "同时表示工作站电源模块、外部供电条件和企业专名，需拆义。"
+    },
+    {
+      "review_id": "noun-discovery:c580010378b5a7f2",
+      "candidate_kind": "new_noun_concept",
+      "identity": "治具",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "稳定实体但当前inspection_object类型错误；需补充fixture/tooling类型。"
+    },
+    {
+      "review_id": "noun-discovery:756be2888b26cb0f",
+      "candidate_kind": "new_noun_concept",
+      "identity": "顶升",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "裸词同时表示顶升机构、顶升板和动作，需拆义。"
+    },
+    {
+      "review_id": "noun-discovery:a92a30127f82045a",
+      "candidate_kind": "new_noun_concept",
+      "identity": "弯板",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "应表达为PCB的deformation=bent属性，不建永久物理子类。"
+    },
+    {
+      "review_id": "noun-discovery:2d978e857349a49d",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1020T",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:0bf1e14b507b3df7",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI252T",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:ec185ad9166285b6",
+      "candidate_kind": "new_noun_concept",
+      "identity": "急停",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "裸词同时表示急停按钮、急停回路、状态和操作，需拆义。"
+    },
+    {
+      "review_id": "noun-discovery:2dc582cbbd786083",
+      "candidate_kind": "new_noun_concept",
+      "identity": "数据库",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "同时表示数据库服务、逻辑数据存储和数据库文件，当前software类型过粗。"
+    },
+    {
+      "review_id": "noun-discovery:987a417e40d96894",
+      "candidate_kind": "new_noun_concept",
+      "identity": "EAP",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "虽有外部系统证据，但客户EAP、协议和服务实例边界尚未统一。"
+    },
+    {
+      "review_id": "noun-discovery:ee270615beea890e",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI2020C",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:d9402145d1726d6e",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI2030L",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:a1446c9cf1c1bd48",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1020",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:7a49a6b0684951f2",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1020C",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:1ce0d9d805b76e36",
+      "candidate_kind": "new_noun_concept",
+      "identity": "DP",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "裸缩写存在DisplayPort和其他技术缩写歧义，保留上下文消歧。"
+    },
+    {
+      "review_id": "noun-discovery:cfeab08c5d6e5844",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI252L",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:3e7824f63fa943c1",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI2020",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:26952ee4af8673ba",
+      "candidate_kind": "new_noun_concept",
+      "identity": "薄板",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "应表达为PCB的thickness_class=thin属性，不建永久物理子类。"
+    },
+    {
+      "review_id": "noun-discovery:806f5b92f8e092b9",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SY2600D",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:266d5a3546130b20",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI2020L",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:fc2a3ed44f8843da",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI252",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:97689086536045b5",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1030T",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:707fcbc759cb820e",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1020L",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:56b963813eeaf51d",
+      "candidate_kind": "new_noun_concept",
+      "identity": "1200D",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "裸型号缺少产品系列前缀和权威主数据。"
+    },
+    {
+      "review_id": "noun-discovery:e9c304cd22f9ab80",
+      "candidate_kind": "new_noun_concept",
+      "identity": "SI1030",
+      "action": "defer",
+      "decision_source": "concept_decisions",
+      "note": "产品型号需与权威产品主数据核对。"
+    },
+    {
+      "review_id": "noun-discovery:858ab318a2fa8d3f",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "RGB",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:46ed6c20c7b082da",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "252T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:dfebac73f78cd54e",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2020D",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:0e1ea7643c84670c",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "1020T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:60c4d7f1149ce322",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-2030T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:08d997b3d212ab6f",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1020T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:10f072c6b167e7f1",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1020",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:c52bd19457ec0d27",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2030L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:2838ad16ca9428d1",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1020D",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:f1926cc60a514bb7",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-2020C",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:350b20586febeb2a",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-252T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:ced7b739f26ff4c1",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "1020C",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:e96f2a4cf67dd01e",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2020C",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:730e3be19094bcca",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "1020E",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:dbb2198471bee30e",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2020t",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:7e9504630190a1e6",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "252L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:8960d6b40a1ba2aa",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-2020",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:b0f36dfa3b1d7dba",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-2030L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:24db4292ecbcf591",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI1020D",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:58716dae28110400",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-252",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:4bf48042744bae35",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2020L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:f43536429c35f11b",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1020C",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:64064f6fc2467b07",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "1030T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:bf1cd202d0c397d6",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "2600D",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:e7cb162b2c139b51",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1020L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:63db579e2e47a443",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1030",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:ee5aa62e7bee11ee",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI2030T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:84f05fb5d32b1aa9",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SY-2600D",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:0e07df72254145a5",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-1030T",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:fca9440de0c2b52c",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI-252L",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:b672eae783ba0f6f",
+      "candidate_kind": "noun_surface_variant",
+      "identity": "SI_1020",
+      "action": "defer",
+      "decision_source": "variant_default",
+      "note": "未批准的变体为歧义缩写、上下文受限表达或尚未核验的产品型号短写。"
+    },
+    {
+      "review_id": "noun-discovery:772849262f09863c",
+      "candidate_kind": "noun_relation",
+      "identity": "workpiece:板卡|is_a|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:1a350b3d9bf3b4d2",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:器件|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:de7b696d96e45f7b",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:焊盘|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:9ca9677a99bce440",
+      "candidate_kind": "noun_relation",
+      "identity": "external_system:mes|communicates_with|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:790cf0c7097bd058",
+      "candidate_kind": "noun_relation",
+      "identity": "sdk:sdk|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:92ddfd625012cb4e",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:mark点|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:5a7efeb94fb13ae3",
+      "candidate_kind": "noun_relation",
+      "identity": "software:buddy|runs_on|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:3dec2bc851fa467e",
+      "candidate_kind": "noun_relation",
+      "identity": "subsystem:cad|input_of|station:编程站",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:515c1c27640f6a92",
+      "candidate_kind": "noun_relation",
+      "identity": "component:加密狗|connected_to|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:4e378f5c1e501be5",
+      "candidate_kind": "noun_relation",
+      "identity": "component:轨道|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:83393945479ff970",
+      "candidate_kind": "noun_relation",
+      "identity": "identifier:料号|identifies|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:d849c2c7c4dd2de3",
+      "candidate_kind": "noun_relation",
+      "identity": "identifier:序列号|identifies|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:450262e7600989a2",
+      "candidate_kind": "noun_relation",
+      "identity": "identifier:条码|identifies|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:eb8c3fc01cb30ab3",
+      "candidate_kind": "noun_relation",
+      "identity": "data_artifact:整板大图|output_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:b4f341966e7198db",
+      "candidate_kind": "noun_relation",
+      "identity": "driver:设备驱动程序|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:6d1ed26a304df1bf",
+      "candidate_kind": "noun_relation",
+      "identity": "data_artifact:白图|output_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:f225d9d788e285dc",
+      "candidate_kind": "noun_relation",
+      "identity": "component:显卡|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:894c29fdc9cf64f2",
+      "candidate_kind": "noun_relation",
+      "identity": "component:硬盘|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:10d550b8314e4e72",
+      "candidate_kind": "noun_relation",
+      "identity": "equipment:接驳台|connected_to|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:32f3b40e6a160e03",
+      "candidate_kind": "noun_relation",
+      "identity": "workpiece:标准金板|is_a|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:07903857b263e54a",
+      "candidate_kind": "noun_relation",
+      "identity": "component:传感器|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:ce915e41d1766b56",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:led|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:06fc6f8ee6c448f3",
+      "candidate_kind": "noun_relation",
+      "identity": "component:网卡|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:5883d90de12e742c",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:chip|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:794d4c3809e89446",
+      "candidate_kind": "noun_relation",
+      "identity": "workpiece:大板|is_a|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:c18d4faaf5039c10",
+      "candidate_kind": "noun_relation",
+      "identity": "component:输送皮带|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:3b08a9fb4a00a353",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:ic|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:913fed3e0f739e95",
+      "candidate_kind": "noun_relation",
+      "identity": "equipment:收板机|connected_to|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:2a3ed2aeb1d013b2",
+      "candidate_kind": "noun_relation",
+      "identity": "component:内存条|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:fffe547212982f4b",
+      "candidate_kind": "noun_relation",
+      "identity": "component:cpu|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:f9ef21d24b55113c",
+      "candidate_kind": "noun_relation",
+      "identity": "component:电源|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:2181a52ee3477b77",
+      "candidate_kind": "noun_relation",
+      "identity": "inspection_object:治具|connected_to|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:d70bb2b284dd9252",
+      "candidate_kind": "noun_relation",
+      "identity": "data_artifact:rgb图|output_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:f4fc91eaa76ab2b5",
+      "candidate_kind": "noun_relation",
+      "identity": "component:主板|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:bc51f1bc9ea97f94",
+      "candidate_kind": "noun_relation",
+      "identity": "component:显示器|connected_to|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:7822dda80eaabd83",
+      "candidate_kind": "noun_relation",
+      "identity": "component:鼠标|connected_to|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:4d18ed0cede583f6",
+      "candidate_kind": "noun_relation",
+      "identity": "component:键盘|connected_to|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:4d6d9724c5f02b30",
+      "candidate_kind": "noun_relation",
+      "identity": "component:进板挡块|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:ee40caaf0f92960f",
+      "candidate_kind": "noun_relation",
+      "identity": "data_artifact:gerber工程数据|input_of|station:编程站",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:5dee67dadbeb6c00",
+      "candidate_kind": "noun_relation",
+      "identity": "package_type:qfn|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:fd2465efa20d4fc5",
+      "candidate_kind": "noun_relation",
+      "identity": "package_type:bga|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:a2b92b243caf1752",
+      "candidate_kind": "noun_relation",
+      "identity": "component:顶升|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:b7db0c7bbdb34f65",
+      "candidate_kind": "noun_relation",
+      "identity": "component:气缸|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:029b6b91fca876ad",
+      "candidate_kind": "noun_relation",
+      "identity": "interface:cxp接口|connected_to|equipment:相机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:40b99ff7dd9977a1",
+      "candidate_kind": "noun_relation",
+      "identity": "component:图像采集卡|connected_to|equipment:相机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:d371a9cc96795736",
+      "candidate_kind": "noun_relation",
+      "identity": "component:散热风扇|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:e9f2be66b875a273",
+      "candidate_kind": "noun_relation",
+      "identity": "workpiece:弯板|is_a|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:f1093d39e1126460",
+      "candidate_kind": "noun_relation",
+      "identity": "component:gpu|part_of|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:05bc7e09b213adab",
+      "candidate_kind": "noun_relation",
+      "identity": "software:cuda|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:cd89b80309577d3c",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1020t|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:e99686d63cf5fc99",
+      "candidate_kind": "noun_relation",
+      "identity": "firmware:bios|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:aa4999bfc2694b9d",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si252t|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:171de36c7b7b4060",
+      "candidate_kind": "noun_relation",
+      "identity": "component:急停|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:3a253042cd4947dc",
+      "candidate_kind": "noun_relation",
+      "identity": "package_type:qfp|part_of|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:3c5887a4fa64c71c",
+      "candidate_kind": "noun_relation",
+      "identity": "component:电机|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:fbff478484ec3b09",
+      "candidate_kind": "noun_relation",
+      "identity": "external_system:eap|communicates_with|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:2b63424b20dab0d2",
+      "candidate_kind": "noun_relation",
+      "identity": "component:光源控制器|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:d4f0504bc5c5e862",
+      "candidate_kind": "noun_relation",
+      "identity": "configuration_file:machine.toml|part_of|software:主程序",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:40449aee1936f9d1",
+      "candidate_kind": "noun_relation",
+      "identity": "component:压块|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:8c7e69ccd5973a13",
+      "candidate_kind": "noun_relation",
+      "identity": "interface:smema接口|connected_to|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:47bd08b268a1f692",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si2020c|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:8cf333c3d7dfc044",
+      "candidate_kind": "noun_relation",
+      "identity": "data_artifact:bom物料清单|input_of|station:编程站",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:16a4b8491d02452f",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si2030l|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:2f2984fd7e740bab",
+      "candidate_kind": "noun_relation",
+      "identity": "software:winpe|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:918354b1b50c0137",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1020|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:39174ff3bcc79d37",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1020c|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:206f27eee9c1885a",
+      "candidate_kind": "noun_relation",
+      "identity": "equipment:上板机|connected_to|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:c717907cb3d42a9c",
+      "candidate_kind": "noun_relation",
+      "identity": "component:plc控制器|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:4c3a1fe17e10b154",
+      "candidate_kind": "noun_relation",
+      "identity": "component:输送滚轮|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:3e59f214c92c6082",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si252l|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:33c067fe048b7b4d",
+      "candidate_kind": "noun_relation",
+      "identity": "software:display driver uninstaller|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:ba646de0285c034f",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si2020|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:7cdebcbba8ae7405",
+      "candidate_kind": "noun_relation",
+      "identity": "workpiece:薄板|is_a|workpiece:pcb",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:e5ef2e85386a413b",
+      "candidate_kind": "noun_relation",
+      "identity": "component:运动控制卡|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:98526ad534c06061",
+      "candidate_kind": "noun_relation",
+      "identity": "component:光源控制板|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:1b4087a69cc0850b",
+      "candidate_kind": "noun_relation",
+      "identity": "software:microsoft defender|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:663a5ef08a152855",
+      "candidate_kind": "noun_relation",
+      "identity": "component:调宽轴|part_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:41a4bfdbf6355999",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:sy2600d|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:c976efe783cba780",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si2020l|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:34cd03abf998c647",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si252|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:94dc4528e693d2bd",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1030t|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:b3ad6d72aa54a924",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1020l|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:4d3988c0d4c4480d",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:1200d|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:1039885568020a25",
+      "candidate_kind": "noun_relation",
+      "identity": "software:dism++|runs_on|equipment:工控机",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:790c4e9a52106530",
+      "candidate_kind": "noun_relation",
+      "identity": "product_model:si1030|model_of|equipment:aoi设备",
+      "action": "reject",
+      "decision_source": "relation_default",
+      "note": "仅由语料共现生成，或关系层级/方向过粗；不得直接写入权威本体。"
+    },
+    {
+      "review_id": "noun-discovery:03f3a8122a6429ca",
+      "candidate_kind": "noun_association",
+      "identity": "software:程序|associated_with|workpiece:板卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:109c2fa00b70a4c1",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:器件|associated_with|workpiece:板卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:756338c20bb68dd7",
+      "candidate_kind": "noun_association",
+      "identity": "external_system:jira|associated_with|inspection_object:器件",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:4dd0a9084a7f552e",
+      "candidate_kind": "noun_association",
+      "identity": "software:spc|associated_with|software:导出",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:9a59b6ef7e82dec9",
+      "candidate_kind": "noun_association",
+      "identity": "external_system:jira|associated_with|workpiece:板卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:c21bbfe41ad09082",
+      "candidate_kind": "noun_association",
+      "identity": "external_system:jira|associated_with|software:程序",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:264bbb8ffffe8ca8",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:器件|associated_with|inspection_object:焊盘",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:cb10bc0d9f6d7e8f",
+      "candidate_kind": "noun_association",
+      "identity": "software:模板|associated_with|software:程序",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:1cd33f7e454cfd29",
+      "candidate_kind": "noun_association",
+      "identity": "data_artifact:rgb图|associated_with|data_artifact:白图",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:0616de39ab45b3fb",
+      "candidate_kind": "noun_association",
+      "identity": "software:buddy|associated_with|software:主程序",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:6dc006cc6a7fd26e",
+      "candidate_kind": "noun_association",
+      "identity": "software:buddy|associated_with|station:复判站",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:8e5319ebb4c0b972",
+      "candidate_kind": "noun_association",
+      "identity": "component:加密狗|associated_with|station:复判站",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:0ad5e20673a4900e",
+      "candidate_kind": "noun_association",
+      "identity": "external_system:mes|associated_with|identifier:条码",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:f67e600b0aa34443",
+      "candidate_kind": "noun_association",
+      "identity": "software:主程序|associated_with|station:复判站",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:7a0ebc847875fde8",
+      "candidate_kind": "noun_association",
+      "identity": "external_system:mes|associated_with|software:buddy",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:33d1cb3420df155b",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:chip|associated_with|inspection_object:焊盘",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:80c1e040735590a9",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:ic|associated_with|software:spc",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:b566469a443973dd",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:mark点|associated_with|software:模板",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:67004104a9cea981",
+      "candidate_kind": "noun_association",
+      "identity": "sdk:sdk|associated_with|software:winpe",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:435d57d5a251afb8",
+      "candidate_kind": "noun_association",
+      "identity": "sdk:sdk|associated_with|software:qt",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:8c4e88619c83cbd0",
+      "candidate_kind": "noun_association",
+      "identity": "equipment:相机|associated_with|software:主程序",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:865980ff3314b269",
+      "candidate_kind": "noun_association",
+      "identity": "software:qt|associated_with|software:winpe",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:cbd62a683ce8d783",
+      "candidate_kind": "noun_association",
+      "identity": "equipment:扫码枪|associated_with|external_system:mes",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:d64e6e33b932fad2",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:焊盘|associated_with|material:锡膏",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:606f5af641acdad9",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:led|associated_with|sdk:sdk",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:6963960dd77fee76",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:led|associated_with|software:winpe",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:129d616740a14955",
+      "candidate_kind": "noun_association",
+      "identity": "component:网卡|associated_with|equipment:相机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:5d0a6d1f9df602a9",
+      "candidate_kind": "noun_association",
+      "identity": "equipment:扫码枪|associated_with|identifier:条码",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:4c33472255a0cc4e",
+      "candidate_kind": "noun_association",
+      "identity": "component:加密狗|associated_with|inspection_object:ic",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:ed66a81f7043d546",
+      "candidate_kind": "noun_association",
+      "identity": "component:光源|associated_with|equipment:相机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:f065b41ec3fd2d66",
+      "candidate_kind": "noun_association",
+      "identity": "component:键盘|associated_with|component:鼠标",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:3ed542643bf7548d",
+      "candidate_kind": "noun_association",
+      "identity": "identifier:料号|associated_with|software:模板",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:9fcff2cb1c059724",
+      "candidate_kind": "noun_association",
+      "identity": "component:光源|associated_with|data_artifact:rgb图",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:84f70e2714b664c6",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:led|associated_with|software:qt",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:d5d2dd16752faa40",
+      "candidate_kind": "noun_association",
+      "identity": "identifier:料号|associated_with|inspection_object:chip",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:c8f28c49c3d38fb5",
+      "candidate_kind": "noun_association",
+      "identity": "identifier:料号|associated_with|inspection_object:ic",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:1bdc53470d71e94c",
+      "candidate_kind": "noun_association",
+      "identity": "component:电源|associated_with|equipment:工控机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:97dc108444bb86ab",
+      "candidate_kind": "noun_association",
+      "identity": "component:轨道|associated_with|inspection_object:mark点",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:7d19e69f20312150",
+      "candidate_kind": "noun_association",
+      "identity": "component:cpu|associated_with|component:内存",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:f44cbf4ee9bb5592",
+      "candidate_kind": "noun_association",
+      "identity": "component:内存|associated_with|component:硬盘",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:1f803bee84cb754c",
+      "candidate_kind": "noun_association",
+      "identity": "component:内存条|associated_with|equipment:工控机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:6849e75fd89dc43d",
+      "candidate_kind": "noun_association",
+      "identity": "component:内存|associated_with|software:windows",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:ce958ff25ee9539e",
+      "candidate_kind": "noun_association",
+      "identity": "component:主板|associated_with|equipment:工控机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:fe6a048f1ce0f6dd",
+      "candidate_kind": "noun_association",
+      "identity": "component:内存条|associated_with|component:显卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:1a2193882c4425d1",
+      "candidate_kind": "noun_association",
+      "identity": "component:主板|associated_with|component:显卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:580b0f811e7839c1",
+      "candidate_kind": "noun_association",
+      "identity": "equipment:接驳台|associated_with|equipment:缓存机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:8180161fefc0f077",
+      "candidate_kind": "noun_association",
+      "identity": "component:cpu|associated_with|component:gpu",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:1a502ec0dde59fca",
+      "candidate_kind": "noun_association",
+      "identity": "identifier:二维码|associated_with|identifier:条码",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:acf591fde41b570e",
+      "candidate_kind": "noun_association",
+      "identity": "component:显卡|associated_with|driver:显卡驱动",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:ac8050edb76f0277",
+      "candidate_kind": "noun_association",
+      "identity": "component:传感器|associated_with|workpiece:镂空板",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:89d9ae202ecf58f4",
+      "candidate_kind": "noun_association",
+      "identity": "component:光源|associated_with|data_artifact:白图",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:0826b10d73dff902",
+      "candidate_kind": "noun_association",
+      "identity": "component:传感器|associated_with|component:轨道",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:01bb1084cb29fd15",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:mark点|associated_with|workpiece:弯板",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:c1f3c22ba5792213",
+      "candidate_kind": "noun_association",
+      "identity": "component:气缸|associated_with|component:顶升",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:dedef26298fe14f5",
+      "candidate_kind": "noun_association",
+      "identity": "component:轨道|associated_with|equipment:收板机",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:f3564881a111e14f",
+      "candidate_kind": "noun_association",
+      "identity": "equipment:aoi设备|associated_with|equipment:接驳台",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:7e4ad1c164a711e0",
+      "candidate_kind": "noun_association",
+      "identity": "component:硬盘|associated_with|workpiece:大板",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:b57fce6734c075c8",
+      "candidate_kind": "noun_association",
+      "identity": "component:网卡|associated_with|driver:网卡驱动",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:251a7d79049039b2",
+      "candidate_kind": "noun_association",
+      "identity": "component:cpu|associated_with|component:电源",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:a267a888b7fbae37",
+      "candidate_kind": "noun_association",
+      "identity": "component:主板|associated_with|firmware:bios",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:8f5cbda5d7a1b9b3",
+      "candidate_kind": "noun_association",
+      "identity": "component:传感器|associated_with|equipment:接驳台",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:35179ad2a9b00622",
+      "candidate_kind": "noun_association",
+      "identity": "inspection_object:chip|associated_with|software:dl算法",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:c6fa934b0c7fd148",
+      "candidate_kind": "noun_association",
+      "identity": "driver:显卡驱动|associated_with|software:cuda",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:769b26b816df937b",
+      "candidate_kind": "noun_association",
+      "identity": "component:显示器|associated_with|component:电源",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:3b8441b1f1e4a7f5",
+      "candidate_kind": "noun_association",
+      "identity": "component:机械硬盘|associated_with|component:硬盘",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:0e5a3e28f16fccab",
+      "candidate_kind": "noun_association",
+      "identity": "firmware:bios|associated_with|software:windows",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:436e439f5a82e27d",
+      "candidate_kind": "noun_association",
+      "identity": "driver:显卡驱动|associated_with|software:windows",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:fc3f343e283ec2c7",
+      "candidate_kind": "noun_association",
+      "identity": "component:显示器|associated_with|interface:dp",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:bf228f04cf56c4e7",
+      "candidate_kind": "noun_association",
+      "identity": "component:无线网卡|associated_with|component:网卡",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:7bfbaccb9be2ac74",
+      "candidate_kind": "noun_association",
+      "identity": "package_type:bga|associated_with|package_type:qfn",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:61d77bbb1d30bc33",
+      "candidate_kind": "noun_association",
+      "identity": "component:内存条|associated_with|firmware:bios",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:03202a59e540238a",
+      "candidate_kind": "noun_association",
+      "identity": "component:显示器|associated_with|component:鼠标",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    },
+    {
+      "review_id": "noun-discovery:b6ad70c51aa8c1fd",
+      "candidate_kind": "noun_association",
+      "identity": "component:键盘|associated_with|interface:usb接口",
+      "action": "reject",
+      "decision_source": "association_default",
+      "note": "弱关联仅反映共现，不作为权威实体关系；保留在检索统计而不入本体。"
+    }
+  ]
+}

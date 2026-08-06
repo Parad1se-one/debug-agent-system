@@ -1,0 +1,999 @@
+{
+  "schema_version": "kg_v2.terminology_report.v2",
+  "terminology_version": "kg_v2.debug_terminology.v4",
+  "revision": "1e1240e485ca3fe48edd5b426a1f7b8e55215e33389e417bbb9029b0c787320b",
+  "concept_count": 1148,
+  "expression_count": 1515,
+  "sense_count": 1629,
+  "concept_counts": {
+    "category": 3,
+    "component": 47,
+    "configuration_file": 9,
+    "connection": 10,
+    "data_artifact": 8,
+    "database_file": 4,
+    "diagnostic_artifact": 2,
+    "driver": 5,
+    "equipment": 18,
+    "external_system": 2,
+    "fault_variant": 162,
+    "firmware": 3,
+    "identifier": 4,
+    "inspection_object": 6,
+    "interface": 14,
+    "log_artifact": 1,
+    "material": 1,
+    "operation": 551,
+    "package_type": 3,
+    "phase": 67,
+    "product_model": 9,
+    "protocol": 9,
+    "runtime_process": 2,
+    "sdk": 3,
+    "software": 29,
+    "software_artifact": 8,
+    "station": 3,
+    "subsystem": 101,
+    "symptom": 57,
+    "workpiece": 3,
+    "workstation": 4
+  },
+  "sense_counts": {
+    "abbreviation": 21,
+    "canonical": 1094,
+    "colloquial_alias": 22,
+    "english_equivalent": 1,
+    "exact_synonym": 18,
+    "search_hint": 472,
+    "typo_variant": 1
+  },
+  "relation_counts": {
+    "artifact_of": 6,
+    "associated_with": 1,
+    "broader_concept": 162,
+    "communicates_with": 1,
+    "compatible_with": 1,
+    "concept_context": 1745,
+    "configuration_of": 1,
+    "connected_to": 27,
+    "connected_via": 20,
+    "context_member": 111,
+    "deployed_at": 3,
+    "driver_of": 3,
+    "endpoint_of": 10,
+    "expression_has_sense": 1629,
+    "firmware_of": 2,
+    "has_component": 5,
+    "has_interface": 10,
+    "installed_in": 4,
+    "is_a": 27,
+    "mentions_concept": 393,
+    "model_of": 1,
+    "part_of": 39,
+    "powered_by": 1,
+    "primary_concept": 804,
+    "processed_by": 1,
+    "runs_on": 9,
+    "sdk_for": 1,
+    "sense_denotes": 1629,
+    "signals_to": 2,
+    "uses_protocol": 9
+  },
+  "ambiguous_expression_count": 90,
+  "ambiguous_expressions": [
+    {
+      "term_id": "term:00b57f8c6317297a",
+      "surface_form": "machine.toml",
+      "concept_count": 5,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:c611f412fd3b6ef9",
+      "surface_form": "镂空板",
+      "concept_count": 5,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:aa4d22c6d4f80896",
+      "surface_form": "复判站",
+      "concept_count": 4,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:4568e350b9a1d0f4",
+      "surface_form": "显卡驱动",
+      "concept_count": 4,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:e2284dc3b5535645",
+      "surface_form": "Buddy",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:2afe5e26e9c8cbec",
+      "surface_form": "CAD",
+      "concept_count": 3,
+      "relation_types": [
+        "abbreviation",
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:8ec6c44eef874ddc",
+      "surface_form": "D盘",
+      "concept_count": 3,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:57e25a264b7e90d1",
+      "surface_form": "SPC文件清理",
+      "concept_count": 3,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:4d806a3ec07d1fc2",
+      "surface_form": "mark点对齐失败",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:65c92f946064d809",
+      "surface_form": "user.cfg.toml",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:1804876e9e229abf",
+      "surface_form": "感应器挡片",
+      "concept_count": 3,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:3c7925a02997f1ad",
+      "surface_form": "收集日志",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:31d3f9e5e25d38df",
+      "surface_form": "模板管理",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:6b48c5c57b321d55",
+      "surface_form": "相机IP",
+      "concept_count": 3,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:a23697915fef5e61",
+      "surface_form": "相机固件",
+      "concept_count": 3,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:33a3140831d6e8cf",
+      "surface_form": "闪退",
+      "concept_count": 3,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:decc3d3c65b241e1",
+      "surface_form": "50-80mm",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:4271e3036ef99134",
+      "surface_form": "ARM连接",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:9946867cfca2ba1e",
+      "surface_form": "Buddy问题",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:ca73f71290ddf8a4",
+      "surface_form": "CAD 导入失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:5a5ec5039a6c580e",
+      "surface_form": "CAD 角度不一致",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:68ab84f7c6d0f578",
+      "surface_form": "CPU",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:f8dcb34308e5c69f",
+      "surface_form": "CT",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:ed9ef1dd42481524",
+      "surface_form": "CT 时间异常增加",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:43c06c86c8119858",
+      "surface_form": "CXP线",
+      "concept_count": 2,
+      "relation_types": [
+        "colloquial_alias",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:7246d2b2b9ceb9cb",
+      "surface_form": "Defender",
+      "concept_count": 2,
+      "relation_types": [
+        "abbreviation",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:6e1648e3db530773",
+      "surface_form": "D盘消失导致Buddy冷存储写入失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:e3c5ba51dba85ab0",
+      "surface_form": "GPU",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:1e32847769dc4a15",
+      "surface_form": "Jira",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:a0b38335e7b3f921",
+      "surface_form": "M.2网卡",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:057b5f99041decd6",
+      "surface_form": "MES配置",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:6201eb4dccc956cc",
+      "surface_form": "Mark",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:1fd84196766ed3ee",
+      "surface_form": "Mark点",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:1541eb3e8db587c7",
+      "surface_form": "OCR",
+      "concept_count": 2,
+      "relation_types": [
+        "abbreviation",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:8d2cc5e694bfcbe4",
+      "surface_form": "SPC",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:04b961957b4302de",
+      "surface_form": "USB",
+      "concept_count": 2,
+      "relation_types": [
+        "abbreviation",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:eca509d84dfd4ba5",
+      "surface_form": "buddy-data",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:c4197e33b2bf7889",
+      "surface_form": "buddy安装报错",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:7721fded3f00f2be",
+      "surface_form": "cold_results",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:0c326c4f02797b08",
+      "surface_form": "conf",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:34e4c8ec26ca658c",
+      "surface_form": "host.db",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:61e02d96a75c79ab",
+      "surface_form": "meta.json",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:f8676ae6c7678d6f",
+      "surface_form": "stats.db",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:26d594bad57606e4",
+      "surface_form": "timeout_output_board_out_of_output_spot_in_sec",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:16454fb74739f255",
+      "surface_form": "丢帧",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:b94bfa9837fb31cd",
+      "surface_form": "主板电池",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:b7da228540276988",
+      "surface_form": "主程序",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:3116c9bfabbe73ee",
+      "surface_form": "光控",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:339a83e536972eda",
+      "surface_form": "光控通信异常",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:da36427ade93725d",
+      "surface_form": "光源控制器",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:7d8f8c37ec7885bc",
+      "surface_form": "内存",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:fdf6295303ad813b",
+      "surface_form": "内存条",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:510bf6658b686b3c",
+      "surface_form": "出板失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:61c0f530fb0b9f16",
+      "surface_form": "加密狗",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:b86c7bd8e8033d71",
+      "surface_form": "加载板卡失败",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:34f0786f9925ed78",
+      "surface_form": "加载用户配置失败",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:f59fcf64b0ad0037",
+      "surface_form": "喇叭口",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:bb0d175d4f6a9327",
+      "surface_form": "复判报保存结果失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:ff802e96d3522905",
+      "surface_form": "复判站出图慢",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:a9069a22e421e936",
+      "surface_form": "工控机异常重启",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:654c65d7b233a5bb",
+      "surface_form": "工控机黑屏无显示",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:cbabb050a91208e3",
+      "surface_form": "弯板",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:0f2a42b2183531f1",
+      "surface_form": "扫码枪",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:ff3502543b88c972",
+      "surface_form": "拍摄失败",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:1244460662fc089d",
+      "surface_form": "拼图错位",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:825ae0bcaf15f26c",
+      "surface_form": "接料带",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:a6367e1687a739d4",
+      "surface_form": "收板机",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:0296a21ab10211c8",
+      "surface_form": "显卡",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:26f2312b586f8f1b",
+      "surface_form": "更换顶升气缸",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:783106ef913941fb",
+      "surface_form": "替代料",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:9874ec3ce1cfcb98",
+      "surface_form": "标定轨道宽度",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:cab4ff34ec54332b",
+      "surface_form": "检查电源线",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:a5ffe74daffa82ce",
+      "surface_form": "检查设备前后门是否关闭",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:c91f7f433b1d7174",
+      "surface_form": "检测框",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:ee54ecc8220bcaa3",
+      "surface_form": "模板匹配",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:76759c40bb413fc1",
+      "surface_form": "油污",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:b2e538a7903bbcc5",
+      "surface_form": "滚轮",
+      "concept_count": 2,
+      "relation_types": [
+        "colloquial_alias",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:c791e4211b8aa9d7",
+      "surface_form": "用户配置加载失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:64ab205b3e45f134",
+      "surface_form": "相机 SDK",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:90f7fa5e134ed3f9",
+      "surface_form": "程序初始化失败",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:2741a336d04334bd",
+      "surface_form": "网口配置",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:65dca53e2e8db3af",
+      "surface_form": "老版本模组电源输出线接口松动导致供电中断",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:a9b40af35cd99d86",
+      "surface_form": "自动重启",
+      "concept_count": 2,
+      "relation_types": [
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:5501c9e3207ae64b",
+      "surface_form": "蓝屏",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:2a45d5f591ca8bbf",
+      "surface_form": "角度标定",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:90571bfdfdfcec86",
+      "surface_form": "设备主程序和工厂程序均无法打开",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:304ba7a5a051fa83",
+      "surface_form": "轨道宽度无法调节",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:276d6718ad556cdb",
+      "surface_form": "运控卡",
+      "concept_count": 2,
+      "relation_types": [
+        "abbreviation",
+        "canonical"
+      ]
+    },
+    {
+      "term_id": "term:cba8d09bb7796a6a",
+      "surface_form": "进板不到位",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical",
+        "search_hint"
+      ]
+    },
+    {
+      "term_id": "term:9811c3c8f0e9d8c6",
+      "surface_form": "进板失败",
+      "concept_count": 2,
+      "relation_types": [
+        "canonical"
+      ]
+    }
+  ],
+  "legacy_concept_count": 64,
+  "legacy_concept_ids": [
+    "concept:01f88cac988d394a",
+    "concept:020b023c65a90f34",
+    "concept:039627dea00f125d",
+    "concept:080398cf4c4bb472",
+    "concept:084aa73ef14c215d",
+    "concept:09668b41bf59fb39",
+    "concept:0a751ce1c039b033",
+    "concept:0c449dbce75e1e9e",
+    "concept:0c45f66c3d8d3be6",
+    "concept:14a3ae0f9d785a13",
+    "concept:16a4325673600780",
+    "concept:19a85d3115817057",
+    "concept:1ab4c70938acbf2f",
+    "concept:1e004fb78f2b23e3",
+    "concept:1f14892ad6b57366",
+    "concept:1fbbdde0a013a5f1",
+    "concept:28dc314783b3722d",
+    "concept:296b91319446740a",
+    "concept:2a43ffbef8bf8ce8",
+    "concept:38eb45d43f8587ef",
+    "concept:43286ccd53ea7aba",
+    "concept:447fb0b3506697ad",
+    "concept:49442d98635d302c",
+    "concept:4c87821617c3e5d7",
+    "concept:4fef8ad0964286a2",
+    "concept:5288e660d9a61ce4",
+    "concept:5bb732601f4cb3ff",
+    "concept:5f987102b3056c0e",
+    "concept:6220c599a30ebb73",
+    "concept:6627c0d5633543f3",
+    "concept:666e6dd9e87e2f94",
+    "concept:69548795f048ab55",
+    "concept:6d4174f65221b31b",
+    "concept:7d8d0e65e7613af0",
+    "concept:7e9be58e3fd3fedb",
+    "concept:7eedb4afd9894163",
+    "concept:7eef4e179dc63705",
+    "concept:875cd30ddce5f0e2",
+    "concept:87cee1cd2e040659",
+    "concept:87fcd06872450c39",
+    "concept:8effc7aed1cfcc06",
+    "concept:900c7176fae87e63",
+    "concept:93abbb3a0658fd86",
+    "concept:962cd947bd25aa4f",
+    "concept:98a8931b6d5b4806",
+    "concept:99239ca2489a2218",
+    "concept:99aab07297d5eb04",
+    "concept:af6de58fd2b838a8",
+    "concept:b86c1b5a3559bec6",
+    "concept:bbc3d3c4f5be0088",
+    "concept:bc64087e537c5678",
+    "concept:bda3e94ee0b2663f",
+    "concept:d180b8aef25ebdf0",
+    "concept:d2f05dc0710f1c2d",
+    "concept:d76dac14d730ea9d",
+    "concept:dba361e7d3d9ee99",
+    "concept:e25130854d7d09e1",
+    "concept:e25408a353732704",
+    "concept:e5408e1bd4013571",
+    "concept:e5b71246a13e68c5",
+    "concept:f1e70fe3df5cbc01",
+    "concept:f41915612b023a19",
+    "concept:f8150be7a8a4fca8",
+    "concept:fdded082a87c81b4"
+  ],
+  "operation_instance_count": 585,
+  "operation_concept_count": 551,
+  "shared_operation_concept_count": 23,
+  "merged_operation_instance_count": 34,
+  "noun_concept_count": 308,
+  "noun_concept_counts": {
+    "component": 47,
+    "configuration_file": 9,
+    "connection": 10,
+    "data_artifact": 8,
+    "database_file": 4,
+    "diagnostic_artifact": 2,
+    "driver": 5,
+    "equipment": 18,
+    "external_system": 2,
+    "firmware": 3,
+    "identifier": 4,
+    "inspection_object": 6,
+    "interface": 14,
+    "log_artifact": 1,
+    "material": 1,
+    "package_type": 3,
+    "product_model": 9,
+    "protocol": 9,
+    "runtime_process": 2,
+    "sdk": 3,
+    "software": 29,
+    "software_artifact": 8,
+    "station": 3,
+    "subsystem": 101,
+    "workpiece": 3,
+    "workstation": 4
+  },
+  "entity_relation_count": 295,
+  "entity_relation_counts": {
+    "artifact_of": 6,
+    "associated_with": 1,
+    "collected_from": 0,
+    "communicates_with": 1,
+    "compatible_with": 1,
+    "configuration_of": 1,
+    "connected_to": 27,
+    "connected_via": 20,
+    "context_member": 111,
+    "database_of": 0,
+    "deployed_at": 3,
+    "driver_of": 3,
+    "endpoint_of": 10,
+    "evidence_for": 0,
+    "firmware_of": 2,
+    "has_component": 5,
+    "has_interface": 10,
+    "has_package_type": 0,
+    "identifies": 0,
+    "input_of": 0,
+    "installed_in": 4,
+    "is_a": 27,
+    "model_of": 1,
+    "output_of": 0,
+    "part_of": 39,
+    "powered_by": 1,
+    "process_instance_of": 0,
+    "processed_by": 1,
+    "produced_by": 0,
+    "runs_on": 9,
+    "sdk_for": 1,
+    "signals_to": 2,
+    "uses_protocol": 9
+  },
+  "noun_alias_candidate_count": 7,
+  "approved_noun_alias_count": 63,
+  "object_files": {
+    "DebugConcept": "objects/debug_concepts.json",
+    "TermExpression": "objects/term_expressions.json",
+    "TermSense": "objects/term_senses.json"
+  },
+  "curated_terms_file": "terminology/curated_terms.json",
+  "relation_file": "relations/edges.json"
+}

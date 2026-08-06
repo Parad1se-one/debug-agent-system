@@ -1,0 +1,2043 @@
+[
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-dism-.docx:66f3afd4935d938b4-4abd1d606a",
+    "title": "Dism++软件使用教程.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/Dism++软件使用教程.docx",
+    "content_hash": "66f3afd4935d938b460bfa67bab20dde35643dff6e7ea865bd3f88f1a41c802f",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 10,
+        "link_text": "制作镜像/备份镜像",
+        "source_context": "制作镜像/备份镜像",
+        "target_url": "https://example.feishu.cn/wiki/XuDgwZpkjiFtKQkinnJc46dGnPh",
+        "wiki_token": "XuDgwZpkjiFtKQkinnJc46dGnPh",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 14,
+        "link_text": "修复系统",
+        "source_context": "修复系统",
+        "target_url": "https://example.feishu.cn/wiki/UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "wiki_token": "UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 18,
+        "link_text": "修复引导",
+        "source_context": "修复引导",
+        "target_url": "https://example.feishu.cn/wiki/V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "wiki_token": "V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId8",
+        "link_order": 4,
+        "paragraph_order": 22,
+        "link_text": "系统还原",
+        "source_context": "系统还原",
+        "target_url": "https://example.feishu.cn/wiki/BpWQw9Wuli1bryka2RGc16bDn9d",
+        "wiki_token": "BpWQw9Wuli1bryka2RGc16bDn9d",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-d-.docx:eaa1b5613f7a1c9f852e-c4389bce70",
+    "title": "D盘扩容方法（软件操作）.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/D盘扩容方法（软件操作）.docx",
+    "content_hash": "eaa1b5613f7a1c9f852e4009cc30521db7c497d3e6d07d971feaff1cd66da48d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-m.2ssd-.docx:f1560584363d377-3c14ce3aae",
+    "title": "M.2SSD硬盘更换和数据迁移.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/M.2SSD硬盘更换和数据迁移.docx",
+    "content_hash": "f1560584363d37799ca25a2bd33969791aac3036ddb01e2fd3ba42418cd65129",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-p95-.docx:352a9566a6a589afbf-1ef8a17957",
+    "title": "P95使用文档.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/P95使用文档.docx",
+    "content_hash": "352a9566a6a589afbf537dfb81df8854c45949550219e9e5ecbfda764213d71d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 3,
+        "link_text": "P95.zip",
+        "source_context": "1.下载:P95.zip",
+        "target_url": "https://example.feishu.cn/file/HLChbI9OnoaRpsxZpgmcTm5SnvV",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-usb-.docx:7c0cba14e0b33d5028-adca67fb65",
+    "title": "USB设备问题解决方案.docx",
+    "document_kind": "repair_playbook_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/USB设备问题解决方案.docx",
+    "content_hash": "7c0cba14e0b33d502812bb99954ab563ad3bc4f4c9bf205de8a8e65a874b90a3",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-.docx:6a807c5b41e390-3f149b0084",
+    "title": "Windows内存检测方法.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/Windows内存检测方法.docx",
+    "content_hash": "6a807c5b41e390d2c6460d7fb00e4a67781f0dcf56a31f2c4390981787963f33",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-.docx:18e275ac298f07-6ea5e9fada",
+    "title": "Windows常见问题解决方案.docx",
+    "document_kind": "faq_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/Windows常见问题解决方案.docx",
+    "content_hash": "18e275ac298f070b0ff59a7492fb3d5a06553e43d10f050ac4a6e5e92f761763",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 5,
+        "link_text": "快速系统文件修复",
+        "source_context": "快速系统文件修复",
+        "target_url": "https://example.feishu.cn/wiki/DVZYwE7gxilQVgk5JEacuWWhnah",
+        "wiki_token": "DVZYwE7gxilQVgk5JEacuWWhnah",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 12,
+        "link_text": "如何进入安全模式",
+        "source_context": "如果已经不小心开启了所有驱动的验证并导致无法进入系统，进入“安全模式”如何进入安全模式，然后",
+        "target_url": "https://example.feishu.cn/wiki/Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "wiki_token": "Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 19,
+        "link_text": "无法上网/显示\"无Internet\"",
+        "source_context": "无法上网/显示\"无Internet\"",
+        "target_url": "https://example.feishu.cn/wiki/DdJwwNtXXiAko1kKUsacEUEZnUh",
+        "wiki_token": "DdJwwNtXXiAko1kKUsacEUEZnUh",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId8",
+        "link_order": 4,
+        "paragraph_order": 23,
+        "link_text": "电脑卡顿",
+        "source_context": "电脑卡顿",
+        "target_url": "https://example.feishu.cn/wiki/OW9Vwykkeiwy8Pkx8zic72GSnCg",
+        "wiki_token": "OW9Vwykkeiwy8Pkx8zic72GSnCg",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId9",
+        "link_order": 5,
+        "paragraph_order": 27,
+        "link_text": "网页打不开但微信/飞书能用",
+        "source_context": "网页打不开但微信/飞书能用",
+        "target_url": "https://example.feishu.cn/wiki/Rrvaw5q3miweuLkJPagcj0DqnNh",
+        "wiki_token": "Rrvaw5q3miweuLkJPagcj0DqnNh",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId10",
+        "link_order": 6,
+        "paragraph_order": 31,
+        "link_text": "开机后一直转圈无法进去系统",
+        "source_context": "开机后一直转圈无法进去系统",
+        "target_url": "https://example.feishu.cn/wiki/CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "wiki_token": "CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId11",
+        "link_order": 7,
+        "paragraph_order": 35,
+        "link_text": "Windows系统/引导修复",
+        "source_context": "Windows系统/引导修复",
+        "target_url": "https://example.feishu.cn/wiki/De2Lw5QosiEwAhkYMpccZLpknGz",
+        "wiki_token": "De2Lw5QosiEwAhkYMpccZLpknGz",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId12",
+        "link_order": 8,
+        "paragraph_order": 39,
+        "link_text": "分析内存转储文件 (MEMORY.DMP)",
+        "source_context": "分析内存转储文件 (MEMORY.DMP)",
+        "target_url": "https://example.feishu.cn/wiki/GF3NwshPIi5KBlkb3iIc9SEknDf",
+        "wiki_token": "GF3NwshPIi5KBlkb3iIc9SEknDf",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId13",
+        "link_order": 9,
+        "paragraph_order": 43,
+        "link_text": "更新驱动（除显卡驱动）",
+        "source_context": "更新驱动（除显卡驱动）",
+        "target_url": "https://example.feishu.cn/wiki/NMsAwS24viSp4wkFN7BcBk1JnUe",
+        "wiki_token": "NMsAwS24viSp4wkFN7BcBk1JnUe",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId14",
+        "link_order": 10,
+        "paragraph_order": 47,
+        "link_text": "内存检测",
+        "source_context": "内存检测",
+        "target_url": "https://example.feishu.cn/wiki/XyfAwNpIWifS74kuwOPchDpinOf",
+        "wiki_token": "XyfAwNpIWifS74kuwOPchDpinOf",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId15",
+        "link_order": 11,
+        "paragraph_order": 51,
+        "link_text": "磁盘文件系统检测和修复",
+        "source_context": "磁盘文件系统检测和修复",
+        "target_url": "https://example.feishu.cn/wiki/SuxXwCJcAijsJZkb3Hkcz26Nnne",
+        "wiki_token": "SuxXwCJcAijsJZkb3Hkcz26Nnne",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId16",
+        "link_order": 12,
+        "paragraph_order": 55,
+        "link_text": "如何进入安全模式",
+        "source_context": "如何进入安全模式",
+        "target_url": "https://example.feishu.cn/wiki/Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "wiki_token": "Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId17",
+        "link_order": 13,
+        "paragraph_order": 59,
+        "link_text": "关闭快速启动",
+        "source_context": "关闭快速启动",
+        "target_url": "https://example.feishu.cn/wiki/SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "wiki_token": "SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId18",
+        "link_order": 14,
+        "paragraph_order": 63,
+        "link_text": "快速系统文件修复",
+        "source_context": "快速系统文件修复",
+        "target_url": "https://example.feishu.cn/wiki/DVZYwE7gxilQVgk5JEacuWWhnah",
+        "wiki_token": "DVZYwE7gxilQVgk5JEacuWWhnah",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId19",
+        "link_order": 15,
+        "paragraph_order": 67,
+        "link_text": "卸载并重装显卡驱动",
+        "source_context": "卸载并重装显卡驱动",
+        "target_url": "https://example.feishu.cn/wiki/JGCEwbiAGiUtzqkOI9VcheS4nCc",
+        "wiki_token": "JGCEwbiAGiUtzqkOI9VcheS4nCc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId20",
+        "link_order": 16,
+        "paragraph_order": 71,
+        "link_text": "磁盘分区与合并",
+        "source_context": "磁盘分区与合并",
+        "target_url": "https://example.feishu.cn/wiki/PZ83wCHBci1jwCkr6MschMRpnOw",
+        "wiki_token": "PZ83wCHBci1jwCkr6MschMRpnOw",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId21",
+        "link_order": 17,
+        "paragraph_order": 75,
+        "link_text": "卸载软件",
+        "source_context": "卸载软件",
+        "target_url": "https://example.feishu.cn/wiki/LlOjwBjLBiYIdLkhQgxcvmtln5f",
+        "wiki_token": "LlOjwBjLBiYIdLkhQgxcvmtln5f",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId22",
+        "link_order": 18,
+        "paragraph_order": 79,
+        "link_text": "禁止Windows更新",
+        "source_context": "禁止Windows更新",
+        "target_url": "https://example.feishu.cn/wiki/VjszwXGjniknwIkhS0vcDa1SnKe",
+        "wiki_token": "VjszwXGjniknwIkhS0vcDa1SnKe",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId23",
+        "link_order": 19,
+        "paragraph_order": 83,
+        "link_text": "Windows及office激活教程",
+        "source_context": "Windows及office激活教程",
+        "target_url": "https://example.feishu.cn/wiki/TO3Pw8r4WiDo9bkEmdlchMsDnbN",
+        "wiki_token": "TO3Pw8r4WiDo9bkEmdlchMsDnbN",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId24",
+        "link_order": 20,
+        "paragraph_order": 87,
+        "link_text": "电脑不开机排查",
+        "source_context": "电脑不开机排查",
+        "target_url": "https://example.feishu.cn/wiki/SKunw3cf5iNkP9kLcAjcGKeVnyc",
+        "wiki_token": "SKunw3cf5iNkP9kLcAjcGKeVnyc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId25",
+        "link_order": 21,
+        "paragraph_order": 91,
+        "link_text": "Windows还原点的使用与注意事项",
+        "source_context": "Windows还原点的使用与注意事项",
+        "target_url": "https://example.feishu.cn/wiki/K0vTwBFakilhFmkNUhOc07kvny0",
+        "wiki_token": "K0vTwBFakilhFmkNUhOc07kvny0",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId26",
+        "link_order": 22,
+        "paragraph_order": 95,
+        "link_text": "键盘随机按键 / 无响应",
+        "source_context": "键盘随机按键 / 无响应",
+        "target_url": "https://example.feishu.cn/wiki/IH1cwYFRGile6xk50QfcoShlndc",
+        "wiki_token": "IH1cwYFRGile6xk50QfcoShlndc",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-_-.docx:dab0aa284e57-98233ea371",
+    "title": "Windows系统_引导修复.docx",
+    "document_kind": "document_index_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/Windows系统_引导修复.docx",
+    "content_hash": "dab0aa284e57ddb1c001dabf42fa220ea59d2f13f008c41b09fd542fc8efb707",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 6,
+        "link_text": "可以进系统",
+        "source_context": "可以进系统",
+        "target_url": "https://example.feishu.cn/wiki/ENaFwPWgji30elki5UAcTLl2nxc",
+        "wiki_token": "ENaFwPWgji30elki5UAcTLl2nxc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 10,
+        "link_text": "无法进入系统",
+        "source_context": "无法进入系统",
+        "target_url": "https://example.feishu.cn/wiki/SzFBwdOYiijYV1kBTRAcgzbkn3G",
+        "wiki_token": "SzFBwdOYiijYV1kBTRAcgzbkn3G",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-memtest86-.docx:353ad0fac829-fa5c9cf8cb",
+    "title": "memtest86使用方法.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/memtest86使用方法.docx",
+    "content_hash": "353ad0fac82952d9d694f4dd5b2441aa24d1678f08b2095a66437dd02692214d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 3,
+        "link_text": "内存测试.img",
+        "source_context": "此方法不依赖Windows，所以需要启动U盘，建议使用ventoy，从内存测试.img下载镜像放入ventoy制作的启动盘里即可。",
+        "target_url": "https://example.feishu.cn/file/ARzKbrAuko0gtQxPwGWcRJ6anVp",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 5,
+        "link_text": "进入恢复环境",
+        "source_context": "开机过程过：铭瑄和华擎主板不停按“F11\"华硕主板不停按”F8“会出现启动选项界面，选择U盘进入。和装系统的操作一样，参考：进入恢复环境就如安装系统的时候要选择安装的镜像一样，需要选择刚才下载的内存测试，按回车进入",
+        "target_url": "https://example.feishu.cn/wiki/HAATwoRTciNRdxkS9qccpfgqnlg",
+        "wiki_token": "HAATwoRTciNRdxkS9qccpfgqnlg",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-.docx:9fe576a8c9faac-375a4f8190",
+    "title": "windows系统里关闭.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/windows系统里关闭.docx",
+    "content_hash": "9fe576a8c9faacf932157b60eafc7a64e50b90a9be812cd079d4eb5485831812",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-bios-.docx:8e8248ce69575d2be-a421c66771",
+    "title": "主板bios里关闭.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/主板bios里关闭.docx",
+    "content_hash": "8e8248ce69575d2be32d7c3f48a043de0d76b8fe9badf3ede745eea7e5cb2dd9",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources---faq.docx:e59b0963bfabbba42-3750f45cb0",
+    "title": "产品使用 - FAQ.docx",
+    "document_kind": "faq_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/产品使用 - FAQ.docx",
+    "content_hash": "e59b0963bfabbba427bdfaba25a95b75dbeecae139f81c7a24c6ed013862c1d3",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:7b4cc8b6ba7165c08bbc25-a6f39bccbe",
+    "title": "修复引导.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/修复引导.docx",
+    "content_hash": "7b4cc8b6ba7165c08bbc258dd609bf88787720c3fe4d19fae7257ee698f99b72",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4a699e7062baa5356bf886-0b244d2b29",
+    "title": "修复系统.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/修复系统.docx",
+    "content_hash": "4a699e7062baa5356bf886aad7b5a2bf269214d96b78676ad4b7d677dbda16d6",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:6f1c37a42c44e43db6bc54-279afa7e43",
+    "title": "关闭快速启动.docx",
+    "document_kind": "document_index_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/关闭快速启动.docx",
+    "content_hash": "6f1c37a42c44e43db6bc5495fea7f31bcfd1bec8c5132a444208b2e9c225f993",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 7,
+        "link_text": "windows系统里关闭",
+        "source_context": "windows系统里关闭",
+        "target_url": "https://example.feishu.cn/wiki/DfzQwkA1MiDIDWk4AAQcKFeZnEX",
+        "wiki_token": "DfzQwkA1MiDIDWk4AAQcKFeZnEX",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 11,
+        "link_text": "主板bios里关闭",
+        "source_context": "主板bios里关闭",
+        "target_url": "https://example.feishu.cn/wiki/FoHWwhfRHiJDN6kmBkZcgeyhnhb",
+        "wiki_token": "FoHWwhfRHiJDN6kmBkZcgeyhnhb",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:a3660fb9c69c08ef521e0c-c8b9707c76",
+    "title": "内存检测.docx",
+    "document_kind": "document_index_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/内存检测.docx",
+    "content_hash": "a3660fb9c69c08ef521e0c1f977d2e2393bff4ddb913e87cd3305965c185b625",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 6,
+        "link_text": "memtest86使用方法",
+        "source_context": "memtest86使用方法",
+        "target_url": "https://example.feishu.cn/wiki/L5d6wjThNipIbJkmOn0cDxinnjb",
+        "wiki_token": "L5d6wjThNipIbJkmOn0cDxinnjb",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 7,
+        "link_text": "Windows内存检测方法",
+        "source_context": "Windows内存检测方法",
+        "target_url": "https://example.feishu.cn/wiki/WrqGwSjlwiyecwkaKHmc6exjnvd",
+        "wiki_token": "WrqGwSjlwiyecwkaKHmc6exjnvd",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-memory.dmp-.docx:e6e219a84a4-dfebd09c80",
+    "title": "分析内存转储文件 (MEMORY.DMP).docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/分析内存转储文件 (MEMORY.DMP).docx",
+    "content_hash": "e6e219a84a4f0d0aab7b84395ed7e5753fe229ea4cb3fa5ae2482ae7ca881577",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 6,
+        "link_text": "复制工具",
+        "source_context": "找到 MEMORY.DMP 文件并打开它。如果在本地，路径一般是： C:\\WINDOWS\\MEMORY.DMP，如果需要发给IT，使用复制工具（使用方法：下载后右键此脚本，用管理员权限打开，脚本会自动复制到桌面的ABC文件夹内。从桌面的ABC文件夹内发送给@工程师乙）",
+        "target_url": "https://files.example.com/index.php/s/amWgPP4MHdZnjjS",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:302cbb250ab784146a7269-82e84b4fce",
+    "title": "加密狗软狗授权步骤.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/加密狗软狗授权步骤.docx",
+    "content_hash": "302cbb250ab784146a72690d8bcaaef9828fc7f26b19801dc30c11d3a1618afb",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 5,
+        "link_text": "厂商工程师科技软锁激活环境安装20240620.exe",
+        "source_context": "安装厂商工程师科技软锁激活环境安装20240620.exe",
+        "target_url": "https://confluence.example.com/download/attachments/33226961/%E8%AF%86%E6%B8%8A%E7%A7%91%E6%8A%80%E8%BD%AF%E9%94%81%E6%BF%80%E6%B4%BB%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%8520240620.exe",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:0e4d5b2b40b0e36dfd7220-efab97d9f0",
+    "title": "卸载并重装显卡驱动.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/卸载并重装显卡驱动.docx",
+    "content_hash": "0e4d5b2b40b0e36dfd72202b30b3083577e3ebb71e0862644f4b89c7103378a3",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 6,
+        "link_text": "彻底卸载显卡驱动",
+        "source_context": "彻底卸载显卡驱动",
+        "target_url": "https://example.feishu.cn/wiki/Ektrwyj0jiSDdIkSrUCc0ACunIg",
+        "wiki_token": "Ektrwyj0jiSDdIkSrUCc0ACunIg",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 10,
+        "link_text": "安装显卡驱动",
+        "source_context": "安装显卡驱动",
+        "target_url": "https://example.feishu.cn/wiki/F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "wiki_token": "F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:60899435b80f2678de5f20-532a33d55d",
+    "title": "卸载软件.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/卸载软件.docx",
+    "content_hash": "60899435b80f2678de5f200d53a0395da360013f20064302aaeaa41bb8fec38f",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:9e0c30d979c237793c89c6-0291bb4677",
+    "title": "可以进入系统.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/可以进入系统.docx",
+    "content_hash": "9e0c30d979c237793c89c6c410981548408048eef08c34bc5eada3159e09b730",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:a7df99d1771be41bbc0f40-de99c0dc04",
+    "title": "可以进系统.docx",
+    "document_kind": "document_index_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/可以进系统.docx",
+    "content_hash": "a7df99d1771be41bbc0f401aa7b5cf804eea0e728dda946ce242eafaf7674e45",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 2,
+        "link_text": "快速系统文件修复",
+        "source_context": "系统修复参考快速系统文件修复或者Dism++软件使用教程中的子目录修复系统文档",
+        "target_url": "https://example.feishu.cn/wiki/DVZYwE7gxilQVgk5JEacuWWhnah",
+        "wiki_token": "DVZYwE7gxilQVgk5JEacuWWhnah",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 2,
+        "link_text": "Dism++软件使用教程",
+        "source_context": "系统修复参考快速系统文件修复或者Dism++软件使用教程中的子目录修复系统文档",
+        "target_url": "https://example.feishu.cn/wiki/VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "wiki_token": "VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 3,
+        "paragraph_order": 2,
+        "link_text": "修复系统",
+        "source_context": "系统修复参考快速系统文件修复或者Dism++软件使用教程中的子目录修复系统文档",
+        "target_url": "https://example.feishu.cn/wiki/UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "wiki_token": "UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 4,
+        "paragraph_order": 3,
+        "link_text": "Dism++软件使用教程",
+        "source_context": "引导修复参考Dism++软件使用教程中的子目录修复引导”文档。",
+        "target_url": "https://example.feishu.cn/wiki/VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "wiki_token": "VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId8",
+        "link_order": 5,
+        "paragraph_order": 3,
+        "link_text": "修复引导",
+        "source_context": "引导修复参考Dism++软件使用教程中的子目录修复引导”文档。",
+        "target_url": "https://example.feishu.cn/wiki/V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "wiki_token": "V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:af7d5cc8726357232cc3ca-058b0422e4",
+    "title": "复盘站连接方法与连接不成功异常处理.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/复盘站连接方法与连接不成功异常处理.docx",
+    "content_hash": "af7d5cc8726357232cc3cac34710dde992d9cec34d78c3278467327751d036e5",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:9b18c4ff03e69d7108c9e1-3f418c7357",
+    "title": "如何进入安全模式.docx",
+    "document_kind": "document_index_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/如何进入安全模式.docx",
+    "content_hash": "9b18c4ff03e69d7108c9e14382ac3df4dc8a1c20a1b8d67eb735316ced9e23c8",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 7,
+        "link_text": "可以进入系统",
+        "source_context": "可以进入系统",
+        "target_url": "https://example.feishu.cn/wiki/MCwGwfrw6iWn1dkRvNsc2R8Xnid",
+        "wiki_token": "MCwGwfrw6iWn1dkRvNsc2R8Xnid",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 11,
+        "link_text": "无法进入系统",
+        "source_context": "无法进入系统",
+        "target_url": "https://example.feishu.cn/wiki/NUfmw7PyKiYWGLkEMhqcM9ndnzn",
+        "wiki_token": "NUfmw7PyKiYWGLkEMhqcM9ndnzn",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-memory.dmp-.docx:d2e2b20411b-b1f27c4ba1",
+    "title": "如何进行MEMORY.DMP文件的分析.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/如何进行MEMORY.DMP文件的分析.docx",
+    "content_hash": "d2e2b20411b62c967cab249be758e280d7b868e292884e4424982b6203240815",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 2,
+        "link_text": "分析内存转储文件 (MEMORY.DMP)",
+        "source_context": "本文参考以下文件进行撰写：分析内存转储文件 (MEMORY.DMP)",
+        "target_url": "https://example.feishu.cn/wiki/GF3NwshPIi5KBlkb3iIc9SEknDf",
+        "wiki_token": "GF3NwshPIi5KBlkb3iIc9SEknDf",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 2,
+        "paragraph_order": 10,
+        "link_text": "文件复制器",
+        "source_context": "下载以下文件之后，右击此文件，选择“以管理员身份运行”以下文件：文件复制器；此时会在桌面生成名为“ABC”的文件夹，里面会有可复制传输的DMP文件。",
+        "target_url": "https://files.example.com/index.php/s/amWgPP4MHdZnjjS",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:fcae684c0c8750e933ab63-645a1c1dac",
+    "title": "安装显卡驱动.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/安装显卡驱动.docx",
+    "content_hash": "fcae684c0c8750e933ab63b8b9b957d6fbaaa89cf5b2d8aab7dcb006a5922767",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 2,
+        "link_text": "581.29-desktop-win10-win11-64bit-international-nsd-dch-whql.exe",
+        "source_context": "下载新的驱动：飞书链接（不需要VPN）：581.29-desktop-win10-win11-64bit-international-nsd-dch-whql.exe",
+        "target_url": "https://example.feishu.cn/file/TESbbw335oTyplxQaOBcmkutn4b",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b14958a36e496e56c7fa1-801f604387",
+    "title": "工控机不开机手册.docx",
+    "document_kind": "fault_manual_numbered",
+    "source_path": "data/raw/aoi_debug_agent_sources/工控机不开机手册.docx",
+    "content_hash": "4b14958a36e496e56c7fa1be6bd9252b1e2544a4d9d2f276ae5e14728dfde3b7",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 21,
+        "link_text": "情况 10",
+        "source_context": "关联排查： 该现象有时也与 CMOS 电池没电，导致显示输出优先级设置重置有关，具体可结合情况 10 进行排查。",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 39,
+        "link_text": "情况 5",
+        "source_context": "如果识别了硬盘，通常是因为系统/引导文件损坏，需要修复系统和引导文件，具体查看情况 5。",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources--v1.0-20250403.docx:9b3aa1c1-86e30d1228",
+    "title": "工控机主板接线规范-v1.0-20250403.docx",
+    "document_kind": "spec_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/工控机主板接线规范-v1.0-20250403.docx",
+    "content_hash": "9b3aa1c1618b4c208b2d1e82154d52f803db56f405323c16aae02348736abbeb",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:52241f68d48017c3583ade-3522949145",
+    "title": "工控机异常(蓝屏&重启&死机）手册.docx",
+    "document_kind": "fault_manual_numbered",
+    "source_path": "data/raw/aoi_debug_agent_sources/工控机异常(蓝屏&重启&死机）手册.docx",
+    "content_hash": "52241f68d48017c3583ade8eea9b3754ad7e70b096398553ef6e08dc976f0a4d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 3,
+        "link_text": "工控机不开机手册",
+        "source_context": "重要提示：排查时请遵循 “先软后硬，先易后难” 的原则。首先尝试软件与系统配置恢复，再检查硬件问题。在进行任何内部操作前，请确保完全断电并做好防静电措施。建议与《工控机不开机手册》结合使用。",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 66,
+        "link_text": "工控机不开机手册",
+        "source_context": "物理排查：参考《工控机不开机手册》，拔下所有内存，用橡皮擦清洁金手指，并单条轮流插入不同插槽测试，这是定位故障内存条的最有效方法。",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 89,
+        "link_text": "工控机不开机手册",
+        "source_context": "检查环境：检查市电电压是否稳定在额定范围内（如220V±10%），接地是否可靠（参考《工控机不开机手册》情况8）。",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:b494462f2654752c6ca115-18b88dc96c",
+    "title": "开机后一直转圈无法进去系统.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/开机后一直转圈无法进去系统.docx",
+    "content_hash": "b494462f2654752c6ca1153c0496e877ec4ee29669905500573372a4d050e3bc",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId8",
+        "link_order": 1,
+        "paragraph_order": 45,
+        "link_text": "安装镜像",
+        "source_context": "进入PE环境的教程可参考：安装镜像，方法一样。",
+        "target_url": "https://example.feishu.cn/wiki/BsBpwKC4Ai0OTTkL0Z3cinkBncb",
+        "wiki_token": "BsBpwKC4Ai0OTTkL0Z3cinkBncb",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId9",
+        "link_order": 2,
+        "paragraph_order": 47,
+        "link_text": "修复系统",
+        "source_context": "修复系统和修复引导",
+        "target_url": "https://example.feishu.cn/wiki/UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "wiki_token": "UxSGwBTTbiPbJgkgv0TclzP2nlh",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId10",
+        "link_order": 3,
+        "paragraph_order": 47,
+        "link_text": "修复引导",
+        "source_context": "修复系统和修复引导",
+        "target_url": "https://example.feishu.cn/wiki/V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "wiki_token": "V7EvwoBH6ifcPQk6wWBcEpUXnb0",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId11",
+        "link_order": 4,
+        "paragraph_order": 51,
+        "link_text": "工控机镜像安装",
+        "source_context": "重装系统，可参考工控机镜像安装",
+        "target_url": "https://example.feishu.cn/wiki/PPuIwLNvziZzf5katsYcWeWTnsc",
+        "wiki_token": "PPuIwLNvziZzf5katsYcWeWTnsc",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:0c99d6e37b53b959ac72c6-fc5a308f1c",
+    "title": "彻底卸载显卡驱动.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/彻底卸载显卡驱动.docx",
+    "content_hash": "0c99d6e37b53b959ac72c63756ea4f2a0b3a5b9cffb4264f0acea4f0c1a8a7da",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 4,
+        "link_text": "https://files.example.com/index.php/s/eb4a1hfLR7Lk5JG",
+        "source_context": "公司网盘链接:https://files.example.com/index.php/s/eb4a1hfLR7Lk5JG",
+        "target_url": "https://files.example.com/index.php/s/eb4a1hfLR7Lk5JG",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 5,
+        "link_text": "DDU.zip",
+        "source_context": "飞书下载链接：DDU.zip",
+        "target_url": "https://example.feishu.cn/file/ApXgbXBPxotgOtxbipacue9HnXf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 3,
+        "paragraph_order": 7,
+        "link_text": "如何进入安全模式",
+        "source_context": "4. 进入安全模式，方法：如何进入安全模式",
+        "target_url": "https://example.feishu.cn/wiki/Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "wiki_token": "Ahw1wKYDiiCkSEkGcB9c2jMOnXb",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId16",
+        "link_order": 4,
+        "paragraph_order": 26,
+        "link_text": "更新显卡驱动",
+        "source_context": "6. 重启到正常坏境后需要安装新的显卡驱动，参考更新显卡驱动下载并安装显卡驱动。",
+        "target_url": "https://example.feishu.cn/wiki/F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "wiki_token": "F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-1-.docx:55cf84372934fddb9a43-ac236d4a2a",
+    "title": "快速系统文件修复 (1).docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/快速系统文件修复 (1).docx",
+    "content_hash": "55cf84372934fddb9a439ede5236c605a9f1111d5872da2dd813b25f99b8a99f",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:040c22a970d4a659a094d4-fac47b945e",
+    "title": "快速系统文件修复.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/快速系统文件修复.docx",
+    "content_hash": "040c22a970d4a659a094d41256da0e8ce4fae4ade1bc03718ab968e97c8612f7",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:e7699cd46eb2d56e3e26ed-9ef3af97a4",
+    "title": "数据采集.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/数据采集.docx",
+    "content_hash": "e7699cd46eb2d56e3e26ed451a4e9b90472d103cc855d35d2f69709de1a9cd73",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:7112f0b901a7bd8a08668f-23c6cb1304",
+    "title": "新硬件稳定性测试（讨论）.docx",
+    "document_kind": "validation_checklist_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/新硬件稳定性测试（讨论）.docx",
+    "content_hash": "7112f0b901a7bd8a08668f60bcd8dcdff0fee0f89853bd464fca7acf65f12ff4",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-_-_-internet_.docx:b61066433-b56e1116e4",
+    "title": "无法上网_显示_无Internet_.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/无法上网_显示_无Internet_.docx",
+    "content_hash": "b61066433d9b3f25c2e264c04df47c71734cd3e49a8c2bd229ec6c563951b5c5",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-1-.docx:1eace46f73bab7c8b299-6adfc051eb",
+    "title": "无法进入系统 (1).docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/无法进入系统 (1).docx",
+    "content_hash": "1eace46f73bab7c8b2999d3f82fb22167217ffd747fb109cdc2f49e214ce401c",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:8c28eac44545c83eaefd21-50c59d4851",
+    "title": "无法进入系统.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/无法进入系统.docx",
+    "content_hash": "8c28eac44545c83eaefd213744f2bf46599de1ee6d45c186f020f25e7021ad79",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 26,
+        "link_text": "开机后一直转圈无法进去系统",
+        "source_context": "参考开机后一直转圈无法进去系统文档中如果无法进入安全模式章节的做法。",
+        "target_url": "https://example.feishu.cn/wiki/CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "wiki_token": "CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-_-.docx:033362c6596149f48f75-708560225c",
+    "title": "更换_加装内存教程.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/更换_加装内存教程.docx",
+    "content_hash": "033362c6596149f48f757187ef824b1d959f8aa96e20f78d6265f5316286c4d9",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:9a994c9987cfe027da84f2-55c026c206",
+    "title": "更新驱动（除显卡驱动）.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/更新驱动（除显卡驱动）.docx",
+    "content_hash": "9a994c9987cfe027da84f2b7613cf68fe3a713fe45f008d2926c5c89f079514f",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:0a933b03510ea4e40a78e6-6e8e900ac5",
+    "title": "机械硬盘技术要求.docx",
+    "document_kind": "spec_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/机械硬盘技术要求.docx",
+    "content_hash": "0a933b03510ea4e40a78e630e9b69fa7a4b0725e973e426570b635682f6718f4",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:277c4fd897c8d393463cbb-9370c1d2e2",
+    "title": "检测界面出现拍照失败问题处理.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/检测界面出现拍照失败问题处理.docx",
+    "content_hash": "277c4fd897c8d393463cbb56ce3aac454ac6fc00704ccf7a48154bd4efde636f",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId12",
+        "link_order": 1,
+        "paragraph_order": 37,
+        "link_text": "相机问题处理",
+        "source_context": "2.2.1 检查相机网口配置：参考该链接PPT5-6页相机问题处理",
+        "target_url": "https://example.feishu.cn/slides/OCkmsEQMLlezGDdpeR3cOnuon9d",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId28",
+        "link_order": 2,
+        "paragraph_order": 89,
+        "link_text": "检测界面出现拍照失败问题处理",
+        "source_context": "给相机进行网络参数配置，如检测界面出现拍照失败问题处理2.2.1所示:",
+        "target_url": "https://example.feishu.cn/wiki/SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "wiki_token": "SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId33",
+        "link_order": 3,
+        "paragraph_order": 104,
+        "link_text": "检测界面出现拍照失败问题处理",
+        "source_context": "插上网卡及运控网线，更改相机ip(192.168.0.101)和运控ip地址(192.168.100.101),并参考检测界面出现拍照失败问题处理2.2.1对相机网口进行配置;",
+        "target_url": "https://example.feishu.cn/wiki/SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "wiki_token": "SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.md:d89aded6c7883aaca7a5e027-9b4714b72d",
+    "title": "现场问题反馈流程.md",
+    "document_kind": "overlay_process_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/现场问题反馈流程.md",
+    "content_hash": "d89aded6c7883aaca7a5e02741fae394c80b89d2fb0f408a147100379a4e83e1",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-1-.docx:26d07056536b7dcdd16c-0448ea4e7e",
+    "title": "电脑不开机排查 (1).docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/电脑不开机排查 (1).docx",
+    "content_hash": "26d07056536b7dcdd16cc1a1122e136ded5a415f28c9662452e6d79b4e393ddf",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 97,
+        "link_text": "工控机不开机手册",
+        "source_context": "详细现象参考：工控机不开机手册",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 141,
+        "link_text": "Windows引导修复",
+        "source_context": "目的： 排除引导或操作系统损坏导致的黑屏（通常在显示Logo后或之前）引导修复请查阅：Windows引导修复。",
+        "target_url": "https://example.feishu.cn/wiki/De2Lw5QosiEwAhkYMpccZLpknGz",
+        "wiki_token": "De2Lw5QosiEwAhkYMpccZLpknGz",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 145,
+        "link_text": "制作启动U盘（在其他电脑上）。",
+        "source_context": "制作启动U盘（在其他电脑上）。",
+        "target_url": "https://example.feishu.cn/wiki/TeygwEorBiIQVckaFtRc7pHonWc",
+        "wiki_token": "TeygwEorBiIQVckaFtRc7pHonWc",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:77af90683b09c576df7a19-46dd9bd411",
+    "title": "电脑不开机排查.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/电脑不开机排查.docx",
+    "content_hash": "77af90683b09c576df7a1994da68925933c84dd0ef014d8feb5a550d09444cd3",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 97,
+        "link_text": "工控机不开机手册",
+        "source_context": "详细现象参考：工控机不开机手册",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId6",
+        "link_order": 2,
+        "paragraph_order": 141,
+        "link_text": "Windows引导修复",
+        "source_context": "目的： 排除引导或操作系统损坏导致的黑屏（通常在显示Logo后或之前）引导修复请查阅：Windows引导修复。",
+        "target_url": "https://example.feishu.cn/wiki/De2Lw5QosiEwAhkYMpccZLpknGz",
+        "wiki_token": "De2Lw5QosiEwAhkYMpccZLpknGz",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 145,
+        "link_text": "制作启动U盘（在其他电脑上）。",
+        "source_context": "制作启动U盘（在其他电脑上）。",
+        "target_url": "https://example.feishu.cn/wiki/TeygwEorBiIQVckaFtRc7pHonWc",
+        "wiki_token": "TeygwEorBiIQVckaFtRc7pHonWc",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:96d958f2a06abc8ab7b3b0-991381a15a",
+    "title": "电脑卡顿.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/电脑卡顿.docx",
+    "content_hash": "96d958f2a06abc8ab7b3b0faf14e8ba2edb0eb489c7de7eb1092457d047a7a8b",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:1e34da2d9042c630f5dc7c-09ec3a25e2",
+    "title": "磁盘分区与合并.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/磁盘分区与合并.docx",
+    "content_hash": "1e34da2d9042c630f5dc7cc341384a5ab24652031fb45a7275a99c902ba67f6c",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId11",
+        "link_order": 1,
+        "paragraph_order": 21,
+        "link_text": "DiskGenius",
+        "source_context": "适用于Windows无法压缩更多空间的情况，此方法需要制作PE启动盘，进PE下使用DiskGenius手动分区。",
+        "target_url": "https://zhida.zhihu.com/search",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId12",
+        "link_order": 2,
+        "paragraph_order": 24,
+        "link_text": "开机后一直转圈无法进去系统",
+        "source_context": "参考：开机后一直转圈无法进去系统",
+        "target_url": "https://example.feishu.cn/wiki/CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "wiki_token": "CPjHwziEuiNz6TkdcPTcI62Dnxg",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId13",
+        "link_order": 3,
+        "paragraph_order": 26,
+        "link_text": "DiskGenius",
+        "source_context": "进入PE后，桌面上会有一个DiskGenius的程序，双击打开。",
+        "target_url": "https://zhida.zhihu.com/search",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId17",
+        "link_order": 4,
+        "paragraph_order": 33,
+        "link_text": "磁盘管理器",
+        "source_context": "在这个界面填写“调整后的容量”这个是给C盘的容量，点开始就行了。结束后你再进系统，打开磁盘管理器，就会显示剩下的一块未分配的区域，你可以新建卷，手动分一个盘符。",
+        "target_url": "https://zhida.zhihu.com/search",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:f968119097234e929929a1-168a131620",
+    "title": "磁盘文件系统检测和修复.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/磁盘文件系统检测和修复.docx",
+    "content_hash": "f968119097234e929929a1ede926c8e35a950d6b74836c8f3bbccfa233d06d5e",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:f530c8bff4f452e9fcc0af-a127d38507",
+    "title": "磁盘的数据清理.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/磁盘的数据清理.docx",
+    "content_hash": "f530c8bff4f452e9fcc0afec08e51447d88f24404fd34f91fd4bc37bdec49a99",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-.docx:b63996b605943d-8a36b4ce66",
+    "title": "禁止Windows更新.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/禁止Windows更新.docx",
+    "content_hash": "b63996b605943d0c9cc5739937a9797135ac2e023bb33f5460fe9afda0609593",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-_-.docx:0fbee5a3efc247d9e419-0c3cec19b9",
+    "title": "网页打不开但微信_飞书能用.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/网页打不开但微信_飞书能用.docx",
+    "content_hash": "0fbee5a3efc247d9e419e4d51e08ec0b6a4cb3d4da96eb9622ba96e0adf806a4",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.docx:f8b6232fae175b8525fe8b-280f7fabc3",
+    "title": "软狗更新教程.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/软狗更新教程.docx",
+    "content_hash": "f8b6232fae175b8525fe8b1a2beaec34ad48a1c1cf06ca3ee4d2617595ea7b9d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 3,
+        "link_text": "加密狗软狗授权步骤",
+        "source_context": "注意：不适用新软狗授权，新软狗授权请参考：加密狗软狗授权步骤",
+        "target_url": "https://example.feishu.cn/docx/OxAwdlL3eorofEx7fmbcA0mYnDe",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-_-.docx:e38ed51315bbcaae0e2f-8b9261c9e7",
+    "title": "键盘随机按键 _ 无响应.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/键盘随机按键 _ 无响应.docx",
+    "content_hash": "e38ed51315bbcaae0e2f3e7f4a07947e7a24212de490f8a7c227795f855e4a0d",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false,
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 141,
+        "link_text": "快速系统文件修复",
+        "source_context": "快速系统文件修复",
+        "target_url": "https://example.feishu.cn/wiki/DVZYwE7gxilQVgk5JEacuWWhnah",
+        "wiki_token": "DVZYwE7gxilQVgk5JEacuWWhnah",
+        "standalone": true
+      }
+    ]
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-sop--20250521.docx:b2ba1827c-1d4b75be82",
+    "title": "进板失败SOP--20250521.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/进板失败SOP--20250521.docx",
+    "content_hash": "b2ba1827cd256d667027bd0d97ba54831363cff9da736efb269722c6bd531c7a",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "source_links": []
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx:c2b2a6a56b6063bac0-bb74619b6f",
+    "title": "CPU温度过高问题处理指南.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/CPU温度过高问题处理指南.docx",
+    "content_hash": "c2b2a6a56b6063bac086993983425b5e8c8b2b6b7fb51b760e1993676bc675ff",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "source_links": [],
+    "source_ref": "data/raw/aoi_debug_agent_sources/CPU温度过高问题处理指南.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-windows-office-.docx:c7a80d4-8edfc591b4",
+    "title": "Windows及office激活教程.docx",
+    "document_kind": "procedure_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/Windows及office激活教程.docx",
+    "content_hash": "c7a80d40af7f7774fb74c507f49cdbf89fe9b9f86dc1f0dbad7a75583a754dd1",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "source_links": [
+      {
+        "relationship_id": "rId4",
+        "link_order": 1,
+        "paragraph_order": 2,
+        "link_text": "Windows往下看",
+        "source_context": "一、激活office，这部分是office教程，Windows往下看，单纯激活windows不用下载",
+        "target_url": "https://example.feishu.cn/wiki/TO3Pw8r4WiDo9bkEmdlchMsDnbN",
+        "wiki_token": "TO3Pw8r4WiDo9bkEmdlchMsDnbN",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId5",
+        "link_order": 2,
+        "paragraph_order": 4,
+        "link_text": "Office C2R Installers | Gravesoft",
+        "source_context": "Microsoft 365 （就是office）下载地址：Office C2R Installers | Gravesoft",
+        "target_url": "https://gravesoft.dev/office_c2r_links",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId7",
+        "link_order": 3,
+        "paragraph_order": 10,
+        "link_text": "https://get.activated.win",
+        "source_context": "输入irm https://get.activated.win | iex",
+        "target_url": "https://link.zhihu.com",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId10",
+        "link_order": 4,
+        "paragraph_order": 18,
+        "link_text": "https://link.zhihu.com/?target=https%3A//github.com/alsyundawy/Microsoft-Office-For-MacOS",
+        "source_context": "Mac激活：https://link.zhihu.com/?target=https%3A//github.com/alsyundawy/Microsoft-Office-For-MacOS",
+        "target_url": "https://link.zhihu.com",
+        "wiki_token": "",
+        "standalone": false
+      }
+    ],
+    "source_ref": "data/raw/aoi_debug_agent_sources/Windows及office激活教程.docx",
+    "_admission_target": "procedure_library",
+    "execution_materialize_allowed": false
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources-.xlsx:0dadbf57ff587202fbfc4d-e4ee6117c0",
+    "title": "配置表.xlsx",
+    "document_kind": "repair_playbook_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/配置表.xlsx",
+    "content_hash": "0dadbf57ff587202fbfc4d67ee5003b87df696ab82be7c0178afb960000ec4dd",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "raw_doc",
+    "source_links": [],
+    "source_ref": "data/raw/aoi_debug_agent_sources/配置表.xlsx",
+    "_admission_target": "playbook",
+    "execution_materialize_allowed": false
+  },
+  {
+    "document_id": "knowledge-document:data-raw-aoi_debug_agent_sources---sop-.docx:7aa195aa76668db7-2b4e832182",
+    "title": "异常处理 - 标准操作流程（SOP）.docx",
+    "document_kind": "troubleshooting_topic_doc",
+    "source_path": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "content_hash": "7aa195aa76668db7338561238e8226f863bd5fb497982b36a4c9c6b2bbb33723",
+    "version": "",
+    "owner": "",
+    "approved": true,
+    "source_kind": "sop",
+    "source_links": [
+      {
+        "relationship_id": "rId5",
+        "link_order": 1,
+        "paragraph_order": 11,
+        "link_text": "2.7.1.6",
+        "source_context": "参考示例：2.7.1.6",
+        "target_url": "https://example.feishu.cn/docx/MMc7dg3J2o2kZFxz4mOcQytmnAf",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId16",
+        "link_order": 2,
+        "paragraph_order": 130,
+        "link_text": "2.4.1.7",
+        "source_context": "参考2.4.1.7",
+        "target_url": "https://example.feishu.cn/wiki/D724wq4aIiA9CdkGKq0cNiNrnrh",
+        "wiki_token": "D724wq4aIiA9CdkGKq0cNiNrnrh",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId22",
+        "link_order": 3,
+        "paragraph_order": 184,
+        "link_text": "10.2.11-3D相机初始化失败排查.doc",
+        "source_context": "10.2.11-3D相机初始化失败排查.doc",
+        "target_url": "https://example.feishu.cn/wiki/BwbOwxWSNizXiNkT4P9chrnxnlg",
+        "wiki_token": "BwbOwxWSNizXiNkT4P9chrnxnlg",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId31",
+        "link_order": 4,
+        "paragraph_order": 221,
+        "link_text": "192.168.137.50",
+        "source_context": "(仅3D) 浏览器访问 http://192.168.137.50:8080，检查cyclops-lighter版本是否是指定版本(注意旧版本升级可能需要重新标定光源，具体参考发版要求)；检查读取/设定光源亮度是否正常，如有异常，可能需要重新烧录，或者排查光源控制器。",
+        "target_url": "http://192.168.17.50",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId34",
+        "link_order": 5,
+        "paragraph_order": 235,
+        "link_text": "10.2.4.2-检测界面出现拍照失败问题处理-【20250701】",
+        "source_context": "参考此文档逐项排查配置，重点关注：相机网口配置；系统电源模式。10.2.4.2-检测界面出现拍照失败问题处理-【20250701】",
+        "target_url": "https://example.feishu.cn/wiki/YGzRwi9MbiPiyokx6O8cluexnth",
+        "wiki_token": "YGzRwi9MbiPiyokx6O8cluexnth",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId35",
+        "link_order": 6,
+        "paragraph_order": 238,
+        "link_text": "10.2.4.2-检测界面出现拍照失败问题处理-【20250701】",
+        "source_context": "参考10.2.4.2-检测界面出现拍照失败问题处理-【20250701】检查网口配置，开启巨帧。",
+        "target_url": "https://example.feishu.cn/wiki/YGzRwi9MbiPiyokx6O8cluexnth",
+        "wiki_token": "YGzRwi9MbiPiyokx6O8cluexnth",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId36",
+        "link_order": 7,
+        "paragraph_order": 243,
+        "link_text": "10.2.4.3-拍照卡顿问题处理SOP--【20250712】",
+        "source_context": "联系FAE检查升级相机固件。升级步骤10.2.4.3-拍照卡顿问题处理SOP--【20250712】",
+        "target_url": "https://example.feishu.cn/wiki/RXo6wSaIaiYcoFkX8iJcWWSznlg",
+        "wiki_token": "RXo6wSaIaiYcoFkX8iJcWWSznlg",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId37",
+        "link_order": 8,
+        "paragraph_order": 246,
+        "link_text": "设置进程相关性",
+        "source_context": "尝试使用绑核的方式，参考设置进程相关性",
+        "target_url": "https://example.feishu.cn/wiki/FUBMwNZ69iYEdpktqODcJlUynIc",
+        "wiki_token": "FUBMwNZ69iYEdpktqODcJlUynIc",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId41",
+        "link_order": 9,
+        "paragraph_order": 276,
+        "link_text": "快速系统文件修复",
+        "source_context": "进行一次系统文件修复快速系统文件修复；",
+        "target_url": "https://example.feishu.cn/wiki/DVZYwE7gxilQVgk5JEacuWWhnah",
+        "wiki_token": "DVZYwE7gxilQVgk5JEacuWWhnah",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId42",
+        "link_order": 10,
+        "paragraph_order": 277,
+        "link_text": "安装显卡驱动",
+        "source_context": "更新显卡驱动安装显卡驱动。",
+        "target_url": "https://example.feishu.cn/wiki/F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "wiki_token": "F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId43",
+        "link_order": 11,
+        "paragraph_order": 279,
+        "link_text": "检测界面出现拍照失败问题处理",
+        "source_context": "检测界面出现拍照失败问题处理",
+        "target_url": "https://example.feishu.cn/wiki/SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "wiki_token": "SkTvwBibcipIR8kSu7tcFxsPnCa",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId51",
+        "link_order": 12,
+        "paragraph_order": 369,
+        "link_text": "传感器相关问题SOP--20250516",
+        "source_context": "按实际修改machine.toml中减速传感器到挡块的距离以及进出板感应器间的距离，减速传感器到挡块标准距离为50-80mmm传感器相关问题SOP--20250516",
+        "target_url": "https://example.feishu.cn/docx/EYPsdNFN2ohvAhx42pTcA6J8nUg",
+        "wiki_token": "",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId61",
+        "link_order": 13,
+        "paragraph_order": 394,
+        "link_text": "10.2.10-TOF传感器距离调节文档",
+        "source_context": "TOF传感器调节灵敏度方法10.2.10-TOF传感器距离调节文档",
+        "target_url": "https://example.feishu.cn/wiki/ZMcgwmheXiGbpikLpwYcq63EnCf",
+        "wiki_token": "ZMcgwmheXiGbpikLpwYcq63EnCf",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId64",
+        "link_order": 14,
+        "paragraph_order": 404,
+        "link_text": "进板失败SOP--20250521",
+        "source_context": "进板失败SOP--20250521",
+        "target_url": "https://example.feishu.cn/docx/QfQFdOjD1oE8LTx6ZdbcUaeqnnf",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId65",
+        "link_order": 15,
+        "paragraph_order": 411,
+        "link_text": "传感器相关问题SOP--20250516",
+        "source_context": "传感器相关问题SOP--20250516",
+        "target_url": "https://example.feishu.cn/docx/EYPsdNFN2ohvAhx42pTcA6J8nUg",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId66",
+        "link_order": 16,
+        "paragraph_order": 413,
+        "link_text": "10.1.14-扫码枪接线与使用",
+        "source_context": "10.1.14-扫码枪接线与使用",
+        "target_url": "https://example.feishu.cn/wiki/VdHwwmTLjidrD2klleVc356YnJc",
+        "wiki_token": "VdHwwmTLjidrD2klleVc356YnJc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId67",
+        "link_order": 17,
+        "paragraph_order": 415,
+        "link_text": "传感器调试方法",
+        "source_context": "传感器调试方法",
+        "target_url": "https://example.feishu.cn/wiki/AGISw7PEriJBRZkNtFfc8nuPnJb",
+        "wiki_token": "AGISw7PEriJBRZkNtFfc8nuPnJb",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId68",
+        "link_order": 18,
+        "paragraph_order": 429,
+        "link_text": "顶升相关问题SOP--20250516",
+        "source_context": "顶升相关问题SOP--20250516",
+        "target_url": "https://example.feishu.cn/docx/HKDPdWYxIowUwUxgCBcchT1Znqh",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId82",
+        "link_order": 19,
+        "paragraph_order": 549,
+        "link_text": "系统蓝屏或者自动重启",
+        "source_context": "系统蓝屏或者自动重启",
+        "target_url": "https://example.feishu.cn/docx/ClxVdscRVoMpPDx2rXncF8ZvnZc",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId83",
+        "link_order": 20,
+        "paragraph_order": 550,
+        "link_text": "蓝屏代码处理",
+        "source_context": "蓝屏代码处理",
+        "target_url": "https://example.feishu.cn/wiki/QPjhwAUIgivjwYkZBQacN9rknEe",
+        "wiki_token": "QPjhwAUIgivjwYkZBQacN9rknEe",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId87",
+        "link_order": 21,
+        "paragraph_order": 569,
+        "link_text": "内存检测",
+        "source_context": "硬件检查：内存检测，硬盘检测，温度监控，关闭快速启动",
+        "target_url": "https://example.feishu.cn/wiki/XyfAwNpIWifS74kuwOPchDpinOf",
+        "wiki_token": "XyfAwNpIWifS74kuwOPchDpinOf",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId88",
+        "link_order": 22,
+        "paragraph_order": 569,
+        "link_text": "硬盘检测",
+        "source_context": "硬件检查：内存检测，硬盘检测，温度监控，关闭快速启动",
+        "target_url": "https://example.feishu.cn/wiki/SuxXwCJcAijsJZkb3Hkcz26Nnne",
+        "wiki_token": "SuxXwCJcAijsJZkb3Hkcz26Nnne",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId89",
+        "link_order": 23,
+        "paragraph_order": 569,
+        "link_text": "关闭快速启动",
+        "source_context": "硬件检查：内存检测，硬盘检测，温度监控，关闭快速启动",
+        "target_url": "https://example.feishu.cn/wiki/SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "wiki_token": "SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId90",
+        "link_order": 24,
+        "paragraph_order": 570,
+        "link_text": "更新显卡驱动",
+        "source_context": "更新驱动：更新显卡驱动，更新驱动（需联网）",
+        "target_url": "https://example.feishu.cn/wiki/F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "wiki_token": "F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId91",
+        "link_order": 25,
+        "paragraph_order": 570,
+        "link_text": "更新驱动",
+        "source_context": "更新驱动：更新显卡驱动，更新驱动（需联网）",
+        "target_url": "https://example.feishu.cn/wiki/NMsAwS24viSp4wkFN7BcBk1JnUe",
+        "wiki_token": "NMsAwS24viSp4wkFN7BcBk1JnUe",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId92",
+        "link_order": 26,
+        "paragraph_order": 571,
+        "link_text": "Dism++软件使用教程",
+        "source_context": "系统修复：Dism++软件使用教程中的修复系统。（需联网）",
+        "target_url": "https://example.feishu.cn/wiki/VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "wiki_token": "VRmrwaLPDiKiEGkCZvNcEb4tnGd",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId95",
+        "link_order": 27,
+        "paragraph_order": 579,
+        "link_text": "更新显卡驱动",
+        "source_context": "不正常关机，显卡驱动掉了，重新装驱动。更新显卡驱动（不能安装最新版本驱动）",
+        "target_url": "https://example.feishu.cn/wiki/F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "wiki_token": "F8aCw0OqOi3d7Ckder7cvfR0nhg",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId96",
+        "link_order": 28,
+        "paragraph_order": 580,
+        "link_text": "关闭快速启动",
+        "source_context": "顺便关闭快速启动关闭快速启动（主板bios里关闭：只能在现场操作）",
+        "target_url": "https://example.feishu.cn/wiki/SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "wiki_token": "SUx0wzxQKiZB9Tkcfd5cwHSwnde",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId98",
+        "link_order": 29,
+        "paragraph_order": 585,
+        "link_text": "D盘扩容方法（软件操作）",
+        "source_context": "D盘扩容方法（软件操作）",
+        "target_url": "https://example.feishu.cn/wiki/VMSbwaVpAi2LDGkCNsRcWDxwnOc",
+        "wiki_token": "VMSbwaVpAi2LDGkCNsRcWDxwnOc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId113",
+        "link_order": 30,
+        "paragraph_order": 627,
+        "link_text": "如何进行MEMORY.DMP文件的分析",
+        "source_context": "如何进行MEMORY.DMP文件的分析",
+        "target_url": "https://example.feishu.cn/wiki/Zushw8T53imuiAkFx5vcLLlnndd",
+        "wiki_token": "Zushw8T53imuiAkFx5vcLLlnndd",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId114",
+        "link_order": 31,
+        "paragraph_order": 629,
+        "link_text": "M.2SSD硬盘更换和数据迁移",
+        "source_context": "M.2SSD硬盘更换和数据迁移",
+        "target_url": "https://example.feishu.cn/docx/Cp2udbk87oXWTDxdtapcB28onAg",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId115",
+        "link_order": 32,
+        "paragraph_order": 632,
+        "link_text": "工控机主板接线规范-v1.0-20250403",
+        "source_context": "工控机主板接线规范-v1.0-20250403",
+        "target_url": "https://example.feishu.cn/docx/GFMEdCii4o64hcxP5Urcaly3nBg",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId117",
+        "link_order": 33,
+        "paragraph_order": 648,
+        "link_text": "工控机不开机手册",
+        "source_context": "工控机不开机手册",
+        "target_url": "https://example.feishu.cn/docx/IRzGdBweGoIzPtx9gnWcsq4TnPf",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId118",
+        "link_order": 34,
+        "paragraph_order": 649,
+        "link_text": "电脑不开机排查",
+        "source_context": "电脑不开机排查",
+        "target_url": "https://example.feishu.cn/wiki/SKunw3cf5iNkP9kLcAjcGKeVnyc",
+        "wiki_token": "SKunw3cf5iNkP9kLcAjcGKeVnyc",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId119",
+        "link_order": 35,
+        "paragraph_order": 652,
+        "link_text": "复盘站连接方法与连接不成功异常处理",
+        "source_context": "复判站ip与相机ip冲突复盘站连接方法与连接不成功异常处理",
+        "target_url": "https://example.feishu.cn/wiki/N7BUwhoOXiMMrXk5UxrcEgVtn4g",
+        "wiki_token": "N7BUwhoOXiMMrXk5UxrcEgVtn4g",
+        "standalone": false
+      },
+      {
+        "relationship_id": "rId128",
+        "link_order": 36,
+        "paragraph_order": 722,
+        "link_text": "采集原始条纹图SOP",
+        "source_context": "采集原始条纹图SOP",
+        "target_url": "https://example.feishu.cn/docx/QGntddOCvoNGhUx6fNxcwBpAnIf",
+        "wiki_token": "",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId129",
+        "link_order": 37,
+        "paragraph_order": 727,
+        "link_text": "数据采集",
+        "source_context": "数据采集",
+        "target_url": "https://example.feishu.cn/wiki/RnhIwI8t4iGz0ok49GMcQf4GnTb",
+        "wiki_token": "RnhIwI8t4iGz0ok49GMcQf4GnTb",
+        "standalone": true
+      },
+      {
+        "relationship_id": "rId130",
+        "link_order": 38,
+        "paragraph_order": 729,
+        "link_text": "D盘爆满之后的数据清理",
+        "source_context": "D盘爆满之后的数据清理",
+        "target_url": "https://example.feishu.cn/wiki/EptswNAeMimHbBkbfI5cXiX9nXe",
+        "wiki_token": "EptswNAeMimHbBkbfI5cXiX9nXe",
+        "standalone": true
+      }
+    ],
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  }
+]

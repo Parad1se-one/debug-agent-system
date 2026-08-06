@@ -1,0 +1,26 @@
+# MEM Diagnostic Session Agent
+
+- id: `MEM`
+- type: Orchestrator state owner
+- owner: `src/debug_agent_system/agents/read/mem_session`
+- responsibility: be the sole owner of mutable diagnostic session persistence.
+- entrypoints:
+  - `DiagnosticSessionStore.create(query, session_id=None)`.
+  - `get(session_id)`.
+  - `save(state)`.
+- inputs:
+  - Query string and optional caller-provided session id.
+  - `SessionState` dataclass for save.
+  - Optional filesystem root from config.
+- outputs:
+  - `SessionState` in memory and optionally JSON file under configured session store.
+- failure_modes:
+  - Unknown/missing session file -> `None`; O0 returns `failed/unknown_session`.
+  - Corrupt session JSON -> `None` rather than partial state.
+  - Unsafe session id chars are sanitized for file path.
+- observability:
+  - Session id is propagated through all O0 responses.
+- non_goals:
+  - Does not decide diagnosis.
+  - Does not write KG.
+  - Other agents should not persist session state independently.

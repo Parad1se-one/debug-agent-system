@@ -1,0 +1,1646 @@
+[
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-c5087e093a",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-74e665ce3b",
+    "outcome_type": "context_not_root_cause",
+    "summary": "现象支持当前user.cfg.toml为空或损坏；意外重启是可能诱因但未被证明。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b82bc26f48",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:cha-331b06ec4d",
+    "outcome_type": "verified_fix",
+    "summary": "使用最近诊断日志中的配置后，主程序可以正常进入。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-5f89ba590d",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "当前user.cfg.toml为空或损坏；损坏触发原因不确定",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-4ca5eeca81",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-f9149e523a",
+    "outcome_type": "diagnostic_method",
+    "summary": "切换设置、恢复原值并重启后验证正常，进一步确认恢复后的配置链路可用。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-fbfbb1af28"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-8cf6c99917",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:col-ed44f700a6",
+    "outcome_type": "diagnostic_method",
+    "summary": "收集配置失败诊断数据已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-045f248d86",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-0203fe9e2c",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查user.cfg.toml和备份已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-524921c0bf",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-6170654e15",
+    "outcome_type": "pending_validation",
+    "summary": "验证主程序启动尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-13bc7b5de1",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-sop-:f8093f9d5739",
+    "outcome_type": "context_not_root_cause",
+    "summary": "网卡参数已按SOP配置，未发现明显配置错误；相机线未装磁环是待核实上下文。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-2cbcf5037a",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:5a0ad215b003",
+    "outcome_type": "diagnostic_method",
+    "summary": "证据显示先发生残帧/丢包，随后相机事件包丢失且不重传。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "链路丢包与事件包不重传参与故障，但丢包来源未确定",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c4b9ee3d88",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+    "outcome_type": "partial_temporary",
+    "summary": "插回板载主板网口后曾作为临时方案继续使用，但数日后同样拍摄失败再次出现。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-d8c886ac6c",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-1dced7d721",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+    "outcome_type": "mitigation_observed",
+    "summary": "重启后观察一小时未再次拍摄失败并暂时生产正常，观察时间不足以认定解决。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-04d8cf5f59",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:380386c2485f",
+    "outcome_type": "pending_validation",
+    "summary": "仅提出升级固件，缺少现场已执行和升级后结果。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a2f0637c54",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:2db6cbd1b734",
+    "outcome_type": "diagnostic_method",
+    "summary": "收集近七天诊断数据已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-620feea6ed",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:805a3a016814",
+    "outcome_type": "diagnostic_method",
+    "summary": "核对相机网线换口时间点已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-350b24269c",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:observe:-:d5b9bdab6705",
+    "outcome_type": "pending_validation",
+    "summary": "观察是否复发尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-82ef97cf92",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:a896dc10e491",
+    "outcome_type": "pending_validation",
+    "summary": "检查相机侧端口磁环和走线尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-dfecf1df27",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-f734a96b16",
+    "outcome_type": "context_not_root_cause",
+    "summary": "确认 MEMORY_MANAGEMENT/0x403/PFN 不同步；smt-aoi.exe 是进程上下文，不足以认定应用为根因。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-3e78fac31c",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-72c40b12d3",
+    "outcome_type": "pending_validation",
+    "summary": "无线网卡驱动已卸载，当天暂未复发，但缺少长期单变量验证。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-6bb2131929",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-47292802bc",
+    "outcome_type": "pending_validation",
+    "summary": "已和客户约定连续一周每日关机重启，但样本没有证明该周期已完整执行或长期有效。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-c61cf6839a",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-73134bda74",
+    "outcome_type": "pending_validation",
+    "summary": "显卡驱动已更新，当天暂未复发，但与其他动作同时执行，无法单独归因。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-bb4713bd11",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-b2d121d8e3",
+    "outcome_type": "pending_validation",
+    "summary": "测试内存和 CPU 稳定性尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-22d2057857",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-5b869c362f",
+    "outcome_type": "pending_validation",
+    "summary": "开启 Driver Verifier尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-7b7001d073"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-ca09c8b263",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:collect-2cd37caa39",
+    "outcome_type": "context_not_root_cause",
+    "summary": "转储提供 0x139、驱动加载异常和页缺失信号，但因转储不完整不能锁定根因。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-08a3c9f1f1",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a65aed6f7a",
+    "outcome_type": "pending_validation",
+    "summary": "现场已拔除两根内存，但没有后续长期无复发证据。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-97192f315e",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:inspect-60407cff5d",
+    "outcome_type": "context_not_root_cause",
+    "summary": "接地状态和 2400 内存频率被记录，未证明它们是根因。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-371471dee0",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-f46eae1c52",
+    "outcome_type": "pending_validation",
+    "summary": "已执行组合式系统修复，缺少各命令结果和复发观察。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-738fabc97f",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a4dba6837d",
+    "outcome_type": "pending_validation",
+    "summary": "向日葵驱动已清除，但与多项操作同时执行，无法单独归因。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1b7010a215",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-c88f389b52",
+    "outcome_type": "pending_validation",
+    "summary": "NVIDIA 驱动已更新，但未说明 DDU 执行且无长期复发结果。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-85f3a1bf09",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-9b06a6adcc",
+    "outcome_type": "pending_validation",
+    "summary": "规范关机流程尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-0e663c01bb",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-94a89ac40d",
+    "outcome_type": "pending_validation",
+    "summary": "使用 DDU 重装显卡驱动尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-626327b90d",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-91be27c9c1",
+    "outcome_type": "pending_validation",
+    "summary": "修复 Defender 并清理其他可疑驱动尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e52e2b1917",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:verify:-9ee50f2990",
+    "outcome_type": "pending_validation",
+    "summary": "开启 Driver Verifier尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-882dc31cf8",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:inspect-420bc003a9",
+    "outcome_type": "context_not_root_cause",
+    "summary": "DMP 明确支持 System PTE 耗尽机制，但没有定位到具体泄漏驱动。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "疑似驱动长期申请 DMA、图像缓冲或连续物理内存后未释放，具体驱动未知",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-ad585bdc9a",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:change:-7e1147df7a",
+    "outcome_type": "recurred",
+    "summary": "调整内存频率后随后连续多日仍发生蓝屏，不能作为最终解决。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-926871becf",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-f411676b20",
+    "outcome_type": "partial_temporary",
+    "summary": "升级 1.3.7 后当时正常，次日客户再次反馈蓝屏。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-e783ff1761",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-1764bc3eb0",
+    "outcome_type": "diagnostic_method",
+    "summary": "用于避免 DMP 损坏并保留可分析证据；此前多次过早重启导致转储不可读。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-2093c49574"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-82c331c59d",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-377d7e8985",
+    "outcome_type": "pending_validation",
+    "summary": "现场已更换内存条，样本只到持续观察，没有长期无复发结论。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-9c99539ad8",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-f2f172633e",
+    "outcome_type": "pending_validation",
+    "summary": "使用 WPR 抓取内核分配趋势尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-af9a0a0f43"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-169277edbd",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-5056f286d7",
+    "outcome_type": "pending_validation",
+    "summary": "使用 PoolMon 监控池分配尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-d65ee25851"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-85431c36bd",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change:-usb-:-73c7a0d1c0",
+    "outcome_type": "mitigation_observed",
+    "summary": "重新拔插光源 USB 接口后已恢复正常。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-e92329e40a",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:observe:-:06be8d2b7f21",
+    "outcome_type": "pending_validation",
+    "summary": "恢复后仍需 1-2 天上线跟线验证确认是否稳定。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-31b9bf494e",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:inspect:-:e92652a54587",
+    "outcome_type": "pending_validation",
+    "summary": "检查光源初始化失败告警尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-d1f038b300"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-232c97ddd2",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-531e5b8ba8",
+    "outcome_type": "context_not_root_cause",
+    "summary": "发现NDIS 10400、Realtek驱动错误和高频重置，形成网卡驱动或硬件异常的初步判断。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8e65e942ab",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-9ef2acec04",
+    "outcome_type": "partial_temporary",
+    "summary": "驱动重装后有效数小时，随后重置和断连复发。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ccdc1f2ec6",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-28c6e75971",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-311713590e",
+    "outcome_type": "context_not_root_cause",
+    "summary": "扩展网卡承载的相机和云控链路同时断连，进一步支持扩展网卡方向。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-11bcfc98ad",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-21d5567662",
+    "outcome_type": "verified_fix",
+    "summary": "更换扩展网卡后设备恢复生产。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "扩展网卡硬件故障或稳定性异常",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-d70543f678",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:colle-d8fd578e5a",
+    "outcome_type": "diagnostic_method",
+    "summary": "收集Windows系统日志已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9f26c1b770",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-fe92e3b660",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查日志时间空档已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8d8ac2300a",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:obser-7d2592ec46",
+    "outcome_type": "pending_validation",
+    "summary": "观察驱动重装后是否复发尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-b8ea2f3c0a",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:verif-ca0725f4ee",
+    "outcome_type": "pending_validation",
+    "summary": "验证生产恢复尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-debda6e8d0",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-95218a3ab4",
+    "outcome_type": "ineffective",
+    "summary": "拔插固态后仍无法进入系统。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-53044145d5",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-759e837706",
+    "outcome_type": "ineffective",
+    "summary": "拔插内存条后仍无法进入系统。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9b26916b49",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-50fbb49aa0",
+    "outcome_type": "ineffective",
+    "summary": "放电后仍无法进入系统。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ce6cc5a50a",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+    "outcome_type": "diagnostic_method",
+    "summary": "可以进入BIOS，说明主机能完成基础自检，问题范围收敛到启动/存储访问链路。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-20829baad7",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-e1636f1de0",
+    "outcome_type": "ineffective",
+    "summary": "PE系统还原后仍无法正常启动。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-a7a0ef7b69",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-0e06eddb84",
+    "outcome_type": "ineffective",
+    "summary": "修复C盘引导后仍无法正常启动。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8991f1c8c7",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f1cc83b174",
+    "outcome_type": "partial_temporary",
+    "summary": "可以进入系统，但D盘无法识别。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f4d25a438a",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-a92b546608",
+    "outcome_type": "verified_fix",
+    "summary": "还原AHCI后系统正常启动并恢复生产。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "具体根因未知；SATA模式往返切换后启动和磁盘访问恢复",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-0be6eef0fd",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-499b03649e",
+    "outcome_type": "pending_validation",
+    "summary": "进入PE环境尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-466c107025",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+    "outcome_type": "diagnostic_method",
+    "summary": "进入BIOS检查SATA模式已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9217f9eb4c",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-548a2daffa",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查D盘识别状态已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-837d572182",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bf4134fc6",
+    "outcome_type": "pending_validation",
+    "summary": "验证系统启动和生产恢复尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-62218683cc",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-fa296972b5",
+    "outcome_type": "ineffective",
+    "summary": "重启主程序和Buddy后仍持续报Buddy错误。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e13a920df9",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-1b2996a4cd",
+    "outcome_type": "partial_temporary",
+    "summary": "重启电脑后首次恢复，但两天后保存失败和D盘消失再次发生。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b3fac20ff",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-680dc0ba6f",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-4b9a3d4182",
+    "outcome_type": "context_not_root_cause",
+    "summary": "请求到达localhost Buddy Host且CURLE_OK；HTTP 500由mkdir D:\\ACME路径不存在直接触发，而非外部网络不通。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "D盘消失或不可访问导致Buddy冷存储路径不存在",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-c682efb320",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-85338ebd1a",
+    "outcome_type": "diagnostic_method",
+    "summary": "保存失败复发时资源管理器中D盘确实消失，验证了日志中的路径不存在。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "D盘消失或不可访问导致Buddy冷存储路径不存在",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f550b4d76a",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-ec6a68a325",
+    "outcome_type": "context_not_root_cause",
+    "summary": "硬盘SMART状态良好，不支持直接判定为物理坏盘。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-0009f88d85",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3cd6fee9f7",
+    "outcome_type": "verified_fix",
+    "summary": "调整BIOS参数后，次日设备架入线体并正常生产。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "高置信直接机制为D盘不可访问；SATA热插拔配置导致内置盘可被弹出是中等置信假设",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-666683da53",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-2c9be1d7a6",
+    "outcome_type": "diagnostic_method",
+    "summary": "记录Buddy保存失败信息已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-c1f9abf004",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-01a3181d5d",
+    "outcome_type": "diagnostic_method",
+    "summary": "收集诊断数据已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-34b5abaa25",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-a2c033e194",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查Windows存储事件和日志空档已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-0e3b1e99ea",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-432a250c34",
+    "outcome_type": "diagnostic_method",
+    "summary": "还原退出U盘操作已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9b91b2018d",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-0da2fefdf5",
+    "outcome_type": "diagnostic_method",
+    "summary": "确认D盘物理连接已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-fe01d0cfff",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3f3c2b6101",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查SATA热插拔BIOS参数已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-ad5dde0ab7",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:veri-42798e040e",
+    "outcome_type": "pending_validation",
+    "summary": "验证程序保存和生产恢复尚无独立验证结果。",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-95f83b1cc4",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+    "outcome_type": "ineffective",
+    "summary": "初次重插后部线缆后仍自动重启。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-bc2528c408",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+    "outcome_type": "ineffective",
+    "summary": "清理内存异物后故障仍存在，不能把异物认定为主根因。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8eafd7f87f",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+    "outcome_type": "ineffective",
+    "summary": "重插内存后仍复发；四根内存和插槽随后可通过自检。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ad8750634c",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+    "outcome_type": "context_not_root_cause",
+    "summary": "识别到引导损坏迹象，但它更像频繁异常断电的次生结果，不是供电中断根因。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-819fceaff4",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+    "outcome_type": "pending_validation",
+    "summary": "只提出修复引导，没有实际执行和结果证据。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "high_cost": false,
+    "destructive": true,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-80c7b5a61c",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:9a6c251b529a",
+    "outcome_type": "diagnostic_method",
+    "summary": "等待后短时可开机但马上再次断电，支持供电链不稳定方向。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-64bb0d82ae",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+    "outcome_type": "partial_temporary",
+    "summary": "重插后分阶段观察和生产2.5小时未复发并恢复生产，但后续明确认定这只是短期方案。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "老版本模组电源输出线接口松动",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7b4a2b7b26",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:compare:-pci-:f33edcb9eec8",
+    "outcome_type": "context_not_root_cause",
+    "summary": "PCI供电换位和还原后都能短期稳定，不能把特定PCI接口位置认定为根因。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-f441b39474",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:observe:-:945abfa3fba5",
+    "outcome_type": "diagnostic_method",
+    "summary": "接回全部外设后仍未立即复发，外设连接不是当时的直接触发条件。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-c9031bdc95",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:558ee7487bcb",
+    "outcome_type": "context_not_root_cause",
+    "summary": "确认现场接地需要整改，同时最终说明部分早期高阻值来自错误测量点位；它不是最终主根因。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-db945131aa",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+    "outcome_type": "mitigation_observed",
+    "summary": "接地整改后20个测点均小于4欧，设备从前一晚到次日中午未再异常；这是并存环境问题的整改。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "现场接地方式不正确是并存风险，不是最终主根因",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1beb7fb3a8",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+    "outcome_type": "diagnostic_method",
+    "summary": "轻推即可观察到线缆相对端子前后窜动，形成电源输出接口松动的关键物理证据。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "老版本模组电源输出线接口松动导致供电接触不稳定",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-0228bb5f3f",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+    "outcome_type": "partial_temporary",
+    "summary": "文本明确点胶短期可用但长期存在复发风险，不能标为verified_fix。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "老版本模组电源输出线接口松动",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-656b6a9206",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:125b2570137a",
+    "outcome_type": "pending_validation",
+    "summary": "更换电源是长期建议，样本没有已执行或更换后的观察证据。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "high_cost": true,
+    "destructive": false,
+    "root_cause_summary": "老版本模组电源输出线接口松动",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-99e6a6fa46",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:6460a450e019",
+    "outcome_type": "diagnostic_method",
+    "summary": "收集系统日志已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-989054432c"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-3b5e663dbc",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-cpu-:805c040093ca",
+    "outcome_type": "diagnostic_method",
+    "summary": "检查电源及主板CPU供电接口已记录为诊断动作。",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "",
+    "generated_from_missing_explicit_outcome": true,
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "outcome_id": "outcome:931d03342bc5",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "action_id": "action:f1dae8038fa1",
+    "outcome_type": "pending_validation",
+    "outcome_origin": "rule_inferred",
+    "activation_mode": "",
+    "activation_requirements": {},
+    "summary": "规范文档只规定老化动作；是否无丢帧且后续不复发仍需现场执行结果和人工确认。",
+    "source_case_id": "case:453ecf1bf543",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": ""
+  },
+  {
+    "outcome_id": "outcome:e17e491bda05",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "action_id": "action:f1dae8038fa1",
+    "outcome_type": "verified_fix",
+    "outcome_origin": "human_reviewed",
+    "activation_mode": "human_confirmed_runtime",
+    "activation_requirements": {
+      "all_of_groups": [
+        [
+          "一小时",
+          "1小时",
+          "1h",
+          "不少于一小时"
+        ],
+        [
+          "无丢帧",
+          "未丢帧",
+          "0丢帧",
+          "零丢帧"
+        ],
+        [
+          "现场确认",
+          "人工确认",
+          "确认问题已解决",
+          "确认解决"
+        ]
+      ]
+    },
+    "summary": "相机拍照老化不少于一小时且无丢帧，并经现场人工确认问题已解决。",
+    "source_case_id": "case:453ecf1bf543",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ],
+    "high_cost": false,
+    "destructive": false,
+    "root_cause_summary": "修复后通过持续拍照老化验证"
+  }
+]

@@ -1,0 +1,3494 @@
+[
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:67a3e151c0b8",
+    "source_episode_id": "case:f484f4362a9a",
+    "target_error_id": "errv2:variant:5ca3e5d66c93",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:5eca6ddec326",
+        "label": "确认模板管理刷新后无模板且创建模板失败",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:dfa29875da07",
+        "label": "检查 Buddy 版本升级路径是否命中 0.11.2~0.11.4 升级到 0.14.x",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:651834a6b50b",
+        "label": "关闭 Buddy 并以管理员身份运行 useraccess_restore 脚本",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:74d7e2ebea33",
+        "label": "恢复权限后重新打开 Buddy 并刷新模板管理验证",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:93c916779ad2"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:650eade9cfbf",
+    "source_episode_id": "case:b8cad43218da",
+    "target_error_id": "errv2:variant:4910bcd7768c",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:69d110e27ba8",
+        "label": "确认故障项目存在模板文件损坏现象",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e1e19410132e",
+        "label": "通过 Buddy 本地接口读取项目元数据",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:1a1c6d513826",
+        "label": "提取 .data.meta 并覆盖项目目录 meta.json",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:58aa590a8e8c",
+        "label": "重新打开模板管理验证模板是否恢复",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:f7b24529347c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ee584a971478",
+    "source_episode_id": "case:526f0088fb44",
+    "target_error_id": "errv2:variant:a4b1c55b5b98",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:347155428e48",
+        "label": "检查设备是否有D盘",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:22216cbe7a00",
+        "label": "检查设备管理器中显卡驱动状态",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:49a3478d738f",
+        "label": "安装显卡驱动",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e29a3a9278f6"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:1c92f2010834",
+    "source_episode_id": "case:b03dc72e6623",
+    "target_error_id": "errv2:variant:e2f87ec2fcb9",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:cbefb7921af3",
+        "label": "确认弹窗报错为加载用户配置失败",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:4c5909cf3007",
+        "label": "备份并清空 conf 目录",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:7d579362edaf",
+        "label": "检查日志与 user.cfg.toml 是否异常",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:9fbfdbe96349",
+        "label": "用最近一次正常诊断日志中的 user.cfg.toml 替换验证",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:9846bca31ef8"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:fc4756e47b18",
+    "source_episode_id": "case:03655ec630a6",
+    "target_error_id": "errv2:variant:ec9afd3830c5",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:7cd6a79a4a4f",
+        "label": "对比 smt-buddy-term put res 与主程序 get res 时间差",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:861a9e545a25",
+        "label": "判断主程序 saving result 与传输时长占比",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:09d88e93a278",
+        "label": "检查复判站与主程序之间的数据传输链路",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:129f4c69af9e",
+        "label": "检查是否属于双轨竞争或缓存切换",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ad9b07f81052",
+    "source_episode_id": "case:f6b1fd1a6433",
+    "target_error_id": "errv2:variant:a44985cc325f",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:b655801d114e",
+        "label": "收集日志并确认是否为网络超时",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e93c79067594",
+        "label": "测试网络速度是否正常",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:0f1af50b5d06",
+        "label": "检查复判站 IP 配置是否正常",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d2328b725a97"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9bc2807a3a9a",
+    "source_episode_id": "case:39c69402fdbc",
+    "target_error_id": "errv2:variant:991505498404",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:3efb5766a7e6",
+        "label": "确认弹窗报错为加载用户配置失败",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:cde32d749854",
+        "label": "备份并清空 conf 目录",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:d0d49cd144a1",
+        "label": "检查日志与 user.cfg.toml 是否异常",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:40b5416dcc46",
+        "label": "用最近一次正常诊断日志中的 user.cfg.toml 替换验证",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:0e1a65b97844"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:05bdd8c88078",
+    "source_episode_id": "case:08c8dce04187",
+    "target_error_id": "errv2:variant:16d3c3752ef8",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:2acb1d3c459e",
+        "label": "收集复判站日志",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e70ded5383e8",
+        "label": "检查日志是否存在 500 报错",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:21431a2aac98",
+        "label": "删除复判站报错日志中的异常 json 文件",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:f5f073d4d7cb",
+        "label": "重新加载最新模板验证参考图是否恢复",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:4afe9ffd7307"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ba4146dd3377",
+    "source_episode_id": "case:199ae685e296",
+    "target_error_id": "errv2:variant:4e468df11ac4",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:22595a926f54",
+        "label": "在SPC里执行文件清理",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:62dadd568516",
+        "label": "关闭buddy后收集db文件",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:8b254cf89cf1",
+        "label": "用DB Browser检查host.db/stats.db/term.db",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:ea7acd7f2e38"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:1549c27ea1f2",
+    "source_episode_id": "case:a365fff72edb",
+    "target_error_id": "errv2:variant:94e96f1fd195",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:9384d79fbe05",
+        "label": "检查程序CAD是否按小拼板分拼板号",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:f74b6ab63c93",
+        "label": "确认是否因程序旋转180度导致拼版号不一致",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:88593e28eea9",
+        "label": "使用未旋转程序手动添加后再另存旋转程序验证",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:a43037d0bbc2",
+        "label": "按当前下板方向重新制作程序",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:b76486fd32b9"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:e55644388129",
+    "source_episode_id": "case:0c9d0b38bee1",
+    "target_error_id": "errv2:variant:647a1358fdd9",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:59dd656a834b",
+        "label": "检查复判站IP是否与相机IP冲突",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:3d0a9889659c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:894e9e140baf",
+    "source_episode_id": "case:a8e22b535ab1",
+    "target_error_id": "errv2:variant:d38add58c5f3",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:56f127b3bc38",
+        "label": "先用AOI主程序验证是否能加载该res记录",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:1b416b011b14",
+        "label": "根据复判站日志删除当前报错res",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:e51ac4f9190d",
+        "label": "临时过滤损坏res并等待自动清理",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:ed580e950c4c",
+        "label": "排查多模板框和版本配套问题",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:ff74386b427e"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:26bd059765da",
+    "source_episode_id": "case:f9a10dc3fb98",
+    "target_error_id": "errv2:variant:04ab6350a693",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:39d7cc9942e9",
+        "label": "回流问题数据并在最新版本验证识别框",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:1ca57904805d",
+        "label": "判断识别框是否实际准确",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:65caa5920fbf",
+        "label": "识别框准确时指导现场调试并更新模型或版本",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:cd1034b06196"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:be42b46b1763",
+    "source_episode_id": "case:5cdd21562cfb",
+    "target_error_id": "errv2:variant:98ccc4341275",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:dbd0d2b16bb2",
+        "label": "退出软件并断电 1 分钟后重启",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e6999b04624f",
+        "label": "2D设备插拔光控",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:7af89ca778fa",
+        "label": "检查系统 IP 连接和 ARM 连接及防火墙",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:adc19d9cd88e"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:5f5622834ffd",
+    "source_episode_id": "case:0bbcf6e9d914",
+    "target_error_id": "errv2:variant:ed05a6492d6c",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:dd069e4a1dbe",
+        "label": "检查板卡是否为弯板",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:6f54a0a01f16",
+        "label": "检查轨道宽度是否合适",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:23f1c77f7486",
+        "label": "检查顶升是否把板子夹平",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:62f67b518f27",
+        "label": "检查挡块或邻近器件是否反光",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:244bedc19075",
+        "label": "检查器件本身是否存在差异脏污破损",
+        "order": 5
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:8c9311abfdba"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ec7e4ce31438",
+    "source_episode_id": "case:3762c0860fa0",
+    "target_error_id": "errv2:variant:bd2c4a483c6c",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:bc6ab594163d",
+        "label": "确认相机使用自动获取 IP 且当前识别不到",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:86fd87aa2ad6",
+        "label": "将相机 IP 改为 192.168.0.101 同网段固定地址",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:4d762e72290a",
+        "label": "重新初始化并验证相机是否恢复识别",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:666fbfc14d43"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ee5c41f5dfcf",
+    "source_episode_id": "case:037e6da73c79",
+    "target_error_id": "errv2:variant:9e8b05952fe8",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:db28efaad4e7",
+        "label": "检查近远轨夹边挡块位置是否一致",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:941ab7c4d2f0",
+        "label": "统一两条轨的夹边挡块位置",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:97a80bd2d4c9",
+        "label": "将板边 Mark 点改成板内 Mark 点",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:0bf154fbdb23"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:64cb90f544ba",
+    "source_episode_id": "case:71e9655bad47",
+    "target_error_id": "errv2:variant:788cb5c529da",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:62097e5bb3c1",
+        "label": "检查相机是否上电",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:dd8797895804",
+        "label": "检查2D相机IP是否正确",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:56f5a95a5fd2",
+        "label": "检查光源控制器状态是否正常",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:0b940c51b1ca"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:0fe42493f215",
+    "source_episode_id": "case:b49ff8972454",
+    "target_error_id": "errv2:variant:5aea4ca1a28c",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:692fdfa34d6c",
+        "label": "检查相机SDK版本是否>=2.4.2503.9201",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:c023aa94ec8a",
+        "label": "按文档排查相机网口配置和系统电源模式",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:6b223c88ef0b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ffdd157330b3",
+    "source_episode_id": "case:b4336d9f98d5",
+    "target_error_id": "errv2:variant:976060e31d65",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:8f7b49d2f726",
+        "label": "根据日志区分超时类型",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:94d43db73033",
+        "label": "light switched超时时尝试绑核处理",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:3f1b95da1035"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f311e0adbf68",
+    "source_episode_id": "case:847f31d14bf5",
+    "target_error_id": "errv2:variant:85ccacc7d116",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:f660f2e6de3d",
+        "label": "检查网口配置并开启巨帧",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:a628731ce4f9"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ace21eb9ee88",
+    "source_episode_id": "case:53758163472a",
+    "target_error_id": "errv2:variant:fd608c7d45f3",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:59c26725979c",
+        "label": "确认是否白图无错位但RGB错位",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:ea2c378bf0dc",
+        "label": "检查伺服模式是否正常",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:6ff4f2d87316",
+        "label": "检查伺服电机是否存在硬件故障",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:7aa292bd3c6f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ce8861aed0d3",
+    "source_episode_id": "case:fe9244cf7d78",
+    "target_error_id": "errv2:variant:eb2a7fdf6c4e",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:bf20b2db61f6",
+        "label": "检查上位送板机第二轨与AOI第二轨是否过近或有夹角",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:292b0f6a1325",
+        "label": "重新调整上位送板机水平位置",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:41c621f7c472",
+        "label": "标定轨道宽度",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:ca088ed1c0b9"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:8e95813a0899",
+    "source_episode_id": "case:ad03308b2e1d",
+    "target_error_id": "errv2:variant:fc5bfb5b91d1",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:32aab514d3db",
+        "label": "检查皮带和滚轮间是否有异物",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:b3ebe384dc01",
+        "label": "检查皮带损坏与板宽参数是否匹配",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:1e533a368950",
+        "label": "手动拉动皮带并清洁滚轮",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:0e2feb72d61b",
+        "label": "检查皮带动力线连接",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:56e4282c9b9b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:109e623433a6",
+    "source_episode_id": "case:1880673ed990",
+    "target_error_id": "errv2:variant:d5eea319cb98",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:61a62e8eb199",
+        "label": "检查六个感应器状态是否有红灯",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:cebaa08a5329",
+        "label": "清洁感应器并排除轨道异物",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e07e7bbb7fcd"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:c0daef170618",
+    "source_episode_id": "case:c87abe53d3d4",
+    "target_error_id": "errv2:variant:1bb6990ef791",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:d941ea3d0723",
+        "label": "检查轨道传感器状态是否被感应",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:064c2512f8e4",
+        "label": "检查是否为镂空板导致进板感应器未触发",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:47ce4053ed5c",
+        "label": "安装感应器挡片保证触发",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:72c14e5c1ef3"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:6c024a90c70d",
+    "source_episode_id": "case:961c14556f3b",
+    "target_error_id": "errv2:variant:a1d4742f8c90",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:36a03ef4bd0e",
+        "label": "检查流道宽度与喇叭口是否造成卡板",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:669513fbdefe",
+        "label": "检查薄板或弯板是否导致卡板",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:a2813c5132ae",
+        "label": "检查减速传感器到阻挡块距离并重新标定",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:2d953f5089e9",
+        "label": "断电后手动拉动皮带检查阻力与损坏",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:10978bb5510d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:d9c747b01cf8",
+    "source_episode_id": "case:45371aea128e",
+    "target_error_id": "errv2:variant:f8e19a97b578",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:ac4c5af0e036",
+        "label": "检查板子是否为镂空板",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:3b7cae2a148f",
+        "label": "安装感应器挡片保证进板触发",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:69ec14b05625",
+        "label": "无挡片时用接料带辅助触发",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:c9a5a1442f32"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:cad70ad48b9b",
+    "source_episode_id": "case:7659f74cb200",
+    "target_error_id": "errv2:variant:a62b48ef1b39",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:7e28ce11e0c6",
+        "label": "检查是否为镂空板导致感应器未触发",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:a207364f9353",
+        "label": "安装感应器挡片或用接料带辅助触发",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:7126b01aa7eb",
+        "label": "板子过长时增大timeout_output_board_out_of_output_spot_in_sec",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d9cf40787a5c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9a7ee192d08e",
+    "source_episode_id": "case:0201171525cc",
+    "target_error_id": "errv2:variant:a32cda57eedf",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:10accf2088ae",
+        "label": "检查是否存在传感器误触发",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:b2e3ea03d7ab"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:23e54f807bea",
+    "source_episode_id": "case:5e0c0e1c9661",
+    "target_error_id": "errv2:variant:0338d170a1d3",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:43189f7c1f19",
+        "label": "检查出板口是否仍有板未出板",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:db905b5af65f",
+        "label": "检查进板传感器是否被触发并调整灵敏度",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:067f7227cb5e",
+        "label": "在工厂软件中检查皮带正反转",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:54a1a9ff1629",
+        "label": "检查IO点位信号是否正确",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:bbe2107bff74",
+        "label": "重新拔插皮带电机线",
+        "order": 5
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:ddccf90609cc"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:4ae8a42ffa40",
+    "source_episode_id": "case:c8d0ae7d6214",
+    "target_error_id": "errv2:variant:3f3f4a8c59f7",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:a5b969de2a10",
+        "label": "调整传感器螺丝和灵敏度",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:8d990786e04b",
+        "label": "增加output_board_out_filter_delay_in_millisec",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:79ff37d94726",
+        "label": "适当调节出板皮带参数",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:6cc3108bf2c6",
+        "label": "安装并标记感应器挡片位置",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:5e9b2f428f55"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9cc9ca8f63e0",
+    "source_episode_id": "case:50b71775fb2a",
+    "target_error_id": "errv2:variant:0a5f62a8947f",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:0064c2cbfeca",
+        "label": "检查实际气压值是否在0.2-0.5",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:48972c27dc59",
+        "label": "调整气压阈值使其小于实际气压值",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:71d9cef83d6c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:e655ec8b3a0b",
+    "source_episode_id": "case:d15748d2c4c4",
+    "target_error_id": "errv2:variant:2e556d119eee",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:cee79491309e",
+        "label": "清洗玻璃罩和排净气管内水油污",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:fb2f0ce7b899",
+        "label": "检查气压值并逆时针调大气阀",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:9bec4f80be72",
+        "label": "更换顶升气缸",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:9e56db13a82d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:686f7fcc79a0",
+    "source_episode_id": "case:b39db0a26b2a",
+    "target_error_id": "errv2:variant:29957728725e",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:301eea9a7815",
+        "label": "检查挡块是否卡顿并观察是否回弹",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:625de3ba5b6b",
+        "label": "手动按压挡块检查气缸回弹",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:1978c65346f8",
+        "label": "拔掉阻挡气缸气管并反复推拉检查是否顺畅",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:ab579c5bab6e"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f5b47c4e57e7",
+    "source_episode_id": "case:efd407c8edf2",
+    "target_error_id": "errv2:variant:6ada76c47f15",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:04ffabaa68c5",
+        "label": "检查内存显存和CPU/GPU占用",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:401acaa896bc",
+        "label": "重新安装或更换相关硬件",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e4ff50702855"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:6d37dacda98f",
+    "source_episode_id": "case:f430f782a32b",
+    "target_error_id": "errv2:variant:4562194ba843",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:231930b7197b",
+        "label": "使用薄扳手拆卸仪表盘",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:f96f9a355f66",
+        "label": "缠绕生料进行加固",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:f339c7e41530",
+        "label": "装回仪表盘并验证是否仍漏气",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e051b530eefc"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:b77317ab8b4b",
+    "source_episode_id": "case:7f22a670dca7",
+    "target_error_id": "errv2:variant:7eaca826258e",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:81a443b1e018",
+        "label": "断气并清理右侧小瓶积水",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:92e1ce5344e9",
+        "label": "排除总气管和支气管内积水",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:5b7aa4cb388b",
+        "label": "擦干电气元件并检查气源与三联件",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:25a7bc5fc1ac"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:32078a3723c8",
+    "source_episode_id": "case:280b5b5433f5",
+    "target_error_id": "errv2:variant:bcb288ac578d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:8ccbef151d06",
+        "label": "分解 CT 构成",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:6cb334d0e865",
+        "label": "检查模板匹配开关是否过多",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:af191572a92e",
+        "label": "检查检测阶段算法生成焊盘框是否开启",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:58d5a6717372",
+        "label": "检查保存 OK 小图是否开启",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:ee0ffae5dd78",
+        "label": "检查整板异物检测是否开启",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:8b983fbda426",
+        "label": "检查模板库是否存在大量替代料",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:e40508d8c84d",
+        "label": "检查双轨资源竞争与缓存机制",
+        "order": 8
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:b4251f065a26",
+    "source_episode_id": "case:d6dff7149f80",
+    "target_error_id": "errv2:variant:2a60b79c87b9",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:a6e77934b52d",
+        "label": "检查导入后的 CAD 编码格式是否正确",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:7e21411444d1",
+        "label": "检查导后 XY 及角度位置是否正确",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:0f248ff49748",
+        "label": "检查 CAD 是否包含多余文字或空格符",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:1c24e008fd65",
+        "label": "检查 CAD 内是否存在特殊符号",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:3c1a1fa2b559",
+        "label": "检查 CAD 坐标是否为拼版坐标",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:e4076eee3f17",
+        "label": "检查坐标数值是否超出板卡尺寸",
+        "order": 6
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:3dfa1538faf4"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:d0b51eab666b",
+    "source_episode_id": "case:420dab95d3c6",
+    "target_error_id": "errv2:variant:c2cd584776e4",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:2e325ccaf46c",
+        "label": "正常场景按顺时针导入 CAD",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:ff702ffd7038",
+        "label": "特殊斜角物料场景改为逆时针导入 CAD",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:5fb3beeb2b73",
+        "label": "做完程序后将设置改回顺时针",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:0860b8b283bb",
+        "label": "检查 CAD 视图行列是否设置反",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:551a7a9f1c50",
+        "label": "确认是否存在 0/180 度角度分裂",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:d0c705d4e0a1",
+        "label": "对比 0.26 客户版本与展厅新版本表现",
+        "order": 6
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:19968959df4e"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:df72f961fb9c",
+    "source_episode_id": "case:a577d1ff34a1",
+    "target_error_id": "errv2:variant:373e5c2af9ae",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:a81b1c1252c4",
+        "label": "尝试使用模板匹配算法",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:a97234a05c6f",
+        "label": "选择非圆点的特征部位作为匹配对象",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d620d598adde"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:cb54b6431621",
+    "source_episode_id": "case:2dd115de2813",
+    "target_error_id": "errv2:variant:5ad5d9efd01d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:954653fb444b",
+        "label": "检查 Mark 点选择位置与参数是否合理",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e9103844fba1",
+        "label": "优先使用形状匹配算法并调试模板强弱阈值",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:bb0b3d5df898",
+        "label": "特殊情况下切换到模板匹配算法",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:197000356448",
+        "label": "检查板卡方向是否正确",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:561bc0745d26",
+        "label": "检查是否进板不到位",
+        "order": 5
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:3786a93b965b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:b16f34a1a8d2",
+    "source_episode_id": "case:782c5b50e4a6",
+    "target_error_id": "errv2:variant:1536a6b6dd8a",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:4552f83367e6",
+        "label": "将封装加入模板库",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:1a58dbad6fe0",
+        "label": "将 OCR 加入模板库",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:5184869bffbb",
+        "label": "将极性加入模板库",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:67c76e1758da"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:28d20a4cef54",
+    "source_episode_id": "case:c5266de68d39",
+    "target_error_id": "errv2:variant:560b45b5a5a5",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:78c6ec7f48bc",
+        "label": "确认问题表现为侧立或翘脚漏报",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:2b264300ecc8",
+        "label": "调整 XY 轴阈值",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:666587fa2633",
+        "label": "调整角度阈值",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:f586f6dd7951",
+        "label": "复测并确认漏报是否收敛",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:5bc4f627a718"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:aacbfbbddc2f",
+    "source_episode_id": "case:a7ee2dba064a",
+    "target_error_id": "errv2:variant:e85a44f4ff62",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:eed7d9c031f2",
+        "label": "评估是否适用板弯补偿（3%以内）",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:00c3045670e3",
+        "label": "设置标记点区域",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:7d0f54d6f063"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:791b65816634",
+    "source_episode_id": "case:54fc258944c0",
+    "target_error_id": "errv2:variant:99015b4dd02d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:33843f8472f3",
+        "label": "收集日志并检查运控日志是否有 invalid map<K, T> key",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:5e12a681ea56",
+        "label": "使用 MotionPanel 检查运控卡状态",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:3d8032e71a6a",
+        "label": "确认 9014 运控卡与 e450demo 网口卡对应关系",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:4c21071d0982"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:921b0319aa34",
+    "source_episode_id": "case:468622871b0d",
+    "target_error_id": "errv2:variant:9790cdd90279",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:a1e1ac2011aa",
+        "label": "检查运控日志是否有异常",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:23bf7353c2c9",
+        "label": "检查网络适配器速率是否为 100M",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:97ac49564b04",
+        "label": "网速异常时修改 Speed & Duplex",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:daeca09cca69",
+        "label": "重新初始化验证运控是否恢复",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:61036cd3693a"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:e93232cd4ca8",
+    "source_episode_id": "case:fea5d19e3a59",
+    "target_error_id": "errv2:variant:2b0ee6654ea6",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:1033e846ddb0",
+        "label": "检查运控日志中的Camera steady costs",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:093e11249844"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:6526cbd0a78b",
+    "source_episode_id": "case:ed8669accf36",
+    "target_error_id": "errv2:variant:735b95484ecc",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:172e9b9f1d63",
+        "label": "收集日志并确认TRACK_NEAR NOT_ALLOWED",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:3d1d7e6d6ac4",
+        "label": "检查限位和原点状态",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:e895712473be",
+        "label": "检查设备前后门是否关闭",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:07e5dff132ea",
+        "label": "检查板宽轴是否需要复位",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:1cbd366f2846"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:fdbeb6e3064c",
+    "source_episode_id": "case:c7e8b51a624f",
+    "target_error_id": "errv2:variant:dd978de9a776",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:c9d53cadf484",
+        "label": "在运控配置页面切换高级/大师并修改出板参数",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:bb620921c246",
+        "label": "必要时直接修改machine.toml参数",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:61494e63f49d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:24f9ede57c90",
+    "source_episode_id": "case:35dc9cf7f7b7",
+    "target_error_id": "errv2:variant:e26711065a0d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:e2fcf6a928a5",
+        "label": "删除异常文件",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:b5590ae1de56",
+        "label": "重启检测验证固定轨位置是否恢复",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:8a84c145656a"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:7e40b473d6c4",
+    "source_episode_id": "case:58cdd65a3635",
+    "target_error_id": "errv2:variant:ccaa2ab2fdd4",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:33a18673e9e2",
+        "label": "检查减速传感器是否被触发",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:0297ccc39c8d",
+        "label": "检查减速传感器到挡块距离是否过近并重新标定",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:88a34714df71",
+        "label": "按实际修改machine.toml相关距离参数",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:95a7b8955f13"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f668f6f686ea",
+    "source_episode_id": "case:1f9eb1366f0d",
+    "target_error_id": "errv2:variant:578de50facb0",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:5b526ec7a890",
+        "label": "检查设备前后门是否关闭",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:394028517045",
+        "label": "在软件内点击硬件复位并等待轨道归位",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:eb8b461980b8",
+        "label": "重开软件并调取程序验证是否恢复正常",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:55b505cc2831"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:8115a55f58b2",
+    "source_episode_id": "case:1cf7b4bb512b",
+    "target_error_id": "errv2:variant:1356d0150d41",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:9092a6f3c9fb",
+        "label": "修改timeout_output_board_out_of_output_spot_in_sec为4",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:84811cbc6d82"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:a0b6cb277be0",
+    "source_episode_id": "case:4286e00fd807",
+    "target_error_id": "errv2:variant:ce522a5343b8",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:2cc868a65bf0",
+        "label": "按顺序重启三个软件",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:3ce633a3f75b",
+        "label": "检查machine.toml是否存在",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:bf7cf705658b",
+        "label": "检查machine.toml端口参数或查找备份文件",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:2e9a92b5f99f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:2f2465271289",
+    "source_episode_id": "case:831896365f21",
+    "target_error_id": "errv2:variant:e306ddb8b23e",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:345e62faff73",
+        "label": "确认FOV图片数量不足42张",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:6500d9af4087",
+        "label": "断电后紧固或重新插拔CXP线",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:35e3a3ac3aa4"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:fa921ff7d868",
+    "source_episode_id": "case:5d253979c7b5",
+    "target_error_id": "errv2:variant:3b454c501d13",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:394d01a275f8",
+        "label": "检查3D相机是否被设置为自动曝光",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e4b2cb465b51"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9bdc0544f1b2",
+    "source_episode_id": "case:49d32e1bea37",
+    "target_error_id": "errv2:variant:92c2169ab7f8",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:3491adde2a55",
+        "label": "检查日志是否存在exposure end timed out",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:e3aed87c2ab1",
+        "label": "检查timeout_wait_for_camera_event_in_millisec是否为10000",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:33a197f77b1b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:323dc7940b5d",
+    "source_episode_id": "case:2dd8020a1ee2",
+    "target_error_id": "errv2:variant:6119e37f7937",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:1787fa4fd298",
+        "label": "检查设备日期和时间是否正确",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:072cbfb5887f",
+        "label": "执行系统文件修复",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:08126e858fe1",
+        "label": "更新显卡驱动",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:09743bf03bff"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:cfa3f40d4c35",
+    "source_episode_id": "case:22a3e3c3680b",
+    "target_error_id": "errv2:variant:af862bdacdc0",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:538340b2bf04",
+        "label": "按F1进入系统并Esc不保存退出",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:6ee2c89d71ea",
+        "label": "检查主板电池是否没电并更换",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:3cdab9c4f2c0",
+        "label": "无视频输入时对主板完全断电后重试",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:0488832925c4"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:a520d500f8f3",
+    "source_episode_id": "case:f782ddd38bd9",
+    "target_error_id": "errv2:variant:7c84534ea195",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:56c8aedb74d0",
+        "label": "检查buddy-data目录占用",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:5f6834751f41",
+        "label": "按目录类型执行迁移模板或缩短热存储时间",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:dd71b0790fdd",
+        "label": "检查用户目录和导出目录占用",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:e70440b5ba05",
+        "label": "检查MES目录是否占用C盘",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:fe5bb50fc290",
+        "label": "全盘定位异常空间占用",
+        "order": 5
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:c8e93714866b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:4a99af2b0592",
+    "source_episode_id": "case:155cac70cba7",
+    "target_error_id": "errv2:variant:2545bf73ac53",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:c13bc33f3b41",
+        "label": "确认D盘是否被用户误用于存放普通数据",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:f9c27ea15cd4",
+        "label": "通过SPC执行文件清理",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:31b96a7161bd"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:468ee246d022",
+    "source_episode_id": "case:3a00b526c703",
+    "target_error_id": "errv2:variant:14c2cb5e766c",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:48945f7a6308",
+        "label": "在磁盘管理中分配未分配盘符",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:f7ec5a3c0c8d",
+        "label": "将原D盘数据迁移到新盘符",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:755a8bb2a6b1",
+        "label": "交换原D盘和新机械硬盘盘符并重启",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e8c6882b85f9"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:c52c04bc5530",
+    "source_episode_id": "case:7be504947156",
+    "target_error_id": "errv2:variant:085961f0d893",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:9b7695c0dbb0",
+        "label": "确认客户保留天数和删除授权",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:15209b7e151a",
+        "label": "执行cold_results清理脚本",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:ad73f4c5f124",
+        "label": "删除脚本并同步执行SPC文件清理",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:19d471772d10"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:135921acdae7",
+    "source_episode_id": "case:4edbea2a64e4",
+    "target_error_id": "errv2:variant:e331eddf4c58",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:7c7f8dc3455f",
+        "label": "断电拆机并安装新SSD到副M.2插槽",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:cfe7e198dcea",
+        "label": "在PE系统中克隆旧硬盘到新SSD",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:d197cbe7376f",
+        "label": "交换SSD位置并在BIOS中确认启动项",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:65396e2d0900"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:beebf0962eae",
+    "source_episode_id": "case:487c3df2bf65",
+    "target_error_id": "errv2:variant:b2151957490b",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:601ed9c20ca6",
+        "label": "下载并安装WinDbg",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:8e1c3ae23394",
+        "label": "收集ABC文件夹中的DMP文件",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:ac0e32bc2989",
+        "label": "配置symbols并执行!analyze -v",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d516c8c3db2f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9553f4d64276",
+    "source_episode_id": "case:b3454704def9",
+    "target_error_id": "errv2:variant:c418362a09e0",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:ec7b04c05a47",
+        "label": "查看日志是否与光控相关",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:183232f173b3",
+        "label": "交换光控和加密狗位置",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:5df7e51d9743",
+        "label": "检查是否使用一分四USB2.0拓扑",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:44cbce940c9f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:a291d478bdfe",
+    "source_episode_id": "case:368a9d6fe533",
+    "target_error_id": "errv2:variant:c2b563dfa419",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:9a1a10eacdb6",
+        "label": "检查页面文件是否由系统接管或是否被关闭",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:19e66ff4273e",
+        "label": "增大虚拟内存页面文件大小",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:8846ef89db53",
+        "label": "必要时更新版本",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:fd66fbd3488d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ffebfff86e7d",
+    "source_episode_id": "case:b664987f240e",
+    "target_error_id": "errv2:variant:bf9cfce95b8b",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:ef9974bca5b7",
+        "label": "拔插显卡并清洁金手指",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:8a3b0cc19256",
+        "label": "收集日志并查看系统日志文件",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:2b01ba052507",
+        "label": "重新安装显卡驱动并关闭快速启动",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:179ae119cdfa"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:4536d81b2b29",
+    "source_episode_id": "case:84022a493409",
+    "target_error_id": "errv2:variant:e832a165e16b",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:e940227e7355",
+        "label": "运行gpedit.msc进入组策略",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:0bcf558b52c7",
+        "label": "关闭Microsoft Defender防病毒与实时保护",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:a0661b62dfe0",
+        "label": "重启系统并验证编程耗时是否恢复",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:39b229df6533"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:85875195ced0",
+    "source_episode_id": "case:21f434ab6a0e",
+    "target_error_id": "errv2:variant:640f1b149bcf",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:c81fac773608",
+        "label": "以管理员身份运行DMP收集工具",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:42f4e4136dec",
+        "label": "压缩桌面生成的ABC文件夹并收回",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d8ffa51b3cb2"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:83e207992cc4",
+    "source_episode_id": "case:cb348b37cb09",
+    "target_error_id": "errv2:variant:b1ccecf6657a",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:e49894a933d2",
+        "label": "关闭Windows安全防护并重启验证",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:96dc22251294",
+        "label": "查看buddy资源浮窗中的内存显存使用情况",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:9a51ae9ba1e3",
+        "label": "开启并回收buddy指标收集日志",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:882467805581"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:9ea688afb874",
+    "source_episode_id": "case:67d9c2970631",
+    "target_error_id": "errv2:variant:442c0ff7b8ca",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:386f47c4d3ca",
+        "label": "检查电源和内存条连接稳定性",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:38c936faba06",
+        "label": "卸载无线网卡驱动",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:aeda768007d5",
+        "label": "收集诊断日志或查看事件管理器系统日志",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:202c745ea34b"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:057dc35531df",
+    "source_episode_id": "case:341f3ec6cfb2",
+    "target_error_id": "errv2:variant:39ebe7bfde46",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:6d824430dcdf",
+        "label": "修改冲突的计算机名称",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:515a37d0b9ae",
+        "label": "收集日志并查看是否存在VSS来源错误",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:94a496db3500",
+        "label": "按硬件检查-驱动更新-系统修复-持续观察顺序排查",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:b9c7e7cbd80d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:d47b847ec199",
+    "source_episode_id": "case:ca0609b2bc54",
+    "target_error_id": "errv2:variant:74bff08dbf69",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:924fbda39e5b",
+        "label": "插拔显卡和内存条",
+        "order": 1
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:a6ec04d4cbac"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:321468384360",
+    "source_episode_id": "case:3e30cd59c5a1",
+    "target_error_id": "errv2:variant:858099d657fb",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:01b388daf107",
+        "label": "检查CMD窗口标题是否包含管理员字样",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:fcdb39cf4927",
+        "label": "将UAC通知等级调整到第三级",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:f4a56abf9119",
+        "label": "重启设备并再次检查CMD默认模式",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:9d175d758771"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:3cb7dfa1d16e",
+    "source_episode_id": "case:dc178631a5fc",
+    "target_error_id": "errv2:variant:e03fd1a0b41b",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:040727a4b063",
+        "label": "检查光源控制器串口线是否插在规范主板接口",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:f98ef455db77",
+        "label": "查看设备管理器端口号",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:f4b00e8dfe94",
+        "label": "在machine.toml中修改对应端口参数",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:2c296abe3190"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:886c5f676f4d",
+    "source_episode_id": "case:9957c9618adf",
+    "target_error_id": "errv2:variant:9dad09fd98ca",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:1eea9638417a",
+        "label": "插鼠标检查USB接口和供电是否正常",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:ac807a9d51b3",
+        "label": "检查接口是否脱落",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:b3a31879c319",
+        "label": "更换U盘或设备排除外设短路问题",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:e3951ed09fde"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:a04d5c002c3f",
+    "source_episode_id": "case:8094cecb3c25",
+    "target_error_id": "errv2:variant:1c1e5db082d5",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:8dd99f0d02a6",
+        "label": "检查外部供电与电源线",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:a21a6d50e3d4",
+        "label": "检查显示器与视频线连接",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:72453efbf471",
+        "label": "观察Debug灯并做最小化硬件测试",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:8755a0415358",
+        "label": "检查启动顺序与硬盘识别",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:a8fd7a481dee",
+        "label": "排查温度、电源与间歇性黑屏死机",
+        "order": 5
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:5472a701e02e"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:2c42fc4ee99c",
+    "source_episode_id": "case:1690bca87c7c",
+    "target_error_id": "errv2:variant:34457dc94ba8",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:342e696ac3d4",
+        "label": "收集日志并检查dx/dy是否在5像素内",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:2c7754dbe967",
+        "label": "dx/dy超范围时重新进行角度标定",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:26dd70563830"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:87828bfcf7cd",
+    "source_episode_id": "case:b319cc6bdbf8",
+    "target_error_id": "errv2:variant:16ebab0bf75a",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:670bbdd320ea",
+        "label": "查看日志是否报camera y axis GoToPoint failed",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:81291abe9c1b",
+        "label": "使用标定软件重新标定y轴限位值",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:3b65177f1375"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:ca91af078153",
+    "source_episode_id": "case:0977c33c2ff1",
+    "target_error_id": "errv2:variant:a8e0e16aa8de",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:9a164c7a170e",
+        "label": "检查码本身是否有问题",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:06860b1e93f1",
+        "label": "调整扫码枪位置",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:632b2fa48592",
+        "label": "检查网络连接是否ping成功",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:e268d4677733",
+        "label": "检查外部触发感应器位置是否误触发",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:0e10bab7403d"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:648cb5eed75b",
+    "source_episode_id": "case:7930b54c085c",
+    "target_error_id": "errv2:variant:25e22d02e5c3",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:43944cb7fa31",
+        "label": "检查接驳台扫码枪传感器是否平衡",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:7e0f6c8a832e",
+        "label": "检查传感器触发情况",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:5264493502fa",
+        "label": "检查扫码枪配置",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:7831046adc1f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:6b5200387bb9",
+    "source_episode_id": "case:ba47331f7617",
+    "target_error_id": "errv2:variant:29e2bdbed992",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:784d2b57fe98",
+        "label": "按版本选择ctrl+X整图导出方式",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:439d1aeaea3b",
+        "label": "执行SPC数据导出",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:958e615b6b04",
+        "label": "执行AOI/SPI FOV碎图导出",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:8972f7dd4179",
+        "label": "按需求导出日志和配置",
+        "order": 4
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:d899e23ca383"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f53588a39ae0",
+    "source_episode_id": "case:1e17f0559eaa",
+    "target_error_id": "errv2:variant:af6a76a55ec1",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:68c87b0efafc",
+        "label": "按版本执行cold_results或缓存数据清理",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:63928e4d057a",
+        "label": "同步在SPC中清理数据库",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:2072e135691a",
+        "label": "检查C盘导出目录与MES目录占用",
+        "order": 3
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:b9513899f7a2"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f64ca39e8266",
+    "source_episode_id": "case:66f062924241",
+    "target_error_id": "errv2:variant:1fb725ddc3c7",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:d24067588b34",
+        "label": "检查默认浏览器是否被360劫持",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:7ee3b8e6d66f",
+        "label": "将默认浏览器改成edge",
+        "order": 2
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:1b09600f405c"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-0f59e2a59a",
+    "source_episode_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "target_error_id": "errv2:variant:family::d618be740693:-:c4560bfa8a96",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+        "label": "重新拔插工控机后部线缆",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+        "label": "清理内存金手指异物",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+        "label": "重新拔插四根内存条",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+        "label": "修复系统引导",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:-2ff4507dab",
+        "label": "收集系统日志",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:-c2a5d98f6b",
+        "label": "还原断电后无法立即开机现象",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-c-e771821d72",
+        "label": "检查电源及主板CPU供电接口",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+        "label": "重插模组电源输出连接线",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:compare:-p-8ebbcf02cc",
+        "label": "对比PCI供电换位和还原",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:-a06fa42e50",
+        "label": "检查并复测整机接地",
+        "order": 11
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+        "label": "增加工控机和侧板接地线",
+        "order": 12
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+        "label": "轻推主板供电线检查端子窜动",
+        "order": 13
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+        "label": "对松动端子点胶固定",
+        "order": 14
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:125b2570137a",
+        "label": "更换工控机电源",
+        "order": 15
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+        "label": "重新拔插工控机后部线缆",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+        "label": "清理内存金手指异物",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+        "label": "重新拔插四根内存条",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+        "label": "修复系统引导",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:-2ff4507dab",
+        "label": "收集系统日志",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:-c2a5d98f6b",
+        "label": "还原断电后无法立即开机现象",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-c-e771821d72",
+        "label": "检查电源及主板CPU供电接口",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+        "label": "重插模组电源输出连接线",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:compare:-p-8ebbcf02cc",
+        "label": "对比PCI供电换位和还原",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:-a06fa42e50",
+        "label": "检查并复测整机接地",
+        "order": 11
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+        "label": "增加工控机和侧板接地线",
+        "order": 12
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+        "label": "轻推主板供电线检查端子窜动",
+        "order": 13
+      },
+      {
+        "check_id": "checkv2:action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+        "label": "对松动端子点胶固定",
+        "order": 14
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-989054432c",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-2faf5dc8b3",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-071b8257ae",
+    "source_episode_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "target_error_id": "errv2:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-d46e78a09d",
+        "label": "分析 DMP 中 PFN 不同步信号",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-b482e7773e",
+        "label": "进行内存和CPU稳定性测试",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-1214f26694",
+        "label": "卸载无线网卡驱动",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-ef6945056f",
+        "label": "更新 NVIDIA 驱动至 581.29",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-6b19a55414",
+        "label": "开启 Driver Verifier",
+        "order": 6
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-d46e78a09d",
+        "label": "分析 DMP 中 PFN 不同步信号",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-1214f26694",
+        "label": "卸载无线网卡驱动",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:memory_management-pfn-:0b-ef6945056f",
+        "label": "更新 NVIDIA 驱动至 581.29",
+        "order": 4
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-7b7001d073",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-66c9f3a6ae",
+    "source_episode_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "target_error_id": "errv2:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-8312114920",
+        "label": "收集并分析转储文件",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-44d229fa01",
+        "label": "拔除两根内存条",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-64bb138215",
+        "label": "检查接地和内存频率",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-2fead2118e",
+        "label": "规范关机流程",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-3e1a45f62c",
+        "label": "执行系统文件修复",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-8a8126c9a7",
+        "label": "清除向日葵驱动",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-7ae8e85ebd",
+        "label": "更新 NVIDIA 驱动",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-b36bfbe723",
+        "label": "使用 DDU 重装显卡驱动",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-a95f2f8f97",
+        "label": "修复 Defender 并清理其他可疑驱动",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-4269d18ffb",
+        "label": "开启 Driver Verifier",
+        "order": 10
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-8312114920",
+        "label": "收集并分析转储文件",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-44d229fa01",
+        "label": "拔除两根内存条",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-64bb138215",
+        "label": "检查接地和内存频率",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-2fead2118e",
+        "label": "规范关机流程",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-3e1a45f62c",
+        "label": "执行系统文件修复",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-8a8126c9a7",
+        "label": "清除向日葵驱动",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:-7ae8e85ebd",
+        "label": "更新 NVIDIA 驱动",
+        "order": 7
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1640721fff",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-7cf1423ce3",
+    "source_episode_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "target_error_id": "errv2:variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-20008a1377",
+        "label": "分析 DMP 中 PTE 耗尽信号",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-1241d85424",
+        "label": "将内存频率改为 2666 并观察",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-2ff755cbe8",
+        "label": "使用 WPR 抓取内核分配趋势",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-2157a268e9",
+        "label": "使用 PoolMon 监控池分配",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-f15e756171",
+        "label": "等待蓝屏转储完成后再重启",
+        "order": 6
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-20008a1377",
+        "label": "分析 DMP 中 PTE 耗尽信号",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:-1241d85424",
+        "label": "将内存频率改为 2666 并观察",
+        "order": 2
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-af9a0a0f43",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-d65ee25851",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-2093c49574",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-1c359efbcf",
+    "source_episode_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "target_error_id": "errv2:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-aad9b4835e",
+        "label": "拔插固态",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-44fa4f5eff",
+        "label": "拔插内存条",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-2875bead10",
+        "label": "执行放电",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-c6277b2b15",
+        "label": "检查 BIOS 设置",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-01e9635886",
+        "label": "进入PE环境",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-abed964b3f",
+        "label": "执行系统还原",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-97e26794f0",
+        "label": "修复C盘引导",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-df2ff8c34d",
+        "label": "将SATA从AHCI切换为RAID",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-f8dbf8e4da",
+        "label": "检查D盘识别状态",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-7dff8a52c6",
+        "label": "将SATA从RAID还原为AHCI",
+        "order": 10
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-d37e5bbd02",
+        "label": "验证系统启动和生产恢复",
+        "order": 11
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-aad9b4835e",
+        "label": "拔插固态",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-44fa4f5eff",
+        "label": "拔插内存条",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-2875bead10",
+        "label": "执行放电",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-c6277b2b15",
+        "label": "检查 BIOS 设置",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-01e9635886",
+        "label": "进入PE环境",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-abed964b3f",
+        "label": "执行系统还原",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-97e26794f0",
+        "label": "修复C盘引导",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-df2ff8c34d",
+        "label": "将SATA从AHCI切换为RAID",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-f8dbf8e4da",
+        "label": "检查D盘识别状态",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-7dff8a52c6",
+        "label": "将SATA从RAID还原为AHCI",
+        "order": 10
+      },
+      {
+        "check_id": "checkv2:action:variant:family::77f1b67eafb3:inaccessible_boot_device-d37e5bbd02",
+        "label": "验证系统启动和生产恢复",
+        "order": 11
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8365bbcb13",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-6feee593e3",
+    "source_episode_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "target_error_id": "errv2:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-50ec12bcff",
+        "label": "收集Windows系统日志",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-778c5c8592",
+        "label": "查询网卡重置事件",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-9eca167678",
+        "label": "检查日志时间空档",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-b9ab7c4810",
+        "label": "重装2.5G网卡驱动",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-61ccb76b99",
+        "label": "检查扩展网卡端口及下游链路状态",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-d1a3fcdc5b",
+        "label": "更换扩展网卡",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-a7df906ac3",
+        "label": "验证生产恢复",
+        "order": 8
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-50ec12bcff",
+        "label": "收集Windows系统日志",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-778c5c8592",
+        "label": "查询网卡重置事件",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-9eca167678",
+        "label": "检查日志时间空档",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-b9ab7c4810",
+        "label": "重装2.5G网卡驱动",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-61ccb76b99",
+        "label": "检查扩展网卡端口及下游链路状态",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-d1a3fcdc5b",
+        "label": "更换扩展网卡",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f01-a7df906ac3",
+        "label": "验证生产恢复",
+        "order": 8
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ccdc1f2ec6",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-cc0d1fa954",
+    "source_episode_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "target_error_id": "errv2:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-435b443cbc",
+        "label": "收集配置失败诊断数据",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-cf610cec3b",
+        "label": "检查user.cfg.toml和备份",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-8d6509749f",
+        "label": "判断当前配置是否损坏",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-4b42d2b92f",
+        "label": "使用最近诊断日志中的user.cfg.toml",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-a170476933",
+        "label": "验证主程序启动",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-ae04a67c3f",
+        "label": "切换设置后恢复原值并重启复验",
+        "order": 6
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-435b443cbc",
+        "label": "收集配置失败诊断数据",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-cf610cec3b",
+        "label": "检查user.cfg.toml和备份",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-8d6509749f",
+        "label": "判断当前配置是否损坏",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-4b42d2b92f",
+        "label": "使用最近诊断日志中的user.cfg.toml",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-a170476933",
+        "label": "验证主程序启动",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a-ae04a67c3f",
+        "label": "切换设置后恢复原值并重启复验",
+        "order": 6
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-5f89ba590d",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-fbfbb1af28",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-859f57818b",
+    "source_episode_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "target_error_id": "errv2:variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:inspec-169d40d8b2",
+        "label": "检查光源初始化失败告警",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change-133785602b",
+        "label": "重新拔插光源 USB 接口",
+        "order": 2
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change-133785602b",
+        "label": "重新拔插光源 USB 接口",
+        "order": 1
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-d1f038b300",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-fe275d94b4",
+    "source_episode_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "target_error_id": "errv2:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-58893b4bbe",
+        "label": "记录Buddy保存失败信息",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-2337a63199",
+        "label": "收集诊断数据",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-29aaf8197b",
+        "label": "重启主程序和Buddy",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ca3a6bdb22",
+        "label": "重启电脑",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-7a9a014014",
+        "label": "查询Buddy保存日志",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ded0781bde",
+        "label": "检查Windows存储事件和日志空档",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-9d1c4f36e9",
+        "label": "检查D盘是否存在",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-3226c86cfd",
+        "label": "还原退出U盘操作",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-f2101b2ae3",
+        "label": "检查硬盘SMART状态",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-dce5145d5f",
+        "label": "确认D盘物理连接",
+        "order": 10
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-abafb58277",
+        "label": "检查SATA热插拔BIOS参数",
+        "order": 11
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ffff4f986f",
+        "label": "检查 BIOS 设置",
+        "order": 12
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-37c5af38ff",
+        "label": "验证程序保存和生产恢复",
+        "order": 13
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-58893b4bbe",
+        "label": "记录Buddy保存失败信息",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-2337a63199",
+        "label": "收集诊断数据",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-29aaf8197b",
+        "label": "重启主程序和Buddy",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ca3a6bdb22",
+        "label": "重启电脑",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-7a9a014014",
+        "label": "查询Buddy保存日志",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ded0781bde",
+        "label": "检查Windows存储事件和日志空档",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-9d1c4f36e9",
+        "label": "检查D盘是否存在",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-3226c86cfd",
+        "label": "还原退出U盘操作",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-f2101b2ae3",
+        "label": "检查硬盘SMART状态",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-dce5145d5f",
+        "label": "确认D盘物理连接",
+        "order": 10
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-abafb58277",
+        "label": "检查SATA热插拔BIOS参数",
+        "order": 11
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-ffff4f986f",
+        "label": "检查 BIOS 设置",
+        "order": 12
+      },
+      {
+        "check_id": "checkv2:action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39d-37c5af38ff",
+        "label": "验证程序保存和生产恢复",
+        "order": 13
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b3fac20ff",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-d885ff7f63",
+    "source_episode_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "target_error_id": "errv2:variant:family::5274d74078aa:-:7012dc376b46",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:-c8fb51fca1",
+        "label": "收集近七天诊断数据",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:-2366eebe96",
+        "label": "核对相机网线换口时间点",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-s-51a36e3512",
+        "label": "按SOP检查网卡参数",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:-9250a83f6f",
+        "label": "检查残帧和相机事件包",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+        "label": "将相机网线插回主板网口",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+        "label": "重启设备",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:change:-:380386c2485f",
+        "label": "升级大恒相机固件",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:-e85b979698",
+        "label": "检查相机侧端口磁环和走线",
+        "order": 9
+      }
+    ],
+    "actual_order": [
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:-c8fb51fca1",
+        "label": "收集近七天诊断数据",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:-2366eebe96",
+        "label": "核对相机网线换口时间点",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-s-51a36e3512",
+        "label": "按SOP检查网卡参数",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:-9250a83f6f",
+        "label": "检查残帧和相机事件包",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+        "label": "将相机网线插回主板网口",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+        "label": "重启设备",
+        "order": 6
+      }
+    ],
+    "evidence_message_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-d8c886ac6c",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744"
+    ]
+  },
+  {
+    "type": "DiagnosticTrace",
+    "trace_id": "tracev2:trace:f43c56985f6c",
+    "source_episode_id": "case:453ecf1bf543",
+    "target_error_id": "errv2:variant:505989010b74",
+    "recommended_order": [
+      {
+        "check_id": "checkv2:action:d806ef1cfd61",
+        "label": "确认拍照失败现象并收集故障时段日志",
+        "order": 1
+      },
+      {
+        "check_id": "checkv2:action:31bfe15b8b49",
+        "label": "检查相机SDK版本",
+        "order": 2
+      },
+      {
+        "check_id": "checkv2:action:085223f171e2",
+        "label": "检查日志中的相机丢事件或事件ACK异常",
+        "order": 3
+      },
+      {
+        "check_id": "checkv2:action:0b398f8374d5",
+        "label": "按相机型号匹配工具并升级固件",
+        "order": 4
+      },
+      {
+        "check_id": "checkv2:action:7367a7341eef",
+        "label": "检查相机网口参数",
+        "order": 5
+      },
+      {
+        "check_id": "checkv2:action:8c803ae45afc",
+        "label": "按基线配置相机网口参数",
+        "order": 6
+      },
+      {
+        "check_id": "checkv2:action:a514589a860e",
+        "label": "取消其他网卡的GigE Vision Filter",
+        "order": 7
+      },
+      {
+        "check_id": "checkv2:action:58c1c112a804",
+        "label": "检查工控机电源模式",
+        "order": 8
+      },
+      {
+        "check_id": "checkv2:action:a7d64a1b3da0",
+        "label": "设置卓越性能并关闭网卡节能",
+        "order": 9
+      },
+      {
+        "check_id": "checkv2:action:1616d363bd4f",
+        "label": "检查系统日志中的网卡过热和网络断链",
+        "order": 10
+      },
+      {
+        "check_id": "checkv2:action:ead91fff7662",
+        "label": "检查网卡驱动和系统驱动状态",
+        "order": 11
+      },
+      {
+        "check_id": "checkv2:action:5154bcbb0945",
+        "label": "确认网卡类型和更换条件",
+        "order": 12
+      },
+      {
+        "check_id": "checkv2:action:2fcdedca3a10",
+        "label": "更换M.2网卡",
+        "order": 13
+      },
+      {
+        "check_id": "checkv2:action:b3d34750ce25",
+        "label": "更换PCI接口网卡",
+        "order": 14
+      },
+      {
+        "check_id": "checkv2:action:405099be2b2a",
+        "label": "恢复相机及运控IP并复查网络日志",
+        "order": 15
+      },
+      {
+        "check_id": "checkv2:action:bb29ee8be8a4",
+        "label": "检查磁环和相机端点胶",
+        "order": 16
+      },
+      {
+        "check_id": "checkv2:action:0aefa8353a29",
+        "label": "加装磁环并按标准点胶",
+        "order": 17
+      },
+      {
+        "check_id": "checkv2:action:ea29f945cf6e",
+        "label": "检查网线弯折走线和表面损伤",
+        "order": 18
+      },
+      {
+        "check_id": "checkv2:action:5467da52da8d",
+        "label": "更换相机网线并按标准重新走线",
+        "order": 19
+      },
+      {
+        "check_id": "checkv2:action:4242fa39fa53",
+        "label": "检查设备地线是否接工厂大地",
+        "order": 20
+      },
+      {
+        "check_id": "checkv2:action:a4debb2951d0",
+        "label": "检查工控机机箱接地",
+        "order": 21
+      },
+      {
+        "check_id": "checkv2:action:38683387ac08",
+        "label": "修正设备与机箱接地",
+        "order": 22
+      },
+      {
+        "check_id": "checkv2:action:ed3aa4226e4e",
+        "label": "检查旧驱动隐藏设备和缺失驱动",
+        "order": 23
+      },
+      {
+        "check_id": "checkv2:action:1e3d7de4abb8",
+        "label": "使用DriverStoreExplorer清理旧驱动",
+        "order": 24
+      },
+      {
+        "check_id": "checkv2:action:adc57cea08d3",
+        "label": "手动删除隐藏或异常设备驱动",
+        "order": 25
+      },
+      {
+        "check_id": "checkv2:action:92b22d7e4632",
+        "label": "安装缺失驱动并联系支持",
+        "order": 26
+      },
+      {
+        "check_id": "checkv2:action:75c4b7488f33",
+        "label": "确认是否为双轨大板特定场景",
+        "order": 27
+      },
+      {
+        "check_id": "checkv2:action:e5850b5cd56f",
+        "label": "临时设置主程序和运控进程绑核",
+        "order": 28
+      },
+      {
+        "check_id": "checkv2:action:8bafbe8045f5",
+        "label": "汇总前序证据并判断部件更换条件",
+        "order": 29
+      },
+      {
+        "check_id": "checkv2:action:d9cafcec058a",
+        "label": "更换工控机",
+        "order": 30
+      },
+      {
+        "check_id": "checkv2:action:a3fe39166e0f",
+        "label": "更换相机",
+        "order": 31
+      },
+      {
+        "check_id": "checkv2:action:8210bd9ef062",
+        "label": "执行相机老化至少一小时",
+        "order": 32
+      },
+      {
+        "check_id": "checkv2:action:f1dae8038fa1",
+        "label": "执行拍照老化并记录丢帧结果",
+        "order": 33
+      }
+    ],
+    "actual_order": [],
+    "evidence_message_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  }
+]

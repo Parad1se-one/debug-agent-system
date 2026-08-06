@@ -1,0 +1,15 @@
+{
+  "schema_version": "debug_agent_system.read_side_frozen_manifest.v1",
+  "frozen_at": "2026-07-30",
+  "boundary": "Existing DebugAgentSystem.start SAG/Evidence Pack/Codex composer path",
+  "files": {
+    "src/debug_agent_system/runtime/system.py": "719a173750df4ada9eea92ae5563c1588215f08afa96017bf1fdda4a48f9b684",
+    "src/debug_agent_system/knowledge_v2/read_model.py": "c68bbec7c5c13b2c0913ce288922b2bb4c06ed964303930107b284b36ee34d55",
+    "src/debug_agent_system/knowledge_v2/sqlite_sag_v2.py": "a3177a1f8355f556a4b367cd78d92ed7645efb5970ce82b1ba8af122d6c81abc",
+    "src/debug_agent_system/agents/read/evidence_pack.py": "9a2fb100792b54b7d6b2c6829cfe0cbb1caefa69ea7df24968af673070b5c972",
+    "src/debug_agent_system/agents/read/evidence_answer.py": "52fca0d7de270662bbb3bf808109eb35c782b7f4f32477bff9d27206446ac391",
+    "src/debug_agent_system/agents/read/codex_answer.py": "e78a51bc7eec5645894b2032513826acf53a6c7cf7ec26dd408f51b9d767800c",
+    "src/debug_agent_system/adapters/codex_read/executor.py": "bd877fd12f6c833a6b6ae7941a968ff9bd6c7ee11b9a2ab724af59e63d93ef4c",
+    "config/debug_agent_system.yaml": "c7d1fae64d55f2f9877d380089a76bc1f0191682f73f86f183b218c7d6813966"
+  }
+}

@@ -1,0 +1,23 @@
+# O-KG Retrieval Agent
+
+- id: `O-KG`
+- type: Orchestrator/Worker boundary
+- owner: `src/debug_agent_system/agents/read/o_kg_retrieval`
+- responsibility: recall and rank candidate `Error` nodes from current `data/kg`; apply deterministic rerank rules for strong signals such as blue-screen codes.
+- entrypoint: `KGRetrievalAgent.retrieve(query, limit=5)`.
+- inputs:
+  - `query: str` full user query with any appended user supplements.
+  - `limit: int` max candidates returned.
+- outputs:
+  - `list[Candidate]` with `error_id`, `label`, `score`, `route`, `evidence`, `payload`.
+  - Blue-screen rerank may set `route=lexical_kg+blue_screen_rerank` and payload `_rerank_boost`.
+- failure_modes:
+  - No match -> empty list; O0/C converts to `ask_info`.
+  - OCR/user typo `Oxc...` -> normalized to `0xc...` before matching.
+  - Competing high-score generic no-boot vs explicit blue-screen signal -> canonical blue-screen tree may be promoted if plausible.
+- observability:
+  - O0 stores serialized candidates in `metadata.retrieval_candidates`.
+- non_goals:
+  - Does not lock subgraphs.
+  - Does not choose traversal branch.
+  - Does not mutate KG/indexes.

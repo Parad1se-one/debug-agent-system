@@ -1,0 +1,33 @@
+# Interface CLI Agent
+
+- id: `I-CLI`
+- type: Interface
+- owner: `src/debug_agent_system/adapters/cli.py`
+- responsibility: expose local command-line entrypoints for read-side diagnosis, write-side ingestion, and evidence parsing without changing internal contracts.
+- entrypoints:
+  - `python -m debug_agent_system.adapters.cli diagnose <query>` -> calls `DebugAgentSystem.start()`.
+  - `python -m debug_agent_system.adapters.cli step <session_id> <message>` -> calls `DebugAgentSystem.step()`.
+  - `parse-evidence jira|attachment|proj <payload>` -> calls `EvidenceToolAgent`.
+  - `ingest-xing <import_root>` -> calls `WriteSidePipeline.run_xing_upload()`.
+- inputs:
+  - CLI argv strings only.
+  - `diagnose`: free-text `query`; optional config/session flags if supported by adapter.
+  - `step`: `session_id` plus user reply text.
+  - `parse-evidence`: tool name and JSON/string/path payload.
+  - `ingest-xing`: local import root containing `_MANIFEST/*.csv`.
+- outputs:
+  - JSON printed to stdout.
+  - Diagnosis output follows `AgentResponse`: `status`, `answer`, `required_data`, `current_check_id`, `observability`, `metadata`.
+  - Parse output follows tool-specific `*ParseResult` contracts.
+  - Ingest output contains `run_manifest`, `summary`, `review_summary`, `queue_writes`, dry-run plans.
+- failure_modes:
+  - Invalid command/args -> non-zero CLI exit via argparse.
+  - Unknown session -> `status=failed`, `failure_type=unknown_session`.
+  - Missing import manifest -> exception/non-zero exit; caller must fix path.
+  - Tool parse failure -> structured `EvidenceToolError`, not process mutation.
+- observability:
+  - Preserve downstream `observability` fields; CLI itself must not hide `agent_id/status/failure_type`.
+  - stdout JSON is the audit artifact for manual runs.
+- non_goals:
+  - Do not implement diagnosis logic in CLI.
+  - Do not mutate KG except through W5 approved-only paths exposed by write pipeline.

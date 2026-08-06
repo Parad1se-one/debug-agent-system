@@ -1,0 +1,3115 @@
+{
+  "schema_version": "kg_v2.entity_ontology.v1",
+  "description": "Debug 场景名词实体的审核基线。结构化 KG 字段会自动补充原子实体；本文件只保存跨字段根概念、明确关系和待人工审核的现场叫法。",
+  "concepts": [
+    {
+      "key": "equipment:aoi设备",
+      "canonical_name": "AOI设备",
+      "concept_type": "equipment",
+      "definition": "用于自动光学检测的 AOI 主设备类别。",
+      "approved": true
+    },
+    {
+      "key": "equipment:工控机",
+      "canonical_name": "工控机",
+      "concept_type": "equipment",
+      "definition": "AOI 设备中承担控制、检测程序和 Windows 环境运行的工业控制计算机。",
+      "approved": true
+    },
+    {
+      "key": "station:复判站",
+      "canonical_name": "复判站",
+      "concept_type": "station",
+      "definition": "接收检测结果并供人员复核判定的站点。",
+      "approved": true
+    },
+    {
+      "key": "station:编程站",
+      "canonical_name": "编程站",
+      "concept_type": "station",
+      "definition": "用于 AOI 程序制作、编辑或调试的站点。",
+      "approved": true
+    },
+    {
+      "key": "equipment:相机",
+      "canonical_name": "相机",
+      "concept_type": "equipment",
+      "definition": "AOI 成像与采集链路中的相机设备类别。",
+      "approved": true
+    },
+    {
+      "key": "equipment:2d相机",
+      "canonical_name": "2D相机",
+      "concept_type": "equipment",
+      "definition": "用于二维图像采集的相机子类。",
+      "approved": true
+    },
+    {
+      "key": "equipment:3d相机",
+      "canonical_name": "3D相机",
+      "concept_type": "equipment",
+      "definition": "用于三维成像或高度信息采集的相机子类。",
+      "approved": true
+    },
+    {
+      "key": "equipment:工业相机",
+      "canonical_name": "工业相机",
+      "concept_type": "equipment",
+      "definition": "用于工业机器视觉采集的相机设备类别；具体接口、分辨率、帧率和型号应保留为实例证据。",
+      "approved": true
+    },
+    {
+      "key": "equipment:spi设备",
+      "canonical_name": "SPI设备",
+      "concept_type": "equipment",
+      "definition": "用于锡膏印刷质量检测的 SPI 产线设备；与串行外设接口协议 SPI 保持词义隔离。",
+      "approved": true
+    },
+    {
+      "key": "equipment:上板机",
+      "canonical_name": "上板机",
+      "concept_type": "equipment",
+      "definition": "向 SMT/AOI 产线输送待处理板卡的上料设备；其与 AOI 的相对位置必须由具体产线证据确认。",
+      "approved": true
+    },
+    {
+      "key": "equipment:收板机",
+      "canonical_name": "收板机",
+      "concept_type": "equipment",
+      "definition": "接收产线输出板卡的下料或收集设备；OK/NG 分流属于实例能力或配置。",
+      "approved": true
+    },
+    {
+      "key": "equipment:接驳台",
+      "canonical_name": "接驳台",
+      "concept_type": "equipment",
+      "definition": "用于连接相邻产线设备、承载板卡输送或人工处理的接驳设备；上游、下游和分流角色属于实例属性。",
+      "approved": true
+    },
+    {
+      "key": "equipment:缓存机",
+      "canonical_name": "缓存机",
+      "concept_type": "equipment",
+      "definition": "用于在相邻产线设备之间暂存、放行或调节板卡节拍的缓存设备。",
+      "approved": true
+    },
+    {
+      "key": "equipment:回流焊设备",
+      "canonical_name": "回流焊设备",
+      "concept_type": "equipment",
+      "definition": "通过受控加热完成焊膏回流焊接的 SMT 产线设备；与回流焊工艺过程保持实体层次区分。",
+      "approved": true
+    },
+    {
+      "key": "workpiece:pcb",
+      "canonical_name": "PCB",
+      "concept_type": "workpiece",
+      "definition": "进入 AOI 设备检测流程的印制电路板工件。",
+      "approved": true
+    },
+    {
+      "key": "software:windows",
+      "canonical_name": "Windows",
+      "concept_type": "software",
+      "definition": "工控机、复判站或编程站上运行的 Windows 操作系统。",
+      "approved": true
+    },
+    {
+      "key": "workstation:工作站",
+      "canonical_name": "工作站",
+      "concept_type": "workstation",
+      "definition": "承担特定业务职责的物理计算节点。它不是固定电脑型号，也不等同于功能工位；通常由计算硬件、操作系统与驱动、业务软件、网络、外设接口及本地配置共同组成。",
+      "approved": true
+    },
+    {
+      "key": "station:aoi主站",
+      "canonical_name": "AOI主站",
+      "concept_type": "station",
+      "definition": "执行 AOI 检测、设备控制以及与复判站、编程站或外部系统交换数据的功能工位。",
+      "approved": true
+    },
+    {
+      "key": "workstation:aoi主站工控机",
+      "canonical_name": "AOI主站工控机",
+      "concept_type": "workstation",
+      "definition": "部署在 AOI 主站、承担检测主程序与设备控制服务运行的工业工作站。",
+      "approved": true
+    },
+    {
+      "key": "workstation:复判工作站",
+      "canonical_name": "复判工作站",
+      "concept_type": "workstation",
+      "definition": "部署在复判站、运行复判软件并接收 AOI 检测结果的物理计算节点。",
+      "approved": true
+    },
+    {
+      "key": "workstation:编程工作站",
+      "canonical_name": "编程工作站",
+      "concept_type": "workstation",
+      "definition": "部署在编程站、用于 AOI 程序制作、编辑、调试和发布的物理计算节点。",
+      "approved": true
+    },
+    {
+      "key": "software:aoi主程序",
+      "canonical_name": "AOI主程序",
+      "concept_type": "software",
+      "definition": "运行在 AOI 主站工控机上的检测与设备控制业务程序。",
+      "approved": true
+    },
+    {
+      "key": "software:复判站软件",
+      "canonical_name": "复判站软件",
+      "concept_type": "software",
+      "definition": "用于显示检测结果并支持人工复核判定的业务软件。",
+      "approved": true
+    },
+    {
+      "key": "software:编程软件",
+      "canonical_name": "编程软件",
+      "concept_type": "software",
+      "definition": "用于制作、编辑、调试和发布 AOI 检测程序的软件。",
+      "approved": true
+    },
+    {
+      "key": "component:主板",
+      "canonical_name": "主板",
+      "concept_type": "component",
+      "definition": "工作站中承载 CPU、内存、扩展卡、存储及各类接口的核心硬件。",
+      "approved": true
+    },
+    {
+      "key": "component:cpu",
+      "canonical_name": "CPU",
+      "concept_type": "component",
+      "definition": "工作站的中央处理器。",
+      "approved": true
+    },
+    {
+      "key": "component:内存",
+      "canonical_name": "内存",
+      "concept_type": "component",
+      "definition": "工作站运行操作系统与业务程序时使用的易失性存储部件。",
+      "approved": true
+    },
+    {
+      "key": "component:系统盘",
+      "canonical_name": "系统盘",
+      "concept_type": "component",
+      "definition": "保存工作站操作系统、驱动及业务软件的持久化存储部件。",
+      "approved": true
+    },
+    {
+      "key": "component:网卡",
+      "canonical_name": "网卡",
+      "concept_type": "component",
+      "definition": "为工作站或设备提供以太网通信能力的网络适配部件。",
+      "approved": true
+    },
+    {
+      "key": "component:m.2网卡",
+      "canonical_name": "M.2网卡",
+      "concept_type": "component",
+      "definition": "采用 M.2 规格安装的网卡子类型。",
+      "approved": true
+    },
+    {
+      "key": "component:图像采集卡",
+      "canonical_name": "图像采集卡",
+      "concept_type": "component",
+      "definition": "接收相机图像数据并向工作站提供采集能力的扩展卡。",
+      "approved": true
+    },
+    {
+      "key": "component:运动控制卡",
+      "canonical_name": "运动控制卡",
+      "concept_type": "component",
+      "definition": "工作站内用于轨道、轴或其他执行机构控制的扩展卡。",
+      "approved": true
+    },
+    {
+      "key": "component:键盘",
+      "canonical_name": "键盘",
+      "concept_type": "component",
+      "definition": "通过工作站外设接口输入字符与控制指令的人工交互设备。",
+      "approved": true
+    },
+    {
+      "key": "component:鼠标",
+      "canonical_name": "鼠标",
+      "concept_type": "component",
+      "definition": "通过工作站外设接口提供指针输入的人工交互设备。",
+      "approved": true
+    },
+    {
+      "key": "component:显示器",
+      "canonical_name": "显示器",
+      "concept_type": "component",
+      "definition": "通过视频接口显示工作站图形输出的外设。",
+      "approved": true
+    },
+    {
+      "key": "component:加密狗",
+      "canonical_name": "加密狗",
+      "concept_type": "component",
+      "definition": "通常通过 USB 接口连接、用于保存或校验软件授权的硬件外设。",
+      "approved": true
+    },
+    {
+      "key": "component:u盘",
+      "canonical_name": "U盘",
+      "concept_type": "component",
+      "definition": "通常通过 USB 接口连接的可移动存储设备。",
+      "approved": true
+    },
+    {
+      "key": "component:光源控制器",
+      "canonical_name": "光源控制器",
+      "concept_type": "component",
+      "definition": "接收控制指令并调节 AOI 光源状态的控制部件。",
+      "approved": true
+    },
+    {
+      "key": "component:工作站电源模块",
+      "canonical_name": "工作站电源模块",
+      "concept_type": "component",
+      "definition": "为工作站内部硬件提供稳定电源的供电部件。",
+      "approved": true
+    },
+    {
+      "key": "component:usb线缆",
+      "canonical_name": "USB线缆",
+      "concept_type": "component",
+      "definition": "承载 USB 数据及可选供电的物理连接介质。",
+      "approved": true
+    },
+    {
+      "key": "component:hdmi线缆",
+      "canonical_name": "HDMI线缆",
+      "concept_type": "component",
+      "definition": "承载 HDMI 数字音视频信号的物理连接介质。",
+      "approved": true
+    },
+    {
+      "key": "component:displayport线缆",
+      "canonical_name": "DisplayPort线缆",
+      "concept_type": "component",
+      "definition": "承载 DisplayPort 数字音视频信号的物理连接介质。",
+      "approved": true
+    },
+    {
+      "key": "component:cxp线缆",
+      "canonical_name": "CXP线缆",
+      "concept_type": "component",
+      "definition": "连接 CXP 相机与图像采集卡、承载 CoaXPress 数据与控制信号的物理线缆。",
+      "approved": true
+    },
+    {
+      "key": "component:以太网线",
+      "canonical_name": "以太网线",
+      "concept_type": "component",
+      "definition": "承载以太网数据通信的双绞线或其他物理网络介质。",
+      "approved": true
+    },
+    {
+      "key": "component:串口线缆",
+      "canonical_name": "串口线缆",
+      "concept_type": "component",
+      "definition": "承载串行通信信号的物理连接介质。",
+      "approved": true
+    },
+    {
+      "key": "component:smema信号线缆",
+      "canonical_name": "SMEMA信号线缆",
+      "concept_type": "component",
+      "definition": "承载相邻产线设备间 SMEMA 握手信号的物理线缆。",
+      "approved": true
+    },
+    {
+      "key": "component:sata数据线",
+      "canonical_name": "SATA数据线",
+      "concept_type": "component",
+      "definition": "连接 SATA 存储设备与主板接口的物理数据线。",
+      "approved": true
+    },
+    {
+      "key": "equipment:产线上游设备",
+      "canonical_name": "产线上游设备",
+      "concept_type": "equipment",
+      "definition": "在具体产线实例中位于 AOI 设备上游并与其交换板件就绪/允许信号的设备角色。",
+      "approved": true
+    },
+    {
+      "key": "equipment:产线下游设备",
+      "canonical_name": "产线下游设备",
+      "concept_type": "equipment",
+      "definition": "在具体产线实例中位于 AOI 设备下游并与其交换板件就绪/允许信号的设备角色。",
+      "approved": true
+    },
+    {
+      "key": "interface:usb接口",
+      "canonical_name": "USB接口",
+      "concept_type": "interface",
+      "definition": "USB 外设连接的物理或逻辑端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:hdmi接口",
+      "canonical_name": "HDMI接口",
+      "concept_type": "interface",
+      "definition": "HDMI 数字音视频连接端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:displayport接口",
+      "canonical_name": "DisplayPort接口",
+      "concept_type": "interface",
+      "definition": "DisplayPort 数字音视频连接端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:cxp接口",
+      "canonical_name": "CXP接口",
+      "concept_type": "interface",
+      "definition": "CoaXPress 相机与图像采集卡链路的设备端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:以太网接口",
+      "canonical_name": "以太网接口",
+      "concept_type": "interface",
+      "definition": "以太网通信链路的设备端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:串行接口",
+      "canonical_name": "串行接口",
+      "concept_type": "interface",
+      "definition": "RS-232、RS-485 等串行通信链路的设备端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:smema接口",
+      "canonical_name": "SMEMA接口",
+      "concept_type": "interface",
+      "definition": "SMEMA 产线握手信号的设备端点。",
+      "approved": true
+    },
+    {
+      "key": "interface:pcie接口",
+      "canonical_name": "PCIe接口",
+      "concept_type": "interface",
+      "definition": "工作站主板上用于安装和连接 PCI Express 扩展卡的接口或插槽。",
+      "approved": true
+    },
+    {
+      "key": "interface:m.2接口",
+      "canonical_name": "M.2接口",
+      "concept_type": "interface",
+      "definition": "工作站主板上用于安装 M.2 规格设备的接口或插槽。",
+      "approved": true
+    },
+    {
+      "key": "interface:sata接口",
+      "canonical_name": "SATA接口",
+      "concept_type": "interface",
+      "definition": "主板与 SATA 存储设备之间的数据连接端点。",
+      "approved": true
+    },
+    {
+      "key": "protocol:usb协议",
+      "canonical_name": "USB协议",
+      "concept_type": "protocol",
+      "definition": "USB 外设通信所使用的协议族。",
+      "approved": true
+    },
+    {
+      "key": "protocol:hdmi协议",
+      "canonical_name": "HDMI协议",
+      "concept_type": "protocol",
+      "definition": "HDMI 数字音视频传输协议。",
+      "approved": true
+    },
+    {
+      "key": "protocol:displayport协议",
+      "canonical_name": "DisplayPort协议",
+      "concept_type": "protocol",
+      "definition": "DisplayPort 数字音视频传输协议。",
+      "approved": true
+    },
+    {
+      "key": "protocol:coaxpress协议",
+      "canonical_name": "CoaXPress协议",
+      "concept_type": "protocol",
+      "definition": "CXP 工业相机链路使用的高速图像传输协议。",
+      "approved": true
+    },
+    {
+      "key": "protocol:以太网协议",
+      "canonical_name": "以太网协议",
+      "concept_type": "protocol",
+      "definition": "局域网设备数据通信所使用的以太网协议族。",
+      "approved": true
+    },
+    {
+      "key": "protocol:串行通信协议",
+      "canonical_name": "串行通信协议",
+      "concept_type": "protocol",
+      "definition": "通过串行接口交换控制或状态数据的协议类别。",
+      "approved": true
+    },
+    {
+      "key": "protocol:smema握手协议",
+      "canonical_name": "SMEMA握手协议",
+      "concept_type": "protocol",
+      "definition": "相邻 SMT/AOI 产线设备交换板件就绪和允许信号的握手机制。",
+      "approved": true
+    },
+    {
+      "key": "protocol:sata协议",
+      "canonical_name": "SATA协议",
+      "concept_type": "protocol",
+      "definition": "主板与 SATA 存储设备之间的数据传输协议。",
+      "approved": true
+    },
+    {
+      "key": "protocol:pcie协议",
+      "canonical_name": "PCIe协议",
+      "concept_type": "protocol",
+      "definition": "主板与 PCI Express 扩展设备之间的高速总线协议。",
+      "approved": true
+    },
+    {
+      "key": "connection:usb外设连接",
+      "canonical_name": "USB外设连接",
+      "concept_type": "connection",
+      "definition": "工作站与键盘、鼠标、加密狗或 U 盘等 USB 外设之间的通用连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:hdmi显示连接",
+      "canonical_name": "HDMI显示连接",
+      "concept_type": "connection",
+      "definition": "工作站与显示器之间通过 HDMI 端点和线缆建立的显示连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:displayport显示连接",
+      "canonical_name": "DisplayPort显示连接",
+      "concept_type": "connection",
+      "definition": "工作站与显示器之间通过 DisplayPort 端点和线缆建立的显示连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:cxp采集连接",
+      "canonical_name": "CXP采集连接",
+      "concept_type": "connection",
+      "definition": "相机与图像采集卡之间通过 CXP 接口和线缆建立的图像采集连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:以太网连接",
+      "canonical_name": "以太网连接",
+      "concept_type": "connection",
+      "definition": "工作站、相机或其他网络设备之间通过以太网端点和介质建立的通信连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:串口控制连接",
+      "canonical_name": "串口控制连接",
+      "concept_type": "connection",
+      "definition": "工作站与光源控制器等设备之间通过串行接口建立的控制连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:smema握手连接",
+      "canonical_name": "SMEMA握手连接",
+      "concept_type": "connection",
+      "definition": "AOI 设备与相邻产线设备之间交换 SMEMA 握手信号的连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:sata存储连接",
+      "canonical_name": "SATA存储连接",
+      "concept_type": "connection",
+      "definition": "系统盘与主板之间通过 SATA 端点和数据线建立的存储连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:pcie扩展连接",
+      "canonical_name": "PCIe扩展连接",
+      "concept_type": "connection",
+      "definition": "图像采集卡、网卡或运动控制卡通过 PCIe 接口接入主板的总线连接模式。",
+      "approved": true
+    },
+    {
+      "key": "connection:m.2扩展连接",
+      "canonical_name": "M.2扩展连接",
+      "concept_type": "connection",
+      "definition": "M.2 规格设备通过 M.2 接口安装到主板的连接模式；实际承载协议仍需由具体设备证据确认。",
+      "approved": true
+    },
+    {
+      "key": "component:显卡",
+      "canonical_name": "显卡",
+      "concept_type": "component",
+      "definition": "安装在工作站中、承担图形显示或通用 GPU 计算的硬件板卡。",
+      "approved": true
+    },
+    {
+      "key": "component:gpu",
+      "canonical_name": "GPU",
+      "concept_type": "component",
+      "definition": "显卡或集成图形子系统中的图形处理器；不与显卡板卡、驱动或 CUDA 运行时合并。",
+      "approved": true
+    },
+    {
+      "key": "software:winpe",
+      "canonical_name": "Windows PE",
+      "concept_type": "software",
+      "definition": "用于部署、恢复和离线维护 Windows 的轻量运行环境；不是完整安装的 Windows 系统实例。",
+      "approved": true
+    },
+    {
+      "key": "software:dism++",
+      "canonical_name": "Dism++",
+      "concept_type": "software",
+      "definition": "用于 Windows 系统维护、镜像备份和恢复的工具；工具本身不等同于修复或备份动作。",
+      "approved": true
+    },
+    {
+      "key": "software:display driver uninstaller",
+      "canonical_name": "Display Driver Uninstaller",
+      "concept_type": "software",
+      "definition": "用于清理显示驱动及其残留的维护工具；不是显卡驱动程序。",
+      "approved": true
+    },
+    {
+      "key": "software:microsoft defender",
+      "canonical_name": "Microsoft Defender",
+      "concept_type": "software",
+      "definition": "Windows 环境中的安全防护软件。",
+      "approved": true
+    },
+    {
+      "key": "software:mvs",
+      "canonical_name": "MVS",
+      "concept_type": "software",
+      "definition": "工业相机的发现、配置和状态检查工具；与相机驱动、固件和 SDK 分开建模。",
+      "approved": true
+    },
+    {
+      "key": "software:cuda",
+      "canonical_name": "CUDA",
+      "concept_type": "software",
+      "definition": "面向 NVIDIA GPU 的计算平台与运行时；不与 GPU、显卡驱动或 cuBLAS 库文件合并。",
+      "approved": true
+    },
+    {
+      "key": "software:machine服务",
+      "canonical_name": "Machine服务",
+      "concept_type": "software",
+      "definition": "AOI 系统中承担设备控制或机器侧能力的逻辑服务；具体可执行产物须由部署证据确认。",
+      "approved": true
+    },
+    {
+      "key": "software:维护站软件",
+      "canonical_name": "维护站软件",
+      "concept_type": "software",
+      "definition": "用于 AOI 维护站业务的逻辑应用，与 AOI 主程序分开建模。",
+      "approved": true
+    },
+    {
+      "key": "software:hercules调试工具",
+      "canonical_name": "Hercules调试工具",
+      "concept_type": "software",
+      "definition": "用于网络或串口通信测试的外部调试工具。",
+      "approved": true
+    },
+    {
+      "key": "driver:设备驱动程序",
+      "canonical_name": "设备驱动程序",
+      "concept_type": "driver",
+      "definition": "使操作系统能够识别和控制硬件设备的软件构件上位概念；裸词必须结合目标硬件消歧。",
+      "approved": true
+    },
+    {
+      "key": "driver:显卡驱动",
+      "canonical_name": "显卡驱动",
+      "concept_type": "driver",
+      "definition": "使 Windows 能够控制显卡和 GPU 能力的设备驱动程序。",
+      "approved": true
+    },
+    {
+      "key": "driver:网卡驱动",
+      "canonical_name": "网卡驱动",
+      "concept_type": "driver",
+      "definition": "使操作系统能够识别和控制网卡的设备驱动程序。",
+      "approved": true
+    },
+    {
+      "key": "driver:相机驱动",
+      "canonical_name": "相机驱动",
+      "concept_type": "driver",
+      "definition": "使操作系统或采集软件能够访问相机设备的驱动程序；具体供应商和版本需保留。",
+      "approved": true
+    },
+    {
+      "key": "firmware:设备固件",
+      "canonical_name": "设备固件",
+      "concept_type": "firmware",
+      "definition": "嵌入设备或硬件部件并控制其底层行为的软件上位概念。",
+      "approved": true
+    },
+    {
+      "key": "firmware:相机固件",
+      "canonical_name": "相机固件",
+      "concept_type": "firmware",
+      "definition": "运行在工业相机内部并与相机型号、SDK 和采集链路存在版本兼容约束的固件。",
+      "approved": true
+    },
+    {
+      "key": "firmware:bios",
+      "canonical_name": "BIOS",
+      "concept_type": "firmware",
+      "definition": "主板上的启动与硬件初始化固件；不表达为运行在工控机上的普通应用。",
+      "approved": true
+    },
+    {
+      "key": "sdk:sdk",
+      "canonical_name": "SDK",
+      "concept_type": "sdk",
+      "definition": "供软件集成设备或平台能力的软件开发工具包上位概念；裸词不能无条件指向某一供应商 SDK。",
+      "approved": true
+    },
+    {
+      "key": "sdk:相机sdk",
+      "canonical_name": "相机 SDK",
+      "concept_type": "sdk",
+      "definition": "供业务软件调用工业相机发现、配置和采集能力的软件开发工具包。",
+      "approved": true
+    },
+    {
+      "key": "sdk:machine sdk",
+      "canonical_name": "Machine SDK",
+      "concept_type": "sdk",
+      "definition": "Machine 相关能力的软件开发工具包；在包归属明确前不与相机 SDK 或 AOI 主程序合并。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:smt-aoi.exe",
+      "canonical_name": "smt-aoi.exe",
+      "concept_type": "software_artifact",
+      "definition": "AOI 主程序的可执行部署产物；某次同名运行进程属于运行实例而非该文件概念本身。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:machined.exe",
+      "canonical_name": "machined.exe",
+      "concept_type": "software_artifact",
+      "definition": "Machine 相关可执行部署产物；所属逻辑服务需由安装目录或构建清单确认。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:smt-aoi-maintenance-station.exe",
+      "canonical_name": "smt-aoi-maintenance-station.exe",
+      "concept_type": "software_artifact",
+      "definition": "维护站软件的可执行部署产物，不因文件名包含 smt-aoi 就并入 AOI 主程序。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:motionpanel.exe",
+      "canonical_name": "MotionPanel.exe",
+      "concept_type": "software_artifact",
+      "definition": "运动控制相关工具的可执行部署产物；所属逻辑模块需由部署证据确认。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:hercules.exe",
+      "canonical_name": "hercules.exe",
+      "concept_type": "software_artifact",
+      "definition": "Hercules 调试工具的可执行部署产物。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:ntdll.dll",
+      "canonical_name": "ntdll.dll",
+      "concept_type": "software_artifact",
+      "definition": "Windows 系统库部署文件；出现在崩溃栈中不等于它是故障根因。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:kernelbase.dll",
+      "canonical_name": "kernelbase.dll",
+      "concept_type": "software_artifact",
+      "definition": "Windows 系统库部署文件；出现在崩溃栈中不等于它是故障根因。",
+      "approved": true
+    },
+    {
+      "key": "software_artifact:cublas64_11.dll",
+      "canonical_name": "cublas64_11.dll",
+      "concept_type": "software_artifact",
+      "definition": "CUDA 11 相关 cuBLAS 库的部署文件。",
+      "approved": true
+    },
+    {
+      "key": "runtime_process:软件运行进程",
+      "canonical_name": "软件运行进程",
+      "concept_type": "runtime_process",
+      "definition": "可执行产物在某次运行中形成的进程实例上位概念；PID、启动参数和状态保存在运行观察中。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:machine.toml",
+      "canonical_name": "machine.toml",
+      "concept_type": "configuration_file",
+      "definition": "机器级 TOML 配置文件；归属程序需由安装路径、读取日志或文档确认。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:app.cfg.toml",
+      "canonical_name": "app.cfg.toml",
+      "concept_type": "configuration_file",
+      "definition": "应用级 TOML 配置文件；不能只按文件名推断具体 owner。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:user.cfg.toml",
+      "canonical_name": "user.cfg.toml",
+      "concept_type": "configuration_file",
+      "definition": "用户级 TOML 配置文件；与 user.cfg 和 user.cfg.db 保持独立。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:user.cfg",
+      "canonical_name": "user.cfg",
+      "concept_type": "configuration_file",
+      "definition": "用户配置文件；相同 stem 不代表与其他格式文件具有相同作用域。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:machined.toml",
+      "canonical_name": "machined.toml",
+      "concept_type": "configuration_file",
+      "definition": "Machine 服务的 TOML 配置文件，与 machine.toml 保持独立。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:calibration.yml",
+      "canonical_name": "calibration.yml",
+      "concept_type": "configuration_file",
+      "definition": "标定相关 YAML 配置文件；具体设备和模块归属需由来源证据确认。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:sensorinfo.xml",
+      "canonical_name": "SensorInfo.xml",
+      "concept_type": "configuration_file",
+      "definition": "传感器信息相关 XML 文件；具体作用域和 owner 需由来源证据确认。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:tgo_cfg.ini",
+      "canonical_name": "tgo_cfg.ini",
+      "concept_type": "configuration_file",
+      "definition": "TGO 相关 INI 配置文件；具体作用域和 owner 需由来源证据确认。",
+      "approved": true
+    },
+    {
+      "key": "configuration_file:machine_status.ini",
+      "canonical_name": "machine_status.ini",
+      "concept_type": "configuration_file",
+      "definition": "机器状态相关 INI 数据文件；生成者和消费者需由来源证据确认。",
+      "approved": true
+    },
+    {
+      "key": "database_file:host.db",
+      "canonical_name": "host.db",
+      "concept_type": "database_file",
+      "definition": "Host 相关数据库文件；逻辑数据存储归属和 schema 版本需由来源证据确认。",
+      "approved": true
+    },
+    {
+      "key": "database_file:host_v4.db",
+      "canonical_name": "host_v4.db",
+      "concept_type": "database_file",
+      "definition": "Host V4 相关数据库文件；未有迁移证据时不与 host.db 合并。",
+      "approved": true
+    },
+    {
+      "key": "database_file:stats.db",
+      "canonical_name": "stats.db",
+      "concept_type": "database_file",
+      "definition": "统计数据相关数据库文件；不与 Host 或用户配置数据库合并。",
+      "approved": true
+    },
+    {
+      "key": "database_file:user.cfg.db",
+      "canonical_name": "user.cfg.db",
+      "concept_type": "database_file",
+      "definition": "用户配置相关数据库文件；与文本或 TOML 配置文件保持独立。",
+      "approved": true
+    },
+    {
+      "key": "diagnostic_artifact:meta.json",
+      "canonical_name": "meta.json",
+      "concept_type": "diagnostic_artifact",
+      "definition": "诊断或采集包中的元数据文件；生成者和采集来源作为实例属性或证据关系保存。",
+      "approved": true
+    },
+    {
+      "key": "diagnostic_artifact:sysinfo.json",
+      "canonical_name": "sysinfo.json",
+      "concept_type": "diagnostic_artifact",
+      "definition": "诊断或采集包中的系统信息文件；生成者和采集来源作为实例属性或证据关系保存。",
+      "approved": true
+    },
+    {
+      "key": "log_artifact:日志产物",
+      "canonical_name": "日志产物",
+      "concept_type": "log_artifact",
+      "definition": "由软件、进程或设备生成的运行记录上位概念；具体日志实例需保留时间、来源和生成者。",
+      "approved": true
+    },
+    {
+      "key": "external_system:mes",
+      "canonical_name": "MES",
+      "concept_type": "external_system",
+      "definition": "与 AOI 生产流程交换工单、料号、序列号、过站或检测相关信息的制造执行系统；具体厂商、版本、接口与部署位置属于实例属性。",
+      "approved": true
+    },
+    {
+      "key": "external_system:jira",
+      "canonical_name": "Jira",
+      "concept_type": "external_system",
+      "definition": "用于提交、跟踪产品或技术问题的外部工单系统；资料模板中的共现不构成 AOI 与 Jira 的结构连接事实。",
+      "approved": true
+    },
+    {
+      "key": "software:buddy",
+      "canonical_name": "Buddy",
+      "concept_type": "software",
+      "definition": "管理 AOI 模板、项目数据、冷热存储和本地服务接口的业务软件；其数据库、进程、配置和运行实例需分层表达。",
+      "approved": true
+    },
+    {
+      "key": "software:spc",
+      "canonical_name": "SPC",
+      "concept_type": "software",
+      "definition": "提供 AOI 统计、数据查看、导出、用户信息及文件清理等功能的业务应用或模块；不与统计过程控制这一通用能力无条件等同。",
+      "approved": true
+    },
+    {
+      "key": "identifier:料号",
+      "canonical_name": "料号",
+      "concept_type": "identifier",
+      "definition": "标识产品、PCB 或生产物料类别的业务编号；具体编码规则属于来源系统或项目实例属性。",
+      "approved": true
+    },
+    {
+      "key": "identifier:序列号",
+      "canonical_name": "序列号",
+      "concept_type": "identifier",
+      "definition": "标识具体产品、PCB 或生产实例的唯一或准唯一编号。",
+      "approved": true
+    },
+    {
+      "key": "identifier:条码",
+      "canonical_name": "条码",
+      "concept_type": "identifier",
+      "definition": "以机器可读编码承载料号、序列号或其他业务标识的标识类别。",
+      "approved": true
+    },
+    {
+      "key": "identifier:二维码",
+      "canonical_name": "二维码",
+      "concept_type": "identifier",
+      "definition": "二维形式的机器可读条码标识；其承载内容需从具体扫码结果确定。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:器件",
+      "canonical_name": "器件",
+      "concept_type": "inspection_object",
+      "definition": "AOI 检测对象中的电子器件上位概念；具体器件实例可具有类别、封装和检测属性。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:焊盘",
+      "canonical_name": "焊盘",
+      "concept_type": "inspection_object",
+      "definition": "PCB 上用于焊接和 AOI 检测的导电接触区域，不与器件实体合并。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:mark点",
+      "canonical_name": "Mark点",
+      "concept_type": "inspection_object",
+      "definition": "PCB 或治具上用于视觉定位、对位或校准的标记点。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:led",
+      "canonical_name": "LED",
+      "concept_type": "inspection_object",
+      "definition": "作为 AOI 检测对象的发光二极管器件类别。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:chip",
+      "canonical_name": "CHIP",
+      "concept_type": "inspection_object",
+      "definition": "资料中以 CHIP 表达的片式电子器件类别；不据此推断具体封装。",
+      "approved": true
+    },
+    {
+      "key": "inspection_object:ic",
+      "canonical_name": "IC",
+      "concept_type": "inspection_object",
+      "definition": "作为 AOI 检测对象的集成电路器件类别。",
+      "approved": true
+    },
+    {
+      "key": "package_type:qfn",
+      "canonical_name": "QFN",
+      "concept_type": "package_type",
+      "definition": "无引脚方形扁平封装类型；它是器件封装属性，不是具体器件实例。",
+      "approved": true
+    },
+    {
+      "key": "package_type:bga",
+      "canonical_name": "BGA",
+      "concept_type": "package_type",
+      "definition": "球栅阵列封装类型；它是器件封装属性，不是具体器件实例。",
+      "approved": true
+    },
+    {
+      "key": "package_type:qfp",
+      "canonical_name": "QFP",
+      "concept_type": "package_type",
+      "definition": "方形扁平封装类型；它是器件封装属性，不是具体器件实例。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:proj工程数据",
+      "canonical_name": "PROJ工程数据",
+      "concept_type": "data_artifact",
+      "definition": "AOI 项目或模板的 PROJ 工程数据；它可用于迁移、复现、调试和诊断，应与同次板卡的 RES 等数据保持关联。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:cad工程数据",
+      "canonical_name": "CAD工程数据",
+      "concept_type": "data_artifact",
+      "definition": "用于 AOI 编程的器件坐标、料号、位号、角度或板卡尺寸等工程数据。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:gerber工程数据",
+      "canonical_name": "Gerber工程数据",
+      "concept_type": "data_artifact",
+      "definition": "描述 PCB 图形层、焊盘和制造几何的 Gerber 工程数据；导入、提取和对齐均需保留原文件证据。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:bom物料清单",
+      "canonical_name": "BOM物料清单",
+      "concept_type": "data_artifact",
+      "definition": "承载位号、料号、物料描述等内容的物料清单数据；与 CAD、Gerber 保持独立。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:图像产物",
+      "canonical_name": "图像产物",
+      "concept_type": "data_artifact",
+      "definition": "由 AOI 采集、拼图、检测或导出流程产生的图像数据上位概念。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:整板大图",
+      "canonical_name": "整板大图",
+      "concept_type": "data_artifact",
+      "definition": "对板卡视野图进行拼接或导出得到的整板尺度图像，用于编程、复现、位置定位和诊断。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:白图",
+      "canonical_name": "白图",
+      "concept_type": "data_artifact",
+      "definition": "AOI 成像链路中与 RGB 彩色图像区分的白图或 W 图像产物。",
+      "approved": true
+    },
+    {
+      "key": "data_artifact:rgb图",
+      "canonical_name": "RGB图",
+      "concept_type": "data_artifact",
+      "definition": "AOI 成像链路中的 RGB 彩色图像产物，与白图保持独立。",
+      "approved": true
+    },
+    {
+      "key": "runtime_process:explorer.exe",
+      "canonical_name": "explorer.exe",
+      "concept_type": "runtime_process",
+      "definition": "Windows Shell/File Explorer 的运行进程；日志中的挂起或崩溃是运行观察，不与普通应用产品合并。",
+      "approved": true
+    },
+    {
+      "key": "software:ocr算法",
+      "canonical_name": "OCR算法",
+      "concept_type": "software",
+      "definition": "AOI检测中用于字符、丝印或标识识别的OCR算法模块。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:c90b7deaf5a5bd6b",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "建立独立算法模块，不与识别结果或模型文件合并。"
+      }
+    },
+    {
+      "key": "component:硬盘",
+      "canonical_name": "硬盘",
+      "concept_type": "component",
+      "definition": "工作站或工控机中的持久化存储硬件上位概念。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:7cfa379cb91a8eb5",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "机械硬盘和固态硬盘的上位概念。"
+      }
+    },
+    {
+      "key": "workpiece:标准金板",
+      "canonical_name": "标准金板",
+      "concept_type": "workpiece",
+      "definition": "被选作检测调试、基准验证或标准参考的PCB工件角色。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:a9949fc61ae99efb",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "作为标准参考板角色，不批准is_a PCB的永久物理子类关系。"
+      }
+    },
+    {
+      "key": "component:传感器",
+      "canonical_name": "传感器",
+      "concept_type": "component",
+      "definition": "设备中用于检测位置、到位、阻挡或状态信号的传感部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:1112739e96cfd559",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "具体进板、到位等角色由实例证据区分。"
+      }
+    },
+    {
+      "key": "software:dl算法",
+      "canonical_name": "DL算法",
+      "concept_type": "software",
+      "definition": "AOI检测中使用深度学习模型完成缺陷识别或分类的算法模块。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:cc4f99164bca681f",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "与OCR、ODA、ODB保持为不同兄弟模块。"
+      }
+    },
+    {
+      "key": "software:oda算法",
+      "canonical_name": "ODA算法",
+      "concept_type": "software",
+      "definition": "AOI检测中用于器件定位或区域识别的ODA算法模块。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:fb383bfa9af6d69e",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不与ODB算法合并。"
+      }
+    },
+    {
+      "key": "component:输送皮带",
+      "canonical_name": "输送皮带",
+      "concept_type": "component",
+      "definition": "产线设备或AOI轨道机构中用于输送板件的皮带部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:03cbae0d44dd7850",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不依据共现绑定到某一具体设备。"
+      }
+    },
+    {
+      "key": "material:锡膏",
+      "canonical_name": "锡膏",
+      "concept_type": "material",
+      "definition": "SMT生产中形成焊点并被AOI/SPI检测的焊接材料。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:e5f28cd30e5083fe",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "稳定材料实体。"
+      }
+    },
+    {
+      "key": "component:内存条",
+      "canonical_name": "内存条",
+      "concept_type": "component",
+      "definition": "安装于工作站或工控机中的可更换内存模块。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:d810d36b3f56e64a",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "与抽象内存资源概念保持区分。"
+      }
+    },
+    {
+      "key": "component:进板挡块",
+      "canonical_name": "进板挡块",
+      "concept_type": "component",
+      "definition": "输送轨道中用于阻挡或定位进入板件的机械部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:d2d2da3a1ee1738f",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不依据共现绑定到AOI设备。"
+      }
+    },
+    {
+      "key": "software:odb算法",
+      "canonical_name": "ODB算法",
+      "concept_type": "software",
+      "definition": "AOI检测中用于器件体或检测区域识别的ODB算法模块。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:a6124d10b8a81505",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不与ODA合并；查询解析需保留ODB++文件格式边界。"
+      }
+    },
+    {
+      "key": "component:气缸",
+      "canonical_name": "气缸",
+      "concept_type": "component",
+      "definition": "设备中将气压转换为直线机械动作的执行部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:84e9cc1cb2e2860a",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不依据共现绑定到某一设备或顶升机构。"
+      }
+    },
+    {
+      "key": "workpiece:镂空板",
+      "canonical_name": "镂空板",
+      "concept_type": "workpiece",
+      "definition": "具有镂空结构、可能影响进板感应或输送定位的PCB工件形态。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:df0b5747fa43d378",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "批准为PCB特殊结构形态。"
+      }
+    },
+    {
+      "key": "component:散热风扇",
+      "canonical_name": "散热风扇",
+      "concept_type": "component",
+      "definition": "工作站、工控机或设备内部用于主动散热的风扇部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:f2b4496ed6b39c53",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不默认属于工控机。"
+      }
+    },
+    {
+      "key": "component:无线网卡",
+      "canonical_name": "无线网卡",
+      "concept_type": "component",
+      "definition": "通过无线网络协议提供网络接入的网卡部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:0455d13d0a43608d",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "批准为网卡子类。"
+      }
+    },
+    {
+      "key": "component:电机",
+      "canonical_name": "电机",
+      "concept_type": "component",
+      "definition": "将电能转换为机械运动、用于输送或执行机构的驱动部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:ca5a29bbed80496b",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "保留通用部件边界；具体输送电机、轴电机由实例上下文区分。"
+      }
+    },
+    {
+      "key": "component:压块",
+      "canonical_name": "压块",
+      "concept_type": "component",
+      "definition": "设备输送或定位机构中用于压紧、限位的机械部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:1e21c6ff2c11e443",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "具体安装位置由实例证据确定。"
+      }
+    },
+    {
+      "key": "component:机械硬盘",
+      "canonical_name": "机械硬盘",
+      "concept_type": "component",
+      "definition": "以磁性盘片为存储介质的硬盘部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:bac029429c76960c",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "批准为硬盘子类。"
+      }
+    },
+    {
+      "key": "component:plc控制器",
+      "canonical_name": "PLC控制器",
+      "concept_type": "component",
+      "definition": "产线设备中执行逻辑控制和时序控制的可编程逻辑控制器。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:991582a0f529742d",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不默认属于AOI设备，可能位于上下游设备。"
+      }
+    },
+    {
+      "key": "component:固态硬盘",
+      "canonical_name": "固态硬盘",
+      "concept_type": "component",
+      "definition": "以固态存储介质保存数据的硬盘部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:54b292d36bed8373",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "批准为硬盘子类。"
+      }
+    },
+    {
+      "key": "component:输送滚轮",
+      "canonical_name": "输送滚轮",
+      "concept_type": "component",
+      "definition": "产线输送机构中承载或驱动板件移动的滚轮部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:5bf0527b92dac366",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "不依据共现绑定到某一具体设备。"
+      }
+    },
+    {
+      "key": "component:光源控制板",
+      "canonical_name": "光源控制板",
+      "concept_type": "component",
+      "definition": "设备中用于控制光源输出、触发或通信的板卡部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:ab15f7b91ec3cc45",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "与光源控制器保持独立，具体关系需实例证据。"
+      }
+    },
+    {
+      "key": "component:主板电池",
+      "canonical_name": "主板电池",
+      "concept_type": "component",
+      "definition": "安装在主板上、用于维持RTC或固件设置的电池部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:f0eb2440bad5b6b2",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "批准与主板的组成关系。"
+      }
+    },
+    {
+      "key": "component:调宽轴",
+      "canonical_name": "调宽轴",
+      "concept_type": "component",
+      "definition": "输送轨道调宽机构中传递或执行宽度调整的轴类部件。",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:6788cc5df0178060",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "reviewed_at": "2026-08-03T00:00:00+00:00",
+        "note": "具体所属设备由实例证据确定。"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from_key": "workstation:aoi主站工控机",
+      "to_key": "equipment:工控机",
+      "relation": "is_a",
+      "basis": "approved_workstation_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "station:复判站",
+      "to_key": "equipment:aoi设备",
+      "relation": "connected_to",
+      "basis": "approved_station_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体站点实例必须补充网络端点或部署拓扑证据。",
+      "approved": true
+    },
+    {
+      "from_key": "station:编程站",
+      "to_key": "equipment:aoi设备",
+      "relation": "connected_to",
+      "basis": "approved_station_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体站点实例必须补充网络端点或部署拓扑证据。",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:2d相机",
+      "to_key": "equipment:相机",
+      "relation": "is_a",
+      "basis": "approved_domain_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:3d相机",
+      "to_key": "equipment:相机",
+      "relation": "is_a",
+      "basis": "approved_domain_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:工业相机",
+      "to_key": "equipment:相机",
+      "relation": "is_a",
+      "basis": "approved_camera_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "software:windows",
+      "to_key": "equipment:工控机",
+      "relation": "runs_on",
+      "basis": "approved_domain_structure",
+      "approved": true
+    },
+    {
+      "from_key": "workpiece:pcb",
+      "to_key": "equipment:aoi设备",
+      "relation": "processed_by",
+      "basis": "approved_domain_process_context",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:复判工作站",
+      "to_key": "workstation:工作站",
+      "relation": "is_a",
+      "basis": "approved_workstation_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:编程工作站",
+      "to_key": "workstation:工作站",
+      "relation": "is_a",
+      "basis": "approved_workstation_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:aoi主站工控机",
+      "to_key": "workstation:工作站",
+      "relation": "is_a",
+      "basis": "approved_workstation_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:aoi主站工控机",
+      "to_key": "station:aoi主站",
+      "relation": "deployed_at",
+      "basis": "approved_workstation_deployment",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:复判工作站",
+      "to_key": "station:复判站",
+      "relation": "deployed_at",
+      "basis": "approved_workstation_deployment",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:编程工作站",
+      "to_key": "station:编程站",
+      "relation": "deployed_at",
+      "basis": "approved_workstation_deployment",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:aoi主站工控机",
+      "to_key": "equipment:aoi设备",
+      "relation": "part_of",
+      "basis": "approved_workstation_deployment",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "只表示 AOI 主站实例中的典型组成，不能反推所有工控机均属于 AOI 设备。",
+      "approved": true
+    },
+    {
+      "from_key": "software:windows",
+      "to_key": "workstation:工作站",
+      "relation": "runs_on",
+      "basis": "approved_workstation_software_layer",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "software:aoi主程序",
+      "to_key": "workstation:aoi主站工控机",
+      "relation": "runs_on",
+      "basis": "approved_workstation_software_layer",
+      "approved": true
+    },
+    {
+      "from_key": "software:复判站软件",
+      "to_key": "workstation:复判工作站",
+      "relation": "runs_on",
+      "basis": "approved_workstation_software_layer",
+      "approved": true
+    },
+    {
+      "from_key": "software:编程软件",
+      "to_key": "workstation:编程工作站",
+      "relation": "runs_on",
+      "basis": "approved_workstation_software_layer",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:主板",
+      "relation": "has_component",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:cpu",
+      "relation": "has_component",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:内存",
+      "relation": "has_component",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:系统盘",
+      "relation": "has_component",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:网卡",
+      "relation": "has_component",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "网卡可能为板载或扩展卡，具体实例需记录安装形态。",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "component:工作站电源模块",
+      "relation": "powered_by",
+      "basis": "approved_workstation_structure",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:m.2网卡",
+      "to_key": "component:网卡",
+      "relation": "is_a",
+      "basis": "approved_component_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "component:图像采集卡",
+      "to_key": "interface:pcie接口",
+      "relation": "installed_in",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:网卡",
+      "to_key": "interface:pcie接口",
+      "relation": "installed_in",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "仅适用于 PCIe 网卡实例；板载、M.2 或 USB 网卡不得沿用该边。",
+      "approved": true
+    },
+    {
+      "from_key": "component:运动控制卡",
+      "to_key": "interface:pcie接口",
+      "relation": "installed_in",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:m.2网卡",
+      "to_key": "interface:m.2接口",
+      "relation": "installed_in",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:pcie接口",
+      "to_key": "connection:pcie扩展连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:pcie扩展连接",
+      "to_key": "protocol:pcie协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "interface:m.2接口",
+      "to_key": "connection:m.2扩展连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "M.2 仅限定接口/外形；PCIe 或 SATA 承载协议必须由具体设备证据确认。",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "interface:usb接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:键盘",
+      "to_key": "connection:usb外设连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:鼠标",
+      "to_key": "connection:usb外设连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:加密狗",
+      "to_key": "connection:usb外设连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:u盘",
+      "to_key": "connection:usb外设连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "connection:usb外设连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:usb接口",
+      "to_key": "connection:usb外设连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:usb线缆",
+      "to_key": "connection:usb外设连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "部分 USB 外设使用直连插头，不应强制要求独立线缆实例。",
+      "approved": true
+    },
+    {
+      "from_key": "connection:usb外设连接",
+      "to_key": "protocol:usb协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "interface:hdmi接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:显示器",
+      "to_key": "connection:hdmi显示连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "connection:hdmi显示连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:hdmi接口",
+      "to_key": "connection:hdmi显示连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:hdmi线缆",
+      "to_key": "connection:hdmi显示连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:hdmi显示连接",
+      "to_key": "protocol:hdmi协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "interface:displayport接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:显示器",
+      "to_key": "connection:displayport显示连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "connection:displayport显示连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:displayport接口",
+      "to_key": "connection:displayport显示连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:displayport线缆",
+      "to_key": "connection:displayport显示连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:displayport显示连接",
+      "to_key": "protocol:displayport协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:相机",
+      "to_key": "interface:cxp接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "只适用于 CXP 相机实例，不代表所有相机均具有 CXP 接口。",
+      "approved": true
+    },
+    {
+      "from_key": "component:图像采集卡",
+      "to_key": "interface:cxp接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "equipment:相机",
+      "to_key": "connection:cxp采集连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:图像采集卡",
+      "to_key": "connection:cxp采集连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:cxp接口",
+      "to_key": "connection:cxp采集连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:cxp线缆",
+      "to_key": "connection:cxp采集连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:cxp采集连接",
+      "to_key": "protocol:coaxpress协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "interface:以太网接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:网卡",
+      "to_key": "interface:以太网接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "connection:以太网连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "equipment:相机",
+      "to_key": "connection:以太网连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "只适用于以太网相机实例。",
+      "approved": true
+    },
+    {
+      "from_key": "interface:以太网接口",
+      "to_key": "connection:以太网连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:以太网线",
+      "to_key": "connection:以太网连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:以太网连接",
+      "to_key": "protocol:以太网协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "interface:串行接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "workstation:工作站",
+      "to_key": "connection:串口控制连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:光源控制器",
+      "to_key": "connection:串口控制连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:串行接口",
+      "to_key": "connection:串口控制连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:串口线缆",
+      "to_key": "connection:串口控制连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:串口控制连接",
+      "to_key": "protocol:串行通信协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:aoi设备",
+      "to_key": "interface:smema接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "equipment:产线上游设备",
+      "to_key": "connection:smema握手连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "equipment:aoi设备",
+      "to_key": "connection:smema握手连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "equipment:产线下游设备",
+      "to_key": "connection:smema握手连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:smema接口",
+      "to_key": "connection:smema握手连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:smema信号线缆",
+      "to_key": "connection:smema握手连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:smema握手连接",
+      "to_key": "protocol:smema握手协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:产线上游设备",
+      "to_key": "equipment:aoi设备",
+      "relation": "signals_to",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "direction": "upstream_to_aoi",
+      "evidence_required": true,
+      "notes": "具体产线实例必须有方向文本或 I/O 映射证据。",
+      "approved": true
+    },
+    {
+      "from_key": "equipment:aoi设备",
+      "to_key": "equipment:产线下游设备",
+      "relation": "signals_to",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "direction": "aoi_to_downstream",
+      "evidence_required": true,
+      "notes": "具体产线实例必须有方向文本或 I/O 映射证据。",
+      "approved": true
+    },
+    {
+      "from_key": "component:主板",
+      "to_key": "interface:sata接口",
+      "relation": "has_interface",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "component:系统盘",
+      "to_key": "connection:sata存储连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "只适用于 SATA 系统盘实例；NVMe 系统盘不得沿用该边。",
+      "approved": true
+    },
+    {
+      "from_key": "component:主板",
+      "to_key": "connection:sata存储连接",
+      "relation": "connected_via",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "interface:sata接口",
+      "to_key": "connection:sata存储连接",
+      "relation": "endpoint_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:sata数据线",
+      "to_key": "connection:sata存储连接",
+      "relation": "part_of",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "approved": true
+    },
+    {
+      "from_key": "connection:sata存储连接",
+      "to_key": "protocol:sata协议",
+      "relation": "uses_protocol",
+      "basis": "approved_connection_pattern",
+      "scope": "type_pattern",
+      "approved": true
+    },
+    {
+      "from_key": "component:gpu",
+      "to_key": "component:显卡",
+      "relation": "part_of",
+      "basis": "approved_software_stack_hardware_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "software:winpe",
+      "to_key": "software:windows",
+      "relation": "is_a",
+      "basis": "approved_windows_environment_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "software:microsoft defender",
+      "to_key": "software:windows",
+      "relation": "part_of",
+      "basis": "approved_windows_software_stack",
+      "approved": true
+    },
+    {
+      "from_key": "software:mvs",
+      "to_key": "equipment:相机",
+      "relation": "associated_with",
+      "basis": "approved_camera_tool_context",
+      "notes": "只表达相机管理工具上下文，不把 MVS 与驱动、固件或 SDK 合并。",
+      "approved": true
+    },
+    {
+      "from_key": "software:cuda",
+      "to_key": "component:gpu",
+      "relation": "compatible_with",
+      "basis": "approved_software_stack_compatibility_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体实例必须保留 GPU 型号、驱动版本和 CUDA 版本约束。",
+      "approved": true
+    },
+    {
+      "from_key": "software:machine服务",
+      "to_key": "workstation:aoi主站工控机",
+      "relation": "runs_on",
+      "basis": "approved_workstation_software_layer",
+      "approved": true
+    },
+    {
+      "from_key": "driver:显卡驱动",
+      "to_key": "driver:设备驱动程序",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "driver:网卡驱动",
+      "to_key": "driver:设备驱动程序",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "driver:相机驱动",
+      "to_key": "driver:设备驱动程序",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "driver:显卡驱动",
+      "to_key": "component:显卡",
+      "relation": "driver_of",
+      "basis": "approved_device_driver_binding",
+      "approved": true
+    },
+    {
+      "from_key": "driver:网卡驱动",
+      "to_key": "component:网卡",
+      "relation": "driver_of",
+      "basis": "approved_device_driver_binding",
+      "approved": true
+    },
+    {
+      "from_key": "driver:相机驱动",
+      "to_key": "equipment:相机",
+      "relation": "driver_of",
+      "basis": "approved_device_driver_binding",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体实例必须补充供应商、型号和驱动版本证据。",
+      "approved": true
+    },
+    {
+      "from_key": "firmware:相机固件",
+      "to_key": "firmware:设备固件",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "firmware:bios",
+      "to_key": "firmware:设备固件",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "firmware:相机固件",
+      "to_key": "equipment:相机",
+      "relation": "firmware_of",
+      "basis": "approved_device_firmware_binding",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体实例必须补充相机型号、固件版本和兼容矩阵。",
+      "approved": true
+    },
+    {
+      "from_key": "firmware:bios",
+      "to_key": "component:主板",
+      "relation": "firmware_of",
+      "basis": "approved_device_firmware_binding",
+      "approved": true
+    },
+    {
+      "from_key": "sdk:相机sdk",
+      "to_key": "sdk:sdk",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "sdk:machine sdk",
+      "to_key": "sdk:sdk",
+      "relation": "is_a",
+      "basis": "approved_software_stack_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "sdk:相机sdk",
+      "to_key": "equipment:相机",
+      "relation": "sdk_for",
+      "basis": "approved_device_sdk_binding",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体实例必须补充供应商、相机系列和 SDK 版本证据。",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:smt-aoi.exe",
+      "to_key": "software:aoi主程序",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:smt-aoi-maintenance-station.exe",
+      "to_key": "software:维护站软件",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:hercules.exe",
+      "to_key": "software:hercules调试工具",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:ntdll.dll",
+      "to_key": "software:windows",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:kernelbase.dll",
+      "to_key": "software:windows",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software_artifact:cublas64_11.dll",
+      "to_key": "software:cuda",
+      "relation": "artifact_of",
+      "basis": "approved_deployment_artifact_binding",
+      "approved": true
+    },
+    {
+      "from_key": "configuration_file:machined.toml",
+      "to_key": "software:machine服务",
+      "relation": "configuration_of",
+      "basis": "approved_configuration_binding",
+      "approved": true
+    },
+    {
+      "from_key": "software:aoi主程序",
+      "to_key": "external_system:mes",
+      "relation": "communicates_with",
+      "basis": "approved_business_integration_pattern",
+      "scope": "type_pattern",
+      "evidence_required": true,
+      "notes": "具体现场实例必须补充 MES 配置、接口文档或通信日志；不得由名称共现推断调用方向、协议或部署位置。",
+      "approved": true
+    },
+    {
+      "from_key": "identifier:二维码",
+      "to_key": "identifier:条码",
+      "relation": "is_a",
+      "basis": "approved_identifier_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "inspection_object:led",
+      "to_key": "inspection_object:器件",
+      "relation": "is_a",
+      "basis": "approved_inspection_object_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "inspection_object:chip",
+      "to_key": "inspection_object:器件",
+      "relation": "is_a",
+      "basis": "approved_inspection_object_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "inspection_object:ic",
+      "to_key": "inspection_object:器件",
+      "relation": "is_a",
+      "basis": "approved_inspection_object_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "data_artifact:整板大图",
+      "to_key": "data_artifact:图像产物",
+      "relation": "is_a",
+      "basis": "approved_image_artifact_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "data_artifact:白图",
+      "to_key": "data_artifact:图像产物",
+      "relation": "is_a",
+      "basis": "approved_image_artifact_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "data_artifact:rgb图",
+      "to_key": "data_artifact:图像产物",
+      "relation": "is_a",
+      "basis": "approved_image_artifact_taxonomy",
+      "approved": true
+    },
+    {
+      "from_key": "runtime_process:explorer.exe",
+      "to_key": "software:windows",
+      "relation": "runs_on",
+      "basis": "approved_operating_system_process_binding",
+      "approved": true
+    },
+    {
+      "from_key": "workpiece:镂空板",
+      "to_key": "workpiece:pcb",
+      "relation": "is_a",
+      "basis": "human_reviewed_corpus_discovery",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:1a064e4fb2654e4d",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "from_key": "component:无线网卡",
+      "to_key": "component:网卡",
+      "relation": "is_a",
+      "basis": "human_reviewed_corpus_discovery",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:35bcde6d9236655e",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "from_key": "component:机械硬盘",
+      "to_key": "component:硬盘",
+      "relation": "is_a",
+      "basis": "human_reviewed_corpus_discovery",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:ee6936004db0cbe7",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "from_key": "component:固态硬盘",
+      "to_key": "component:硬盘",
+      "relation": "is_a",
+      "basis": "human_reviewed_corpus_discovery",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:01c1500bdabdaff8",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "from_key": "component:主板电池",
+      "to_key": "component:主板",
+      "relation": "part_of",
+      "basis": "human_reviewed_corpus_discovery",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:cbc1bca37be0a0a7",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    }
+  ],
+  "aliases": [
+    {
+      "surface_form": "WinPE",
+      "concept_key": "software:winpe",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "DDU",
+      "concept_key": "software:display driver uninstaller",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "复盘站",
+      "concept_key": "station:复判站",
+      "relation_type": "typo_variant",
+      "approved": true
+    },
+    {
+      "surface_form": "IPC",
+      "concept_key": "equipment:工控机",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "工业计算机",
+      "concept_key": "equipment:工控机",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "工业电脑",
+      "concept_key": "equipment:工控机",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "PCB板",
+      "concept_key": "workpiece:pcb",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "线路板",
+      "concept_key": "workpiece:pcb",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "CXP线",
+      "concept_key": "component:cxp线缆",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "SN",
+      "concept_key": "identifier:序列号",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "Barcode",
+      "concept_key": "identifier:条码",
+      "relation_type": "english_equivalent",
+      "approved": true
+    },
+    {
+      "surface_form": "码枪",
+      "concept_key": "equipment:扫码枪",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "条码枪",
+      "concept_key": "equipment:扫码枪",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "扫码器",
+      "concept_key": "equipment:扫码枪",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "元件",
+      "concept_key": "inspection_object:器件",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "元器件",
+      "concept_key": "inspection_object:器件",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "标记点",
+      "concept_key": "inspection_object:mark点",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "PROJ",
+      "concept_key": "data_artifact:proj工程数据",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "proj文件",
+      "concept_key": "data_artifact:proj工程数据",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "CAD",
+      "concept_key": "data_artifact:cad工程数据",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "CAD文件",
+      "concept_key": "data_artifact:cad工程数据",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "Gerber",
+      "concept_key": "data_artifact:gerber工程数据",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "Gerber文件",
+      "concept_key": "data_artifact:gerber工程数据",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "BOM",
+      "concept_key": "data_artifact:bom物料清单",
+      "relation_type": "abbreviation",
+      "approved": true
+    },
+    {
+      "surface_form": "BOM文件",
+      "concept_key": "data_artifact:bom物料清单",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "物料清单",
+      "concept_key": "data_artifact:bom物料清单",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "日志",
+      "concept_key": "log_artifact:日志产物",
+      "relation_type": "exact_synonym",
+      "approved": true
+    },
+    {
+      "surface_form": "回流焊",
+      "concept_key": "equipment:回流焊设备",
+      "relation_type": "colloquial_alias",
+      "approved": true
+    },
+    {
+      "surface_form": "OCR",
+      "concept_key": "software:ocr算法",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:c90b7deaf5a5bd6b",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "驱动",
+      "concept_key": "driver:设备驱动程序",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:f5129a2741238580",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有设备驱动程序概念。"
+      }
+    },
+    {
+      "surface_form": "金板",
+      "concept_key": "workpiece:标准金板",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:a9949fc61ae99efb",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "DL",
+      "concept_key": "software:dl算法",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:cc4f99164bca681f",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "ODA",
+      "concept_key": "software:oda算法",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:fb383bfa9af6d69e",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "USB",
+      "concept_key": "interface:usb接口",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:e6af6bc5088a9cdc",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有USB接口概念。"
+      }
+    },
+    {
+      "surface_form": "皮带",
+      "concept_key": "component:输送皮带",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:03cbae0d44dd7850",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "网线",
+      "concept_key": "component:以太网线",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:4b3976ba0672fac5",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有以太网线概念；候选原类型interface不正确。"
+      }
+    },
+    {
+      "surface_form": "挡块",
+      "concept_key": "component:进板挡块",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:d2d2da3a1ee1738f",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "网口",
+      "concept_key": "interface:以太网接口",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:398b653c93d26efb",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有以太网接口概念。"
+      }
+    },
+    {
+      "surface_form": "ODB",
+      "concept_key": "software:odb算法",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:a6124d10b8a81505",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "CXP",
+      "concept_key": "interface:cxp接口",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:43a22a1e4bd5b549",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有CoaXPress接口概念。"
+      }
+    },
+    {
+      "surface_form": "固件",
+      "concept_key": "firmware:设备固件",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:18b7e2f3fe2f082b",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有设备固件概念。"
+      }
+    },
+    {
+      "surface_form": "采集卡",
+      "concept_key": "component:图像采集卡",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:44ae585ea4b8e18e",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有图像采集卡概念。"
+      }
+    },
+    {
+      "surface_form": "风扇",
+      "concept_key": "component:散热风扇",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:f2b4496ed6b39c53",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "串口",
+      "concept_key": "interface:串行接口",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:24618556c15fce8f",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有串行接口概念。"
+      }
+    },
+    {
+      "surface_form": "PCIe",
+      "concept_key": "interface:pcie接口",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:b1456eb66c183eb0",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有PCIe接口概念。"
+      }
+    },
+    {
+      "surface_form": "HDMI",
+      "concept_key": "interface:hdmi接口",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:f58f328543c7e979",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有HDMI接口概念。"
+      }
+    },
+    {
+      "surface_form": "SMEMA",
+      "concept_key": "interface:smema接口",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:ccf4db721c9ceb64",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有SMEMA接口概念。"
+      }
+    },
+    {
+      "surface_form": "PLC",
+      "concept_key": "component:plc控制器",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:991582a0f529742d",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "滚轮",
+      "concept_key": "component:输送滚轮",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:5bf0527b92dac366",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "光控板",
+      "concept_key": "component:光源控制板",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:ab15f7b91ec3cc45",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "source_name_for_normalized_concept"
+      }
+    },
+    {
+      "surface_form": "M.2",
+      "concept_key": "interface:m.2接口",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:d4024820883533d6",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03",
+        "note": "并入既有M.2接口概念。"
+      }
+    },
+    {
+      "surface_form": "AOI",
+      "concept_key": "equipment:aoi设备",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:1fb68b89dadab907",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "感应器",
+      "concept_key": "component:传感器",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:de569289d4896b4a",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "运控卡",
+      "concept_key": "component:运动控制卡",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:e0ca94835f0977cf",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "SI-2020T",
+      "concept_key": "product_model:si2020t",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:41bac8c61ddea717",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "USB口",
+      "concept_key": "interface:usb接口",
+      "relation_type": "colloquial_alias",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:bbc1447243a3742d",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "SI-2030",
+      "concept_key": "product_model:si2030",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:1cdac28ce698c2a3",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "USB接口",
+      "concept_key": "interface:usb接口",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:560c9db0bb50f0c0",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "SI-2020D",
+      "concept_key": "product_model:si2020d",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:b9f5ec1f023234d1",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "SSD",
+      "concept_key": "component:固态硬盘",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:de9ba5858e2869c3",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "Defender",
+      "concept_key": "software:microsoft defender",
+      "relation_type": "abbreviation",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:c81a282f59e50372",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "SI-1020E",
+      "concept_key": "product_model:si1020e",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:c1a81dfcdcd4c143",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    },
+    {
+      "surface_form": "CXP接口",
+      "concept_key": "interface:cxp接口",
+      "relation_type": "exact_synonym",
+      "approved": true,
+      "review": {
+        "review_id": "noun-discovery:b1e57a4fe09ab5da",
+        "reviewed_by": "codex_full_noun_audit_2026-08-03"
+      }
+    }
+  ],
+  "alias_candidates": [
+    {
+      "surface_form": "主机",
+      "concept_key": "equipment:工控机",
+      "candidate_kind": "noun_alias",
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "high"
+    },
+    {
+      "surface_form": "板子",
+      "concept_key": "workpiece:pcb",
+      "candidate_kind": "noun_alias",
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium"
+    },
+    {
+      "surface_form": "PE",
+      "concept_key": "software:winpe",
+      "candidate_kind": "noun_abbreviation",
+      "suggested_relation_type": "abbreviation",
+      "risk": "medium"
+    },
+    {
+      "surface_form": "Mark",
+      "concept_key": "inspection_object:mark点",
+      "candidate_kind": "noun_abbreviation",
+      "suggested_relation_type": "abbreviation",
+      "required_scope": [
+        "AOI",
+        "PCB",
+        "定位",
+        "对位",
+        "标定",
+        "焊盘",
+        "器件"
+      ],
+      "forbidden_scope": [
+        "Markdown",
+        "商标",
+        "人名"
+      ],
+      "risk": "medium"
+    },
+    {
+      "surface_form": "大图",
+      "concept_key": "data_artifact:整板大图",
+      "candidate_kind": "noun_alias",
+      "suggested_relation_type": "colloquial_alias",
+      "required_scope": [
+        "AOI",
+        "板卡",
+        "整板",
+        "相机",
+        "采集",
+        "拼图",
+        "检测",
+        "SPC",
+        "RGB",
+        "白图",
+        "FOV"
+      ],
+      "forbidden_scope": [
+        "海报",
+        "宣传图",
+        "屏保"
+      ],
+      "risk": "high"
+    },
+    {
+      "surface_form": "彩图",
+      "concept_key": "data_artifact:rgb图",
+      "candidate_kind": "noun_alias",
+      "suggested_relation_type": "colloquial_alias",
+      "required_scope": [
+        "AOI",
+        "RGB",
+        "白图",
+        "相机",
+        "采集",
+        "拼图",
+        "检测",
+        "SPC"
+      ],
+      "forbidden_scope": [
+        "海报",
+        "宣传图",
+        "插图"
+      ],
+      "risk": "medium"
+    },
+    {
+      "surface_form": "SPI",
+      "concept_key": "equipment:spi设备",
+      "candidate_kind": "noun_abbreviation",
+      "suggested_relation_type": "abbreviation",
+      "required_scope": [
+        "AOI",
+        "锡膏",
+        "焊膏",
+        "设备",
+        "机器",
+        "产线",
+        "订单",
+        "交付",
+        "编程",
+        "检测"
+      ],
+      "forbidden_scope": [
+        "串行外设接口",
+        "总线",
+        "协议",
+        "寄存器",
+        "MOSI",
+        "MISO",
+        "SCLK",
+        "片选"
+      ],
+      "risk": "high"
+    }
+  ]
+}

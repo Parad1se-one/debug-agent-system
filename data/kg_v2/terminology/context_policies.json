@@ -1,0 +1,125 @@
+{
+  "schema_version": "kg_v2.terminology_context_policies.v2",
+  "description": "Declarative context gates for noun concepts whose bare aliases are unsafe to resolve without a surrounding noun or task signal. v2 adds missing negation context and narrows over-broad expansions identified in terminology AB test v1.",
+  "policies": [
+    {
+      "canonical_name": "USB接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["USB设备", "USB外设", "USB接口", "USB口", "外设", "拔插", "供电", "无法识别", "初始化", "静电"],
+      "block_if_any": ["USB协议", "协议栈", "descriptor", "枚举失败", "协议"],
+      "reason": "USB协议/协议栈是通信语义，不能被裸 USB 接口别名覆盖；需要硬件上下文"
+    },
+    {
+      "canonical_name": "回流焊设备",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["回流焊设备", "产线设备", "设备故障", "设备问题"],
+      "block_if_any": ["回流焊工艺", "工艺", "温度曲线", "焊接温度", "制程", "工艺参数"],
+      "reason": "回流焊工艺/温度曲线是过程语义，不能直接解析为设备实体"
+    },
+    {
+      "canonical_name": "设备驱动程序",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["设备驱动", "驱动程序", "显卡", "网卡", "相机", "设备管理器", "驱动问题", "驱动更新"],
+      "block_if_any": ["业务增长", "业务", "营收", "市场", "增长因素", "季度", "业绩"],
+      "reason": "驱动裸词需要硬件或系统上下文，业务语境不得扩展到设备驱动"
+    },
+    {
+      "canonical_name": "PCIe接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["PCIe网卡", "PCIe插槽", "PCIe接口", "PCIe卡", "网卡", "采集卡"],
+      "block_if_any": [],
+      "reason": "PCIe 裸缩写只在硬件/接口上下文才安全解析为接口实体"
+    },
+    {
+      "canonical_name": "HDMI接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["HDMI显示器", "HDMI接口", "HDMI口", "HDMI线", "显示", "画面", "屏幕"],
+      "block_if_any": [],
+      "reason": "HDMI 裸缩写只在显示/接口上下文才安全解析"
+    },
+    {
+      "canonical_name": "CXP接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["CXP相机", "CXP线缆", "CXP接口", "CXP采集", "相机", "采集卡"],
+      "block_if_any": [],
+      "reason": "CXP 裸缩写只在相机/采集上下文才安全解析"
+    },
+    {
+      "canonical_name": "SMEMA接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["SMEMA握手", "SMEMA接口", "SMEMA信号", "上下游", "handshake"],
+      "block_if_any": [],
+      "reason": "SMEMA 裸缩写只在产线握手/信号上下文才安全解析"
+    },
+    {
+      "canonical_name": "PLC控制器",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["PLC控制", "PLC控制器", "PLC模块", "控制", "输送", "电机"],
+      "block_if_any": [],
+      "reason": "PLC 裸缩写只在控制/输送上下文才安全解析"
+    },
+    {
+      "canonical_name": "Windows PE",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["WinPE", "PE环境", "PE启动", "PE修复", "引导", "启动"],
+      "block_if_any": ["接地", "接地线", "电阻", "电气", "保护接地"],
+      "reason": "PE 在电气/接地上下文中是保护接地（Protective Earth），不是 Windows PE"
+    },
+    {
+      "canonical_name": "SPI设备",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["SPI设备", "SPI检测", "SPI锡膏", "AOI", "检测"],
+      "block_if_any": ["总线", "MOSI", "MISO", "SCLK", "波形", "协议", "调试"],
+      "reason": "SPI 在总线/协议上下文中是 Serial Peripheral Interface，不是 SPI 检测设备"
+    },
+    {
+      "canonical_name": "Mark点",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["Mark点", "标记点", "对位", "对齐", "定位", "基准点"],
+      "block_if_any": ["文档", "Markdown", "标注", "重点", "文档"],
+      "reason": "Mark 在文档/标注上下文中是普通动词，不是 Mark 点"
+    },
+    {
+      "canonical_name": "工控机",
+      "require_allow_if_bare": false,
+      "allow_if_any": ["工控机", "工业电脑", "工业计算机", "IPC", "AOI"],
+      "block_if_any": [],
+      "reason": "主机 在无 AOI/工业上下文时不应自动解析为工控机（可能是普通 PC 主机）"
+    },
+    {
+      "canonical_name": "PCB",
+      "require_allow_if_bare": false,
+      "allow_if_any": ["PCB", "PCB板", "线路板", "电路板", "板子", "进板", "AOI"],
+      "block_if_any": [],
+      "reason": "板子 在无 AOI/生产上下文时不应自动解析为 PCB（可能是会议室桌子板材）"
+    },
+    {
+      "canonical_name": "日志产物",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["日志", "导出日志", "Buddy日志", "DLOG", "日志文件"],
+      "block_if_any": [],
+      "reason": "日志 裸词需要 Buddy/DLOG/导出等 AOI 上下文才解析为日志产物"
+    },
+    {
+      "canonical_name": "运动控制卡",
+      "require_allow_if_bare": false,
+      "allow_if_any": ["运控卡", "运动控制卡", "控制卡", "运动控制器"],
+      "block_if_any": [],
+      "reason": "运控卡 是运动控制卡的现场别称，需要 AOI/设备上下文确认"
+    },
+    {
+      "canonical_name": "DL算法",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["DL算法", "DL模型", "深度学习", "检测算法", "DL model", "model", "检测", "算法", "误报", "漏报", "少锡"],
+      "block_if_any": [],
+      "reason": "DL 裸缩写只在 AI/算法上下文才安全解析为 DL算法"
+    },
+    {
+      "canonical_name": "CXP接口",
+      "require_allow_if_bare": true,
+      "allow_if_any": ["CXP相机", "CXP线缆", "CXP接口", "CXP采集", "相机", "采集卡", "camera", "拍照", "采集", "CXP camera"],
+      "block_if_any": [],
+      "reason": "CXP 裸缩写只在相机/采集上下文才安全解析"
+    }
+  ]
+}

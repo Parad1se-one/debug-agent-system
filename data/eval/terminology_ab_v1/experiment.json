@@ -1,0 +1,124 @@
+{
+  "schema_version": "debug_agent_system.terminology_ab_experiment.v1",
+  "benchmark_id": "kg-v2-read-terminology-ab-v1",
+  "benchmark_version": "1.0.0",
+  "case_file": "data/eval/terminology_ab_v1/cases.jsonl",
+  "case_count": 60,
+  "category_quotas": {
+    "canonical_name": 15,
+    "field_alias_abbreviation_typo": 20,
+    "english_or_mixed": 15,
+    "safety_ambiguity_negative": 10
+  },
+  "hypothesis": "审核通过的术语层在不增加错误扩展或错误故障锁定的前提下，提高现场别称、错拼、缩写和中英文混写 Query 的路由、证据召回或回答质量。",
+  "paired_design": {
+    "unit": "case_id",
+    "arms": {
+      "A_control": {
+        "terminology_enabled": false
+      },
+      "B_treatment": {
+        "terminology_enabled": true
+      }
+    },
+    "only_allowed_difference": "terminology_enabled",
+    "same_across_arms": [
+      "git_commit_and_runtime_dependency_patch",
+      "system_prompt_sha256",
+      "model",
+      "runtime_transport",
+      "reasoning_effort",
+      "max_tool_rounds",
+      "max_tool_calls",
+      "verification_attempts",
+      "timeout_seconds",
+      "data_raw_revision",
+      "kg_v2_revision",
+      "query_text",
+      "case_order",
+      "evaluator_version"
+    ],
+    "execution_order": "paired_interleaved",
+    "fixed_order_seed": 20260804,
+    "resume_policy": "reuse_only_when_arm_and_all_frozen_fingerprints_match"
+  },
+  "runtime_defaults": {
+    "runtime": "responses_api",
+    "model": "gpt-5.4",
+    "reasoning_effort": "medium",
+    "max_tool_rounds": 24,
+    "max_tool_calls": 80,
+    "verification_attempts": 2,
+    "timeout_seconds": 600
+  },
+  "metrics": {
+    "route_accuracy": {
+      "range": [0, 1],
+      "method": "同一 evaluator 根据 Query 对象、故障域和最终回答判定路由是否落入正确资料域；不得把术语命中本身视为正确路由。"
+    },
+    "evidence_recall": {
+      "range": [0, 1],
+      "method": "gold_source_documents 中至少一个来源被实际读取且用于回答时计 1；无 gold 来源的题不计算该指标。"
+    },
+    "answer_quality": {
+      "range": [0, 4],
+      "method": "盲评事实正确性、问题覆盖、结构可执行性和证据约束，每项 0/1；评审输入不展示 A/B 标签。"
+    },
+    "required_search_compliance": {
+      "range": [0, 1],
+      "method": "B 组对每个 required_search_pairs 同时搜索原词和规范名；A 组记为不适用。"
+    },
+    "unsafe_expansion_count": {
+      "range": [0, null],
+      "lower_is_better": true,
+      "method": "统计 must_not_resolve 中的概念进入 resolved mention、required search 或用于回答证据范围的次数。"
+    },
+    "wrong_variant_lock_count": {
+      "range": [0, null],
+      "lower_is_better": true,
+      "method": "统计仅因术语命中而锁定错误 Family/Variant 或生成确定性根因的次数。"
+    }
+  },
+  "acceptance_gates": {
+    "alias_typo_clear_gain": {
+      "subset": "field_alias_abbreviation_typo",
+      "pass_when": "route_accuracy、evidence_recall 或 normalized_answer_quality 至少一项 B-A >= 0.10，其他可用主指标均不得下降超过 0.02，且逐题 B 胜数大于 A 胜数。"
+    },
+    "full_set_no_material_regression": {
+      "subset": "all_non_safety_cases",
+      "pass_when": "每个可用主指标 B-A >= -0.02；canonical_name 和 english_or_mixed 任一子集不得下降超过 0.05；B 组发布失败数不得高于 A 组。"
+    },
+    "ambiguity_never_wrongly_locks": {
+      "subset": "safety_ambiguity_negative",
+      "pass_when": "wrong_variant_lock_count == 0"
+    },
+    "safety_negative_zero_expansion": {
+      "subset": "safety_ambiguity_negative",
+      "pass_when": "unsafe_expansion_count == 0"
+    },
+    "search_contract_complete": {
+      "subset": "treatment_cases_with_required_search_pairs",
+      "pass_when": "required_search_compliance == 1.0"
+    }
+  },
+  "failure_iteration_policy": {
+    "required": true,
+    "failure_buckets": [
+      "missing_alias_or_typo",
+      "nested_or_overlapping_mention",
+      "insufficient_context_disambiguation",
+      "overbroad_entity_relation",
+      "required_search_not_executed",
+      "retrieved_but_not_used",
+      "answer_composition_regression",
+      "out_of_domain_false_expansion"
+    ],
+    "workflow": [
+      "保存逐题 A/B 工具轨迹、术语解析、检索契约、来源和评分差异。",
+      "把失败归入唯一主桶，并区分术语数据、上下文约束、检索契约和回答编织问题。",
+      "只修改对应的通用机制或已审核词义，不添加单 Query 特判。",
+      "生成新的 terminology revision 和实验 run_id。",
+      "固定同一 60 题全量重跑；不得只重跑成功案例或代表集。"
+    ]
+  }
+}

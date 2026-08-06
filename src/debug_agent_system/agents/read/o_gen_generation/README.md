@@ -1,0 +1,27 @@
+# O-GEN Diagnosis Generation Agent
+
+- id: `O-GEN`
+- type: Worker
+- owner: `src/debug_agent_system/agents/read/o_gen_generation`
+- responsibility: render KG-grounded checks, resolutions, and escalation text for users without expanding beyond locked subgraph evidence.
+- entrypoints:
+  - `render_check(subgraph, check, compact=True)`.
+  - `render_resolution(subgraph, solution)`.
+  - `render_escalation(subgraph, reason)`.
+- inputs:
+  - `LockedSubgraph` with label/sources/solutions.
+  - `CheckNode` selected by B-D or O0 branch gate.
+  - Optional `SolutionNode` from resolved check.
+  - `compact` flag from O0 interactive mode.
+- outputs:
+  - User-facing string answer.
+  - Compact check answer: hit fault, priority check, how_to_check.
+  - Non-compact checklist: current plus up to 7 contextual checks and manual hints.
+- failure_modes:
+  - Missing solution -> resolution text asks to supplement KG/review_queue.
+  - Risky actions are phrased as manual confirmation, not auto-execution.
+- observability:
+  - O-GEN does not create metadata; O0/B-D response fields identify rendered check/resolution.
+- non_goals:
+  - No retrieval, no branch selection, no hallucinated steps outside subgraph.
+  - No destructive operation execution.

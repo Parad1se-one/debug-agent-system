@@ -1,0 +1,22 @@
+# O-LOG Log Analysis Agent
+
+- id: `O-LOG`
+- type: Worker
+- owner: `src/debug_agent_system/agents/read/o_log_analysis`
+- responsibility: extract lightweight routing/observability hints from query text plus optional pre-parsed log summary; never owns final diagnosis.
+- entrypoint: `LogAnalysisAgent.analyze(query, log_summary=None)`.
+- inputs:
+  - `query: str` user query.
+  - Optional `log_summary: dict` from external parser; values are inspected as text.
+- outputs:
+  - dict with `log_available`, `branch_hints`, `suggested_check_ids`, `version_hints`, `device_hints`, `parse_errors`.
+  - Current deterministic hints include camera/light/motion/config branches and version regex matches.
+- failure_modes:
+  - No logs -> `log_available=false`, empty hints; diagnosis continues.
+  - Parse problems from upstream -> should be passed in `parse_errors`; O-LOG does not throw for missing logs.
+- observability:
+  - O0 stores result in `metadata.log_summary`.
+- non_goals:
+  - Does not produce final answer.
+  - Does not skip checks unless future upstream provides confirmed `skip_check_ids`; suggested checks are advisory only.
+  - Does not read log files directly in current implementation.

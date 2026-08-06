@@ -1,0 +1,32 @@
+# W5 Incremental Ingest Agent
+
+- id: `W5`
+- type: Worker/write boundary
+- owner: `src/debug_agent_system/agents/write/w5_incremental_ingest`
+- responsibility: produce dry-run merge plans and apply only already-approved review items to KG through store methods.
+- entrypoints:
+  - `dry_run_merge_plan(payload)` / `dry_run(candidate)`.
+  - `apply_approved(payload)`.
+  - `dry_run_required_info_merge(payload)`.
+  - `apply_approved_required_info(payload)`.
+- inputs:
+  - Candidate or review item containing nested `candidate`.
+  - Required-info candidate or review item containing nested `required_info_candidate`.
+  - Approval markers: `human_approved`, `review_status/status in approved|human_approved|accepted`, or `selected_action in approve|accept|merge`.
+- outputs:
+  - Dry-run plan with `would_create_nodes`, `would_update_nodes`, `would_skip_nodes`, `would_create_edges`, `would_skip_edges`, duplicate/schema flags, `affects_existing_check_chain`.
+  - Apply result from KG store: applied/skipped/already_applied and counts.
+  - Required-info dry-run/apply result for `required_info` enrichment, including target existence and already-present checks.
+- failure_modes:
+  - Not approved -> `skipped/not_approved`.
+  - Schema invalid -> `skipped/schema_invalid`.
+  - Required-info review_only -> `skipped/review_only`.
+  - Store lacks required-info method -> `skipped/store_missing_required_info_merge`.
+- observability:
+  - Dry-run plans include `observability.agent_id=W5`, mode.
+  - Store audit queue records applied candidates.
+- non_goals:
+  - Does not decide approval.
+  - Does not auto-apply fresh pending candidates.
+  - Does not bypass KGStore idempotency.
+  - Does not create a separate SoftwareVersion store; approved `SoftwareVersion` nodes merge into `instances/versions/versions.json`.

@@ -1,0 +1,1401 @@
+[
+  {
+    "case_id": "case:f484f4362a9a",
+    "source_kind": "sop",
+    "title": "Buddy 模板创建失败",
+    "summary": "Buddy 正常开启，但模板管理刷新后没有模板，创建模板时出现网络请求失败/超时。",
+    "source_ref": "1.1.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:b8cad43218da",
+    "source_kind": "sop",
+    "title": "模板文件损坏导致模板无法加载",
+    "summary": "主程序/模板管理闪退后，Buddy 项目 meta.json 损坏，导致模板信息无法正常读取。",
+    "source_ref": "1.1.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:b03dc72e6623",
+    "source_kind": "sop",
+    "title": "主程序加载用户配置失败",
+    "summary": "AOI 主程序启动时报程序初始化失败：加载用户配置失败，需优先排查 conf 与 user.cfg.toml。",
+    "source_ref": "1.1.3.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:03655ec630a6",
+    "source_kind": "sop",
+    "title": "复判站出图慢",
+    "summary": "复判站结果显示或主程序到复判站的数据传输链路变慢。",
+    "source_ref": "1.1.2.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:f6b1fd1a6433",
+    "source_kind": "sop",
+    "title": "复判站加载板卡超时/失败",
+    "summary": "复判站出现板卡加载时间长和加载失败同时出现，需要优先排查网络超时、网络速度与 IP 配置。",
+    "source_ref": "1.3.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:39c69402fdbc",
+    "source_kind": "sop",
+    "title": "复判站加载用户配置失败",
+    "summary": "复判站主程序启动时报程序初始化失败：加载用户配置失败，需优先排查 conf 与 user.cfg.toml。",
+    "source_ref": "1.1.3.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:08c8dce04187",
+    "source_kind": "sop",
+    "title": "复判站检测页面无参考图",
+    "summary": "复判站检测页面没有参考图，点击加载最新模板后仍无图，需优先排查日志中的 500 报错与异常 json 文件。",
+    "source_ref": "1.3.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:f9a10dc3fb98",
+    "source_kind": "sop",
+    "title": "识别框大小不准确",
+    "summary": "检测框大小异常，需要通过数据回流与最新版本验证，区分现场调试问题与标注/模型问题。",
+    "source_ref": "1.2.6.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:5cdd21562cfb",
+    "source_kind": "sop",
+    "title": "光源初始化异常",
+    "summary": "初始化时光源链路异常，需要优先断电重启、插拔光控，并检查 ARM/IP 连接与防火墙。",
+    "source_ref": "1.4.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:0bbcf6e9d914",
+    "source_kind": "sop",
+    "title": "同光源器件成像差异大",
+    "summary": "2D 设备同一光源下器件成像差异明显，需要优先排查板弯、轨道、顶升、反光和器件本体状态。",
+    "source_ref": "1.3.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:3762c0860fa0",
+    "source_kind": "sop",
+    "title": "相机IP自动获取识别不到",
+    "summary": "相机使用自动获取 IP 时无法被识别，需要改为固定 192.168.0.x 网段地址。",
+    "source_ref": "1.4.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:037e6da73c79",
+    "source_kind": "sop",
+    "title": "远端报Mark点错误",
+    "summary": "双轨设备中，近端程序拷贝到远端后，因夹边挡块位置不一致遮挡板边 Mark 点，导致远端报 mark 点错误。",
+    "source_ref": "1.2.4.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:280b5b5433f5",
+    "source_kind": "sop",
+    "title": "CT 时间异常增加",
+    "summary": "检测节拍变长，CT 主要体现在 capture time 或 detection time 增大。",
+    "source_ref": "1.1.2.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:d6dff7149f80",
+    "source_kind": "sop",
+    "title": "CAD 导入失败",
+    "summary": "导入 CAD 时出现解析失败、尺寸过大或导入后不显示。",
+    "source_ref": "1.2.2.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:420dab95d3c6",
+    "source_kind": "sop",
+    "title": "CAD 角度不一致",
+    "summary": "导入 CAD 后，同一料号在板上特殊斜角度位置出现角度不一致。",
+    "source_ref": "1.2.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:a577d1ff34a1",
+    "source_kind": "sop",
+    "title": "Mark 多机复用轻微跑偏/遮挡",
+    "summary": "同一套程序复用于多台机器时，Mark 点会轻微跑偏，且可能被遮挡。",
+    "source_ref": "1.2.4.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:2dd115de2813",
+    "source_kind": "sop",
+    "title": "Mark 点对齐失败",
+    "summary": "Mark 点选择/参数不合理，或进板方向/进板不到位导致 Mark 对齐失败。",
+    "source_ref": "1.2.4.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:782c5b50e4a6",
+    "source_kind": "sop",
+    "title": "不同器件替代料配置",
+    "summary": "不同器件做替代料时，需要将封装、OCR、极性同时加入模板库。",
+    "source_ref": "1.3.5",
+    "approved": false
+  },
+  {
+    "case_id": "case:c5266de68d39",
+    "source_kind": "sop",
+    "title": "侧立和翘脚漏报",
+    "summary": "侧立或翘脚场景存在漏报，需要优先调试 XY 轴与角度阈值。",
+    "source_ref": "1.2.6.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:a7ee2dba064a",
+    "source_kind": "sop",
+    "title": "板卡弯曲/加工误差编程",
+    "summary": "板卡存在弯曲或加工误差时，编程侧需优先考虑板弯补偿与标记点区域策略。",
+    "source_ref": "1.2.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:54fc258944c0",
+    "source_kind": "sop",
+    "title": "设备主程序和工厂程序均无法打开",
+    "summary": "设备主程序和工厂程序均无法打开，需优先检查运控日志与运控卡状态。",
+    "source_ref": "1.1.3.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:468622871b0d",
+    "source_kind": "sop",
+    "title": "初始化运动控制卡卡住/运控闪退",
+    "summary": "初始化阶段卡在运动控制卡，或运控程序闪退，需要优先看运控日志和网卡 100M 速率设置。",
+    "source_ref": "1.4.1.1.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:831896365f21",
+    "source_kind": "sop",
+    "title": "3D FOV图片缺失",
+    "summary": "3D拍摄过程中日志显示某个FOV图片不足42张，需要优先排查CXP链路。",
+    "source_ref": "2.1.2.2.5",
+    "approved": false
+  },
+  {
+    "case_id": "case:5d253979c7b5",
+    "source_kind": "sop",
+    "title": "3D初始化拍摄失败",
+    "summary": "3D链路初始化拍摄失败时，需先检查相机是否被错误设置为自动曝光。",
+    "source_ref": "2.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:49d32e1bea37",
+    "source_kind": "sop",
+    "title": "3D曝光结束超时",
+    "summary": "3D拍摄过程中有停顿并最终失败，日志存在 exposure end timed out。",
+    "source_ref": "2.1.2.2.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:2dd8020a1ee2",
+    "source_kind": "sop",
+    "title": "Windows核心驱动异常导致拍摄失败",
+    "summary": "拍摄失败伴随显卡/核心驱动相关报错，需要检查系统时间、系统文件和显卡驱动。",
+    "source_ref": "2.1.2.2.8",
+    "approved": false
+  },
+  {
+    "case_id": "case:1690bca87c7c",
+    "source_kind": "sop",
+    "title": "拼图错位-角度标定异常",
+    "summary": "拼图错位且 dx/dy 超出合理范围时，需要重新进行角度标定。",
+    "source_ref": "2.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:71e9655bad47",
+    "source_kind": "sop",
+    "title": "2D初始化拍摄失败",
+    "summary": "SMT-AOI 启动初始化过程中提示拍摄失败，2D链路需优先检查相机上电、IP和光源控制器。",
+    "source_ref": "2.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:b49ff8972454",
+    "source_kind": "sop",
+    "title": "2D残帧拍摄失败",
+    "summary": "运控日志报 incomplete frame，需检查 SDK 版本、相机网口配置和系统电源模式。",
+    "source_ref": "2.1.2.2.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:b4336d9f98d5",
+    "source_kind": "sop",
+    "title": "2D相机事件超时",
+    "summary": "2D拍摄过程中出现事件超时，需根据日志分支检查相机固件或使用绑核方式。",
+    "source_ref": "2.1.2.2.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:847f31d14bf5",
+    "source_kind": "sop",
+    "title": "2D网口巨帧配置异常",
+    "summary": "日志报 block discarded 时，需要优先检查网口配置并开启巨帧。",
+    "source_ref": "2.1.2.2.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:53758163472a",
+    "source_kind": "sop",
+    "title": "拼图错位-相机未停稳/伺服问题",
+    "summary": "白图无错位但RGB错位时，优先怀疑相机未停稳，需排查伺服模式或伺服电机硬件故障。",
+    "source_ref": "2.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:fea5d19e3a59",
+    "source_kind": "sop",
+    "title": "大板拍摄速度越来越慢",
+    "summary": "大板拍摄时相机停稳耗时过大，影响实时fps计算并误触发流控机制。",
+    "source_ref": "2.1.2.2.6",
+    "approved": false
+  },
+  {
+    "case_id": "case:ed8669accf36",
+    "source_kind": "sop",
+    "title": "进板到位后加载板卡失败-操作不允许",
+    "summary": "主程序收到 TRACK_NEAR NOT_ALLOWED，需检查限位、原点、门状态与板宽轴复位。",
+    "source_ref": "2.1.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:0977c33c2ff1",
+    "source_kind": "sop",
+    "title": "扫码枪报警导致设备不进板",
+    "summary": "开启自动扫码后，扫码不成功会导致板卡不进板，需要排查码、扫码枪位置、网络和外部触发感应器。",
+    "source_ref": "2.3.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:7930b54c085c",
+    "source_kind": "sop",
+    "title": "扫码枪频闪",
+    "summary": "扫码枪运行时出现频闪，需要排查接驳台传感器平衡、触发情况和扫码枪配置。",
+    "source_ref": "2.3.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:fe9244cf7d78",
+    "source_kind": "sop",
+    "title": "上位送板机轨道喇叭口干涉",
+    "summary": "上位送板机第二轨与AOI第二轨过近并形成夹角，生产大尺寸PCB时引发碰撞干扰进板。",
+    "source_ref": "2.3.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:ad03308b2e1d",
+    "source_kind": "sop",
+    "title": "皮带空转/卡住/不流畅",
+    "summary": "皮带或滚轮链路存在异物、磨损、阻力或动力线问题，导致轨道运行不流畅。",
+    "source_ref": "2.4.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:1880673ed990",
+    "source_kind": "sop",
+    "title": "轨道宽度无法调节-感应器误触发",
+    "summary": "六个感应器中某个被灰尘或异物触发，导致无法调宽。",
+    "source_ref": "2.4.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:c87abe53d3d4",
+    "source_kind": "sop",
+    "title": "轨道有板误报",
+    "summary": "正常测试时远端/近端轨道误报有板，需排查轨道传感器状态和镂空板触发问题。",
+    "source_ref": "2.4.1.1.6",
+    "approved": false
+  },
+  {
+    "case_id": "case:961c14556f3b",
+    "source_kind": "sop",
+    "title": "进板不到位",
+    "summary": "板子未到达指定阻挡位置，需综合排查流道宽度、喇叭口、薄板/弯板、减速传感器标定和皮带阻力。",
+    "source_ref": "2.4.1.1.7",
+    "approved": false
+  },
+  {
+    "case_id": "case:45371aea128e",
+    "source_kind": "sop",
+    "title": "镂空板进板感应器未触发",
+    "summary": "镂空板进板时感应器未触发，导致板子进到轨道内一半就报轨道有板。",
+    "source_ref": "2.4.1.1.5",
+    "approved": false
+  },
+  {
+    "case_id": "case:c7e8b51a624f",
+    "source_kind": "sop",
+    "title": "出板速度缓慢",
+    "summary": "出板速度缓慢时，可通过运控配置页面或 machine.toml 调整相关参数。",
+    "source_ref": "2.4.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:35dc9cf7f7b7",
+    "source_kind": "sop",
+    "title": "固定轨位置未恢复",
+    "summary": "双轨设备硬复位后开启检测，固定轨没有回复到上次位置，需要删除老版本标定程序生成的异常文件。",
+    "source_ref": "2.4.1.1.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:58cdd65a3635",
+    "source_kind": "sop",
+    "title": "板卡撞挡块回弹",
+    "summary": "减速传感器未触发或距离参数不当，导致板卡撞到挡块后回弹。",
+    "source_ref": "2.4.1.1.8",
+    "approved": false
+  },
+  {
+    "case_id": "case:1f9eb1366f0d",
+    "source_kind": "sop",
+    "title": "轨道宽度无法调节-硬件复位未完成",
+    "summary": "设备前后门未关好或断电开机后未点击硬件复位，导致轨道无法调宽。",
+    "source_ref": "2.4.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:7659f74cb200",
+    "source_kind": "sop",
+    "title": "出板失败-镂空板/挡片/板长问题",
+    "summary": "出板失败时需排查镂空板感应、挡片安装和板子过长引起的超时。",
+    "source_ref": "2.5.1.1.5",
+    "approved": false
+  },
+  {
+    "case_id": "case:0201171525cc",
+    "source_kind": "sop",
+    "title": "近轨挡块异常下压-传感器误触发",
+    "summary": "启动程序未放板时近轨挡块下压，长时间没有感应到进板并报错，优先排查传感器误触发。",
+    "source_ref": "2.5.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:5e0c0e1c9661",
+    "source_kind": "sop",
+    "title": "进板失败",
+    "summary": "板子到达进板口但皮带不转，导致板子停在进板口，需按出板口占板、进板传感器、皮带、IO点位和电机线顺序排查。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/进板失败SOP--20250521.docx",
+    "approved": true
+  },
+  {
+    "case_id": "case:c8d0ae7d6214",
+    "source_kind": "sop",
+    "title": "镂空板导致出板传感器误感应/未触发",
+    "summary": "镂空板和人工拿板场景下，出板传感器会误感应空洞、短时间多次触发或未触发。",
+    "source_ref": "2.5.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:1cf7b4bb512b",
+    "source_kind": "sop",
+    "title": "收板机位置误报卡板",
+    "summary": "板卡推送到下道收板机某位置时主设备误报卡板，可通过增加出板延迟处理。",
+    "source_ref": "2.5.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:50b71775fb2a",
+    "source_kind": "sop",
+    "title": "气压过低黄色报警",
+    "summary": "黄色报警提示气压过低时，需要检查实际气压值并调整阈值。",
+    "source_ref": "2.6.1.1.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:d15748d2c4c4",
+    "source_kind": "sop",
+    "title": "顶升一边未落下",
+    "summary": "顶升一边未落下时，需排查气管进水污物、气压值不足或顶升气缸故障。",
+    "source_ref": "2.6.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:b39db0a26b2a",
+    "source_kind": "sop",
+    "title": "顶升落下但挡块未抬起",
+    "summary": "顶升落下后挡块未抬起，需排查挡块卡顿和阻挡气缸异常。",
+    "source_ref": "2.6.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:199ae685e296",
+    "source_kind": "sop",
+    "title": "复判报保存结果失败",
+    "summary": "推送结果至buddy失败status:500时，需要先做SPC文件清理，再借助db检查proj/res状态。",
+    "source_ref": "2.7.1.1.16",
+    "approved": false
+  },
+  {
+    "case_id": "case:22a3e3c3680b",
+    "source_kind": "sop",
+    "title": "BIOS设置失效导致无法进入系统",
+    "summary": "电脑报错Press F1 to Run SETUF，通常与BIOS设置失效或主板电池没电相关。",
+    "source_ref": "2.7.1.1.14",
+    "approved": false
+  },
+  {
+    "case_id": "case:f782ddd38bd9",
+    "source_kind": "sop",
+    "title": "C盘空间占用异常",
+    "summary": "C盘空间不足导致buddy服务异常，需要按 buddy-data、热存储、用户目录、导出目录和MES配置逐层排查。",
+    "source_ref": "2.7.1.1.5",
+    "approved": false
+  },
+  {
+    "case_id": "case:155cac70cba7",
+    "source_kind": "sop",
+    "title": "D盘占用过高导致卡死或加载慢",
+    "summary": "D盘查看文件或拷贝文件卡死/加载慢时，优先检查D盘是否被buddy-data占满并通过SPC清理。",
+    "source_ref": "2.7.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:3a00b526c703",
+    "source_kind": "sop",
+    "title": "D盘扩容与盘符迁移",
+    "summary": "加装机械硬盘后，需要分配新盘符、迁移原D盘数据并重新设置盘符。",
+    "source_ref": "2.7.1.1.13",
+    "approved": false
+  },
+  {
+    "case_id": "case:7be504947156",
+    "source_kind": "sop",
+    "title": "D盘测试数据占满",
+    "summary": "0.27现场D盘被 cold_results 测试数据占满，需要在客户确认保留天数后执行脚本清理。",
+    "source_ref": "2.7.1.1.6",
+    "approved": false
+  },
+  {
+    "case_id": "case:4edbea2a64e4",
+    "source_kind": "sop",
+    "title": "M.2 SSD更换与系统迁移",
+    "summary": "通过PE和克隆工具把旧系统盘迁移到新的M.2 SSD，并交换到主M.2插槽。",
+    "source_ref": "2.7.1.1.19",
+    "approved": false
+  },
+  {
+    "case_id": "case:487c3df2bf65",
+    "source_kind": "sop",
+    "title": "MEMORY.DMP分析流程",
+    "summary": "通过WinDbg下载、配置symbols并执行 !analyze -v 分析 MEMORY.DMP 文件。",
+    "source_ref": "2.7.1.1.18",
+    "approved": false
+  },
+  {
+    "case_id": "case:b3454704def9",
+    "source_kind": "sop",
+    "title": "光控通信异常",
+    "summary": "光控通信问题需优先排查日志、光控与加密狗位置，以及USB2.0拓扑是否使用一分四。",
+    "source_ref": "2.7.1.1.15",
+    "approved": false
+  },
+  {
+    "case_id": "case:368a9d6fe533",
+    "source_kind": "sop",
+    "title": "大板检测卡顿-虚拟内存不足",
+    "summary": "Windows诊断出虚拟内存不足，导致大板检测卡顿、闪退、丢帧。",
+    "source_ref": "2.7.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:b664987f240e",
+    "source_kind": "sop",
+    "title": "未检查到CUDA设备",
+    "summary": "报警未检查到cuda设备时，需先检查显卡接触、系统日志、驱动和快速启动。",
+    "source_ref": "2.7.1.1.11",
+    "approved": false
+  },
+  {
+    "case_id": "case:84022a493409",
+    "source_kind": "sop",
+    "title": "生成自定义框耗时异常",
+    "summary": "编程时间异常增加且日志显示生成自定义框耗时异常时，可通过关闭Defender实时防护缓解。",
+    "source_ref": "2.7.1.1.17",
+    "approved": false
+  },
+  {
+    "case_id": "case:21f434ab6a0e",
+    "source_kind": "sop",
+    "title": "系统蓝屏或自动重启",
+    "summary": "系统蓝屏或自动重启时，需第一时间收集DMP文件并回收分析。",
+    "source_ref": "2.7.1.1.8",
+    "approved": false
+  },
+  {
+    "case_id": "case:cb348b37cb09",
+    "source_kind": "sop",
+    "title": "编程测试页面卡死迟钝",
+    "summary": "编程测试页面卡死、鼠标迟钝、任务管理器也弹不出，需优先排查Windows安全防护与系统资源不足。",
+    "source_ref": "2.7.1.1.9",
+    "approved": false
+  },
+  {
+    "case_id": "case:67d9c2970631",
+    "source_kind": "sop",
+    "title": "设备自动重启排查",
+    "summary": "设备正常使用过程中自动重启，需要先看硬件连接稳定性，再看系统异常与软件列表。",
+    "source_ref": "2.7.1.1.4",
+    "approved": false
+  },
+  {
+    "case_id": "case:341f3ec6cfb2",
+    "source_kind": "sop",
+    "title": "设备黑屏排查",
+    "summary": "设备黑屏时，需从计算机名称冲突、瞬时硬件/驱动故障、系统资源死锁等方向综合排查。",
+    "source_ref": "2.7.1.1.10",
+    "approved": false
+  },
+  {
+    "case_id": "case:ca0609b2bc54",
+    "source_kind": "sop",
+    "title": "运输后设备无法开机",
+    "summary": "运输导致连接问题时，重新插拔显卡和内存条可恢复开机。",
+    "source_ref": "2.7.1.1.12",
+    "approved": false
+  },
+  {
+    "case_id": "case:3e30cd59c5a1",
+    "source_kind": "sop",
+    "title": "默认CMD以管理员模式启动",
+    "summary": "CMD默认以管理员模式启动，需通过UAC设置恢复正常权限级别。",
+    "source_ref": "2.7.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:efd407c8edf2",
+    "source_kind": "sop",
+    "title": "大板检测卡顿-硬件资源不足",
+    "summary": "检测大板卡时卡顿、闪退、丢帧，需优先检查内存、显存、CPU/GPU占用及安装状态。",
+    "source_ref": "2.7.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:dc178631a5fc",
+    "source_kind": "sop",
+    "title": "主板接线不规范导致光源设置失败",
+    "summary": "出现“拍摄失败！set light source params failed”时，优先检查光源控制器串口线主板接口及对应machine.toml端口号。",
+    "source_ref": "2.8.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:9957c9618adf",
+    "source_kind": "sop",
+    "title": "工控机USB口识别不到设备",
+    "summary": "工控机USB口无法识别设备时，需先区分接口问题、硬件问题、驱动问题或U盘短路问题。",
+    "source_ref": "2.8.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:8094cecb3c25",
+    "source_kind": "sop",
+    "title": "工控机无法正常开机",
+    "summary": "工控机无法正常开机时，需按外部供电、显示、自检、电源保护、引导失败和硬件黑屏等阶段逐层排查。",
+    "source_ref": "2.8.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:a365fff72edb",
+    "source_kind": "sop",
+    "title": "BADMARK跳叉板显示异常",
+    "summary": "程序旋转180度后手动添加测试位置，导致拼版号与实际不一致，复判站跳叉板显示异常。",
+    "source_ref": "2.9.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:0c9d0b38bee1",
+    "source_kind": "sop",
+    "title": "复判站IP与相机IP冲突",
+    "summary": "复判站和主机连接异常时，可能由复判站IP与相机IP冲突导致。",
+    "source_ref": "2.9.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:a8e22b535ab1",
+    "source_kind": "sop",
+    "title": "复判站复判数据加载板卡失败",
+    "summary": "复判站数据传输过程中断电/断网导致res损坏，或多模板框/版本不配套导致复判数据加载板卡失败。",
+    "source_ref": "2.9.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:f430f782a32b",
+    "source_kind": "sop",
+    "title": "气压表位置漏气",
+    "summary": "气压表位置漏气时，通过拆卸仪表盘、缠绕生料并装回解决。",
+    "source_ref": "2.10.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:7f22a670dca7",
+    "source_kind": "sop",
+    "title": "气缸/气路积水污染",
+    "summary": "气缸、总气管、支气管或三联件存在积水/油污污染，需要做排水、吹干和气源检查。",
+    "source_ref": "2.10.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:b319cc6bdbf8",
+    "source_kind": "sop",
+    "title": "区域拍照功能报错-y轴限位异常",
+    "summary": "区域拍照功能时报camera y axis GoToPoint failed，通常是y轴限位值标定不正确。",
+    "source_ref": "3.1.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:526f0088fb44",
+    "source_kind": "sop",
+    "title": "Buddy安装报错",
+    "summary": "Buddy安装报错时，需优先确认设备是否有D盘以及显卡驱动是否缺失。",
+    "source_ref": "4.1.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:4286e00fd807",
+    "source_kind": "sop",
+    "title": "运控打不开-运动控制程序错误",
+    "summary": "运控打不开并报运动控制程序错误时，需优先检查三软件重启顺序和machine.toml。",
+    "source_ref": "5.1.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:ba47331f7617",
+    "source_kind": "sop",
+    "title": "SPC数据采集与导出",
+    "summary": "围绕ctrl+X整图导出、SPC数据导出、截图、FOV碎图导出和日志导出的一整套数据采集流程。",
+    "source_ref": "6.1.1.1.2",
+    "approved": false
+  },
+  {
+    "case_id": "case:1e17f0559eaa",
+    "source_kind": "sop",
+    "title": "SPC联动磁盘数据清理",
+    "summary": "针对D盘爆满，通过脚本清理cold_results，并同步在SPC中清理数据库与缓存数据。",
+    "source_ref": "6.1.1.1.3",
+    "approved": false
+  },
+  {
+    "case_id": "case:66f062924241",
+    "source_kind": "sop",
+    "title": "SPC页面打不开-浏览器被360劫持",
+    "summary": "SPC页面打不开时，若浏览器被360劫持，则需要将默认浏览器改成edge。",
+    "source_ref": "6.1.1.1.1",
+    "approved": false
+  },
+  {
+    "case_id": "case:attachment:827ebde5ea311efe3857",
+    "source_kind": "chat_case",
+    "title": "客户反馈今日已出现两次设备正常测试过程蓝屏重启现象，发生时间分别为3.47.9.58。软件版本1.3.5，@工程师乙",
+    "summary": "客户反馈今日已出现两次设备正常测试过程蓝屏重启现象，发生时间分别为3.47.9.58。软件版本1.3.5，@工程师乙；DMP文件正在发送中，；现场已更换内存条，请知悉",
+    "source_ref": "oc_8080b5db5b569c81c1209038259dc4dd_202605301258000800_202606061116000800_240",
+    "approved": true,
+    "_admission_target": "evidence_only",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:attachment:e9636a847fe174243d34",
+    "source_kind": "chat_case",
+    "title": "AOI设备今日开机后报蓝屏，现在正在和工程师乙沟通",
+    "summary": "AOI设备今日开机后报蓝屏，现在正在和工程师乙沟通；客户10的一台AOI设备昨天出现蓝屏，与@工程师乙 工程师乙联系排查后，需要更换工控机",
+    "source_ref": "oc_0f7a1dee6783898df50c9adceceb2791_202606101342000800_202606142108000800_846",
+    "approved": true,
+    "_admission_target": "evidence_only",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:attachment:10e07330580a79858297",
+    "source_kind": "chat_case",
+    "title": "问题一1.3.8 新建导入json报错",
+    "summary": "问题一1.3.8 新建导入json报错；CADImport；SMT2605271507_T_AOI.json",
+    "source_ref": "oc_c9806b667c0f9ea243b89461d77abbb2_202606011456000800_202606072129000800_388",
+    "approved": true,
+    "_admission_target": "evidence_only",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:attachment:9e7e31d8e3da912b1d26",
+    "source_kind": "chat_case",
+    "title": "何老师工程师庚，复查测试记录发现有个QFN少脚，在编程阶段没有对比出来。重复验证发现跟焊盘组框有关系，这个是不是不太合理需要优化一下。1.3.4版本",
+    "summary": "何老师工程师庚，复查测试记录发现有个QFN少脚，在编程阶段没有对比出来。重复验证发现跟焊盘组框有关系，这个是不是不太合理需要优化一下。1.3.4版本；少了个脚，但是器件对比没有检出，没有对比检出的原因就是多了个焊盘组框",
+    "source_ref": "oc_c9806b667c0f9ea243b89461d77abbb2_202606011456000800_202606072129000800_388",
+    "approved": true,
+    "_admission_target": "evidence_only",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "source_kind": "manual_review",
+    "title": "更换工控机后user.cfg.toml为空或损坏导致配置加载失败",
+    "summary": "更换工控机后user.cfg.toml为空或损坏导致配置加载失败；现象支持当前user.cfg.toml为空或损坏；意外重启是可能诱因但未被证明。；使用最近诊断日志中的配置后，主程序可以正常进入。；切换设置、恢复原值并重启后验证正常，进一步确认恢复后的配置链路可用。",
+    "source_ref": "oc_884648a71b6a27acd9800b11715ba166_202510071003000800_202510111906000800_188:episode:2",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:7eb331d850dee91dd1696f00",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-001",
+    "annotation_sha256": "06bf9cd739f588e7f2017ae792d8e107175ce477c54f99d63e4799f4ad185198",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "source_kind": "manual_review",
+    "title": "相机链路丢包与事件包不重传导致拍摄失败",
+    "summary": "相机链路丢包与事件包不重传导致拍摄失败；网卡参数已按SOP配置，未发现明显配置错误；相机线未装磁环是待核实上下文。；证据显示先发生残帧/丢包，随后相机事件包丢失且不重传。；插回板载主板网口后曾作为临时方案继续使用，但数日后同样拍摄失败再次出现。；重启后观察一小时未再次拍摄失败并暂时生产正常，观察时间不足以认定解决。；仅提出升级固件，缺少现场已执行和升级后结果。",
+    "source_ref": "oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508071547000800_202508111711000800_540:episode:24",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:1d7286514813ffd464b244a5",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-002",
+    "annotation_sha256": "2393d1f4f77cdd12b9b66b5c05aa38401e8e8c59e2ef994c2654c8f22703186e",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "source_kind": "manual_review",
+    "title": "MEMORY_MANAGEMENT/PFN 不同步蓝屏",
+    "summary": "MEMORY_MANAGEMENT/PFN 不同步蓝屏；确认 MEMORY_MANAGEMENT/0x403/PFN 不同步；smt-aoi.exe 是进程上下文，不足以认定应用为根因。；无线网卡驱动已卸载，当天暂未复发，但缺少长期单变量验证。；已和客户约定连续一周每日关机重启，但样本没有证明该周期已完整执行或长期有效。；显卡驱动已更新，当天暂未复发，但与其他动作同时执行，无法单独归因。",
+    "source_ref": "oc_167cafc618fb4ad11e57162fa81fb257_202606030428000800_202606112310000800_229:episode:8",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:55308586baae6d4b86f85522",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-003",
+    "annotation_sha256": "c982a64bcecc19be2b9f2ee9a437737a24d8d8cd4b6fa4cec6b835664e6edbb2",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "source_kind": "manual_review",
+    "title": "0x00000139 关键数据结构损坏蓝屏",
+    "summary": "0x00000139 关键数据结构损坏蓝屏；转储提供 0x139、驱动加载异常和页缺失信号，但因转储不完整不能锁定根因。；现场已拔除两根内存，但没有后续长期无复发证据。；接地状态和 2400 内存频率被记录，未证明它们是根因。；已执行组合式系统修复，缺少各命令结果和复发观察。；向日葵驱动已清除，但与多项操作同时执行，无法单独归因。；NVIDIA 驱动已更新，但未说明 DDU 执行且无长期复发结果。",
+    "source_ref": "oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507141317000800_202507161942000800_301:episode:5",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:f7ea0491ae8e709eaf739c4e",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-004",
+    "annotation_sha256": "e6defb2dd9a30016c0761941b46ff00a8225d0564f99c6fb72b11a70af8f93b9",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "source_kind": "manual_review",
+    "title": "System PTE 耗尽蓝屏",
+    "summary": "System PTE 耗尽蓝屏；DMP 明确支持 System PTE 耗尽机制，但没有定位到具体泄漏驱动。；调整内存频率后随后连续多日仍发生蓝屏，不能作为最终解决。；升级 1.3.7 后当时正常，次日客户再次反馈蓝屏。；用于避免 DMP 损坏并保留可分析证据；此前多次过早重启导致转储不可读。；现场已更换内存条，样本只到持续观察，没有长期无复发结论。",
+    "source_ref": "oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605261411000800_202605302126000800_1084:episode:6",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:c02225d213122854fe7d88f4",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-005",
+    "annotation_sha256": "624dff4b59fb8c9273e2673f9941cd8d8d750b95b872703db1b506c53ef89758",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "source_kind": "manual_review",
+    "title": "离线安装通电测试后光源初始化失败，USB 重新拔插后恢复",
+    "summary": "离线安装通电测试后光源初始化失败，USB 重新拔插后恢复；重新拔插光源 USB 接口后已恢复正常。；恢复后仍需 1-2 天上线跟线验证确认是否稳定。",
+    "source_ref": "oc_8080b5db5b569c81c1209038259dc4dd_202603251302000800_202603291626000800_238:episode:2",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:05129b1115231262493ab645",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-006",
+    "annotation_sha256": "7a46a8ce74431a7d9162a3ecf95082b3b47166cb8de8c4454e94cc5873b67354",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "source_kind": "manual_review",
+    "title": "Realtek 2.5G扩展网卡反复重置并导致黑屏/断连",
+    "summary": "Realtek 2.5G扩展网卡反复重置并导致黑屏/断连；发现NDIS 10400、Realtek驱动错误和高频重置，形成网卡驱动或硬件异常的初步判断。；驱动重装后有效数小时，随后重置和断连复发。；扩展网卡承载的相机和云控链路同时断连，进一步支持扩展网卡方向。；更换扩展网卡后设备恢复生产。",
+    "source_ref": "oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10T15:55:2026-06-11T11:33:human-gold:trace-a",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:2915ca4a35fae7bf0dadb39d",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-007",
+    "annotation_sha256": "df9e618e0c524b945cd8791cd712688c880b4589f56558760a3b3bea465014e5",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "source_kind": "manual_review",
+    "title": "INACCESSIBLE_BOOT_DEVICE启动蓝屏",
+    "summary": "INACCESSIBLE_BOOT_DEVICE启动蓝屏；拔插固态后仍无法进入系统。；拔插内存条后仍无法进入系统。；放电后仍无法进入系统。；可以进入BIOS，说明主机能完成基础自检，问题范围收敛到启动/存储访问链路。；PE系统还原后仍无法正常启动。；修复C盘引导后仍无法正常启动。；可以进入系统，但D盘无法识别。；还原AHCI后系统正常启动并恢复生产。",
+    "source_ref": "oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10T15:55:2026-06-11T11:33:human-gold:trace-b",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:d8ae5c2d5aff5c0b99e00613",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-008",
+    "annotation_sha256": "3eb84ac3894d9067cb5b7c9597eb46e44ddd820136b8fd6ad7785ab7041e2469",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "source_kind": "manual_review",
+    "title": "D盘消失导致Buddy冷存储写入失败",
+    "summary": "D盘消失导致Buddy冷存储写入失败；重启主程序和Buddy后仍持续报Buddy错误。；重启电脑后首次恢复，但两天后保存失败和D盘消失再次发生。；请求到达localhost Buddy Host且CURLE_OK；HTTP 500由mkdir D:\\ACME路径不存在直接触发，而非外部网络不通。；保存失败复发时资源管理器中D盘确实消失，验证了日志中的路径不存在。；硬盘SMART状态良好，不支持直接判定为物理坏盘。；调整BIOS参数后，次日设备架入线体并正常生产。",
+    "source_ref": "oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25T14:44:2026-03-28T23:27:human-gold:buddy-d-drive",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:29601d3cd462a7c8c286450f",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-009",
+    "annotation_sha256": "055f171493b97c5649acad5d6cf7260cce4edbe6b33ddf6589441ed1ab3d0682",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "source_kind": "manual_review",
+    "title": "老版本模组电源输出线接口松动导致供电中断",
+    "summary": "老版本模组电源输出线接口松动导致供电中断；初次重插后部线缆后仍自动重启。；清理内存异物后故障仍存在，不能把异物认定为主根因。；重插内存后仍复发；四根内存和插槽随后可通过自检。；识别到引导损坏迹象，但它更像频繁异常断电的次生结果，不是供电中断根因。；只提出修复引导，没有实际执行和结果证据。；等待后短时可开机但马上再次断电，支持供电链不稳定方向。；重插后分阶段观察和生产2.5小时未复发并恢复生产，但后续明确认定这只是短期方案。；PCI供电换位和还原后都能短期稳定，不能把特定PC…",
+    "source_ref": "oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10T20:09:2026-05-14T20:23:human-gold:psu-connector",
+    "approved": true,
+    "trust_tier": "gold",
+    "review_id": "review:typed:dedupe:ff4aeb18fd8c98186e6033f5",
+    "ingest_run_id": "gold-v1:w7-w2-w3-w4-w6-w5:kg-v2.1",
+    "annotation_set_id": "gold-v1",
+    "annotation_case_id": "goldcase-010",
+    "annotation_sha256": "dc54d8284da42dee46ded174cf8a0a68c85255609c2e3863c4038a8c392cd83c",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "case_id": "case:453ecf1bf543",
+    "source_kind": "sop",
+    "title": "相机拍摄失败综合排查",
+    "summary": "检测界面出现拍照失败问题处理的综合入口；按日志、固件、网络配置、网卡、网线、接地、驱动、部件更换和老化结果动态分流。",
+    "source_ref": "2.1.2.2.9",
+    "approved": true
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.3.2:",
+    "source_kind": "sop",
+    "title": "复判站参考图缺失",
+    "summary": "收集日志；查看日志是否有‘500’报错；复判站中删除报错日志中的json文件。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.3.3:2d",
+    "source_kind": "sop",
+    "title": "2D同光源器件成像一致性异常",
+    "summary": "检查板卡是否是弯板；检查轨道大小是否合适（板子是否可以在轨道滑动）；顶升是否把板子夹平（板子是否被夹弯）；查看是否是挡块（器件）反光导致的（器件是否在挡块附近）；器件本身是有差异、脏污、破损。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.3.4:",
+    "source_kind": "sop",
+    "title": "复盘站出现板卡加载时间长和加载板卡失败同时出现",
+    "summary": "收集日志，查看日志加载板卡失败的原因是否为网络超时；测试网络速度是否正常；查看复盘站的IP是否正常",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-bd93c63dd0",
+    "source_kind": "sop",
+    "title": "SMT-AOI软件启动初始化过程中，提示“拍摄失败”",
+    "summary": "查看相机是否有上电；(仅2D) 检查相机IP是否正确。；(仅2D) 检查光源控制器状态是否正常。；(仅3D) 检查相机是否被设置为“自动曝光” ，应为关闭状态。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.1.3:",
+    "source_kind": "sop",
+    "title": "远近轨像素差异导致图像拼接错位",
+    "summary": "检查伺服模式或者伺服电机是否有硬件故障；收集拍照时主程序的日志，检查dx/dy是否在合理范围之内（5像素以内）。若dx/dy超过合理值，需要重新进行角度标定；检查远近轨的每毫米像素数是否相同；若1，2均无异常，则可能是拼图算法的问题，如果现场允许，通过工厂程序采集碎图发回产研。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.1.4:-:",
+    "source_kind": "sop",
+    "title": "做程序进板到位以后,弹窗报错‘加载板卡失败:操作不允许’",
+    "summary": "收集日志，工厂软件进出板正常，主程序收到了NOT_ALLOWED；ACME.qt.smt.aoi [0x00001a0c] DEBUG - [MachineManager.cpp:1300] Call M-SDK InputBoardAsync result: TRACK_NEAR NOT_ALLOWED；检查限位和原点。paused 门没关好 not allowed 原点限位标定 need reset 板宽轴要复位；检查设备前后门是否关闭",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:4:",
+    "source_kind": "sop",
+    "title": "如果按逆时针还是无法解决同一个料号角度不统一问题需要往下面情况排查",
+    "summary": "查看CAD视图 行列是否设置正确，行列是否设置反，行列设置反会存在同一个料号下角度有0 180度；客户版本是0.26的，展厅用最新版本没有复现行列设置反，导致同一个料号下方向不一致问题",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.1.2.1.1:",
+    "source_kind": "sop",
+    "title": "设备主程序和工厂程序均无法打开",
+    "summary": "收集日志，查看运控日志，是否有日志 ACME.sdk.msdk.global ERROR - invalid map<K, T> key；用MotionPanel.exe（地址：D:/AOI装机软件/运控卡SDK/PCI-9014/MotionPanel）查一下运控卡状态，如果是9014卡，新的网口运控卡是e450demo。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-4ce83f2921",
+    "source_kind": "sop",
+    "title": "CAD导入报错解析失败， 导入后尺寸过大，导入后没显示",
+    "summary": "检查导后的CAD格式是否正确，目前支持多种编码格式，若自动识别的编码格式错误，需手动选择正确的编码格式；检查导后XY及角度位置是否正确；检查导入的CAD有没有多余文字、空格符等；检查CAD内是否有特殊符号；检查CAD坐标是否为拼版坐标。（位号不能有相同的，如果有做去重处理）；检查坐标数值是否超出板卡尺寸",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-c6caf41b8c",
+    "source_kind": "sop",
+    "title": "希望一套程序用在多台机器上，但是Mark点在不同机器上会轻微跑偏而且还可能被遮挡",
+    "summary": "尝试使用模板匹配算法，选择非圆点的特征部位，如图",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-d80414e87b",
+    "source_kind": "sop",
+    "title": "mark点对齐失败",
+    "summary": "检查标记点选择/参数；查看mark点选择的位置是否合理，参数是否合理。；通常情况下要选择形状匹配算法，通过调试模板强/弱阈值，使特征点分布能够充分体现mark点形状，同时尽量减少干扰的特征点(不在轮廓上的特征点)。；特殊情况下可以使用模板匹配算法。；进板方向错误：；查看板卡方向是否正确（尤其是鸳鸯板）；进板不到位：；参考2.4.1.7",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.4.1.1.1:",
+    "source_kind": "sop",
+    "title": "光源初始化或连接异常",
+    "summary": "将软件全部退出，断电1分钟后重启；D设备插拔光控（前面屏幕下面开门）；查看系统IP连接（网络连接、ARM连接），防火墙是否关闭；收集日志，反馈到项目群，联系硬件",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-95b150e809",
+    "source_kind": "sop",
+    "title": "3D相机初始化失败排查",
+    "summary": "检查相机供电线及cxp链路；主要从4个方面排查；检查相机拍摄状态；检查相机模组网线及IP；检查设备前后门是否都完全关好",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:1.4.1.1.3:",
+    "source_kind": "sop",
+    "title": "卡在初始化运动控制卡，运控闪退",
+    "summary": "查看运控日志是否有异常，无异常按照下方步骤操作；打开网络适配器，查看网速是否正常，运控卡需要100M；网速异常，点击相机的网口；右键点击属性",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.1.2.1:",
+    "source_kind": "sop",
+    "title": "拍摄开始即失败",
+    "summary": "检查读取/设定光源亮度是否正常，如有异常，可能需要重新烧录，或者排查光源控制器；(仅3D) 紧固或者重新插拔CXP线。运控日志通常会显示拍摄开始没有图片返回。；(仅3D) 光机内部设置的标定条纹数量不对，烧录最新条纹，烧录完成后重启视觉模组。(烧录请联系FAE操作)；(仅2D) 检查光源控制器状态是否正常。；可尝试系统彻底关机后，断电并等待30秒，再上电重…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-fed882b044",
+    "source_kind": "sop",
+    "title": "(仅2D)残帧",
+    "summary": "打开相机软件Galaxy Viewer；检测相机SDK版本是否高于或等于2.4.2503.9201版本，如有必要升级SDK。原因；[Galaxy_Windows_CN_32bits-64bits_2.4.2503.9201.exe]；参考此文档逐项排查配置，重点关注：相机网口配置；系统电源模式。10.2.4.2-检测界面出现拍照失败问题处理-【202507…；联系FAE排查物理接口及其它项",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-99bd27fb39",
+    "source_kind": "sop",
+    "title": "(仅2D) 相机事件超时",
+    "summary": "联系FAE检查升级相机固件。升级步骤10.2.4.3-拍照卡顿问题处理SOP--【20250712】；日志报错；capture whole board wait for light switched event timed out!! retrying... [failed 0 times continuously]；尝试使用绑核的方式，参考设置进程相关性；如果日志报错",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-fc2c063283",
+    "source_kind": "sop",
+    "title": "(仅3D) 拍摄过程中有停顿，最终失败",
+    "summary": "检查运控配置项，timeout_wait_for_camera_event_in_millisec 应为 10000。如下图：；以上还是无法改善，日志中出现；machine.ShmBufferPool WARN - AcquireBuffer timed out affter 5000ms (free=0/32)；ACME.sdk.sy3d.glo…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.1.2.2.6:",
+    "source_kind": "sop",
+    "title": "大板拍摄速度异常下降",
+    "summary": "检查运控日志，拍摄过程中相机停稳耗时，若耗时过大，需要联系FAE排查(伺服参数)；ACME.sdk.msdk.global INFO - Camera steady costs 44.9173 ms, mode: SERVO_SIGNAL, threshold: 2；相机停稳耗时会影响实时fps计算，从而误触发运控的流控机制，导致拍照间隔增大。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-2b10407cbf",
+    "source_kind": "sop",
+    "title": "Windows核心驱动报错",
+    "summary": "查看设备的日期和时间，一般时间不对会导致签名失败；进行一次系统文件修复快速系统文件修复；更新显卡驱动安装显卡驱动。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.1.2.2.10:",
+    "source_kind": "sop",
+    "title": "顶升不到位导致相机成像模糊",
+    "summary": "排查顶升在升起板卡的时候是否到位；板卡在升起过程中是否出现压片压到器件；是否出现板卡弯曲；拿清洁布擦拭镜头，以防镜头出现脏污；光源参数是否正常。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.3.1.1.3:",
+    "source_kind": "sop",
+    "title": "扫码枪异常频闪",
+    "summary": "检查接驳台上的扫码枪传感器是否平衡；检查传感器触发情况，包括但不限于传感器位置，传感器感应强度等；检查扫码枪配置",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.4.1.1.1:",
+    "source_kind": "sop",
+    "title": "皮带出现空转/卡住/不流畅",
+    "summary": "检查皮带上、滚轮间是否有异物卡住。检查皮带是否有损坏、开裂或过度磨损；检查软件中设定的板宽参数是否与实际板卡相符，过窄或过宽都可能导致卡顿；皮带是否损坏（如撕裂、磨损）；皮带无起皮、无小器件黏附。；定期使用酒精和抹布清洁皮带及滚轮，去除脏污。；检查皮带动力线是否连接牢固，有无损坏；手动缓慢拉动整条皮带，正反各一圈，确保无阻力，并观察以下情况",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.4.1.1.2:",
+    "source_kind": "sop",
+    "title": "传感器或异物导致轨道宽度无法调节",
+    "summary": "清洁感应器；排除轨道上可能存在的异物；关闭设备前后门，软件内点击硬件复位，待轨道归位完成之后，重开软件调取相应程序，设备即恢复正常",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.4.1.1.5:",
+    "source_kind": "sop",
+    "title": "编程时板子进到轨道内一半，报错轨道有板",
+    "summary": "检查板子是否为镂空板，进板时进板感应器未触发，导致进板慢，设备报错；安装设备提供感应器挡片，按照要求放在设备感应器位置，保证进板时挡片能触发感应器；如果没有感应片，用接料带贴在传感器前方进板时板子推动接料带感应。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.5.1.1.1:",
+    "source_kind": "sop",
+    "title": "启动程序没有放板，但是近轨挡块下压，导致长时间没有感应到进板并报错",
+    "summary": "检查是否是传感器误触发",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.5.1.1.5:",
+    "source_kind": "sop",
+    "title": "镂空或过长板卡出板失败",
+    "summary": "检查板子是否为镂空板，出板时进板感应器未触发；安装设备提供感应器挡片，按照要求放在设备感应器位置，保证进板时挡片能触发感应器；如果没有感应挡片，用接料带贴在传感器前方进板时板子推动接料带感应。；检查板子过长如板子过长，修改将machine.toml里timeout_output_board_out_of_output_spot_in_sec值增大，操作步骤参考2.5.1.2",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.6.1.1.4:",
+    "source_kind": "sop",
+    "title": "气压过低报警",
+    "summary": "检查气压是否正常（0.2-0.5），打开设备下门，右侧有气压显示调节阀；调整气压阈值（左大右小），持续点击右下角灰色按钮将下面一行数值调到小于气压值即可",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-9d35621c40",
+    "source_kind": "sop",
+    "title": "在D盘查看文件、拷贝文件会卡死或者加载慢，磁盘可能达到占用100%",
+    "summary": "清理数据时，请使用SPC的清理功能：右键SMT buddy，打开SPC，设置，使用文件清理功能。清理过程中最小化页面，不能关闭页面，关闭页面会导致清理中断",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.4:",
+    "source_kind": "sop",
+    "title": "设备自动重启，可能是什么原因",
+    "summary": "观察重启现象，如果是正常使用过程中突然黑屏，首先检查硬件连接的稳定性；检查电源插脚、插线板是否连接稳定。；查看机箱内内存条是否安装妥当，可以拔掉后，擦拭干净金手指，再安装。如果不稳定也可以用胶固定。；如果自动重启前出现系统卡顿等异常，；查看已安装的软件列表，卸载所有无线网卡驱动。如：；收集诊断日志或者直接打开事件管理器，查看系统日志中是否有异常。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.5:c",
+    "source_kind": "sop",
+    "title": "C盘空间占用异常，如何解决",
+    "summary": "打开Windows Powershell,复制以下命令并粘贴到powershell窗口，警告弹窗选择“依然粘贴”，回车：；SOP；Get-ChildItem -Path \"C:\\ProgramData\\ACME\\buddy-data\" -Directory | ForEach-Object {；$size = (Get-ChildItem -Pat…；查看各文件夹空间占用，若projects占比过大，执行步骤b；若results占比过大(超过30G)，执行步骤c；若…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.9:",
+    "source_kind": "sop",
+    "title": "软件卡死且任务管理器无响应",
+    "summary": "收集日志，查看buddy资源浮窗，内存、显存使用情况；系统资源不足；打开启动buddy指标收集，等待下一次该情况出现，再次收集日志，再把buddy启动指标收集关闭",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.10:",
+    "source_kind": "sop",
+    "title": "设备黑屏时硬件排查方向",
+    "summary": "收集日志，系统日志没有其他错误，应用日志发现一个VSS来源的COM组件错误，从日志上可以看到日志记录为系统正在关机。但描述“正常用着”，看上去像是系统自己引发的关机。也有可能是系统崩溃记录有错，重启后又能正常使用，是典型的 瞬时硬件/驱动故障 或 系统资源死锁 的表现，无需惊慌；内存故障（RAM 坏块）、SSD/硬盘突然掉盘（NVMe 驱动崩溃）、CPU/…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-666dbfd604",
+    "source_kind": "sop",
+    "title": "显卡问题（报警：未检查到cuda设备）",
+    "summary": "收集日志，查看系统日志文件；不正常关机，显卡驱动掉了，重新装驱动。更新显卡驱动（不能安装最新版本驱动）；顺便关闭快速启动关闭快速启动（主板bios里关闭：只能在现场操作）",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-825fda0899",
+    "source_kind": "sop",
+    "title": "电脑报错，不进入系统，下方显示‘Press F1 to Run SETUF’",
+    "summary": "点击下方圈出部分，按Esc，不保存退出；主板电池没电了，保存的bios设置失效了，时间变出厂日期（更换主板电池）；后续屏幕显示‘无视频输入’（主板无法通过自检，无法启动，给主板完全断电后可以恢复）",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.15:",
+    "source_kind": "sop",
+    "title": "日志出现光控通信异常",
+    "summary": "查看日志是否跟光控相关，交换光控和加密狗位置；光源控制器的串口转USB线和加密狗 用USB2.0就够，但是不能用一分四的USB 2.0。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.7.1.1.16:",
+    "source_kind": "sop",
+    "title": "复判报保存结果失败",
+    "summary": "安装DB Browser for SQLite：Z:\\Artifacts-Testing\\Tools\\Utils\\DB.Browser.for.SQLite-v3.13.0-win64.zip，用于查看db文件；借助db排查proj，res状态是否正常；关闭buddy，收集db文件：；db文件地址：C:\\ProgramData\\ACME\\buddy-data。；host.db：记录了res的created_time，updated_time，deleted_time…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.8.1.1.3:",
+    "source_kind": "sop",
+    "title": "设备报错模型加载失败",
+    "summary": "重启主程序；解决方法；插拔加密狗；重装AOI软件，排查模型是否损坏",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-f5f2f324d1",
+    "source_kind": "sop",
+    "title": "复判站做BADMARK跳叉板显示异常，处理思路如下",
+    "summary": "查看某小拼板发现有一个手动添加位置测试空焊盘连锡，自动生成拼版号跟实际拼版号不一致且程序有旋转180度；确认异常是程序旋转过180度，手动添加位置自动生成拼版号跟实际拼版号会不一致，导致自动跳叉复判站显示异常；用没有旋转过的程序，手动添加需要测试空焊盘连锡位置，保存，再用这个程序另存一个旋转180度程序，复判站叉板显示正常；程序按当前下板方向重新制作程序，在正常手动添加测试空焊盘连锡位置拼版号正常，复判站叉板显示正常；已提JIRA，待产品把软件修复此异常即可…",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.9.1.1.3:",
+    "source_kind": "sop",
+    "title": "复判站复判数据报错''加载板卡失败''，排查处理方法如下",
+    "summary": "查看复判站日志，找到报错这个res路径,然后把复判站电脑上当前报错res删除；导致原因；复判界面时间筛选为当前数据可以临时过滤这个复判数据；损坏res无法加载复判数据过几天会自动清理；如不是0.27.44版本复判站报错‘’加载板卡失败‘’可以排查程序是否有添加多模板框，部分旧版本存在添加多模板框会报错‘’加载板卡失败‘’删除多模板框即可，或者直接升级0.2…；检查AOI 复判站整套版本是否配套，版本不配套也存在复判站报错‘’加载板卡失败‘’，直接更新配套即可",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-5ffc15edc4",
+    "source_kind": "sop",
+    "title": "复盘站加载数据慢，TX时间超过1，排查思路，异常如下视频",
+    "summary": "检查悬浮窗，是否开启保存OK小图，缺陷小图按pin格式保存，这两个默认是不开启的，开启会严重影响设备性能及加载误报数据慢误报出图时间长，需要使用这两个功能，使用完后必须及时关闭；拔插一下两头网线；查看主机和复判站以太网状态",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:2.10.1.1.2:",
+    "source_kind": "sop",
+    "title": "气压表漏气异常",
+    "summary": "使用薄扳手进行拆卸仪表盘；缠绕生料进行加固；装回仪表盘",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:3.1.1.1.2:",
+    "source_kind": "sop",
+    "title": "业务原点标定异常",
+    "summary": "输入板长板宽，点设置板宽；选择现场流道方向，运动到业务原点",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:-e7b9faefcb",
+    "source_kind": "sop",
+    "title": "buddy安装报错",
+    "summary": "检查设备是否有D盘；检查电脑有没有安装显卡驱动，开始菜单按钮上鼠标右键，选择设备管理器里面显卡的部分，如果没有显示具体显卡的名字，而是显示微软基本显示适配器这样的，就说明确实没有装驱动，安装显卡驱动（可以官网下载）",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "case_id": "case:data-raw-aoi_debug_agent_sources---sop-.docx:doc:---sop-:sec:5.1.1.1.1:",
+    "source_kind": "sop",
+    "title": "运控打不开，报错‘运动控制程序错误’",
+    "summary": "查看machine.toml文件是否存在；存在：查看machine.toml端口参数是否正常；不存在：查看回收站中是否有、在文档里找是否有备份文件、把设备名牌拍下，询问刘子轩是否有备份文件。",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "approved": true,
+    "trust_tier": "extracted",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  }
+]

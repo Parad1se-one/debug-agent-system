@@ -1,0 +1,1471 @@
+[
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-12e0a609e3",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-f7557b13b8",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:col-ed44f700a6",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-8cf6c99917"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-805e5d95ba",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-29ae488996",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-0203fe9e2c",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-045f248d86"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-3e26a2d1c3",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-6fc4b5c8da",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-74e665ce3b",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-c5087e093a"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-baf98d8f33",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-4253d959ad",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:cha-331b06ec4d",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b82bc26f48"
+    ],
+    "outcome_types": [
+      "verified_fix"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-5f89ba590d",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-a4590f0867",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-9a8bea6914",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-6170654e15",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-524921c0bf"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b-4f5e3ea2c9",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-8ad1b6fd1e",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-f9149e523a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-4ca5eeca81"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-fbfbb1af28"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-9cb30b8b90",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-fb43d7f85e",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:2db6cbd1b734",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a2f0637c54"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-50dfa21ad3",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-abd4a17d2f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:805a3a016814",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-620feea6ed"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-62a4665b69",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-595452dea9",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-sop-:f8093f9d5739",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-13bc7b5de1"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-60a45590aa",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-6c4a1b0dd7",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:5a0ad215b003",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-2cbcf5037a"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-07d26c1c33",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-c9610b391e",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c4b9ee3d88"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-d8c886ac6c",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-6ec740ba52",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-a12ff03b7f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-1dced7d721"
+    ],
+    "outcome_types": [
+      "mitigation_observed"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f3-563330903b",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-00578f0388",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:observe:-:d5b9bdab6705",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-350b24269c"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e5716-88d4f2739d",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-a85b881b24",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-f734a96b16",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-dfecf1df27"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e5716-7258d19c74",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-31d36e5c51",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-72c40b12d3",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-3e78fac31c"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e5716-a1f18a9781",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-4debe96764",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-47292802bc",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-6bb2131929"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e5716-cb140eba82",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-b02e584a56",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-73134bda74",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-c61cf6839a"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-f039001cc2"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-97516f6d32",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-15a574c788",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:collect-2cd37caa39",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-ca09c8b263"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-be1ab8f8ea",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-7382ef5c1b",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a65aed6f7a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-08a3c9f1f1"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-5c0e5cb591",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-8bcfd4edac",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:inspect-60407cff5d",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-97192f315e"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-15f6f22305",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-17851c1d25",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-9b06a6adcc",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-85f3a1bf09"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-b4bc298bb7",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-50ecbd0cc8",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-f46eae1c52",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-371471dee0"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-cd5d51a718",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-9fdd1be1bd",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a4dba6837d",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-738fabc97f"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0-b3237733df",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-b5465c88ed",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-c88f389b52",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1b7010a215"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c-a111b4b79d",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-6662840be4",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:inspect-420bc003a9",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-882dc31cf8"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c-069f4e92a7",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-759f56d8f8",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:change:-7e1147df7a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-ad585bdc9a"
+    ],
+    "outcome_types": [
+      "recurred"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c-652ff05987",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-3e6a365779",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-f411676b20",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-926871becf"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c-44ef6874d9",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-03d0b928b2",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-377d7e8985",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-82c331c59d"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-258dead821",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-183975e95c",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change:-usb-:-73c7a0d1c0",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-85431c36bd"
+    ],
+    "outcome_types": [
+      "mitigation_observed"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-ee8e8f2b34",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-a4b79c4eb7",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:observe:-:06be8d2b7f21",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-e92329e40a"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-9e90e6a6c5",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-8ce655e384",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:colle-d8fd578e5a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-d70543f678"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-bb866a231a",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-6d7b05a8f3",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-531e5b8ba8",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-232c97ddd2"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-a3f4a4db4c",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-85e7ef4491",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-fe92e3b660",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9f26c1b770"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-f527f9e6cf",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-240c36a0a1",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-9ef2acec04",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8e65e942ab"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ccdc1f2ec6",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-d83b082b52",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-452500cd72",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:obser-7d2592ec46",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8d8ac2300a"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-a3693adf57",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-83234c7334",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-311713590e",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-28c6e75971"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-f2a5569948",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-97f2b14b9b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-21d5567662",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-11bcfc98ad"
+    ],
+    "outcome_types": [
+      "verified_fix"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-a045766707",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-2c0f831e90",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:verif-ca0725f4ee",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-b8ea2f3c0a"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-6e24731502",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-ba862b9830",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-95218a3ab4",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-debda6e8d0"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-8cf51fedc1",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-cc2e866636",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-759e837706",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-53044145d5"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-2ed849742b",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-ecf334bdf2",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-50fbb49aa0",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9b26916b49"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-b303064a67",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-e987795ad9",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ce6cc5a50a",
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-466c107025"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-75f8b916ed",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-32193cacc4",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-499b03649e",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-0be6eef0fd"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-79f672064f",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-5295de99e8",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-e1636f1de0",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-20829baad7"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-6b4e9b31bc",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-fc7b3332e3",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-0e06eddb84",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-a7a0ef7b69"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-adda02a31e",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-5de120383e",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f1cc83b174",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8991f1c8c7"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-d754b2fa12",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-2168e98c4d",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-548a2daffa",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-9217f9eb4c"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-cd98b103fd",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-c23878644f",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-a92b546608",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f4d25a438a"
+    ],
+    "outcome_types": [
+      "verified_fix"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b894-6a16cea925",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-fc439047b7",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bf4134fc6",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-837d572182"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-586723f9cd",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-d0adbb5c59",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-2c9be1d7a6",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-666683da53"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-3a73b68c0a",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-f7f1764e50",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-01a3181d5d",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-c1f9abf004"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-7cde79179d",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-98498fa3fb",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-fa296972b5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-62218683cc"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-f8529e9ad4",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-95bc7ca64e",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-1b2996a4cd",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e13a920df9"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b3fac20ff",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-5e6d0c23fb",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-c841074d11",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-4b9a3d4182",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-680dc0ba6f"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-3b14db7695",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-10919f6c28",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-a2c033e194",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-34b5abaa25"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-201701fe7d",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-bf57594aac",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-85338ebd1a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-c682efb320"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-6fe5b144bf",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-9022a04a27",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-432a250c34",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-0e3b1e99ea"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-483a27ee85",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-37ffb789e3",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-ec6a68a325",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f550b4d76a"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-2c04008807",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-435c48a180",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-0da2fefdf5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9b91b2018d"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-e905312ee4",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-d60b8a64f7",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3f3c2b6101",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-fe01d0cfff"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-7367fd46b0",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-b5cd85c8ba",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3cd6fee9f7",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-0009f88d85"
+    ],
+    "outcome_types": [
+      "verified_fix"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_8080b5db5b569c81c12090-591906465b",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-fa0ed91561",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:veri-42798e040e",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-ad5dde0ab7"
+    ],
+    "outcome_types": [
+      "pending_validation"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-06bff64a53",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-47e94396c3",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-95f83b1cc4"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-75b559fc03",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-f7b81266f9",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-bc2528c408"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-6ccf0f1330",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-adcc4c03f8",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8eafd7f87f"
+    ],
+    "outcome_types": [
+      "ineffective"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-f0756ec946",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-825965797a",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ad8750634c"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-a50a910a1f",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c5672d9f99",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:6460a450e019",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-99e6a6fa46"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-989054432c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-6a02677656",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-0d7fbc4832",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:9a6c251b529a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-80c7b5a61c"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-8d451d69eb",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-ea3714c8a1",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-cpu-:805c040093ca",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-3b5e663dbc"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-c81bf1f1c3",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-0311ea2fdd",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-64bb0d82ae"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-c2d2b2449b",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-bac3b7e1a1",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:compare:-pci-:f33edcb9eec8",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7b4a2b7b26"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-78b949b3bc",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-ca2962477d",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:observe:-:945abfa3fba5",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-f441b39474"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-074979eb9c",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c8766e09d2",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:558ee7487bcb",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-c9031bdc95"
+    ],
+    "outcome_types": [
+      "context_not_root_cause"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-0edb3d60ab",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-653fb90091",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-db945131aa"
+    ],
+    "outcome_types": [
+      "mitigation_observed"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-47b3992f1e",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c50f38ece5",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1beb7fb3a8"
+    ],
+    "outcome_types": [
+      "diagnostic_method"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "observation_id": "observation:trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677-be082e100b",
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-84bda057ce",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+    "attempt_index": 1,
+    "observation_count": 1,
+    "outcome_ids": [
+      "outcome:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-0228bb5f3f"
+    ],
+    "outcome_types": [
+      "partial_temporary"
+    ],
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  }
+]

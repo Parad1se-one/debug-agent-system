@@ -1,0 +1,56 @@
+{
+  "schema_version": "debug_agent_system.read_side_frozen_manifest.v2",
+  "frozen_at": "2026-08-04",
+  "baseline_commit": "8279de45731624a95b6a81b94d46f84bc041ec8d",
+  "worktree_snapshot": "The listed files and trees are content-pinned even though unrelated user changes were present in the worktree.",
+  "boundary": {
+    "kg_sag_runtime": "DebugAgentSystem.start + KG_v2/SAG + Evidence Pack/Codex composer",
+    "kg_raw_codex": "Independent KG_v2+raw Codex read pipeline",
+    "incident_runtime": "Incident Evidence Runtime and diagnostic package parsers",
+    "rule": "Read Runtime v3 is implemented in a new package and must not mutate these frozen paths."
+  },
+  "files": {
+    "pyproject.toml": "9e602b4bac918ae3cb92d35c4df440b33f6d5fa17f7a4042a8c528487c99cc3c",
+    "config/debug_agent_system.yaml": "4c326e15b8e43c9d7eeb69447d29562a1bd41fb752e2c18e75d771cb3174432d",
+    "src/debug_agent_system/core/config.py": "62629d2335157095633ff1ef506557dbefa87dc5ed6505a31d87449a2c21fec8",
+    "src/debug_agent_system/core/contracts.py": "7b88ff900fdf420b5fd2e612527d7fd1413f52281de74863b38343b7c84d88f3",
+    "src/debug_agent_system/runtime/system.py": "c8037e88a143606eed688064e1e5e27960eaf4c066860744794a523f1868b270",
+    "src/debug_agent_system/adapters/cli.py": "81ba7312204ca75b9b89a45dad86b6ebfdbb09dd93be2c87d73d8c846b063730",
+    "src/debug_agent_system/knowledge_v2/read_model.py": "c68bbec7c5c13b2c0913ce288922b2bb4c06ed964303930107b284b36ee34d55",
+    "src/debug_agent_system/knowledge_v2/sqlite_sag_v2.py": "a3177a1f8355f556a4b367cd78d92ed7645efb5970ce82b1ba8af122d6c81abc",
+    "src/debug_agent_system/knowledge_v2/query_scope.py": "a00b8c0d6942f3f0cfb44a530887f3439d9457407c1c820a87a3dcd921820a2b",
+    "src/debug_agent_system/knowledge_v2/terminology.py": "fe196efaa35e22108823cedcdad706c97c6d04bc4462b68a5ac275325abd39dd",
+    "data/kg_v2/terminology/terminology_manifest.json": "5af62c4fd696ad4e13d7aca3b8887bad2334532e54cf69832760112d4ca074bd",
+    "data/kg_v2_sag/debug_agent_v2.sqlite": "78d99472880c10ea00fc9e60cf934dcbda0039636cb7c16b0c31dc068deeb171",
+    "data/eval/formal_debug_benchmark_v1/core.json": "0a442730e85135fa97c5cd03a0d675da9800a666c0b515ab0257dcd8432edc27",
+    "data/eval/formal_debug_benchmark_v1/core_validation.json": "a413465c001309c14f85b5d180265223f2cd1d936d06affde1908e229ce25e83",
+    "data/eval/formal_debug_benchmark_v1/core_test_inputs.json": "5d293363126fe571918f7b201a8d238377c81c3c5002ad65842cb8afd6886223",
+    "data/eval/formal_debug_benchmark_v1/feature_selftest_queries.manifest.json": "21e175243da33dd0c888dccc84cc47df6f2437d7cb3475e97b117b9e07e7f12d"
+  },
+  "trees": [
+    {
+      "path": "src/debug_agent_system/agents/read",
+      "pattern": "**/*.py",
+      "file_count": 17,
+      "sha256": "6db516ff6b2b591aee5b7edd2f2b83722a06c49e4871e02324ac85f8eae19cbe"
+    },
+    {
+      "path": "src/debug_agent_system/adapters/codex_read",
+      "pattern": "**/*.py",
+      "file_count": 4,
+      "sha256": "52fbf5ecea79635f35f3fbe270ce07f87aff755ab61422e2c60503252a766c54"
+    },
+    {
+      "path": "src/debug_agent_system/kg_raw_codex",
+      "pattern": "**/*.py",
+      "file_count": 5,
+      "sha256": "e0e1eb42e6b15dae89259c0d73df4c2fef19f02c93345a788424c18e6e07895e"
+    },
+    {
+      "path": "src/debug_agent_system/incident_runtime",
+      "pattern": "**/*.py",
+      "file_count": 15,
+      "sha256": "6204ac94d3bd827b86313c758cbcd06cf6d56ed2854fa830fdc4739cbd74cfea"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# D3 Log Pattern Agent
+
+- id: `D3`
+- type: Loop Worker
+- owner: `src/debug_agent_system/agents/loop/log_pattern`
+- responsibility: propose `LogPattern` candidates from repeated unmatched log signatures for future write-side review.
+- entrypoint: `LogPatternAgent.propose(log_summary)`.
+- canonical ingress: `WriteSidePipeline.run_log_pattern(log_summary)` and CLI `ingest-log-pattern`.
+- inputs:
+  - `log_summary: dict` from O-LOG or external log parser.
+  - Expected fields: matched/unmatched templates, signatures, timestamps, parse_errors, source file inventory when available.
+- outputs:
+  - `{"type":"LogPatternCandidate", "status":"pending_review", "log_summary": ...}`.
+  - Canonical ingress stores only reviewable SourceCase/EvidenceItem data; it does not create a KG `LogPattern` object.
+- failure_modes:
+  - Empty/noisy log summary -> pending review candidate may be rejected by W4/W6.
+  - Parser errors remain evidence; they do not block read-side diagnosis.
+- observability:
+  - Preserve `parse_errors`, signature ids, source file inventory inside `log_summary`.
+- non_goals:
+  - Does not create KG `LogPattern` nodes directly.
+  - Does not map unknown logs to errors without review.
+  - Does not bypass W4/W6 or materialize execution knowledge.

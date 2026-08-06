@@ -1,0 +1,29 @@
+# W2 Knowledge Extraction Agent
+
+- id: `W2`
+- type: Worker
+- owner: `src/debug_agent_system/agents/write/w2_extract`
+- responsibility: convert W1 episodes into schema-valid candidate nodes/edges and required-info candidates; proposals only.
+- entrypoints:
+  - `KnowledgeExtractionAgent.extract(summary_or_episode)`.
+  - `extract_semantics(episode)`.
+  - `normalize_to_kg_schema(semantics)`.
+- inputs:
+  - W1 summary or fault episode with `episode_id`, `thread_id`, message groups, `extracted`, `attachments`, `evidence_message_ids`, `source_offsets`.
+  - Optional KG store for matching existing errors; `match_threshold` controls candidate match.
+- outputs:
+  - `SchemaValidCandidate`-like dict with `candidate_id`, `nodes`, `edges`, `schema_valid`, `schema_issues`, `proposal_only=true`, `source_episode_id`, confidence and evidence fields.
+  - Evidence fields include log/proj/Jira/text-attachment/document/image-header metadata when W1 tools provide them.
+  - Nodes may include `Error`, `DiagnosticCheck`, `Solution`, `Site`, `SoftwareVersion`.
+  - Edges may include `has_check`, `resolved_by`, occurrence/version/site links.
+  - `required_info_candidates` for ask-info/release-state enrichment.
+- failure_modes:
+  - Insufficient/noisy episode -> candidate may be schema invalid or review-only; W4/W6 route to noise/review.
+  - Existing fuzzy match -> candidate references `matched_existing_error`, not auto-merge.
+  - Missing evidence -> schema/quality issues, not direct graph write.
+- observability:
+  - Candidate id, source episode/thread id, confidence, schema issues, matched existing error, source offsets, evidence ids.
+- non_goals:
+  - Does not write KG.
+  - Does not resolve conflicts; W3 owns classification.
+  - Does not approve its own candidates.

@@ -1,0 +1,1665 @@
+[
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-f7557b13b8",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:col-ed44f700a6",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-29ae488996",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-0203fe9e2c",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-6fc4b5c8da",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ins-74e665ce3b",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9",
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-4253d959ad",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:cha-331b06ec4d",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-5f89ba590d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-9a8bea6914",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-6170654e15",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-6989aa5506"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_-8ad1b6fd1e",
+    "trace_id": "trace:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-725fc96f03",
+    "source_case_id": "case:expert-review:oc_884648a71b6a27acd9800b11715ba166_20251007100-627d89ae75",
+    "action_id": "action:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:ver-f9149e523a",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-fbfbb1af28"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-fb43d7f85e",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:collect:-:2db6cbd1b734",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-abd4a17d2f",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:805a3a016814",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-595452dea9",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-sop-:f8093f9d5739",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-6c4a1b0dd7",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:5a0ad215b003",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-c9610b391e",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:6439923777d5",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-d8c886ac6c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-a12ff03b7f",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:ce859bcf435c",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-00578f0388",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:observe:-:d5b9bdab6705",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-8f49c7df23",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:change:-:380386c2485f",
+    "ordinal": 8,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_-84cc51723b",
+    "trace_id": "trace:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-c586dfbf6f",
+    "source_case_id": "case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_20250807154-2eecc4c3a1",
+    "action_id": "action:variant:family::5274d74078aa:-:7012dc376b46:inspect:-:a896dc10e491",
+    "ordinal": 9,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-a85b881b24",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-f734a96b16",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-cb7a6cb9ba",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-b2d121d8e3",
+    "ordinal": 2,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-31d36e5c51",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-72c40b12d3",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-4debe96764",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-47292802bc",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-b02e584a56",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-73134bda74",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_-df6b37452c",
+    "trace_id": "trace:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-941dcf3a92",
+    "source_case_id": "case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_20260603042-f782d1ab11",
+    "action_id": "action:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-5b869c362f",
+    "ordinal": 6,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-7b7001d073"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-15a574c788",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:collect-2cd37caa39",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1640721fff",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-7382ef5c1b",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a65aed6f7a",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-8bcfd4edac",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:inspect-60407cff5d",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-17851c1d25",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-9b06a6adcc",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-50ecbd0cc8",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-f46eae1c52",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-9fdd1be1bd",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-a4dba6837d",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-b5465c88ed",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-c88f389b52",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-8699eab82f",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-94a89ac40d",
+    "ordinal": 8,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-b971eb2759",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:change:-91be27c9c1",
+    "ordinal": 9,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_-6c777f3f9c",
+    "trace_id": "trace:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-11eeef8549",
+    "source_case_id": "case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_20250714131-530233f315",
+    "action_id": "action:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:verify:-9ee50f2990",
+    "ordinal": 10,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-6662840be4",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:inspect-420bc003a9",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-759f56d8f8",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:change:-7e1147df7a",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-a7b8aeedfa",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-f2f172633e",
+    "ordinal": 3,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-af9a0a0f43"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-3e6a365779",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-f411676b20",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-c912473e0c",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-5056f286d7",
+    "ordinal": 5,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-d65ee25851"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-c3d548294b",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:collect-1764bc3eb0",
+    "ordinal": 6,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-2093c49574"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_-03d0b928b2",
+    "trace_id": "trace:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-cc9ae20b45",
+    "source_case_id": "case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_20260526141-93c1fd45e0",
+    "action_id": "action:variant:family::77f1b67eafb3:system-pte-:f3630414e915:observe-377d7e8985",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-8d348238f1",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-999647b67d",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:inspect:-:e92652a54587",
+    "ordinal": 1,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-d1f038b300"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-183975e95c",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-999647b67d",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:change:-usb-:-73c7a0d1c0",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_-a4b79c4eb7",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-999647b67d",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_20260325130-0d36e285c5",
+    "action_id": "action:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:observe:-:06be8d2b7f21",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-8ce655e384",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:colle-d8fd578e5a",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-6d7b05a8f3",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-531e5b8ba8",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-85e7ef4491",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-fe92e3b660",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-240c36a0a1",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-9ef2acec04",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-ccdc1f2ec6"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-452500cd72",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:obser-7d2592ec46",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-48c94f370d",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-83234c7334",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:inspe-311713590e",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-97f2b14b9b",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:chang-21d5567662",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-2c0f831e90",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c330b810de",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-ce4ca9fe8f",
+    "action_id": "action:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:verif-ca0725f4ee",
+    "ordinal": 8,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-cc4b434a39"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-ba862b9830",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-95218a3ab4",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-cc2e866636",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-759e837706",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-ecf334bdf2",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-50fbb49aa0",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-e987795ad9",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-7b7e0c6299",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-32193cacc4",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-499b03649e",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-5295de99e8",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-e1636f1de0",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-fc7b3332e3",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-0e06eddb84",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-753db439df"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-5de120383e",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f1cc83b174",
+    "ordinal": 8,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-2168e98c4d",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-548a2daffa",
+    "ordinal": 9,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-c23878644f",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-a92b546608",
+    "ordinal": 10,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:-fc439047b7",
+    "trace_id": "trace:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-1313fd022b",
+    "source_case_id": "case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-06-10t-19c83893f0",
+    "action_id": "action:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bf4134fc6",
+    "ordinal": 11,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-d0adbb5c59",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-2c9be1d7a6",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-f7f1764e50",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:coll-01a3181d5d",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-98498fa3fb",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-fa296972b5",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-95bc7ca64e",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:chan-1b2996a4cd",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b1696cbb0",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-4b3fac20ff"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-c841074d11",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-4b9a3d4182",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-10919f6c28",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-a2c033e194",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-bf57594aac",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-85338ebd1a",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-9022a04a27",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-432a250c34",
+    "ordinal": 8,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-3e27d91149"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-37ffb789e3",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-ec6a68a325",
+    "ordinal": 9,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-435c48a180",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-0da2fefdf5",
+    "ordinal": 10,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-b7e730057d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-d60b8a64f7",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3f3c2b6101",
+    "ordinal": 11,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-b5cd85c8ba",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:insp-3cd6fee9f7",
+    "ordinal": 12,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:-fa0ed91561",
+    "trace_id": "trace:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-f569a8acfe",
+    "source_case_id": "case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-03-25t-c2401ef118",
+    "action_id": "action:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:veri-42798e040e",
+    "ordinal": 13,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-efe8e51fa1"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-47e94396c3",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:ce841761e156",
+    "ordinal": 1,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1a34b5b698"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-f7b81266f9",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:1095b5e2baab",
+    "ordinal": 2,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-adcc4c03f8",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:7f4b9b409aa5",
+    "ordinal": 3,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-8f68070008",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-825965797a",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:0c3abb790529",
+    "ordinal": 4,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-dc109815e4"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c5672d9f99",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:collect:-:6460a450e019",
+    "ordinal": 5,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-989054432c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-0d7fbc4832",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:9a6c251b529a",
+    "ordinal": 6,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-ea3714c8a1",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-cpu-:805c040093ca",
+    "ordinal": 7,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-0311ea2fdd",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:b9a481b8e7e5",
+    "ordinal": 8,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-bac3b7e1a1",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:compare:-pci-:f33edcb9eec8",
+    "ordinal": 9,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-ca2962477d",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:observe:-:945abfa3fba5",
+    "ordinal": 10,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c8766e09d2",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:inspect:-:558ee7487bcb",
+    "ordinal": 11,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-2faf5dc8b3",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-b6654575fd",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-653fb90091",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:a726c112e683",
+    "ordinal": 12,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-c50f38ece5",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:verify:-:de1c28fb0eab",
+    "ordinal": 13,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-84bda057ce",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:fe925694500a",
+    "ordinal": 14,
+    "execution_status": "actual",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-ab01e98aa7",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:-74eb3de231",
+    "trace_id": "trace:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-548dadb947",
+    "source_case_id": "case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-05-10t-8270e704ad",
+    "action_id": "action:variant:family::d618be740693:-:c4560bfa8a96:change:-:125b2570137a",
+    "ordinal": 15,
+    "execution_status": "recommended",
+    "attempt_index": 0,
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "trace_step_id": "trace-step:a12ec3de0109",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:d806ef1cfd61",
+    "ordinal": 1,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:52446a449fe7",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:31bfe15b8b49",
+    "ordinal": 2,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:d8a941645c1c",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:085223f171e2",
+    "ordinal": 3,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:42cb848a21e1",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:0b398f8374d5",
+    "ordinal": 4,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:88bd85d7fef4",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:7367a7341eef",
+    "ordinal": 5,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:3eefba963b9c",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:8c803ae45afc",
+    "ordinal": 6,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:ec59bcf5b87b",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:a514589a860e",
+    "ordinal": 7,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:d6e57c6d0452",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:58c1c112a804",
+    "ordinal": 8,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:2b07f0c837c6",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:a7d64a1b3da0",
+    "ordinal": 9,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:019f1e22bdac",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:1616d363bd4f",
+    "ordinal": 10,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:b0a51b4987c1",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:ead91fff7662",
+    "ordinal": 11,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:a374586c3357",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:5154bcbb0945",
+    "ordinal": 12,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:5279a9be7a1a",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:2fcdedca3a10",
+    "ordinal": 13,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:4e6800b22f58",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:b3d34750ce25",
+    "ordinal": 14,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:a6c2862cea34",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:405099be2b2a",
+    "ordinal": 15,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:f7319481b00a",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:bb29ee8be8a4",
+    "ordinal": 16,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:79ec0fd2b505",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:0aefa8353a29",
+    "ordinal": 17,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:41f8e16a8012",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:ea29f945cf6e",
+    "ordinal": 18,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:cb441d95816d",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:5467da52da8d",
+    "ordinal": 19,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:a760778991f3",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:4242fa39fa53",
+    "ordinal": 20,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:a9c0a7b9036a",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:a4debb2951d0",
+    "ordinal": 21,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:c74d1e2f9ee9",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:38683387ac08",
+    "ordinal": 22,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:3aa3bb5e1620",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:ed3aa4226e4e",
+    "ordinal": 23,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:0f5768090ed1",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:1e3d7de4abb8",
+    "ordinal": 24,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:dc6aecda7d25",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:adc57cea08d3",
+    "ordinal": 25,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:c362e42faa93",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:92b22d7e4632",
+    "ordinal": 26,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:adea0a11e873",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:75c4b7488f33",
+    "ordinal": 27,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:c857ebbfb992",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:e5850b5cd56f",
+    "ordinal": 28,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:4f3ee65ef198",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:8bafbe8045f5",
+    "ordinal": 29,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:4e21df3429b6",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:d9cafcec058a",
+    "ordinal": 30,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:e62bc99859db",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:a3fe39166e0f",
+    "ordinal": 31,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:770f420b2ae9",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:8210bd9ef062",
+    "ordinal": 32,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:75d02d5ce133",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:f1dae8038fa1",
+    "ordinal": 33,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "trace_step_id": "trace-step:15d7ca8ecf39",
+    "trace_id": "trace:f43c56985f6c",
+    "source_case_id": "case:453ecf1bf543",
+    "action_id": "action:3cee47304d7a",
+    "ordinal": 34,
+    "execution_status": "recommended",
+    "attempt_index": 1,
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  }
+]

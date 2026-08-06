@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "debug-agent-system"
+version = "0.1.0"
+description = "Knowledge-graph-driven multi-agent system for AOI equipment fault diagnosis"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = [
+  "markdown-it-py>=3,<4",
+]
+
+[project.optional-dependencies]
+# Core runtime has no heavy deps. Optional extras:
+incident = [
+  # EVTX / Windows event parsing for the incident evidence runtime.
+  "python-evtx>=0.8,<0.9",
+]
+codex = [
+  # Optional Codex read harness (uses urllib OpenAI-compatible client; no SDK required).
+]
+deepseek = [
+  # Optional DeepSeek read/write paths (uses urllib; no SDK required).
+]
+dev = [
+  "pytest>=7",
+]
+
+[project.urls]
+Homepage = "https://github.com/Parad1se-one/debug-agent-system"
+Repository = "https://github.com/Parad1se-one/debug-agent-system"
+
+[project.scripts]
+debug-agent-system = "debug_agent_system.adapters.cli:main"
+debug-agent-system-eval = "debug_agent_system.eval.debug_sim.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

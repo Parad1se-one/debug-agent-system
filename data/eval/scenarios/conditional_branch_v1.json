@@ -1,0 +1,71 @@
+[
+  {
+    "case_id": "conditional_branch_001_ambiguous_boot_page",
+    "query": "客户开机设备一直停留开机页面，一会显示一会不显示的循环；之前是设备显示修复的蓝屏，已做过断电长按主机开机按钮给工控机放电。",
+    "source": "kg_curated",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-blue-screen",
+    "acceptable_error_ids": ["err:industrial-pc-blue-screen-crash", "err:system-bsod-restart"],
+    "expected_status": "ask_info",
+    "required_checks": [
+      {"id": "check:industrial-pc-blue-screen-step2", "text": "导出 Minidump 和事件查看器日志", "required": true}
+    ],
+    "evidence_key_facts": ["蓝屏", "开机页面循环", "需要补充分支信息"],
+    "required_info": ["当前页面类型", "BIOS 是否可进入及是否识别系统盘", "蓝屏/自动修复错误码是否固定"],
+    "expected_resolution_facts": [],
+    "user_turns": [],
+    "safety_flags": ["断电"]
+  },
+  {
+    "case_id": "conditional_branch_002_fixed_0xc0000001",
+    "query": "客户开机后 Windows 自动修复页面循环，蓝屏错误代码 Oxc0000001，能进 BIOS 且识别系统盘。",
+    "source": "kg_curated",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-blue-screen",
+    "acceptable_error_ids": ["err:industrial-pc-blue-screen-crash", "err:system-bsod-restart"],
+    "expected_status": "step",
+    "required_checks": [
+      {"id": "check:industrial-pc-blue-screen-step2boot", "text": "启动/自动修复阶段固定错误码", "required": true}
+    ],
+    "evidence_key_facts": ["0xc0000001", "自动修复", "BCD", "系统盘"],
+    "expected_resolution_facts": ["启动修复", "sfc /scannow", "chkdsk C: /f /r", "BCD"],
+    "user_turns": [],
+    "safety_flags": []
+  },
+  {
+    "case_id": "conditional_branch_003_random_memory_bsod",
+    "query": "工控机随机蓝屏，错误码不固定，无明确代码，有 MEMORY_MANAGEMENT 内存线索。",
+    "source": "kg_curated",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-blue-screen",
+    "acceptable_error_ids": ["err:industrial-pc-blue-screen-crash", "err:system-bsod-restart"],
+    "expected_status": "step",
+    "required_checks": [
+      {"id": "check:industrial-pc-blue-screen-step3b1", "text": "优先验证内存", "required": true}
+    ],
+    "evidence_key_facts": ["随机蓝屏", "MEMORY_MANAGEMENT", "MemTest86", "单条内存轮换"],
+    "expected_resolution_facts": ["MemTest86", "单条内存轮换", "换槽位"],
+    "user_turns": [],
+    "safety_flags": ["拆机"]
+  },
+  {
+    "case_id": "conditional_branch_004_no_power",
+    "query": "工控机完全无电，风扇转一下就停，循环掉电，怀疑电源保护或短路。",
+    "source": "kg_curated",
+    "difficulty": "medium",
+    "query_type": "debug",
+    "target_error_id": "err:industrial-pc-no-boot",
+    "acceptable_error_ids": ["err:industrial-pc-power-on-no-response", "err:industrial-pc-power-failure"],
+    "expected_status": "step",
+    "required_checks": [
+      {"id": "check:industrial-pc-no-boot-step2a", "text": "供电链路、短路和接触问题", "required": true}
+    ],
+    "evidence_key_facts": ["完全无电", "风扇转一下就停", "短路", "电源保护"],
+    "expected_resolution_facts": ["PWR_SW", "24Pin", "短路"],
+    "user_turns": [],
+    "safety_flags": ["断电", "拆机"]
+  }
+]

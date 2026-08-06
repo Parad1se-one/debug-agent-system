@@ -1,0 +1,37 @@
+# ---- Raw / private data (never committed to this public repo) ----
+data/raw/
+data/imports/
+data/annotations/
+data/eval/benchmark/
+data/eval/formal_debug_benchmark_v1/
+data/kg/
+data/results/
+data/archive/
+
+# ---- Runtime session state / local caches ----
+data/sessions/
+data/sessions_v2/
+data/sessions_v2_sag/
+data/sessions_v2_json/
+data/sessions_sag/
+data/kg_sag/
+data/kg_sag_v2/
+data/kg_v2_sag/
+tmp/
+
+# ---- Secrets / environment overrides ----
+.env
+.env.*
+!.env.example
+config/people_role_registry.json
+
+# ---- Python artifacts ----
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.omx/
+build/
+dist/
+*.egg-info/

@@ -1,0 +1,23 @@
+# D2 ATR Weighting Agent
+
+- id: `D2`
+- type: Loop Worker
+- owner: `src/debug_agent_system/agents/loop/atr_weighting`
+- responsibility: propose occurrence/edge-weight adjustments from approved diagnostic feedback.
+- entrypoint: `ATRWeightingAgent.propose(feedback)`.
+- review ingress: `WriteSidePipeline.run_atr_weight_proposal(feedback)` and CLI `ingest-atr-weight-proposal`.
+- inputs:
+  - `feedback: dict` usually emitted by D1 or W6-approved review item.
+  - Expected fields: `top_error_id`, solved/failed check ids, resolution outcome, evidence/session id.
+- outputs:
+  - `{"type":"ATRWeightProposal", "status":"pending_review", "feedback": ...}`.
+  - W6 stores the proposal idempotently in `atr_weight_proposals`; this is deliberately separate from the KG typed candidate queue.
+- failure_modes:
+  - Missing solved edge -> proposal remains pending review; no inferred weight update.
+  - Ambiguous feedback -> human review required.
+- observability:
+  - Proposal status and embedded feedback id/session id.
+- non_goals:
+  - Does not write `edges.json`.
+  - Does not promote frequency into truth without W6/W5 approval.
+  - Current approvals are audit decisions only: no versioned ATR weight store/applier exists, so `application_boundary.w5_eligible=false` and no KG mutation occurs.

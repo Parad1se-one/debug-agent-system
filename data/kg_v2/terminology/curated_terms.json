@@ -1,0 +1,5 @@
+{
+  "schema_version": "kg_v2.curated_terminology.v1",
+  "description": "人工审核后的等价表达。只有 approved=true 的条目参与安全 Query 扩展；历史 keywords 不应复制到这里。",
+  "entries": []
+}

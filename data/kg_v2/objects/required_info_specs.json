@@ -1,0 +1,4411 @@
+[
+  {
+    "required_info_id": "required-info:e970ee8ffd4a",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:5ca3e5d66c93",
+    "slot": "software_version",
+    "question": "请提供设备首次安装的 Buddy 版本，以及当前升级后的 Buddy 版本。",
+    "why_required": "需要确认是否命中 0.11.2~0.11.4 升级到 0.14.x 的已知权限问题。",
+    "condition": "Buddy 模板管理刷新后无模板且创建模板失败",
+    "blocks": [
+      "检查 Buddy 版本升级路径是否命中 0.11.2~0.11.4 升级到 0.14.x"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:93c916779ad2"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1ec590f68b3e",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:5ca3e5d66c93",
+    "slot": "log_package",
+    "question": "请提供 Buddy 日志和主程序日志，尤其是模板管理刷新与创建模板时段的日志。",
+    "why_required": "需要确认是权限问题、网络请求超时，还是 Buddy 服务本身异常。",
+    "condition": "Buddy 模板创建失败",
+    "blocks": [
+      "确认模板管理刷新后无模板且创建模板失败",
+      "恢复权限后重新打开 Buddy 并刷新模板管理验证"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:93c916779ad2"
+    ]
+  },
+  {
+    "required_info_id": "required-info:6419ac37a8d2",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:5ca3e5d66c93",
+    "slot": "repro_steps",
+    "question": "请说明刷新模板管理与创建模板失败的具体操作步骤和复现频率。",
+    "why_required": "需要确认问题是否稳定复现，并在权限修复后进行同路径验证。",
+    "condition": "Buddy 模板创建失败",
+    "blocks": [
+      "恢复权限后重新打开 Buddy 并刷新模板管理验证"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:93c916779ad2"
+    ]
+  },
+  {
+    "required_info_id": "required-info:9c0ce97e1f8c",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:4910bcd7768c",
+    "slot": "owner_context",
+    "question": "请提供出现模板损坏的具体项目 ID 或对应 project 目录位置。",
+    "why_required": "需要定位要访问的 Buddy 项目接口和本地 project 目录，才能修复目标 meta.json。",
+    "condition": "模板文件损坏导致模板无法加载",
+    "blocks": [
+      "通过 Buddy 本地接口读取项目元数据",
+      "提取 .data.meta 并覆盖项目目录 meta.json"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:f7b24529347c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a7cd5034a0c7",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:4910bcd7768c",
+    "slot": "program_file",
+    "question": "请提供当前损坏项目目录下的 meta.json 文件或其路径。",
+    "why_required": "需要确认目标 meta.json 是否存在、是否可覆盖，以及修复前后的具体文件位置。",
+    "condition": "模板文件损坏导致模板无法加载",
+    "blocks": [
+      "提取 .data.meta 并覆盖项目目录 meta.json"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:f7b24529347c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:39b6e247acdd",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:4910bcd7768c",
+    "slot": "repro_steps",
+    "question": "请说明闪退发生时的操作步骤，以及修复后模板管理是否恢复正常。",
+    "why_required": "需要确认这是闪退后的模板元数据损坏，而不是其他模板管理异常，并验证修复结果。",
+    "condition": "模板文件损坏导致模板无法加载",
+    "blocks": [
+      "确认故障项目存在模板文件损坏现象",
+      "重新打开模板管理验证模板是否恢复"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:f7b24529347c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e971526e7f65",
+    "family_id": "family:b231d1b8a380",
+    "variant_id": "variant:e2f87ec2fcb9",
+    "slot": "program_file",
+    "question": "请提供当前 conf 目录内容以及 user.cfg.toml 文件。",
+    "why_required": "需要确认是 conf 残留、配置损坏，还是 user.cfg.toml 空白异常。",
+    "condition": "主程序加载用户配置失败",
+    "blocks": [
+      "备份并清空 conf 目录",
+      "检查日志与 user.cfg.toml 是否异常"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:9846bca31ef8"
+    ]
+  },
+  {
+    "required_info_id": "required-info:733c86502618",
+    "family_id": "family:b231d1b8a380",
+    "variant_id": "variant:e2f87ec2fcb9",
+    "slot": "log_package",
+    "question": "请提供最近一次诊断日志及其中可用的配置文件。",
+    "why_required": "需要用历史正常配置进行替换验证，并对比当前日志中的配置解析异常。",
+    "condition": "主程序加载用户配置失败",
+    "blocks": [
+      "检查日志与 user.cfg.toml 是否异常",
+      "用最近一次正常诊断日志中的 user.cfg.toml 替换验证"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:9846bca31ef8"
+    ]
+  },
+  {
+    "required_info_id": "required-info:eeaec8581454",
+    "family_id": "family:b231d1b8a380",
+    "variant_id": "variant:e2f87ec2fcb9",
+    "slot": "software_version",
+    "question": "请提供当前主程序版本及最近是否发生工控机更换或安装包重装。",
+    "why_required": "需要判断是否为安装包残留与版本/环境变化引起的配置恢复问题。",
+    "condition": "主程序加载用户配置失败",
+    "blocks": [
+      "备份并清空 conf 目录"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:9846bca31ef8"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4f151782049f",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:ec9afd3830c5",
+    "slot": "log_package",
+    "question": "请提供复判站日志、主程序日志，以及包含 put res / get res 的时间片段。",
+    "why_required": "需要直接定位复判站与主程序之间的时间差与瓶颈位置。",
+    "condition": "复判站出图慢",
+    "blocks": [
+      "对比 smt-buddy-term put res 与主程序 get res 时间差",
+      "判断主程序 saving result 与传输时长占比"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:6ef506458790",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:ec9afd3830c5",
+    "slot": "software_version",
+    "question": "请提供复判站、主程序与 machine 版本。",
+    "why_required": "需要判断是否命中版本级缓存/传输行为差异。",
+    "condition": "复判站出图慢",
+    "blocks": [
+      "检查是否属于双轨竞争或缓存切换"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:071bef55a089",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:ec9afd3830c5",
+    "slot": "environment",
+    "question": "请提供双轨/单轨模式、板型规模、当前设备负载和资源使用情况。",
+    "why_required": "需要判断是否属于双轨竞争、资源瓶颈或大板负载影响。",
+    "condition": "复判站出图慢",
+    "blocks": [
+      "检查是否属于双轨竞争或缓存切换"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:3d30b3c33fbd",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:ec9afd3830c5",
+    "slot": "ip_config",
+    "question": "请提供复判站与主程序之间的网络配置和链路信息。",
+    "why_required": "复判站出图慢可能来自主程序到复判站的数据传输链路异常。",
+    "condition": "复判站出图慢",
+    "blocks": [
+      "检查复判站与主程序之间的数据传输链路"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:1b4e691ca90c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:914c29cf6a58",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:a44985cc325f",
+    "slot": "log_package",
+    "question": "请提供复判站加载板卡失败时段的完整日志。",
+    "why_required": "需要确认失败根因是否是网络超时，而不是其它资源加载异常。",
+    "condition": "复判站加载板卡超时/失败",
+    "blocks": [
+      "收集日志并确认是否为网络超时"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d2328b725a97"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a170e0381bc3",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:a44985cc325f",
+    "slot": "ip_config",
+    "question": "请提供复判站当前 IP 配置和网络拓扑信息。",
+    "why_required": "需要直接验证 IP 配置是否正确，并判断网络链路是否异常。",
+    "condition": "复判站加载板卡超时/失败",
+    "blocks": [
+      "检查复判站 IP 配置是否正常"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d2328b725a97"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c596db510e48",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:a44985cc325f",
+    "slot": "environment",
+    "question": "请提供网络测速结果、交换机/网线环境以及复现频率。",
+    "why_required": "需要判断是偶发链路抖动还是稳定的网络性能问题。",
+    "condition": "复判站加载板卡超时/失败",
+    "blocks": [
+      "测试网络速度是否正常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:d2328b725a97"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bc9f46f71eb8",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:991505498404",
+    "slot": "program_file",
+    "question": "请提供当前 review-station/conf 目录内容以及 user.cfg.toml 文件。",
+    "why_required": "需要确认复判站配置目录是否残留异常文件，或 user.cfg.toml 是否空白损坏。",
+    "condition": "复判站加载用户配置失败",
+    "blocks": [
+      "备份并清空 conf 目录",
+      "检查日志与 user.cfg.toml 是否异常"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0e1a65b97844"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a2c65ee86abb",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:991505498404",
+    "slot": "log_package",
+    "question": "请提供最近一次正常诊断日志及其中可用的配置文件。",
+    "why_required": "需要回填正常配置并对比当前日志中的配置异常信号。",
+    "condition": "复判站加载用户配置失败",
+    "blocks": [
+      "检查日志与 user.cfg.toml 是否异常",
+      "用最近一次正常诊断日志中的 user.cfg.toml 替换验证"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0e1a65b97844"
+    ]
+  },
+  {
+    "required_info_id": "required-info:10438260987f",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:991505498404",
+    "slot": "software_version",
+    "question": "请提供当前复判站版本及最近是否发生工控机更换或安装包重装。",
+    "why_required": "需要判断是否因安装残留或环境变化触发复判站配置问题。",
+    "condition": "复判站加载用户配置失败",
+    "blocks": [
+      "备份并清空 conf 目录"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:0e1a65b97844"
+    ]
+  },
+  {
+    "required_info_id": "required-info:0be4d0deddef",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:16d3c3752ef8",
+    "slot": "log_package",
+    "question": "请提供复判站日志，尤其是无参考图时段的完整日志。",
+    "why_required": "需要先确认是否存在 500 报错以及对应的异常资源文件。",
+    "condition": "复判站检测页面无参考图",
+    "blocks": [
+      "收集复判站日志",
+      "检查日志是否存在 500 报错"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:4afe9ffd7307"
+    ]
+  },
+  {
+    "required_info_id": "required-info:9c72d5aca01f",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:16d3c3752ef8",
+    "slot": "program_file",
+    "question": "请提供日志中提到的异常 json 文件名或路径。",
+    "why_required": "需要准确定位应删除的异常 json 文件，避免误删其它资源。",
+    "condition": "复判站检测页面无参考图",
+    "blocks": [
+      "删除复判站报错日志中的异常 json 文件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:4afe9ffd7307"
+    ]
+  },
+  {
+    "required_info_id": "required-info:621e274f4f4c",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:16d3c3752ef8",
+    "slot": "software_version",
+    "question": "请提供当前复判站版本和主程序版本。",
+    "why_required": "需要区分是否为版本相关的资源加载异常。",
+    "condition": "复判站检测页面无参考图",
+    "blocks": [
+      "重新加载最新模板验证参考图是否恢复"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:4afe9ffd7307"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d80495c88ff6",
+    "family_id": "family:70a64345e97b",
+    "variant_id": "variant:04ab6350a693",
+    "slot": "log_package",
+    "question": "请提供可回流的问题数据包，用于在最新版本中验证识别框。",
+    "why_required": "需要先拿到原始问题数据，才能判断识别框异常是否稳定复现。",
+    "condition": "识别框大小不准确",
+    "blocks": [
+      "回流问题数据并在最新版本验证识别框"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:cd1034b06196"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4ee4a1f427cf",
+    "family_id": "family:70a64345e97b",
+    "variant_id": "variant:04ab6350a693",
+    "slot": "software_version",
+    "question": "请提供当前现场版本与用于复测的最新版本信息。",
+    "why_required": "需要区分是否已经被新版本修复，避免重复进入标注/Jira 流程。",
+    "condition": "识别框大小不准确",
+    "blocks": [
+      "回流问题数据并在最新版本验证识别框",
+      "识别框准确时指导现场调试并更新模型或版本"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:cd1034b06196"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4b0671b28728",
+    "family_id": "family:70a64345e97b",
+    "variant_id": "variant:04ab6350a693",
+    "slot": "sample_image",
+    "question": "请提供识别框异常的典型截图或样本图。",
+    "why_required": "需要把识别框异常表现与回流数据绑定，支持调试和 Jira 证据提交。",
+    "condition": "识别框大小不准确",
+    "blocks": [
+      "判断识别框是否实际准确",
+      "识别框不准确时按标准格式提交标注团队 Jira"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:cd1034b06196"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c2ab73abb1d1",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:98ccc4341275",
+    "slot": "log_package",
+    "question": "请提供光源初始化异常时段的完整日志。",
+    "why_required": "需要把重启、插拔光控后的结果与日志信号对应起来。",
+    "condition": "光源初始化异常",
+    "blocks": [
+      "收集日志并反馈项目群联系硬件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:adc19d9cd88e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c8fd6fb1e169",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:98ccc4341275",
+    "slot": "ip_config",
+    "question": "请提供系统网络连接、ARM 连接状态和相关 IP 配置。",
+    "why_required": "需要确认是否为网络或 ARM 连接异常导致的光源初始化问题。",
+    "condition": "光源初始化异常",
+    "blocks": [
+      "检查系统 IP 连接和 ARM 连接及防火墙"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:adc19d9cd88e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b2bc08ca9783",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:98ccc4341275",
+    "slot": "environment",
+    "question": "请说明当前设备类型（2D/3D）、光控状态和是否已做过断电重启。",
+    "why_required": "需要区分不同设备类型的光源链路与已尝试动作。",
+    "condition": "光源初始化异常",
+    "blocks": [
+      "退出软件并断电 1 分钟后重启",
+      "2D设备插拔光控"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:adc19d9cd88e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bf22d6808ecc",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:ed05a6492d6c",
+    "slot": "sample_image",
+    "question": "请提供同一光源下成像差异明显的器件截图或对比图。",
+    "why_required": "需要确认是整体平整度问题、局部反光问题，还是器件本体差异问题。",
+    "condition": "同光源器件成像差异大",
+    "blocks": [
+      "检查挡块或邻近器件是否反光",
+      "检查器件本身是否存在差异脏污破损"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:8c9311abfdba"
+    ]
+  },
+  {
+    "required_info_id": "required-info:3681cdddb048",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:ed05a6492d6c",
+    "slot": "environment",
+    "question": "请提供当前板型、轨道宽度、顶升状态和是否存在弯板情况。",
+    "why_required": "需要把成像差异与机械夹持和平整度条件绑定起来。",
+    "condition": "同光源器件成像差异大",
+    "blocks": [
+      "检查板卡是否为弯板",
+      "检查轨道宽度是否合适",
+      "检查顶升是否把板子夹平"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:8c9311abfdba"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e2d586b4e3a8",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:ed05a6492d6c",
+    "slot": "repro_steps",
+    "question": "请说明是哪些器件、哪些位置、什么批次或哪些板上出现同光源成像差异。",
+    "why_required": "需要区分个别器件异常与整板/整机机械条件异常。",
+    "condition": "同光源器件成像差异大",
+    "blocks": [
+      "检查器件本身是否存在差异脏污破损"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:8c9311abfdba"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f7b3b17e0d3a",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:bd2c4a483c6c",
+    "slot": "ip_config",
+    "question": "请提供当前相机 IP 配置、主机网卡网段和相机发现结果。",
+    "why_required": "需要确认是自动获取导致的发现失败，还是主机与相机不在同一网段。",
+    "condition": "相机IP自动获取识别不到",
+    "blocks": [
+      "确认相机使用自动获取 IP 且当前识别不到",
+      "将相机 IP 改为 192.168.0.101 同网段固定地址"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:666fbfc14d43"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d81d70e15e9d",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:bd2c4a483c6c",
+    "slot": "environment",
+    "question": "请提供当前是 2D 还是 3D 设备，以及涉及的相机数量。",
+    "why_required": "需要确认现场相机拓扑，避免固定 IP 与其它相机冲突。",
+    "condition": "相机IP自动获取识别不到",
+    "blocks": [
+      "将相机 IP 改为 192.168.0.101 同网段固定地址"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:666fbfc14d43"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1b8e051f45d9",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:9e8b05952fe8",
+    "slot": "sample_image",
+    "question": "请提供近轨与远轨夹边挡块位置及 Mark 点区域的现场照片。",
+    "why_required": "需要确认错误是否来自挡块位置不一致以及板边 Mark 点被遮挡。",
+    "condition": "双轨设备近端程序拷贝到远端报 mark 点错误",
+    "blocks": [
+      "检查近远轨夹边挡块位置是否一致",
+      "确认板边 Mark 点是否被挡块遮挡"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0bf154fbdb23"
+    ]
+  },
+  {
+    "required_info_id": "required-info:42ab43d33f15",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:9e8b05952fe8",
+    "slot": "program_file",
+    "question": "请提供当前近端/远端共用的程序文件与 Mark 点设置。",
+    "why_required": "需要确认是否真的是同一程序跨轨复用，以及当前 Mark 点仍配置为板边。",
+    "condition": "远端报Mark点错误",
+    "blocks": [
+      "统一两条轨的夹边挡块位置",
+      "将板边 Mark 点改成板内 Mark 点"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:0bf154fbdb23"
+    ]
+  },
+  {
+    "required_info_id": "required-info:93f4713e07c7",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:9e8b05952fe8",
+    "slot": "repro_steps",
+    "question": "请说明错误是否只在远轨复用时出现，以及近端是否正常。",
+    "why_required": "需要确认问题是轨间位置差异还是程序本身错误。",
+    "condition": "远端报Mark点错误",
+    "blocks": [
+      "检查近远轨夹边挡块位置是否一致"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:0bf154fbdb23"
+    ]
+  },
+  {
+    "required_info_id": "required-info:9455fc199f98",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:bcb288ac578d",
+    "slot": "software_version",
+    "question": "请提供主程序、算法包及 machine 版本。",
+    "why_required": "需要确认是否命中 0.26.7 前后缓存机制与已知版本行为差异。",
+    "condition": "检测节拍变长",
+    "blocks": [
+      "检查双轨资源竞争与缓存机制"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b0525f244085",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:bcb288ac578d",
+    "slot": "environment",
+    "question": "请提供当前设备的内存、显存、板卡尺寸、器件规模以及是否开启整板异物检测、保存 OK 小图等环境信息。",
+    "why_required": "需要判断时长增加是由配置开关、板卡规模还是硬件资源瓶颈导致。",
+    "condition": "CT 时间异常增加",
+    "blocks": [
+      "查看内存和显存占用",
+      "检查整板异物检测是否开启",
+      "检查保存 OK 小图是否开启"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d2fdfebf8415",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:bcb288ac578d",
+    "slot": "repro_steps",
+    "question": "请说明 CT 变长出现的工步、板型和复现步骤。",
+    "why_required": "需要确认问题是否稳定复现，并把节拍增长落到具体工序。",
+    "condition": "CT 时间异常增加",
+    "blocks": [
+      "分解 CT 构成"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:57a72eaacd53",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:bcb288ac578d",
+    "slot": "owner_context",
+    "question": "请确认当前问题由调试负责人继续跟进，还是需要转交复判站负责人并行排查。",
+    "why_required": "该 section 同时拆到调试链与复判站链，需要明确当前责任边界。",
+    "condition": "CT 时间异常增加 / 复判站出图慢混合表述",
+    "blocks": [
+      "检查双轨资源竞争与缓存机制"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:b8cc851aab4b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:de2d033e2d8e",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:2a60b79c87b9",
+    "slot": "program_file",
+    "question": "请提供当前导入的 CAD 文件。",
+    "why_required": "需要直接检查 CAD 文件本体的编码、文字、特殊符号和坐标内容。",
+    "condition": "CAD 导入失败",
+    "blocks": [
+      "检查导入后的 CAD 编码格式是否正确",
+      "检查 CAD 是否包含多余文字或空格符",
+      "检查 CAD 内是否存在特殊符号"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3dfa1538faf4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4a62f7a501d6",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:2a60b79c87b9",
+    "slot": "repro_steps",
+    "question": "请说明导入 CAD 时的具体步骤，以及是在解析失败、尺寸过大还是导入后不显示。",
+    "why_required": "需要确认当前命中的失败分支，以避免把解析失败、显示异常和尺寸异常混为一类。",
+    "condition": "CAD 导入失败",
+    "blocks": [
+      "检查导后 XY 及角度位置是否正确",
+      "检查坐标数值是否超出板卡尺寸"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3dfa1538faf4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:ad59ee7484ca",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:2a60b79c87b9",
+    "slot": "software_version",
+    "question": "请提供当前主程序版本。",
+    "why_required": "需要确认是否命中特定版本的 CAD 导入行为差异。",
+    "condition": "CAD 导入失败",
+    "blocks": [
+      "检查导入后的 CAD 编码格式是否正确"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:3dfa1538faf4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e49d71f9e959",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:c2cd584776e4",
+    "slot": "program_file",
+    "question": "请提供当前程序文件和 CAD 文件。",
+    "why_required": "需要确认当前导入 CAD 的方向设置、视图行列配置以及同料号角度分布。",
+    "condition": "CAD 角度不一致",
+    "blocks": [
+      "检查 CAD 视图行列是否设置反",
+      "确认是否存在 0/180 度角度分裂"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:19968959df4e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:0a5464a6e8ed",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:c2cd584776e4",
+    "slot": "repro_steps",
+    "question": "请说明哪些料号、哪些位置出现特殊斜角度，以及当前导 CAD 时使用的是顺时针还是逆时针。",
+    "why_required": "需要确认问题是否只在特定斜角物料与导入方向组合下触发。",
+    "condition": "CAD 角度不一致",
+    "blocks": [
+      "正常场景按顺时针导入 CAD",
+      "特殊斜角物料场景改为逆时针导入 CAD"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:19968959df4e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:8269460660d3",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:c2cd584776e4",
+    "slot": "software_version",
+    "question": "请提供客户现场版本与展厅验证版本。",
+    "why_required": "需要判断是否存在版本差异导致的行列设置行为不一致。",
+    "condition": "CAD 角度不一致",
+    "blocks": [
+      "对比 0.26 客户版本与展厅新版本表现"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:19968959df4e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2e52fb4d2bff",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:373e5c2af9ae",
+    "slot": "sample_image",
+    "question": "请提供当前设备上的 Mark 点成像截图，以及被遮挡或跑偏的实际示例图。",
+    "why_required": "需要确认是特征选择问题、轻微偏移问题，还是实际遮挡问题。",
+    "condition": "Mark 点在不同机器上轻微跑偏或被遮挡",
+    "blocks": [
+      "选择非圆点的特征部位作为匹配对象"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d620d598adde"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a581e9bd694f",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:373e5c2af9ae",
+    "slot": "program_file",
+    "question": "请提供当前程序和 Mark 点相关配置。",
+    "why_required": "需要确认当前程序是否已经采用模板匹配算法，以及 Mark 点选取策略是否一致。",
+    "condition": "Mark 多机复用异常",
+    "blocks": [
+      "尝试使用模板匹配算法"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:d620d598adde"
+    ]
+  },
+  {
+    "required_info_id": "required-info:050575963c97",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:373e5c2af9ae",
+    "slot": "repro_steps",
+    "question": "请说明是哪几台机器之间复用同一套程序，以及跑偏/遮挡出现的具体位置和频率。",
+    "why_required": "需要确认异常是否与机器差异、板边结构或特定位置相关。",
+    "condition": "Mark 多机复用异常",
+    "blocks": [
+      "尝试使用模板匹配算法",
+      "选择非圆点的特征部位作为匹配对象"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:d620d598adde"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d82027b927bc",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:5ad5d9efd01d",
+    "slot": "sample_image",
+    "question": "请提供当前 Mark 点成像截图、模板特征点分布截图。",
+    "why_required": "需要确认特征点是否真正落在 Mark 点轮廓上，以及是否有大量干扰点。",
+    "condition": "Mark 点对齐失败",
+    "blocks": [
+      "检查 Mark 点选择位置与参数是否合理",
+      "优先使用形状匹配算法并调试模板强弱阈值"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3786a93b965b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:17decccf8d6c",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:5ad5d9efd01d",
+    "slot": "program_file",
+    "question": "请提供当前程序和 Mark 点相关参数配置。",
+    "why_required": "需要确认当前算法选择、参数阈值和 Mark 点配置是否合理。",
+    "condition": "Mark 点对齐失败",
+    "blocks": [
+      "优先使用形状匹配算法并调试模板强弱阈值",
+      "特殊情况下切换到模板匹配算法"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3786a93b965b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:67d8b76feb8b",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:5ad5d9efd01d",
+    "slot": "repro_steps",
+    "question": "请说明是所有板都失败，还是特定方向/特定板型/特定进板场景失败。",
+    "why_required": "需要区分参数问题、进板方向问题和进板不到位问题。",
+    "condition": "Mark 点对齐失败",
+    "blocks": [
+      "检查板卡方向是否正确",
+      "检查是否进板不到位"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:3786a93b965b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:59833fb89311",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:1536a6b6dd8a",
+    "slot": "program_file",
+    "question": "请提供当前程序或模板库配置，以确认替代料要写入的位置。",
+    "why_required": "需要定位当前模板库配置上下文，避免把替代料写错位置。",
+    "condition": "不同器件替代料配置",
+    "blocks": [
+      "将封装加入模板库",
+      "将 OCR 加入模板库",
+      "将极性加入模板库"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:67c76e1758da"
+    ]
+  },
+  {
+    "required_info_id": "required-info:3e5730afcf12",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:1536a6b6dd8a",
+    "slot": "sample_image",
+    "question": "请提供原器件与替代器件的封装、OCR、极性对比图。",
+    "why_required": "需要明确哪些特征应同步加入模板库。",
+    "condition": "不同器件替代料配置",
+    "blocks": [
+      "将封装加入模板库",
+      "将 OCR 加入模板库",
+      "将极性加入模板库"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:67c76e1758da"
+    ]
+  },
+  {
+    "required_info_id": "required-info:07f02e104e29",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:1536a6b6dd8a",
+    "slot": "repro_steps",
+    "question": "请说明当前替代料配置的目标器件、使用场景和预期识别差异。",
+    "why_required": "需要确认替代料配置的适用范围和验证路径。",
+    "condition": "不同器件替代料配置",
+    "blocks": [
+      "将极性加入模板库"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:67c76e1758da"
+    ]
+  },
+  {
+    "required_info_id": "required-info:52e6a7a290ef",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:560b45b5a5a5",
+    "slot": "sample_image",
+    "question": "请提供侧立或翘脚漏报的典型样本图和对应元件位置。",
+    "why_required": "需要基于具体漏报样本做 XY/角度阈值调试，而不是盲调参数。",
+    "condition": "侧立和翘脚漏报",
+    "blocks": [
+      "确认问题表现为侧立或翘脚漏报",
+      "复测并确认漏报是否收敛"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:5bc4f627a718"
+    ]
+  },
+  {
+    "required_info_id": "required-info:858c396e00ab",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:560b45b5a5a5",
+    "slot": "software_version",
+    "question": "请提供当前主程序/模型版本信息。",
+    "why_required": "需要确认当前阈值调试是否受版本差异影响。",
+    "condition": "侧立和翘脚漏报",
+    "blocks": [
+      "调整 XY 轴阈值",
+      "调整角度阈值"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:5bc4f627a718"
+    ]
+  },
+  {
+    "required_info_id": "required-info:93e45baeaf21",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:560b45b5a5a5",
+    "slot": "repro_steps",
+    "question": "请说明漏报发生的检测步骤、板型和复现频率。",
+    "why_required": "需要确认阈值调试后的复测路径与现场触发条件一致。",
+    "condition": "侧立和翘脚漏报",
+    "blocks": [
+      "复测并确认漏报是否收敛"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:5bc4f627a718"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d3fffaefda5c",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:e85a44f4ff62",
+    "slot": "repro_steps",
+    "question": "请说明板弯/加工误差在编程时的具体表现，以及当前板型和工步。",
+    "why_required": "需要确认是整板编程阶段的几何补偿问题，而不是后续检测或运输问题。",
+    "condition": "板卡弯曲/加工误差时编程异常",
+    "blocks": [
+      "评估是否适用板弯补偿（3%以内）"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:7d0f54d6f063"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1e1b0c3cc3cc",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:e85a44f4ff62",
+    "slot": "sample_image",
+    "question": "请提供板卡弯曲或标记点区域相关的示意图/拍照图。",
+    "why_required": "需要结合实际板形与标记点位置判断板弯补偿和标记点区域如何设置。",
+    "condition": "板卡弯曲/加工误差时编程异常",
+    "blocks": [
+      "设置标记点区域"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:7d0f54d6f063"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b96348708dc8",
+    "family_id": "family:9a6b099c3c34",
+    "variant_id": "variant:e85a44f4ff62",
+    "slot": "program_file",
+    "question": "请提供当前程序/CAD/标记点设置文件。",
+    "why_required": "需要确认当前编程配置是否已经包含板弯补偿与合理的标记点区域。",
+    "condition": "板卡弯曲/加工误差时编程异常",
+    "blocks": [
+      "设置标记点区域"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:7d0f54d6f063"
+    ]
+  },
+  {
+    "required_info_id": "required-info:7d0138a023bb",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:99015b4dd02d",
+    "slot": "log_package",
+    "question": "请提供主程序打不开时的完整日志，尤其是运控日志。",
+    "why_required": "需要先确认是否出现 invalid map<K, T> key 等明确运控异常信号。",
+    "condition": "设备主程序和工厂程序均无法打开",
+    "blocks": [
+      "收集日志并检查运控日志是否有 invalid map<K, T> key"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:4c21071d0982"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bc4113d617ec",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:99015b4dd02d",
+    "slot": "device_model",
+    "question": "请确认当前运控卡型号，以及是否为 9014 / e450demo 组合。",
+    "why_required": "需要判断是否命中运控卡型号与网口卡对应关系异常。",
+    "condition": "设备主程序和工厂程序均无法打开",
+    "blocks": [
+      "使用 MotionPanel 检查运控卡状态",
+      "确认 9014 运控卡与 e450demo 网口卡对应关系"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:4c21071d0982"
+    ]
+  },
+  {
+    "required_info_id": "required-info:92a45e9de975",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:99015b4dd02d",
+    "slot": "owner_context",
+    "question": "请确认当前问题是否由运控负责人继续跟进，或是否已转交工控机/系统负责人并行排查。",
+    "why_required": "需要锁定当前责任边界，避免“主程序打不开”被误判成纯软件问题。",
+    "condition": "设备主程序和工厂程序均无法打开",
+    "blocks": [
+      "确认 9014 运控卡与 e450demo 网口卡对应关系"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:4c21071d0982"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bd16e3566d1a",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:9790cdd90279",
+    "slot": "log_package",
+    "question": "请提供运控日志和初始化失败时段的系统日志。",
+    "why_required": "需要先确认日志是否已有明确异常，避免盲目调整网卡速率。",
+    "condition": "初始化运动控制卡卡住/运控闪退",
+    "blocks": [
+      "检查运控日志是否有异常"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:61036cd3693a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:35eb70bd4c74",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:9790cdd90279",
+    "slot": "ip_config",
+    "question": "请提供当前网卡速率、网口配置和相机/运控相关网卡信息。",
+    "why_required": "需要确认是否命中网卡速率不为 100M 的问题。",
+    "condition": "初始化运动控制卡卡住/运控闪退",
+    "blocks": [
+      "检查网络适配器速率是否为 100M",
+      "网速异常时修改 Speed & Duplex"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:61036cd3693a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:9def40ccfeff",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:9790cdd90279",
+    "slot": "environment",
+    "question": "请说明当前运控卡型号、网口环境和问题复现频率。",
+    "why_required": "需要确认是否为特定运控卡/网口环境下的初始化异常。",
+    "condition": "初始化运动控制卡卡住/运控闪退",
+    "blocks": [
+      "重新初始化验证运控是否恢复"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:61036cd3693a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bd3c6201a81b",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:e306ddb8b23e",
+    "slot": "log_package",
+    "question": "请提供出现FOV图片缺失时段的完整日志。",
+    "why_required": "需要确认是否为图片数量不足42张的典型分支。",
+    "condition": "3D FOV图片缺失",
+    "blocks": [
+      "确认FOV图片数量不足42张"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:35e3a3ac3aa4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:9660f97eba29",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:e306ddb8b23e",
+    "slot": "environment",
+    "question": "请提供当前CXP线连接状态、是否已断电操作以及复现频率。",
+    "why_required": "需要确保CXP线排查动作在安全前提下执行。",
+    "condition": "3D FOV图片缺失",
+    "blocks": [
+      "断电后紧固或重新插拔CXP线"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:35e3a3ac3aa4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f95a667b5f99",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:3b454c501d13",
+    "slot": "environment",
+    "question": "请提供3D设备型号、当前相机曝光配置和复现截图。",
+    "why_required": "需要确认是否命中自动曝光配置错误。",
+    "condition": "3D初始化拍摄失败",
+    "blocks": [
+      "检查3D相机是否被设置为自动曝光"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e4b2cb465b51"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f8b23e0930fc",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:92c2169ab7f8",
+    "slot": "log_package",
+    "question": "请提供3D拍摄停顿失败时段的完整日志。",
+    "why_required": "需要确认是否为 exposure end timed out 分支。",
+    "condition": "3D曝光结束超时",
+    "blocks": [
+      "检查日志是否存在exposure end timed out"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:33a197f77b1b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b939f1f408c6",
+    "family_id": "family:c2c7f1d1883b",
+    "variant_id": "variant:92c2169ab7f8",
+    "slot": "program_file",
+    "question": "请提供当前运控配置文件或timeout_wait_for_camera_event_in_millisec 配置值。",
+    "why_required": "需要直接验证核心超时参数是否正确。",
+    "condition": "3D曝光结束超时",
+    "blocks": [
+      "检查timeout_wait_for_camera_event_in_millisec是否为10000"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:33a197f77b1b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:667e6f8fb257",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:6119e37f7937",
+    "slot": "log_package",
+    "question": "请提供主程序日志和系统日志中的核心驱动/显卡报错信息。",
+    "why_required": "需要确认是否命中 NVJPEG / WudfRd.sys / GPU API 相关异常。",
+    "condition": "Windows核心驱动异常导致拍摄失败",
+    "blocks": [
+      "检查设备日期和时间是否正确"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:09743bf03bff"
+    ]
+  },
+  {
+    "required_info_id": "required-info:54929019efdf",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:6119e37f7937",
+    "slot": "software_version",
+    "question": "请提供当前显卡驱动版本和系统版本。",
+    "why_required": "需要判断驱动兼容性与系统修复路径。",
+    "condition": "Windows核心驱动异常导致拍摄失败",
+    "blocks": [
+      "执行系统文件修复",
+      "更新显卡驱动"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:09743bf03bff"
+    ]
+  },
+  {
+    "required_info_id": "required-info:032bdf02b96d",
+    "family_id": "family:fba7eb4346e5",
+    "variant_id": "variant:34457dc94ba8",
+    "slot": "log_package",
+    "question": "请提供拍照时主程序日志，尤其是dx/dy相关记录。",
+    "why_required": "需要判断是否命中角度标定异常路径。",
+    "condition": "拼图错位-角度标定异常",
+    "blocks": [
+      "收集日志并检查dx/dy是否在5像素内"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:26dd70563830"
+    ]
+  },
+  {
+    "required_info_id": "required-info:fa73fa9850ac",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:788cb5c529da",
+    "slot": "ip_config",
+    "question": "请提供2D相机IP配置和主机网卡网段信息。",
+    "why_required": "需要确认是否为相机发现/网段配置问题。",
+    "condition": "2D初始化拍摄失败",
+    "blocks": [
+      "检查2D相机IP是否正确"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0b940c51b1ca"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2bad64e518c0",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:788cb5c529da",
+    "slot": "environment",
+    "question": "请说明相机上电状态、光源控制器状态以及设备型号。",
+    "why_required": "需要区分相机本体不上电、控制器异常还是配置问题。",
+    "condition": "2D初始化拍摄失败",
+    "blocks": [
+      "检查相机是否上电",
+      "检查光源控制器状态是否正常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:0b940c51b1ca"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e6fc30c6f8b3",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:5aea4ca1a28c",
+    "slot": "software_version",
+    "question": "请提供当前相机SDK版本与Galaxy Viewer版本。",
+    "why_required": "需要确认是否命中旧SDK无重传机制问题。",
+    "condition": "2D残帧拍摄失败",
+    "blocks": [
+      "检查相机SDK版本是否>=2.4.2503.9201"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:6b223c88ef0b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:74fc58878345",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:5aea4ca1a28c",
+    "slot": "ip_config",
+    "question": "请提供相机网口配置和主机网络适配器配置。",
+    "why_required": "残帧问题常与网口配置异常直接相关。",
+    "condition": "2D残帧拍摄失败",
+    "blocks": [
+      "按文档排查相机网口配置和系统电源模式"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:6b223c88ef0b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a8569529df97",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:976060e31d65",
+    "slot": "log_package",
+    "question": "请提供相机事件超时时段的完整日志。",
+    "why_required": "需要先区分超时类型，才能决定走固件升级还是绑核分支。",
+    "condition": "2D相机事件超时",
+    "blocks": [
+      "根据日志区分超时类型"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3f1b95da1035"
+    ]
+  },
+  {
+    "required_info_id": "required-info:3e1d8cc6d0a0",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:976060e31d65",
+    "slot": "environment",
+    "question": "请提供当前相机固件版本、CPU环境和问题复现频率。",
+    "why_required": "需要判断是否命中固件问题，以及绑核处理是否适用。",
+    "condition": "2D相机事件超时",
+    "blocks": [
+      "block discardtrigger超时时联系FAE升级相机固件",
+      "light switched超时时尝试绑核处理"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:3f1b95da1035"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c2c3914f195b",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:85ccacc7d116",
+    "slot": "ip_config",
+    "question": "请提供当前相机网口配置与巨帧设置。",
+    "why_required": "需要直接判断 block discarded 是否由巨帧/网口配置不当引起。",
+    "condition": "2D网口巨帧配置异常",
+    "blocks": [
+      "检查网口配置并开启巨帧"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a628731ce4f9"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bb733f3277ff",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fd608c7d45f3",
+    "slot": "sample_image",
+    "question": "请提供白图与RGB错位对比图。",
+    "why_required": "需要确认是否是典型相机未停稳场景，而不是标定分支。",
+    "condition": "拼图错位-相机未停稳/伺服问题",
+    "blocks": [
+      "确认是否白图无错位但RGB错位"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:7aa292bd3c6f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:141d74ae3247",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fd608c7d45f3",
+    "slot": "log_package",
+    "question": "请提供拍照时主程序日志与相关伺服日志。",
+    "why_required": "需要结合日志判断伺服模式或伺服电机链路是否异常。",
+    "condition": "拼图错位-相机未停稳/伺服问题",
+    "blocks": [
+      "检查伺服模式是否正常",
+      "检查伺服电机是否存在硬件故障"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:7aa292bd3c6f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c54e364a4e8c",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:2b0ee6654ea6",
+    "slot": "log_package",
+    "question": "请提供大板拍摄变慢时段的运控日志。",
+    "why_required": "需要先确认 Camera steady costs 是否异常。",
+    "condition": "大板拍摄速度越来越慢",
+    "blocks": [
+      "检查运控日志中的Camera steady costs"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:093e11249844"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b4557f1bfa0e",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:2b0ee6654ea6",
+    "slot": "environment",
+    "question": "请提供当前板型尺寸、伺服参数背景和复现频率。",
+    "why_required": "需要判断是否为大板场景特有的停稳耗时问题。",
+    "condition": "大板拍摄速度越来越慢",
+    "blocks": [
+      "联系FAE排查伺服参数"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:093e11249844"
+    ]
+  },
+  {
+    "required_info_id": "required-info:db718324f402",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:735b95484ecc",
+    "slot": "log_package",
+    "question": "请提供主程序日志和工厂软件进出板验证结果。",
+    "why_required": "需要先确认是主程序收到 NOT_ALLOWED，而不是进出板本身异常。",
+    "condition": "进板到位后加载板卡失败-操作不允许",
+    "blocks": [
+      "收集日志并确认TRACK_NEAR NOT_ALLOWED"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:1cbd366f2846"
+    ]
+  },
+  {
+    "required_info_id": "required-info:5c6c17ee99ff",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:735b95484ecc",
+    "slot": "environment",
+    "question": "请提供门状态、限位状态、原点状态和板宽轴状态。",
+    "why_required": "需要定位 NOT_ALLOWED 的具体触发条件。",
+    "condition": "进板到位后加载板卡失败-操作不允许",
+    "blocks": [
+      "检查限位和原点状态",
+      "检查设备前后门是否关闭",
+      "检查板宽轴是否需要复位"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:1cbd366f2846"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4c669bcdac57",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:a8e0e16aa8de",
+    "slot": "sample_image",
+    "question": "请提供当前扫码界面报警截图和板卡二维码样本。",
+    "why_required": "需要先区分是码本身异常还是扫码枪识别异常。",
+    "condition": "扫码枪报警导致设备不进板",
+    "blocks": [
+      "检查码本身是否有问题",
+      "调整扫码枪位置"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0e10bab7403d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:328aea84ee72",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:a8e0e16aa8de",
+    "slot": "ip_config",
+    "question": "请提供扫码枪网络连接状态和ping结果。",
+    "why_required": "需要确认是否为连接失败或网络不通导致。",
+    "condition": "扫码枪报警导致设备不进板",
+    "blocks": [
+      "检查网络连接是否ping成功"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0e10bab7403d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1a1ddb1f774c",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:a8e0e16aa8de",
+    "slot": "environment",
+    "question": "请提供外部触发感应器位置、触发条件和复现频率。",
+    "why_required": "需要判断是否是误触发导致的报警。",
+    "condition": "扫码枪报警导致设备不进板",
+    "blocks": [
+      "检查外部触发感应器位置是否误触发"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:0e10bab7403d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:882e478d0435",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:25e22d02e5c3",
+    "slot": "environment",
+    "question": "请提供扫码枪安装位置、传感器状态和频闪发生场景。",
+    "why_required": "需要先确认频闪是否由传感器平衡或触发条件引起。",
+    "condition": "扫码枪频闪",
+    "blocks": [
+      "检查接驳台扫码枪传感器是否平衡",
+      "检查传感器触发情况"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:7831046adc1f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c003790e0926",
+    "family_id": "family:faaa854ab003",
+    "variant_id": "variant:25e22d02e5c3",
+    "slot": "program_file",
+    "question": "请提供当前扫码枪配置参数或配置截图。",
+    "why_required": "需要验证是否为扫码枪配置异常。",
+    "condition": "扫码枪频闪",
+    "blocks": [
+      "检查扫码枪配置"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:7831046adc1f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:47a4366a7348",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:eb2a7fdf6c4e",
+    "slot": "environment",
+    "question": "请提供板卡尺寸、上位送板机与AOI当前轨道相对位置以及碰撞发生条件。",
+    "why_required": "需要确认是否为大尺寸PCB场景下的轨道几何干涉。",
+    "condition": "上位送板机轨道喇叭口干涉",
+    "blocks": [
+      "检查上位送板机第二轨与AOI第二轨是否过近或有夹角"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ca088ed1c0b9"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2f003a889c13",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:eb2a7fdf6c4e",
+    "slot": "repro_steps",
+    "question": "请说明碰撞发生时的进板步骤、轨道宽度调整方式和复现频率。",
+    "why_required": "需要验证调整水平位置和标定轨道宽度后是否真正消除干涉。",
+    "condition": "上位送板机轨道喇叭口干涉",
+    "blocks": [
+      "重新调整上位送板机水平位置",
+      "标定轨道宽度"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:ca088ed1c0b9"
+    ]
+  },
+  {
+    "required_info_id": "required-info:86624e19c5f9",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fc5bfb5b91d1",
+    "slot": "environment",
+    "question": "请提供当前板型、板宽参数和皮带/滚轮异常表现。",
+    "why_required": "需要确认是板宽参数不匹配还是皮带机械故障。",
+    "condition": "皮带空转/卡住/不流畅",
+    "blocks": [
+      "检查皮带损坏与板宽参数是否匹配"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:56e4282c9b9b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:de261c78601f",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:fc5bfb5b91d1",
+    "slot": "sample_image",
+    "question": "请提供皮带、滚轮和卡顿位置的现场照片。",
+    "why_required": "需要确认异物、磨损或起皮黏附等机械异常。",
+    "condition": "皮带空转/卡住/不流畅",
+    "blocks": [
+      "检查皮带和滚轮间是否有异物",
+      "手动拉动皮带并清洁滚轮"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:56e4282c9b9b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:aeded4b3b9dc",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:d5eea319cb98",
+    "slot": "environment",
+    "question": "请提供当前流道、感应器状态灯和轨道现场情况。",
+    "why_required": "需要确认无法调宽是否由感应器误触发导致。",
+    "condition": "轨道宽度无法调节-感应器误触发",
+    "blocks": [
+      "检查六个感应器状态是否有红灯"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e07e7bbb7fcd"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2161be64cf6c",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:1bb6990ef791",
+    "slot": "environment",
+    "question": "请提供远端/近端轨道传感器状态、板型结构和误报发生场景。",
+    "why_required": "需要确认是传感器被误感应还是镂空板触发不足。",
+    "condition": "轨道有板误报",
+    "blocks": [
+      "检查轨道传感器状态是否被感应",
+      "检查是否为镂空板导致进板感应器未触发"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:72c14e5c1ef3"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b5c5addb04ab",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a1d4742f8c90",
+    "slot": "environment",
+    "question": "请提供流道宽度、喇叭口状态、板型厚薄/弯曲情况和传感器标定距离。",
+    "why_required": "需要判断是哪一类机械因素导致板子未到达指定阻挡位置。",
+    "condition": "进板不到位",
+    "blocks": [
+      "检查流道宽度与喇叭口是否造成卡板",
+      "检查薄板或弯板是否导致卡板",
+      "检查减速传感器到阻挡块距离并重新标定"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:10978bb5510d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f3eed880b7bd",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:f8e19a97b578",
+    "slot": "environment",
+    "question": "请提供板型结构、感应器位置和进板到一半时报错的现场表现。",
+    "why_required": "需要确认是否为镂空板导致感应器未触发。",
+    "condition": "镂空板进板感应器未触发",
+    "blocks": [
+      "检查板子是否为镂空板"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:c9a5a1442f32"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d1ec257e60b1",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:dd978de9a776",
+    "slot": "program_file",
+    "question": "请提供当前运控配置页面参数或 machine.toml 相关配置。",
+    "why_required": "需要确认当前出板参数基线，避免盲调。",
+    "condition": "出板速度缓慢",
+    "blocks": [
+      "在运控配置页面切换高级/大师并修改出板参数",
+      "必要时直接修改machine.toml参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:61494e63f49d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1d2682560d73",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:e26711065a0d",
+    "slot": "program_file",
+    "question": "请提供当前异常文件路径、固定轨位置表现和设备版本背景。",
+    "why_required": "需要确认是否命中老版本标定程序残留文件问题。",
+    "condition": "固定轨位置未恢复",
+    "blocks": [
+      "删除异常文件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:8a84c145656a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:32794115f385",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:ccaa2ab2fdd4",
+    "slot": "program_file",
+    "question": "请提供当前machine.toml相关距离参数。",
+    "why_required": "需要确认减速传感器到挡块和进出板感应器间距离配置。",
+    "condition": "板卡撞挡块回弹",
+    "blocks": [
+      "按实际修改machine.toml相关距离参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:95a7b8955f13"
+    ]
+  },
+  {
+    "required_info_id": "required-info:b4498d118032",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:ccaa2ab2fdd4",
+    "slot": "environment",
+    "question": "请提供减速传感器触发状态、当前标定距离和回弹发生条件。",
+    "why_required": "需要确认是触发失败还是距离过近导致。",
+    "condition": "板卡撞挡块回弹",
+    "blocks": [
+      "检查减速传感器是否被触发",
+      "检查减速传感器到挡块距离是否过近并重新标定"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:95a7b8955f13"
+    ]
+  },
+  {
+    "required_info_id": "required-info:78a0d2bd755a",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:578de50facb0",
+    "slot": "repro_steps",
+    "question": "请说明断电开机后的操作步骤、门状态和轨道归位表现。",
+    "why_required": "需要确认是否是硬件复位流程未完成引起。",
+    "condition": "轨道宽度无法调节-硬件复位未完成",
+    "blocks": [
+      "检查设备前后门是否关闭",
+      "在软件内点击硬件复位并等待轨道归位"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:55b505cc2831"
+    ]
+  },
+  {
+    "required_info_id": "required-info:198a91b0d27e",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a62b48ef1b39",
+    "slot": "environment",
+    "question": "请提供板型是否镂空、是否过长、挡片安装情况和出板失败场景。",
+    "why_required": "需要区分是镂空板触发不足还是板长超时问题。",
+    "condition": "出板失败-镂空板/挡片/板长问题",
+    "blocks": [
+      "检查是否为镂空板导致感应器未触发",
+      "安装感应器挡片或用接料带辅助触发",
+      "板子过长时增大timeout_output_board_out_of_output_spot_in_sec"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d9cf40787a5c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:6d251f5e5fa0",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a62b48ef1b39",
+    "slot": "program_file",
+    "question": "请提供machine.toml中timeout_output_board_out_of_output_spot_in_sec的当前值。",
+    "why_required": "需要判断是否需要增大超时。",
+    "condition": "出板失败-镂空板/挡片/板长问题",
+    "blocks": [
+      "板子过长时增大timeout_output_board_out_of_output_spot_in_sec"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:d9cf40787a5c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:16f417931551",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:a32cda57eedf",
+    "slot": "environment",
+    "question": "请提供未放板时挡块、皮带和传感器状态表现。",
+    "why_required": "需要确认是否属于传感器误触发而不是正常进板逻辑。",
+    "condition": "近轨挡块异常下压-传感器误触发",
+    "blocks": [
+      "观察挡块下压时皮带是否仍在转动",
+      "检查是否存在传感器误触发"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b2e3ea03d7ab"
+    ]
+  },
+  {
+    "required_info_id": "required-info:35bd51c0e1fe",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:0338d170a1d3",
+    "slot": "environment",
+    "question": "请提供进板失败时出板口是否有板、传感器感应灯状态和皮带转动情况。",
+    "why_required": "需要确定优先走占板、传感器还是皮带分支。",
+    "condition": "进板失败",
+    "blocks": [
+      "检查出板口是否仍有板未出板",
+      "检查进板传感器是否被触发并调整灵敏度",
+      "在工厂软件中检查皮带正反转"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ddccf90609cc"
+    ]
+  },
+  {
+    "required_info_id": "required-info:8ea2c8e80583",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:0338d170a1d3",
+    "slot": "log_package",
+    "question": "请提供工厂软件IO点位和相关日志/现象记录。",
+    "why_required": "需要确认是否为IO点位异常或运控卡顺序问题。",
+    "condition": "进板失败",
+    "blocks": [
+      "检查IO点位信号是否正确"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:ddccf90609cc"
+    ]
+  },
+  {
+    "required_info_id": "required-info:0f7a47038b23",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:3f3f4a8c59f7",
+    "slot": "environment",
+    "question": "请提供板型是否镂空、人工拿板节奏、传感器当前灵敏度和挡片安装情况。",
+    "why_required": "需要确认是空洞误感应、人工拿板触发，还是挡片/灵敏度问题。",
+    "condition": "镂空板导致出板传感器误感应/未触发",
+    "blocks": [
+      "调整传感器螺丝和灵敏度",
+      "安装并标记感应器挡片位置"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:5e9b2f428f55"
+    ]
+  },
+  {
+    "required_info_id": "required-info:306cdab350a3",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:3f3f4a8c59f7",
+    "slot": "program_file",
+    "question": "请提供machine.toml中的output_board_out_filter_delay_in_millisec和出板皮带参数。",
+    "why_required": "需要验证过滤延迟和皮带参数是否需要调整。",
+    "condition": "镂空板导致出板传感器误感应/未触发",
+    "blocks": [
+      "增加output_board_out_filter_delay_in_millisec",
+      "适当调节出板皮带参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:5e9b2f428f55"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f763ceaaacb8",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:1356d0150d41",
+    "slot": "program_file",
+    "question": "请提供当前machine.toml配置和误报发生位置。",
+    "why_required": "需要确认是否命中出板超时过短导致的误报。",
+    "condition": "收板机位置误报卡板",
+    "blocks": [
+      "修改timeout_output_board_out_of_output_spot_in_sec为4"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:84811cbc6d82"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c8031151b909",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:0a5f62a8947f",
+    "slot": "environment",
+    "question": "请提供当前气压值、报警阈值和报警触发场景。",
+    "why_required": "需要确认是实际气压过低还是阈值设置过高。",
+    "condition": "气压过低黄色报警",
+    "blocks": [
+      "检查实际气压值是否在0.2-0.5",
+      "调整气压阈值使其小于实际气压值"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:71d9cef83d6c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d633a0bfcfa5",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:2e556d119eee",
+    "slot": "environment",
+    "question": "请提供当前气压值、气管玻璃罩状态和是否存在水油污。",
+    "why_required": "需要确认是否为干燥机/气管污染导致的顶升异常。",
+    "condition": "顶升一边未落下",
+    "blocks": [
+      "清洗玻璃罩和排净气管内水油污",
+      "检查气压值并逆时针调大气阀"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:9e56db13a82d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:31aeb940e31b",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:2e556d119eee",
+    "slot": "repro_steps",
+    "question": "请说明顶升一边未落下的复现频率及已尝试动作。",
+    "why_required": "需要决定是否直接进入更换气缸分支。",
+    "condition": "顶升一边未落下",
+    "blocks": [
+      "更换顶升气缸"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:9e56db13a82d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:fa563a116fec",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:29957728725e",
+    "slot": "environment",
+    "question": "请提供挡块、PCB位置、阻挡气缸状态以及是否有回弹。",
+    "why_required": "需要先区分是挡块机械卡顿还是气缸失效。",
+    "condition": "顶升落下但挡块未抬起",
+    "blocks": [
+      "检查挡块是否卡顿并观察是否回弹",
+      "手动按压挡块检查气缸回弹"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ab579c5bab6e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c273caad7da5",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:29957728725e",
+    "slot": "sample_image",
+    "question": "请提供挡块、气管和气缸现场照片或视频。",
+    "why_required": "需要确认是否存在卡板、异物、水排出等现象。",
+    "condition": "顶升落下但挡块未抬起",
+    "blocks": [
+      "拔掉阻挡气缸气管并反复推拉检查是否顺畅",
+      "继续通气观察气管内是否有异物或水排出"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:ab579c5bab6e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c8a5531500c9",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:4e468df11ac4",
+    "slot": "log_package",
+    "question": "请提供status:500相关日志和SPC文件清理后的结果。",
+    "why_required": "需要确认是数据库膨胀还是结果推送异常。",
+    "condition": "复判报保存结果失败",
+    "blocks": [
+      "在SPC里执行文件清理"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ea7acd7f2e38"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c5db0355697c",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:4e468df11ac4",
+    "slot": "program_file",
+    "question": "请提供buddy-data目录中的host.db/stats.db/term.db及相关db-wal/db-shm文件。",
+    "why_required": "需要检查proj/res状态是否异常。",
+    "condition": "复判报保存结果失败",
+    "blocks": [
+      "关闭buddy后收集db文件",
+      "用DB Browser检查host.db/stats.db/term.db"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ea7acd7f2e38"
+    ]
+  },
+  {
+    "required_info_id": "required-info:6e993047e50b",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:af862bdacdc0",
+    "slot": "environment",
+    "question": "请提供当前报错画面、系统时间是否异常以及是否出现无视频输入。",
+    "why_required": "需要确认是BIOS设置失效还是主板自检失败。",
+    "condition": "BIOS设置失效导致无法进入系统",
+    "blocks": [
+      "按F1进入系统并Esc不保存退出",
+      "检查主板电池是否没电并更换",
+      "无视频输入时对主板完全断电后重试"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:0488832925c4"
+    ]
+  },
+  {
+    "required_info_id": "required-info:85bbf4053acf",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:7c84534ea195",
+    "slot": "program_file",
+    "question": "请提供buddy-data、热存储设置、MES配置和导出目录占用情况。",
+    "why_required": "需要判断C盘空间异常的主要来源。",
+    "condition": "C盘空间占用异常",
+    "blocks": [
+      "检查buddy-data目录占用",
+      "按目录类型执行迁移模板或缩短热存储时间",
+      "检查MES目录是否占用C盘"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:c8e93714866b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f3856ea2e1c2",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:7c84534ea195",
+    "slot": "environment",
+    "question": "请提供当前C盘剩余空间、客户可接受的数据迁移/删除范围。",
+    "why_required": "需要决定是迁移、缩短热存储还是清理文件。",
+    "condition": "C盘空间占用异常",
+    "blocks": [
+      "按目录类型执行迁移模板或缩短热存储时间",
+      "全盘定位异常空间占用"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:c8e93714866b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:95dafa0c2a9f",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:2545bf73ac53",
+    "slot": "environment",
+    "question": "请提供D盘占用情况、用户是否在D盘存放普通文件，以及SPC清理后的结果。",
+    "why_required": "需要判断是否为D盘误用还是buddy数据堆积。",
+    "condition": "D盘占用过高导致卡死或加载慢",
+    "blocks": [
+      "确认D盘是否被用户误用于存放普通数据",
+      "通过SPC执行文件清理"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:31b96a7161bd"
+    ]
+  },
+  {
+    "required_info_id": "required-info:90bad0fdc5fa",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:14c2cb5e766c",
+    "slot": "environment",
+    "question": "请提供当前磁盘分配状态、原D盘数据量和目标机械硬盘盘符。",
+    "why_required": "需要确认盘符置换顺序和可行性。",
+    "condition": "D盘扩容与盘符迁移",
+    "blocks": [
+      "在磁盘管理中分配未分配盘符",
+      "将原D盘数据迁移到新盘符",
+      "交换原D盘和新机械硬盘盘符并重启"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e8c6882b85f9"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f6f5261a9aec",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:085961f0d893",
+    "slot": "environment",
+    "question": "请提供当前现场版本、客户需保留天数和D盘剩余空间情况。",
+    "why_required": "需要确认是否允许执行 cold_results 清理。",
+    "condition": "D盘测试数据占满",
+    "blocks": [
+      "确认客户保留天数和删除授权",
+      "执行cold_results清理脚本"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:19d471772d10"
+    ]
+  },
+  {
+    "required_info_id": "required-info:69cfc9a918c1",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e331eddf4c58",
+    "slot": "environment",
+    "question": "请提供当前主板插槽情况、目标SSD型号和PE工具准备情况。",
+    "why_required": "需要确认系统迁移硬件路径和可执行条件。",
+    "condition": "M.2 SSD更换与系统迁移",
+    "blocks": [
+      "断电拆机并安装新SSD到副M.2插槽",
+      "在PE系统中克隆旧硬盘到新SSD",
+      "交换SSD位置并在BIOS中确认启动项"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:65396e2d0900"
+    ]
+  },
+  {
+    "required_info_id": "required-info:57ce23fa79ac",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:b2151957490b",
+    "slot": "log_package",
+    "question": "请提供DMP文件、WinDbg分析输出和相关故障时间。",
+    "why_required": "需要从 !analyze -v 输出中定位驱动或模块问题。",
+    "condition": "MEMORY.DMP分析流程",
+    "blocks": [
+      "收集ABC文件夹中的DMP文件",
+      "配置symbols并执行!analyze -v"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d516c8c3db2f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:ae9454e1602e",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:c418362a09e0",
+    "slot": "log_package",
+    "question": "请提供光控相关日志、USBTree截图和当前USB连接拓扑。",
+    "why_required": "需要确认是否命中一分四USB2.0导致的光控通信问题。",
+    "condition": "光控通信异常",
+    "blocks": [
+      "查看日志是否与光控相关",
+      "检查是否使用一分四USB2.0拓扑"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:44cbce940c9f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:eb206aa14220",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:c2b563dfa419",
+    "slot": "environment",
+    "question": "请提供虚拟内存设置、页面文件大小、重启前后板卡信息和异常时间范围。",
+    "why_required": "需要确认是否命中系统虚拟内存不足路径。",
+    "condition": "大板检测卡顿-虚拟内存不足",
+    "blocks": [
+      "检查页面文件是否由系统接管或是否被关闭",
+      "增大虚拟内存页面文件大小"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:fd66fbd3488d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:de03efb63f6a",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:bf9cfce95b8b",
+    "slot": "log_package",
+    "question": "请提供显卡相关系统日志、异常发生时间和当前显卡驱动版本。",
+    "why_required": "需要确认是驱动掉线还是硬件接触异常。",
+    "condition": "未检查到CUDA设备",
+    "blocks": [
+      "收集日志并查看系统日志文件",
+      "重新安装显卡驱动并关闭快速启动"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:179ae119cdfa"
+    ]
+  },
+  {
+    "required_info_id": "required-info:7449585cb05b",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:bf9cfce95b8b",
+    "slot": "environment",
+    "question": "请提供是否有异常关机、当前显卡安装状态和是否已尝试拔插。",
+    "why_required": "需要判断是接触问题还是系统驱动问题。",
+    "condition": "未检查到CUDA设备",
+    "blocks": [
+      "拔插显卡并清洁金手指"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:179ae119cdfa"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1b9d34612711",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e832a165e16b",
+    "slot": "log_package",
+    "question": "请提供编程耗时异常时的日志和timeUsage记录。",
+    "why_required": "需要确认是否命中生成自定义框耗时异常路径。",
+    "condition": "生成自定义框耗时异常",
+    "blocks": [
+      "运行gpedit.msc进入组策略",
+      "关闭Microsoft Defender防病毒与实时保护"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:39b229df6533"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f8507f2ad508",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e832a165e16b",
+    "slot": "repro_steps",
+    "question": "请提供关闭Defender前后的耗时对比和重启后验证结果。",
+    "why_required": "需要确认优化是否有效。",
+    "condition": "生成自定义框耗时异常",
+    "blocks": [
+      "重启系统并验证编程耗时是否恢复"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:39b229df6533"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bfa3c2806ae8",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:640f1b149bcf",
+    "slot": "log_package",
+    "question": "请提供收集到的ABC文件夹压缩包以及问题发生时间。",
+    "why_required": "需要拿到DMP和上下文时间，才能进行蓝屏/自动重启分析。",
+    "condition": "系统蓝屏或自动重启",
+    "blocks": [
+      "以管理员身份运行DMP收集工具",
+      "压缩桌面生成的ABC文件夹并收回"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d8ffa51b3cb2"
+    ]
+  },
+  {
+    "required_info_id": "required-info:085113aa2582",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:b1ccecf6657a",
+    "slot": "log_package",
+    "question": "请提供问题发生时的日志、buddy资源浮窗截图和指标收集日志。",
+    "why_required": "需要确认是安全防护问题还是系统资源不足。",
+    "condition": "编程测试页面卡死迟钝",
+    "blocks": [
+      "查看buddy资源浮窗中的内存显存使用情况",
+      "开启并回收buddy指标收集日志"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:882467805581"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1185d0c7f903",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:b1ccecf6657a",
+    "slot": "repro_steps",
+    "question": "请说明重启机器是否恢复、重启主程序是否无效，以及异常发生的大致时间。",
+    "why_required": "需要确认是否命中Windows安全防护特征。",
+    "condition": "编程测试页面卡死迟钝",
+    "blocks": [
+      "关闭Windows安全防护并重启验证"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:882467805581"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4d76677ce2bb",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:442c0ff7b8ca",
+    "slot": "environment",
+    "question": "请提供重启现象、重启前是否黑屏/卡顿、内存条与电源连接状态。",
+    "why_required": "需要先区分硬件连接不稳还是系统异常导致的自动重启。",
+    "condition": "设备自动重启排查",
+    "blocks": [
+      "检查电源和内存条连接稳定性"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:202c745ea34b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:88f405328da3",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:442c0ff7b8ca",
+    "slot": "log_package",
+    "question": "请提供诊断日志、事件管理器系统日志和已安装软件列表。",
+    "why_required": "需要确认是否存在驱动/系统日志异常。",
+    "condition": "设备自动重启排查",
+    "blocks": [
+      "卸载无线网卡驱动",
+      "收集诊断日志或查看事件管理器系统日志"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:202c745ea34b"
+    ]
+  },
+  {
+    "required_info_id": "required-info:a8ea1411ae1b",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:39ebe7bfde46",
+    "slot": "log_package",
+    "question": "请提供黑屏前后的系统日志、应用日志和硬件监控信息。",
+    "why_required": "需要确认是VSS/驱动异常还是瞬时硬件故障。",
+    "condition": "设备黑屏排查",
+    "blocks": [
+      "收集日志并查看是否存在VSS来源错误",
+      "按硬件检查-驱动更新-系统修复-持续观察顺序排查"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b9c7e7cbd80d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:3abb51a3fa2f",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:39ebe7bfde46",
+    "slot": "environment",
+    "question": "请提供设备黑屏时的运行负载、温度、是否自动恢复以及计算机名称。",
+    "why_required": "需要区分名称冲突、过热、硬件故障和资源死锁。",
+    "condition": "设备黑屏排查",
+    "blocks": [
+      "修改冲突的计算机名称"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:b9c7e7cbd80d"
+    ]
+  },
+  {
+    "required_info_id": "required-info:91ff456ae743",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:74bff08dbf69",
+    "slot": "environment",
+    "question": "请提供运输后设备状态、显卡内存条当前连接情况和开机表现。",
+    "why_required": "需要确认是否命中运输导致连接松动的问题。",
+    "condition": "运输后设备无法开机",
+    "blocks": [
+      "插拔显卡和内存条"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a6ec04d4cbac"
+    ]
+  },
+  {
+    "required_info_id": "required-info:82083f1f0977",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:858099d657fb",
+    "slot": "environment",
+    "question": "请提供当前CMD启动方式、UAC等级和重启后验证结果。",
+    "why_required": "需要确认是否为权限模式配置问题。",
+    "condition": "默认CMD以管理员模式启动",
+    "blocks": [
+      "检查CMD窗口标题是否包含管理员字样",
+      "将UAC通知等级调整到第三级",
+      "重启设备并再次检查CMD默认模式"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:9d175d758771"
+    ]
+  },
+  {
+    "required_info_id": "required-info:1adbabb99fc6",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:6ada76c47f15",
+    "slot": "environment",
+    "question": "请提供板卡尺寸、测试时间范围、重启前后是否同板以及当前内存显存配置。",
+    "why_required": "需要确认是否为大板场景下的硬件资源不足。",
+    "condition": "大板检测卡顿-硬件资源不足",
+    "blocks": [
+      "检查内存显存和CPU/GPU占用",
+      "重新安装或更换相关硬件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e4ff50702855"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c32a188def08",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:e03fd1a0b41b",
+    "slot": "program_file",
+    "question": "请提供当前machine.toml端口配置和设备管理器里对应的串口号。",
+    "why_required": "需要确认是否为主板接口接线与端口号不匹配导致。",
+    "condition": "主板接线不规范导致光源设置失败",
+    "blocks": [
+      "查看设备管理器端口号",
+      "在machine.toml中修改对应端口参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:2c296abe3190"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4c7680538de9",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:9dad09fd98ca",
+    "slot": "environment",
+    "question": "请提供当前USB口、鼠标/外设灯状态、接口物理状态和是否更换过U盘。",
+    "why_required": "需要先区分接口供电、物理损坏还是外设问题。",
+    "condition": "工控机USB口识别不到设备",
+    "blocks": [
+      "插鼠标检查USB接口和供电是否正常",
+      "检查接口是否脱落",
+      "更换U盘或设备排除外设短路问题"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e3951ed09fde"
+    ]
+  },
+  {
+    "required_info_id": "required-info:744c8a39d84d",
+    "family_id": "family:684bba81b665",
+    "variant_id": "variant:1c1e5db082d5",
+    "slot": "environment",
+    "question": "请提供当前开机表现（风扇/指示灯/Debug灯/屏幕显示/蜂鸣声）以及已尝试的最小化测试结果。",
+    "why_required": "需要先定位是供电、显示、自检、启动盘还是间歇性黑屏路径。",
+    "condition": "工控机无法正常开机",
+    "blocks": [
+      "检查外部供电与电源线",
+      "检查显示器与视频线连接",
+      "观察Debug灯并做最小化硬件测试",
+      "检查启动顺序与硬盘识别",
+      "排查温度、电源与间歇性黑屏死机"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:5472a701e02e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2bcf2665cbfc",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:94e96f1fd195",
+    "slot": "program_file",
+    "question": "请提供当前程序、CAD拼板号设置和是否存在旋转180度的版本。",
+    "why_required": "需要确认是否命中旋转180度导致拼版号异常的路径。",
+    "condition": "BADMARK跳叉板显示异常",
+    "blocks": [
+      "检查程序CAD是否按小拼板分拼板号",
+      "确认是否因程序旋转180度导致拼版号不一致"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b76486fd32b9"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e8e01dc529cc",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:647a1358fdd9",
+    "slot": "ip_config",
+    "question": "请提供复判站IP、相机IP和网络拓扑信息。",
+    "why_required": "需要确认是否是IP冲突导致的连接异常。",
+    "condition": "复判站IP与相机IP冲突",
+    "blocks": [
+      "检查复判站IP是否与相机IP冲突"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3d0a9889659c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:125432c9bfe4",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:d38add58c5f3",
+    "slot": "log_package",
+    "question": "请提供复判站日志、报错res路径和对应res记录。",
+    "why_required": "需要确认是res损坏还是其它加载路径异常。",
+    "condition": "复判站复判数据加载板卡失败",
+    "blocks": [
+      "先用AOI主程序验证是否能加载该res记录",
+      "根据复判站日志删除当前报错res"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ff74386b427e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:4e57cd3833f2",
+    "family_id": "family:3daaaf2e50b5",
+    "variant_id": "variant:d38add58c5f3",
+    "slot": "program_file",
+    "question": "请提供当前版本号、是否添加多模板框以及AOI/复判站版本配套情况。",
+    "why_required": "需要确认是否命中旧版本多模板框或版本不配套问题。",
+    "condition": "复判站复判数据加载板卡失败",
+    "blocks": [
+      "排查多模板框和版本配套问题"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:ff74386b427e"
+    ]
+  },
+  {
+    "required_info_id": "required-info:155fbfefe785",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:4562194ba843",
+    "slot": "environment",
+    "question": "请提供漏气位置、拆装条件以及加固后的验证结果。",
+    "why_required": "需要确认是否为仪表盘位置漏气且加固有效。",
+    "condition": "气压表位置漏气",
+    "blocks": [
+      "使用薄扳手拆卸仪表盘",
+      "缠绕生料进行加固",
+      "装回仪表盘并验证是否仍漏气"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e051b530eefc"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d19abf9d6a45",
+    "family_id": "family:bc03a0555f1c",
+    "variant_id": "variant:7eaca826258e",
+    "slot": "environment",
+    "question": "请提供当前积水位置、气源状态、是否有油污和三联件状态。",
+    "why_required": "需要确认污染范围以及是否已涉及空压机/三联件故障。",
+    "condition": "气缸/气路积水污染",
+    "blocks": [
+      "断气并清理右侧小瓶积水",
+      "排除总气管和支气管内积水",
+      "擦干电气元件并检查气源与三联件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:25a7bc5fc1ac"
+    ]
+  },
+  {
+    "required_info_id": "required-info:c54561c3ccd4",
+    "family_id": "family:fba7eb4346e5",
+    "variant_id": "variant:16ebab0bf75a",
+    "slot": "log_package",
+    "question": "请提供区域拍照时报错日志及当前y轴限位相关配置。",
+    "why_required": "需要确认是否命中y轴限位标定问题。",
+    "condition": "区域拍照功能报错-y轴限位异常",
+    "blocks": [
+      "查看日志是否报camera y axis GoToPoint failed",
+      "使用标定软件重新标定y轴限位值"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:3b65177f1375"
+    ]
+  },
+  {
+    "required_info_id": "required-info:2067ac4165f9",
+    "family_id": "family:61428cf6f7f1",
+    "variant_id": "variant:a4b1c55b5b98",
+    "slot": "environment",
+    "question": "请提供设备盘符情况和设备管理器中的显卡显示状态。",
+    "why_required": "需要区分是安装目录条件问题还是显卡驱动缺失问题。",
+    "condition": "Buddy安装报错",
+    "blocks": [
+      "检查设备是否有D盘",
+      "检查设备管理器中显卡驱动状态"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:e29a3a9278f6"
+    ]
+  },
+  {
+    "required_info_id": "required-info:8674cefd2ede",
+    "family_id": "family:1b7e62026824",
+    "variant_id": "variant:ce522a5343b8",
+    "slot": "program_file",
+    "question": "请提供machine.toml文件、端口参数和是否存在备份文件。",
+    "why_required": "需要确认是配置缺失还是端口参数异常。",
+    "condition": "运控打不开-运动控制程序错误",
+    "blocks": [
+      "检查machine.toml是否存在",
+      "检查machine.toml端口参数或查找备份文件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:2e9a92b5f99f"
+    ]
+  },
+  {
+    "required_info_id": "required-info:d72aa05969e0",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:29e2bdbed992",
+    "slot": "environment",
+    "question": "请提供当前版本、导出目标（整图/SPC/FOV/日志）和现场模式配置。",
+    "why_required": "需要判断应该走哪一种数据采集路径。",
+    "condition": "SPC数据采集与导出",
+    "blocks": [
+      "按版本选择ctrl+X整图导出方式",
+      "执行SPC数据导出",
+      "执行AOI/SPI FOV碎图导出",
+      "按需求导出日志和配置"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:d899e23ca383"
+    ]
+  },
+  {
+    "required_info_id": "required-info:e4d8bbee9d29",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:af6a76a55ec1",
+    "slot": "environment",
+    "question": "请提供现场版本、需要保留的数据天数、D盘/C盘占用情况以及MES目录位置。",
+    "why_required": "需要选择正确的数据清理路径并控制删除范围。",
+    "condition": "SPC联动磁盘数据清理",
+    "blocks": [
+      "按版本执行cold_results或缓存数据清理",
+      "同步在SPC中清理数据库",
+      "检查C盘导出目录与MES目录占用"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:b9513899f7a2"
+    ]
+  },
+  {
+    "required_info_id": "required-info:bf4eb5c3f0c4",
+    "family_id": "family:7240aaab5dcd",
+    "variant_id": "variant:1fb725ddc3c7",
+    "slot": "environment",
+    "question": "请提供当前默认浏览器设置和SPC页面打不开时的表现。",
+    "why_required": "需要确认是否为浏览器劫持问题。",
+    "condition": "SPC页面打不开-浏览器被360劫持",
+    "blocks": [
+      "检查默认浏览器是否被360劫持",
+      "将默认浏览器改成edge"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:1b09600f405c"
+    ]
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:4e2c526529ea:environment:-:1ffef976eb2e",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:4e2c526529ea",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 设备完全无通电反应 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "设备完全无通电反应"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-dca82711ea"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:275ab4cdb525:environment:-:4f865773bfd9",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:275ab4cdb525",
+    "slot": "environment",
+    "question": "请提供显示器电源状态、视频线接口类型和连接位置。",
+    "why_required": "该信息用于缩小 显示器无显示（基础连接问题） 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "显示器无显示（基础连接问题）"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-bf5cf7a6df"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:275ab4cdb525:environment:-:3fcce3a8f908",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:275ab4cdb525",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 显示器无显示（基础连接问题） 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "显示器无显示（基础连接问题）"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-bf5cf7a6df"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:e9d53baafa93:owner_context:-de-a8d20b89e2",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:e9d53baafa93",
+    "slot": "owner_context",
+    "question": "请提供主板 Debug 灯状态、亮灯顺序或现场照片。",
+    "why_required": "该信息用于缩小 硬件自检异常 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "硬件自检异常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-de00642ea0"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:e9d53baafa93:environment:-bios-1657586410",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:e9d53baafa93",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 硬件自检异常 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "硬件自检异常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-de00642ea0"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:e9d53baafa93:environment:-:83a762520a52",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:e9d53baafa93",
+    "slot": "environment",
+    "question": "请提供显示器电源状态、视频线接口类型和连接位置。",
+    "why_required": "该信息用于缩小 硬件自检异常 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "硬件自检异常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-de00642ea0"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:e9d53baafa93:environment:-:dfdde860d948",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:e9d53baafa93",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 硬件自检异常 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "硬件自检异常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-de00642ea0"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:e9d53baafa93:environment:-dram-99a58baa06",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:e9d53baafa93",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 硬件自检异常 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "硬件自检异常"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-de00642ea0"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:8df6951b0d93:environment:-bios-4e7a09ddb8",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:8df6951b0d93",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 电源保护或严重短路 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "电源保护或严重短路"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-afd8665fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:8df6951b0d93:environment:-:6407593c2b20",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:8df6951b0d93",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 电源保护或严重短路 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "电源保护或严重短路"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-afd8665fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:7a8a98ebd8e8:owner_context:-de-280f74c365",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:7a8a98ebd8e8",
+    "slot": "owner_context",
+    "question": "请提供主板 Debug 灯状态、亮灯顺序或现场照片。",
+    "why_required": "该信息用于缩小 能通过自检，但无法进入操作系统 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "能通过自检，但无法进入操作系统"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-ed0c416fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:7a8a98ebd8e8:environment:-bios-d0c4795fe5",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:7a8a98ebd8e8",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 能通过自检，但无法进入操作系统 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "能通过自检，但无法进入操作系统"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-ed0c416fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:7a8a98ebd8e8:environment:-:c7ef27708193",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:7a8a98ebd8e8",
+    "slot": "environment",
+    "question": "请提供显示器电源状态、视频线接口类型和连接位置。",
+    "why_required": "该信息用于缩小 能通过自检，但无法进入操作系统 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "能通过自检，但无法进入操作系统"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-ed0c416fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:7a8a98ebd8e8:error_message:-:487bdea1dea3",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:7a8a98ebd8e8",
+    "slot": "error_message",
+    "question": "请提供蓝屏错误代码、失败模块文件名和现场照片。",
+    "why_required": "该信息用于缩小 能通过自检，但无法进入操作系统 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "能通过自检，但无法进入操作系统"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-ed0c416fd3"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:4e708264d629:environment:-:a4a4fd5f946e",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:4e708264d629",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 间歇性黑屏或死机 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "间歇性黑屏或死机"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-196a18f2fd"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:-:4e708264d629:environment:-dram-ced311a3a8",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:-:4e708264d629",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 间歇性黑屏或死机 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "间歇性黑屏或死机"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-196a18f2fd"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:bios-:34074e172c41:environment:-124b25861f",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:bios-:34074e172c41",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 BIOS 设置错误或硬件配置变更后无法开机 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "BIOS 设置错误或硬件配置变更后无法开机"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-8186076945"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:bios-:34074e172c41:environment:-9fd7e5e45f",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:bios-:34074e172c41",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 BIOS 设置错误或硬件配置变更后无法开机 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "BIOS 设置错误或硬件配置变更后无法开机"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-8186076945"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:bios-:34074e172c41:environment:-9806d774ed",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:bios-:34074e172c41",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 BIOS 设置错误或硬件配置变更后无法开机 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "BIOS 设置错误或硬件配置变更后无法开机"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-8186076945"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:1b4c095cb3e4:environment:-:4499839e228c",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:1b4c095cb3e4",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 市电或工业环境干扰 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "市电或工业环境干扰"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-84c61a7d9e"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:92397bf5968c:environment:-:6636b87b0bba",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:92397bf5968c",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 接口/板卡氧化或接触不良 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "接口/板卡氧化或接触不良"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-a80316ea6e"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::ae3aa27ea945:-:92397bf5968c:environment:-dram-bfa90833f9",
+    "family_id": "family::ae3aa27ea945",
+    "variant_id": "variant:family::ae3aa27ea945:-:92397bf5968c",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 接口/板卡氧化或接触不良 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "接口/板卡氧化或接触不良"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-a80316ea6e"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::2de959420b48:bios-:c7ad1c47aeef:environment:-365c87b2ab",
+    "family_id": "family::2de959420b48",
+    "variant_id": "variant:family::2de959420b48:bios-:c7ad1c47aeef",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 BIOS 电池耗尽或配置丢失 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "BIOS 电池耗尽或配置丢失"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-2aed52b57e"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:a20f2249fbac:owner_context:-de-a415892e68",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:a20f2249fbac",
+    "slot": "owner_context",
+    "question": "请提供主板 Debug 灯状态、亮灯顺序或现场照片。",
+    "why_required": "该信息用于缩小 多硬盘启动冲突 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "多硬盘启动冲突"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-c59e20b0fd"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:a20f2249fbac:environment:-bios-e1254ebf06",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:a20f2249fbac",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 多硬盘启动冲突 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "多硬盘启动冲突"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-c59e20b0fd"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:a20f2249fbac:environment:-:d159a2071692",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:a20f2249fbac",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 多硬盘启动冲突 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "多硬盘启动冲突"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:4b1-c59e20b0fd"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:da539fdf5dfe:environment:-bios-6373d3849c",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:da539fdf5dfe",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 蓝屏 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "蓝屏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-749937c443"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:da539fdf5dfe:environment:-dram-810a2c2a33",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:da539fdf5dfe",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 蓝屏 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "蓝屏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-749937c443"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:da539fdf5dfe:error_message:-:f5b57c048062",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:da539fdf5dfe",
+    "slot": "error_message",
+    "question": "请提供蓝屏错误代码、失败模块文件名和现场照片。",
+    "why_required": "该信息用于缩小 蓝屏 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "蓝屏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-749937c443"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:da539fdf5dfe:dmp_package:-mini-343978a3f6",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:da539fdf5dfe",
+    "slot": "dmp_package",
+    "question": "请提供故障时间点对应的 Minidump / DMP 转储文件。",
+    "why_required": "该信息用于缩小 蓝屏 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "蓝屏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-749937c443"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:da539fdf5dfe:log_package:-wind-b3452b1620",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:da539fdf5dfe",
+    "slot": "log_package",
+    "question": "请提供故障时间点前后的 Windows 系统事件日志。",
+    "why_required": "该信息用于缩小 蓝屏 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "蓝屏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-749937c443"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:9f5016bc9bd2:environment:-:eac19a88412a",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:9f5016bc9bd2",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 无限蓝屏重启循环 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "无限蓝屏重启循环"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-59bc5a0212"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:9f5016bc9bd2:environment:-dram-20d94eb138",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:9f5016bc9bd2",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 无限蓝屏重启循环 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "无限蓝屏重启循环"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-59bc5a0212"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:-:9f5016bc9bd2:error_message:-:ad81b3d36340",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:-:9f5016bc9bd2",
+    "slot": "error_message",
+    "question": "请提供蓝屏错误代码、失败模块文件名和现场照片。",
+    "why_required": "该信息用于缩小 无限蓝屏重启循环 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "无限蓝屏重启循环"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-59bc5a0212"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:bbd8ac4c0adb:environment:-:a59000d9a7d0",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:bbd8ac4c0adb",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 重启 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "重启"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-23faa30358"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:bbd8ac4c0adb:environment:-dram-14f3369a07",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:bbd8ac4c0adb",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 重启 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "重启"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-23faa30358"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:bbd8ac4c0adb:error_message:-:3fd11f999b00",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:bbd8ac4c0adb",
+    "slot": "error_message",
+    "question": "请提供蓝屏错误代码、失败模块文件名和现场照片。",
+    "why_required": "该信息用于缩小 重启 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "重启"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-23faa30358"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:bbd8ac4c0adb:log_package:-wind-7b644f97ba",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:bbd8ac4c0adb",
+    "slot": "log_package",
+    "question": "请提供故障时间点前后的 Windows 系统事件日志。",
+    "why_required": "该信息用于缩小 重启 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "重启"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-23faa30358"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::8455368e2812:-:e774420cceff:environment:-bios-5b046386cc",
+    "family_id": "family::8455368e2812",
+    "variant_id": "variant:family::8455368e2812:-:e774420cceff",
+    "slot": "environment",
+    "question": "请说明是否可进入 BIOS，以及 BIOS 中硬盘识别和启动顺序状态。",
+    "why_required": "该信息用于缩小 死机（完全卡死） 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "死机（完全卡死）"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-90cfabab1b"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::8455368e2812:-:e774420cceff:environment:-:267466254ed8",
+    "family_id": "family::8455368e2812",
+    "variant_id": "variant:family::8455368e2812:-:e774420cceff",
+    "slot": "environment",
+    "question": "请说明电源线、插座供电、指示灯和风扇是否有反应。",
+    "why_required": "该信息用于缩小 死机（完全卡死） 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "死机（完全卡死）"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-90cfabab1b"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::8455368e2812:-:e774420cceff:environment:-dram-324c114838",
+    "family_id": "family::8455368e2812",
+    "variant_id": "variant:family::8455368e2812:-:e774420cceff",
+    "slot": "environment",
+    "question": "请说明内存条插槽位置、单条测试结果和 DRAM 灯状态。",
+    "why_required": "该信息用于缩小 死机（完全卡死） 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "死机（完全卡死）"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:522-90cfabab1b"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::5fa5249eb34a:-_-_-internet_:ebc4d9d18341:erro-51cf513a51",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:-_-_-internet_:ebc4d9d18341",
+    "slot": "error_phase",
+    "question": "请说明是否出现降频、卡顿、自动重启以及触发时机。",
+    "why_required": "该信息用于缩小 无法上网_显示_无Internet_ 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "无法上网_显示_无Internet_"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-_-_-inter-2dc62fe710"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:98927dcdb560:error_phase:-:29a6c5bbc501",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:98927dcdb560",
+    "slot": "error_phase",
+    "question": "请说明是否出现降频、卡顿、自动重启以及触发时机。",
+    "why_required": "该信息用于缩小 检测界面出现拍照失败问题处理 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "检测界面出现拍照失败问题处理"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:277-988e119f57",
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:277-f9a3a9b26d"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:98927dcdb560:environment:-:4205e33b3a2e",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:98927dcdb560",
+    "slot": "environment",
+    "question": "请提供风扇转速、散热器固定情况和积尘状态。",
+    "why_required": "该信息用于缩小 检测界面出现拍照失败问题处理 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "检测界面出现拍照失败问题处理"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:277-988e119f57",
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-.docx:277-f9a3a9b26d"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:pro-24eab42020",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "slot": "program_file",
+    "question": "请提供当前user.cfg.toml、备份文件及文件大小/修改时间。",
+    "why_required": "需要区分空文件、损坏文件和备份选择问题。",
+    "condition": "初始化阶段报加载用户配置失败",
+    "blocks": [
+      "检查user.cfg.toml和备份; 判断当前配置是否损坏"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-b147322cb9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:log-9e6125302a",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "slot": "log_package",
+    "question": "请提供故障时间点诊断数据和启动日志。",
+    "why_required": "需要确认配置解析失败并查找异常重启等上下文。",
+    "condition": "主程序加载用户配置失败",
+    "blocks": [
+      "收集配置失败诊断数据; 判断当前配置是否损坏"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-d291ac0b51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d:env-2b815d6227",
+    "family_id": "family::efc23af9fc66",
+    "variant_id": "variant:family::efc23af9fc66:-user.cfg.toml-:1869ae54a49d",
+    "slot": "environment",
+    "question": "请说明故障前是否发生异常重启、断电或配置迁移。",
+    "why_required": "用于判断配置文件损坏或丢失的触发条件。",
+    "condition": "user.cfg.toml为空或损坏",
+    "blocks": [
+      "判断当前配置是否损坏"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_884648a71b6a27acd9800b11715ba166_202510-a7d7201fe0"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:7012dc376b46:log_package:-:12cab348ab73",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "slot": "log_package",
+    "question": "请提供拍摄失败时段相机、主程序和运控日志。",
+    "why_required": "需要确认残帧、丢包、事件包不重传及其先后顺序。",
+    "condition": "拍摄失败或残帧",
+    "blocks": [
+      "检查残帧和相机事件包"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b95bea7e02"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:7012dc376b46:ip_config:-ip-:e731c516ace9",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "slot": "ip_config",
+    "question": "请提供板载口和扩展网卡的角色、IP、巨帧及相机网络参数。",
+    "why_required": "用于排除换口后的网卡配置差异。",
+    "condition": "更换相机网口后出现拍摄失败",
+    "blocks": [
+      "按SOP检查网卡参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-b773398474",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-ae88a22c5d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:7012dc376b46:driver_context:-:-ad37e05629",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "slot": "driver_context",
+    "question": "请提供相机固件、网卡驱动、相机侧端口、磁环和走线状态。",
+    "why_required": "需要区分相机固件不重传、网卡丢包和物理链路问题。",
+    "condition": "残帧后事件包丢失",
+    "blocks": [
+      "升级大恒相机固件; 检查相机侧端口磁环和走线"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-3da6f1ca38",
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-714dadc744"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5274d74078aa:-:7012dc376b46:repro_steps:-:139651c42d7c",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:family::5274d74078aa:-:7012dc376b46",
+    "slot": "repro_steps",
+    "question": "请记录换口、重启、生产负载和复发时间。",
+    "why_required": "需要评价各临时措施的有效时长。",
+    "condition": "问题间歇复发",
+    "blocks": [
+      "观察是否复发"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_3b59ee6d5b8ca413b471f31dc4aafdf6_202508-a0e26ce396"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-8f9db3b220",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "slot": "dmp_package",
+    "question": "请保留完整 DMP/Minidump 和蓝屏时间点。",
+    "why_required": "需要比较后续复发是否仍为相同 PFN 不同步签名。",
+    "condition": "再次蓝屏",
+    "blocks": [
+      "分析 DMP 中 PFN 不同步信号"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-4afda93e0d",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "slot": "memory_cpu_test",
+    "question": "停产窗口是否允许执行内存检测和 P95？",
+    "why_required": "本次因生产未执行，硬件稳定性方向仍未排除。",
+    "condition": "可安排停产窗口",
+    "blocks": [
+      "测试内存和 CPU 稳定性"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-66f58de384",
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:memory_management-pfn-:0b99c8904-42302aff8c",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:memory_management-pfn-:0b99c890426d",
+    "slot": "driver_context",
+    "question": "请记录无线网卡和 NVIDIA 驱动变更前后版本及复发时间。",
+    "why_required": "多个动作同时执行，需要后续证据区分驱动因素。",
+    "condition": "驱动变更后观察",
+    "blocks": [
+      "卸载可疑无线网卡驱动; 更新 NVIDIA 驱动至 581.29"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_167cafc618fb4ad11e57162fa81fb257_202606-d3556bf2d5"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:log_pac-4312bba35d",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "slot": "log_package",
+    "question": "再次发生时请保留完整转储和对应系统日志。",
+    "why_required": "本次转储页缺失，无法完成可靠归因。",
+    "condition": "再次蓝屏或自动重启",
+    "blocks": [
+      "收集并分析转储文件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-1640721fff",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:driver_-76132a4850",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "slot": "driver_context",
+    "question": "请记录实际卸载/更新的驱动、版本及执行方式。",
+    "why_required": "需要区分已执行动作与 DDU、Defender、Driver Verifier 等建议动作。",
+    "condition": "驱动处置后观察",
+    "blocks": [
+      "清除向日葵驱动; 更新 NVIDIA 驱动"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-e199765aa9",
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a:memory_-b5afd983d9",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:0x00000139-:5d7bc980660a",
+    "slot": "memory_cpu_test",
+    "question": "请补充两条内存配置下的稳定性测试和复发结果。",
+    "why_required": "拔内存只是试验性处置，尚未验证硬件方向。",
+    "condition": "可安排测试窗口",
+    "blocks": [
+      "拔除两根内存条"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_87ae33cbfd69a7adf8d5f0e16dbd8506_202507-6f417d8859"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:system-pte-:f3630414e915:dmp_pac-bb90acf0c2",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "slot": "dmp_package",
+    "question": "请等待蓝屏百分比完成后再重启，并提供完整 DMP。",
+    "why_required": "损坏的 DMP 只能看到有限信号，无法定位具体泄漏驱动。",
+    "condition": "再次蓝屏",
+    "blocks": [
+      "分析 DMP 中 PTE 耗尽信号"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-051e6eaf66",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-2093c49574"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:system-pte-:f3630414e915:driver_-c57a4a03e3",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "slot": "driver_context",
+    "question": "请使用 WPR 或 PoolMon 采集驱动/池/PTE 分配趋势并保留时间点。",
+    "why_required": "DMP 无法直接给出泄漏驱动，需要故障前持续采样。",
+    "condition": "设备可继续运行且允许采集",
+    "blocks": [
+      "使用 WPR 抓取内核分配趋势; 使用 PoolMon 监控池分配"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-af9a0a0f43",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-d65ee25851"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:system-pte-:f3630414e915:memory_-39ed6e5216",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "slot": "memory_cpu_test",
+    "question": "请补充内存检测、内存频率变更和换内存后的长期结果。",
+    "why_required": "需要区分物理内存问题与 PTE 资源耗尽。",
+    "condition": "可安排停产或观察窗口",
+    "blocks": [
+      "将内存频率改为 2666 并观察; 更换内存条后观察"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-571bcfb8d8",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-0198cdf644",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-bae1b21e27"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:system-pte-:f3630414e915:softwar-4ec0b23833",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:system-pte-:f3630414e915",
+    "slot": "software_version",
+    "question": "请记录每次蓝屏时的软件版本和升级时间。",
+    "why_required": "1.3.7 已出现短时正常后复发，需要区分版本影响。",
+    "condition": "版本切换后观察",
+    "blocks": [
+      "升级至 1.3.7 并观察"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-3457cec470",
+      "evidence:case:expert-review:oc_18765d1df89fdc6b55fd1c3cdc7119ad_202605-6f1db06f73"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:log_package:-ad4ad82e05",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "slot": "log_package",
+    "question": "请提供光源初始化失败时的日志和诊断数据。",
+    "why_required": "需要确认失败是否来自光控板、USB 链路或软件初始化过程。",
+    "condition": "初始化阶段报光源初始化失败",
+    "blocks": [
+      "检查光源初始化失败告警"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-d1f038b300"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:ip_config:-ip-e061e2954e",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "slot": "ip_config",
+    "question": "请补充光控/光源相关 IP、USB 连接和接口上下文。",
+    "why_required": "需要区分网络链路问题和 USB/接口接触问题。",
+    "condition": "初始化阶段报光源初始化失败",
+    "blocks": [
+      "重新拔插光源 USB 接口"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-400c3e3a6b"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::2040d3e58778:-usb-:adbe5e5af1d1:repro_steps:-48a2c4d1b8",
+    "family_id": "family::2040d3e58778",
+    "variant_id": "variant:family::2040d3e58778:-usb-:adbe5e5af1d1",
+    "slot": "repro_steps",
+    "question": "请补充通电测试到恢复正常的完整复现步骤。",
+    "why_required": "需要确认该恢复是否稳定、是否可重复。",
+    "condition": "初始化阶段报光源初始化失败",
+    "blocks": [
+      "恢复后继续观察上线验证"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd_202603-97dcbbec51"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:softw-f0a94bfa7b",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "slot": "software_version",
+    "question": "请提供故障发生时的软件版本。",
+    "why_required": "用于排除版本差异并关联同版本案例。",
+    "condition": "待机黑屏且网卡重置",
+    "blocks": [
+      "查询网卡重置事件"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:log_p-0b57c8b67b",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "slot": "log_package",
+    "question": "请提供故障时间点及驱动重装后的Windows系统日志。",
+    "why_required": "需要确认重置事件、驱动来源和复发情况。",
+    "condition": "系统日志出现网卡重置",
+    "blocks": [
+      "查询网卡重置事件; 观察驱动重装后是否复发"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-19556d8b2e",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:drive-78a7400238",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "slot": "driver_context",
+    "question": "请提供扩展网卡型号、驱动版本及相机/云控链路连接状态。",
+    "why_required": "用于区分驱动问题、扩展网卡硬件问题和单一下游设备问题。",
+    "condition": "2.5G网卡反复重置或多个下游链路同时断连",
+    "blocks": [
+      "检查扩展网卡端口及下游链路状态; 更换扩展网卡"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f3f902f147"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017:envir-d208f066f2",
+    "family_id": "family::5fa5249eb34a",
+    "variant_id": "variant:family::5fa5249eb34a:realtek-2.5g-:42f58eb6f017",
+    "slot": "environment",
+    "question": "请说明日志空档期间设备是否有人操作、处于待机还是离线测试。",
+    "why_required": "需要区分人为关机、无人值守异常和持续运行故障。",
+    "condition": "事件日志存在明显时间空档",
+    "blocks": [
+      "检查日志时间空档"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-f202e68596"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-33bf3eda87",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "slot": "error_message",
+    "question": "请提供蓝屏终止代码和现场照片。",
+    "why_required": "用于区分启动设备不可访问与其他蓝屏类型。",
+    "condition": "Windows启动阶段蓝屏",
+    "blocks": [
+      "检查能否进入BIOS"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-8365bbcb13"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-8bde091644",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "slot": "environment",
+    "question": "请说明是否能进入BIOS，以及BIOS中的硬盘识别和启动顺序。",
+    "why_required": "用于判断基础自检、磁盘识别和引导路径。",
+    "condition": "无法进入Windows但可能进入BIOS",
+    "blocks": [
+      "进入BIOS检查SATA模式"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-c631d4e11e"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b4-f7615436ae",
+    "family_id": "family::77f1b67eafb3",
+    "variant_id": "variant:family::77f1b67eafb3:inaccessible_boot_device-:ec25b43a09d3",
+    "slot": "driver_context",
+    "question": "请提供SATA控制器模式、存储驱动和近期模式变更信息。",
+    "why_required": "用于判断INACCESSIBLE_BOOT_DEVICE是否与控制器模式或存储驱动上下文相关。",
+    "condition": "终止代码为INACCESSIBLE_BOOT_DEVICE",
+    "blocks": [
+      "将SATA从AHCI切换为RAID; 将SATA从RAID还原为AHCI"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-5fe9b08f93",
+      "evidence:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb2:2026-0-109bf5075f"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:soft-1e4cc11cec",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "slot": "software_version",
+    "question": "请提供主程序和Buddy版本。",
+    "why_required": "用于关联相同保存链路和版本行为。",
+    "condition": "程序保存时报Buddy HTTP 500",
+    "blocks": [
+      "查询Buddy保存日志"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-5a9c6f087c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:log_-8d54e92058",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "slot": "log_package",
+    "question": "请提供故障时间点的主程序、Buddy Host和Windows系统日志。",
+    "why_required": "需要区分外部网络、Buddy内部错误和存储路径不可用。",
+    "condition": "程序保存时报Buddy HTTP 500",
+    "blocks": [
+      "查询Buddy保存日志; 检查Windows存储事件和日志空档"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-e8ed211ede",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-841f5e6e63"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:envi-702f8a399f",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "slot": "environment",
+    "question": "请确认D盘和D:\\ACME是否存在，并提供磁盘管理、资源管理器和SMART状态。",
+    "why_required": "Buddy冷存储依赖D盘，需要确认路径不可用的直接原因。",
+    "condition": "日志出现mkdir D:\\ACME失败",
+    "blocks": [
+      "检查D盘是否存在; 检查硬盘SMART状态; 确认D盘物理连接"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-2d174bc932",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:repr-625a613ff4",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "slot": "repro_steps",
+    "question": "请说明故障前是否执行过安全弹出U盘或其他盘符操作。",
+    "why_required": "需要判断内置数据盘是否被当作可移动设备同时弹出。",
+    "condition": "内置D盘从系统中消失",
+    "blocks": [
+      "还原退出U盘操作; 检查SATA热插拔BIOS参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-dcec27d09c",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9:envi-b673c2a6b0",
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "variant_id": "variant:family:buddy-:61428cf6f7f1:d-buddy-:a8b231b39de9",
+    "slot": "environment",
+    "question": "请提供BIOS中数据盘SATA端口及热插拔设置，并记录修改前后值。",
+    "why_required": "需要验证内置盘被识别为可弹出设备的假设并保留可复现操作。",
+    "condition": "内置SATA盘可被弹出或反复消失",
+    "blocks": [
+      "检查SATA热插拔BIOS参数; 调整BIOS参数"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-9edb59b987",
+      "evidence:case:expert-review:oc_8080b5db5b569c81c1209038259dc4dd:2026-0-83ac60c00c"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:c4560bfa8a96:repro_steps:-:75d2bf954352",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "slot": "repro_steps",
+    "question": "请记录断电前运行时长、断电后指示灯、开机键响应及等待后行为。",
+    "why_required": "用于区分系统重启、过温保护和供电接触不稳定。",
+    "condition": "工控机自动断电或重启",
+    "blocks": [
+      "还原断电后无法立即开机现象"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-836354261d"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:c4560bfa8a96:environment:-cpu-42c9ff992b",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "slot": "environment",
+    "question": "请检查电源型号、模组端子、主板/CPU/PCI供电线是否松动及轻推时是否窜动。",
+    "why_required": "需要定位供电链中的接触不良位置。",
+    "condition": "异常断电且等待后可短时恢复",
+    "blocks": [
+      "检查电源及主板CPU供电接口; 轻推主板供电线检查端子窜动"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-e483f5f99a",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:c4560bfa8a96:environment:-:2bdb2abe6046",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "slot": "environment",
+    "question": "请按正确点位测量工控机、机架和钣金到接地桩的电阻并记录全部结果。",
+    "why_required": "接地问题可能并存，错误测量点位会造成错误归因。",
+    "condition": "怀疑静电或接地异常",
+    "blocks": [
+      "检查并复测整机接地"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-2faf5dc8b3",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-1193d1ef8e",
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:variant:family::d618be740693:-:c4560bfa8a96:repro_steps:-:973e530566ca",
+    "family_id": "family::d618be740693",
+    "variant_id": "variant:family::d618be740693:-:c4560bfa8a96",
+    "slot": "repro_steps",
+    "question": "请提供点胶后的长期复发记录，以及是否已更换电源和更换后生产结果。",
+    "why_required": "当前只有临时恢复，尚不能确认耐久修复。",
+    "condition": "使用点胶临时方案",
+    "blocks": [
+      "对松动端子点胶固定; 更换工控机电源"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:case:expert-review:oc_06e4e3db99ea15ed360677e02c0786a4:2026-0-7a668759e8"
+    ],
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "required_info_id": "required-info:81822b484213",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "log_package",
+    "question": "请提供覆盖拍照失败时刻的检测日志和系统日志。",
+    "why_required": "基础日志用于识别相机事件、ACK、网卡过热和网络断链。",
+    "condition": "所有拍照失败案例的基础输入",
+    "blocks": [
+      "确认拍照失败现象并收集故障时段日志",
+      "检查日志中的相机丢事件或事件ACK异常",
+      "检查系统日志中的网卡过热和网络断链"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:18704f976afe",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "software_version",
+    "question": "请提供相机SDK、固件及主程序版本。",
+    "why_required": "用于匹配要求版本并避免使用错误固件工具。",
+    "condition": "进入2.1版本与固件分支",
+    "blocks": [
+      "检查相机SDK版本",
+      "按相机型号匹配工具并升级固件"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:914ff9a4b46c",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "device_model",
+    "question": "请提供相机、网卡和工控机的准确型号。",
+    "why_required": "型号决定固件工具、网卡更换方式和部件兼容性。",
+    "condition": "进入固件或硬件更换分支",
+    "blocks": [
+      "按相机型号匹配工具并升级固件",
+      "确认网卡类型和更换条件",
+      "更换M.2网卡",
+      "更换PCI接口网卡",
+      "更换工控机",
+      "更换相机"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:025375b26503",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "ip_config",
+    "question": "请提供相机和运控IP、网卡高级属性及网络拓扑。",
+    "why_required": "用于核对2.2配置并在更换网卡后正确恢复网络。",
+    "condition": "进入网络配置或网卡更换分支",
+    "blocks": [
+      "检查相机网口参数",
+      "按基线配置相机网口参数",
+      "恢复相机及运控IP并复查网络日志"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:481f42903771",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "driver_context",
+    "question": "请提供网卡与系统驱动版本、设备管理器异常和历史更换记录。",
+    "why_required": "用于区分当前驱动、旧驱动残留和缺失驱动。",
+    "condition": "进入2.4或2.7驱动分支",
+    "blocks": [
+      "检查网卡驱动和系统驱动状态",
+      "使用DriverStoreExplorer清理旧驱动",
+      "手动删除隐藏或异常设备驱动",
+      "安装缺失驱动并联系支持"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:fcbc4055ce53",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "environment",
+    "question": "请提供网线走线、磁环点胶、设备及机箱接地照片。",
+    "why_required": "用于判断干扰、机械损伤和接地异常分支。",
+    "condition": "进入2.5或2.6现场检查分支",
+    "blocks": [
+      "检查磁环和相机端点胶",
+      "检查网线弯折走线和表面损伤",
+      "检查设备地线是否接工厂大地",
+      "检查工控机机箱接地"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:f748ac0b79e0",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "other",
+    "question": "请确认设备是否为双轨大板及故障出现时的负载场景。",
+    "why_required": "CPU绑核仅适用于文档限定的双轨大板场景。",
+    "condition": "准备进入2.7绑核分支",
+    "blocks": [
+      "确认是否为双轨大板特定场景",
+      "临时设置主程序和运控进程绑核"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:5b57876507a3",
+    "family_id": "family:5274d74078aa",
+    "variant_id": "variant:505989010b74",
+    "slot": "production_constraint",
+    "question": "请确认允许的停机窗口、备件和更换审批状态。",
+    "why_required": "网卡、网线、工控机和相机更换均需停机及人工批准。",
+    "condition": "准备执行高成本或破坏性更换",
+    "blocks": [
+      "更换M.2网卡",
+      "更换PCI接口网卡",
+      "更换相机网线并按标准重新走线",
+      "更换工控机",
+      "更换相机"
+    ],
+    "priority": "high",
+    "evidence_ids": [
+      "evidence:a1fe0e9fd79a"
+    ]
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-f4eaa19c6e",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请提供 CPU 核心温度、CPU 封装温度和测试时温度曲线。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-d8bf443262",
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-fc085b995f"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:sample_ima-2c0dbad86b",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "sample_image",
+    "question": "请提供 OCCT 或 AIDA64 的监控结果截图。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-d8bf443262"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-bafc62c392",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请说明是否出现降频、卡顿、自动重启以及触发时机。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-fc085b995f"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-6ac345c76f",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请提供风扇转速、散热器固定情况和积尘状态。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-86525f1785"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-430cbce676",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请提供当前 BIOS 风扇策略或风扇曲线配置。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-d403020b14"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-6ff2d39ca4",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请说明主板 CPU 供电插头状态以及是否做过替换测试。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-d403020b14",
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-ef767de200",
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-ea3a674f92"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "required_info_id": "required-info:variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4:environmen-64da84a140",
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "variant_id": "variant:family:cpu-:5be0bd0bc055:cpu-:bfe19361a6d4",
+    "slot": "environment",
+    "question": "请提供散热器安装状态和硅脂处理结果。",
+    "why_required": "该信息用于缩小 CPU温度异常升高 的诊断范围。",
+    "condition": "",
+    "blocks": [
+      "CPU温度异常升高"
+    ],
+    "priority": "medium",
+    "evidence_ids": [
+      "evidence:knowledge-document:data-raw-aoi_debug_agent_sources-cpu-.docx-ef767de200"
+    ],
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  }
+]

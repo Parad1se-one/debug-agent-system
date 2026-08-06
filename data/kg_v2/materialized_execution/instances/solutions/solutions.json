@@ -1,0 +1,38 @@
+[
+  {
+    "type": "Solution",
+    "solution_id": "solv2:outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb-489c4edbe9",
+    "content": "还原AHCI后系统正常启动并恢复生产。",
+    "method": "change",
+    "evidence_level": "case_chat_evidence",
+    "source": "kg_v2",
+    "source_title": "工控机蓝屏"
+  },
+  {
+    "type": "Solution",
+    "solution_id": "solv2:outcome:case:expert-review:oc_c9806b667c0f9ea243b89461d77abbb-bce1aff040",
+    "content": "更换扩展网卡后设备恢复生产。",
+    "method": "change",
+    "evidence_level": "case_chat_evidence",
+    "source": "kg_v2",
+    "source_title": "网络连接异常"
+  },
+  {
+    "type": "Solution",
+    "solution_id": "solv2:outcome:case:expert-review:oc_884648a71b6a27acd9800b11715ba16-9b8471cca7",
+    "content": "使用最近诊断日志中的配置后，主程序可以正常进入。",
+    "method": "change",
+    "evidence_level": "case_chat_evidence",
+    "source": "kg_v2",
+    "source_title": "用户配置加载失败"
+  },
+  {
+    "type": "Solution",
+    "solution_id": "solv2:outcome:case:expert-review:oc_8080b5db5b569c81c1209038259dc4d-31fb643a4d",
+    "content": "调整BIOS参数后，次日设备架入线体并正常生产。",
+    "method": "inspect",
+    "evidence_level": "case_chat_evidence",
+    "source": "kg_v2",
+    "source_title": "Buddy问题"
+  }
+]

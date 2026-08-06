@@ -1,0 +1,24 @@
+{
+  "read_runtime_v4": {
+    "enabled": true,
+    "shadow_mode": true,
+    "planner": "deterministic_investigation",
+    "model": "gpt-5.4",
+    "reasoning_effort": "medium",
+    "timeout_seconds": 600,
+    "max_tool_rounds": 8,
+    "max_tool_calls": 48,
+    "fail_open_to_v3": true,
+    "providers": {
+      "baseline": true,
+      "kg_sag": true,
+      "raw": true,
+      "incident": true
+    },
+    "budgets": {
+      "provider_calls": 12,
+      "evidence_records": 512,
+      "planner_rounds": 8
+    }
+  }
+}

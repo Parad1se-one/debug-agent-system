@@ -1,0 +1,12 @@
+schema_version: debug_agent_system.config.v1
+kg_root: data/kg_v2/materialized_execution
+session_store: data/sessions_v2
+knowledge:
+  store: json
+thresholds:
+  graph_match_min_score: 4.0
+  low_confidence: 0.35
+  ask_info_max_required_items: 3
+runtime:
+  max_turns: 12
+  destructive_action_requires_human_confirm: true

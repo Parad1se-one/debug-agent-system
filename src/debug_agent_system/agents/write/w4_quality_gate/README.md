@@ -1,0 +1,31 @@
+# W4 Quality Gate Agent
+
+- id: `W4`
+- type: Verifier
+- owner: `src/debug_agent_system/agents/write/w4_quality_gate`
+- responsibility: score candidate confidence, clarity, relevance, and schema validity before queue routing.
+- entrypoints:
+  - `QualityGateAgent.score(candidate)`.
+  - `score_v2_bundle(bundle)`.
+  - `score_required_info(required_info_candidate)`.
+- inputs:
+  - W2/W3 candidate dict with confidence, nodes, edges, schema flags, evidence ids/source offsets, episode completeness, label/symptom/actions/solution.
+  - Required-info candidate with slot/question/why/condition/target/evidence/tool roles.
+  - W3-normalized KG v2 bundle with source strategy, complete objects/relations, and evidence pack.
+- outputs:
+  - Gate dict with `confidence`, `clarity`, `relevance`, `schema_validity`, `weighted_sum`, `threshold`, `passed`, `issues`, `observability`.
+  - Required-info gate has analogous specificity/relevance/evidence scoring and issues.
+  - V2 bundle gate checks every family/variant/action/required-info item, reports object-level issues, and rejects non-fault document output modes from the fault graph path.
+- failure_modes:
+  - Low confidence -> issue `low_confidence`.
+  - Missing evidence -> hard fail `missing_evidence`.
+  - Missing check and solution -> hard fail `missing_check_or_solution`.
+  - Noise/project-only chat -> review/noise fail.
+  - Schema invalid -> hard fail with schema issues.
+  - Missing evidence pack, noncanonical family, weak/non-atomic objects, generic required-info, or procedure/policy-only document -> v2 hard fail.
+- observability:
+  - `observability.agent_id=W4`, candidate id, episode completeness or v2 item-level issue list.
+- non_goals:
+  - Does not enqueue; W6 owns queue writes.
+  - Does not mutate KG.
+  - Does not override human approval.

@@ -1,0 +1,44 @@
+{
+  "schema_version": "debug_agent_system.kg_v2_read_eval.validation.v1",
+  "dataset_id": "kg_v2-read-quality-v1",
+  "status": "passed",
+  "issue_count": 0,
+  "issues": [],
+  "coverage": {
+    "case_count": 60,
+    "track_counts": {
+      "gold_trace_reasoning": 10,
+      "runtime_replay": 50
+    },
+    "split_counts": {
+      "held_out_test": 5,
+      "regression": 50,
+      "validation": 5
+    },
+    "difficulty_counts": {
+      "easy": 8,
+      "expert": 10,
+      "hard": 20,
+      "medium": 22
+    },
+    "reasoning_mode_counts": {
+      "multi_hop_branch": 12,
+      "multi_hop_linear": 19,
+      "multi_trace_disambiguation": 10,
+      "single_step": 19
+    },
+    "task_type_counts": {
+      "ask_info_gate": 1,
+      "branch_transition": 8,
+      "first_action": 19,
+      "resolution_gate": 2,
+      "safety_gate": 1,
+      "trace_split_and_outcome_reasoning": 10,
+      "variant_retrieval": 19
+    },
+    "runtime_family_count": 13,
+    "runtime_variant_count": 20,
+    "gold_source_case_count": 10,
+    "with_negative_control": 14
+  }
+}

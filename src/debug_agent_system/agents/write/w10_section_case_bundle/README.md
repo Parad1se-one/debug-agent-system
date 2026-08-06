@@ -1,0 +1,24 @@
+# W10 Section Case Bundle Agent
+
+- id: `W10`
+- type: Worker
+- owner: `src/debug_agent_system/agents/write/w10_section_case_bundle`
+- responsibility: convert W9 structured sections and section cases into schema-valid KG v2 document/support drafts without inventing historical outcomes.
+- entrypoint: `SectionCaseBundleAgent.build_bundle(payload)`.
+- inputs:
+  - W9 `structured_sections`, `section_cases`, `chunk_manifest`, document strategy and source path.
+- outputs:
+  - `W10SectionCaseBundleDraft` containing document/section/procedure objects and optional fault-support mappings.
+  - A review-only chunk manifest whose source section ids are bound to draft `KnowledgeSection` ids.
+  - Every output remains a proposal and must continue through W3, W4 and W6.
+- failure_modes:
+  - Unknown or weak document strategy -> document/evidence layer or review-only output.
+  - Invalid object/relation shape -> `schema_valid=false` with explicit issues.
+- observability:
+  - Preserve source document path, strategy, bundle id and per-object counts.
+  - Preserve the source manifest id/hash and report bound/unbound chunk coverage.
+- non_goals:
+  - No direct KG write.
+  - No direct SAG write; only W5-approved graph changes trigger the batch-level atomic rebuild.
+  - No actual `DiagnosticTrace` or `ActionOutcome` from manuals without observed case evidence.
+  - No SOP incremental intake; curated SOP uses its separate build boundary.

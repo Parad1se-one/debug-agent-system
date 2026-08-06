@@ -1,0 +1,96 @@
+[
+  {
+    "case_id": "SAG_REG_BOOT_BLUE_SCREEN_DISPLAY_LOOP_001",
+    "query": "客户开机设备一直停留开机页面，一会显示一会不显示的循环(目前问题），之前是设备显示修复的蓝屏，已经做过操作：断电下长按主机开机按钮给工控机放电",
+    "expected_top_error_ids": [
+      "err:industrial-pc-blue-screen"
+    ],
+    "trace_required": true,
+    "variants": [
+      {
+        "name": "interactive_branch",
+        "interactive": true,
+        "expected_statuses": [
+          "ask_info"
+        ],
+        "expected_current_check_ids": [
+          "check:industrial-pc-blue-screen-step2"
+        ],
+        "required_branch_targets": [
+          "check:industrial-pc-blue-screen-step2boot"
+        ]
+      },
+      {
+        "name": "non_interactive_first_step",
+        "interactive": false,
+        "expected_statuses": [
+          "step"
+        ],
+        "expected_current_check_ids": [
+          "check:industrial-pc-blue-screen-step2boot"
+        ],
+        "forbidden_current_check_ids": [
+          "check:industrial-pc-no-boot-step2a"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "SAG_REG_CAD_IMPORT_001",
+    "query": "AOI软件导入客户CAD后图形特别大，看不到板子，疑似CAD导入解析失败，怎么处理？",
+    "expected_top_error_ids": [
+      "err:cad-import-failure"
+    ],
+    "trace_required": true,
+    "variants": [
+      {
+        "name": "non_interactive_cad",
+        "interactive": false,
+        "expected_statuses": [
+          "step"
+        ],
+        "required_presented_check_ids": [
+          "check:cad-import-failure-step1"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "SAG_REG_NO_POWER_001",
+    "query": "工控机完全无通电反应，风扇不转，开机键指示灯不亮，键盘灯和鼠标灯也不亮，应该怎么排查？",
+    "expected_top_error_ids": [
+      "err:industrial-pc-no-boot"
+    ],
+    "trace_required": true,
+    "variants": [
+      {
+        "name": "non_interactive_no_power",
+        "interactive": false,
+        "expected_statuses": [
+          "step"
+        ],
+        "expected_current_check_ids": [
+          "check:industrial-pc-no-boot-step2a"
+        ]
+      }
+    ]
+  },
+  {
+    "case_id": "SAG_REG_OUT_OF_DOMAIN_001",
+    "query": "打印机卡纸怎么办？",
+    "trace_required": true,
+    "variants": [
+      {
+        "name": "generic_out_of_domain",
+        "interactive": false,
+        "expected_statuses": [
+          "ask_info"
+        ],
+        "forbidden_statuses": [
+          "step",
+          "resolved"
+        ]
+      }
+    ]
+  }
+]

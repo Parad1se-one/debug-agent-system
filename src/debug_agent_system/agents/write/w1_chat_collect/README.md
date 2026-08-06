@@ -1,0 +1,58 @@
+# W1 Chat Collect Agent
+
+- id: `W1`
+- type: Worker
+- owner: `src/debug_agent_system/agents/write/w1_chat_collect`
+- responsibility: normalize chat/archive messages, split fault episodes, and extract evidence metadata for write-side enrichment; never writes KG.
+- entrypoints:
+  - `collect(messages)`
+  - `normalize_messages(messages)`
+  - `aggregate_threads(messages)`
+  - `split_fault_episodes(thread_id, messages)`
+  - `import_xing_upload(import_root, limit=0, hits_only=False, out_dir=None)`
+  - `import_text_history(import_root, limit=0, out_dir=None)`
+  - `import_xing_with_relations(xing_import_root, relation_import_root, ...)`
+- inputs:
+  - Raw message dicts with `message_id`/`id`, `thread_id`/`segment_id`/`chat_id`, `sender`, `content`/`text`, `attachments`, and raw source metadata.
+  - Xing upload root containing `_MANIFEST/xing_messages.csv`, optional `xing_resource_files.csv`, and optional `xing_segments.csv`.
+  - Text-only Feishu history root containing `all_text_messages.jsonl` or `messages_by_chat/*.jsonl`.
+  - Optional relation-enriched text history containing `root_id` / `parent_id`; this can enrich old Xing messages while retaining downloaded attachment evidence.
+  - Optional limits and hit filters for bounded local imports.
+- outputs:
+  - Normalized messages containing `message_id`, `thread_id`, `chat_id`, sender object, `text`, `mentions`, `attachments`, `links`, and `raw`.
+  - Thread summaries containing participants, time bounds, message counts, evidence ids, extracted fields, and episode ids.
+  - Fault episodes containing `episode_id`, `completeness`, fault/diagnostic/resolution/noise messages, attachments, source offsets, and extracted artifacts.
+  - `message_reference_graph.json` with `reply_to` and `in_thread` edges plus resolved/unresolved target counts.
+  - Relation graph also exposes auditable inferred `context_continuation` edges for preceding same-case descriptions; these are never presented as native Feishu reply edges.
+  - Text-only attribution under `extracted.attribution`:
+    - `reporter_candidates`
+    - `owner_candidates`
+    - `owner_assignments`
+    - `responsibility_signals`
+    - `classification_hypotheses`
+  - Resource evidence under `extracted.tool_evidence` / `extracted.artifacts.tool_evidence`:
+    - attachment metadata and bounded text hints via `TOOL-ATTACHMENT`
+    - log package manifest/text hints via `TOOL-LOG-PACKAGE`
+    - `.proj` bounded preview/manifest hints via `TOOL-PROJ`
+    - Jira URL/issue-key metadata via `TOOL-JIRA`
+    - image/document safe metadata via `TOOL-IMAGE` / `TOOL-DOCUMENT`
+  - Optional run files under `out_dir`: normalized messages, thread summaries, episodes, and run manifest.
+- failure_modes:
+  - Missing Xing manifest directory -> explicit `FileNotFoundError`.
+  - Missing text-history JSONL source -> explicit `FileNotFoundError`.
+  - Empty/noisy thread -> episode `completeness=noise|partial`; downstream W4/W6 decide whether it is usable.
+  - Attachment/document/image/Jira/proj/log parse failures are captured as metadata and do not block collection.
+- observability:
+  - `run_manifest` records source path, message/thread/episode counts, attachment counts, hit counts, and message type distribution.
+  - Text-only imports also record `chat_count`, `segment_count`, and attribution counts.
+  - Evidence ids and source offsets preserve traceability back to raw chat rows.
+- non_goals:
+  - No KG mutation.
+  - No schema-valid KG node creation; W2 owns extraction and schema normalization.
+  - No LLM summarization in the current deterministic implementation.
+  - No unsafe resource processing: no archive extraction to disk, no script/proj execution, no Jira network fetch, no OCR; screenshots only get header metadata via `TOOL-IMAGE`; PDF/Office evidence only gets bounded metadata/text hints via `TOOL-DOCUMENT`.
+- strategy_validity:
+  - Must preserve raw evidence and deterministic ids so W2-W6 outputs remain auditable and reviewable.
+  - Relation-aware merge deduplicates by `message_id`, then conservatively falls back to exact `chat_id + create_time + normalized text`.
+  - Reference components are hard session constraints: they join long reply chains across quiet gaps and split parallel reply chains inside the same temporal window.
+  - Pre-root context is recovered conservatively from same-chat time proximity, shared fault terms, continuation language, participants, and media evidence. Daily/field reports are hard anchors and do not merge upward through their platform root.

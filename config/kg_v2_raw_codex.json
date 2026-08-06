@@ -1,0 +1,15 @@
+{
+  "schema_version": "debug_agent_system.kg_raw_codex_config.v3",
+  "runtime": "responses_api",
+  "model": "gpt-5.4",
+  "cli_model": "gpt-5.3-codex-spark",
+  "codex_binary": "codex",
+  "cli_reasoning_effort": "medium",
+  "credential_source": ".env.local",
+  "transport": "non_streaming",
+  "reasoning_effort": "medium",
+  "max_tool_rounds": 24,
+  "max_tool_calls": 80,
+  "timeout_seconds": 600,
+  "verification_attempts": 2
+}

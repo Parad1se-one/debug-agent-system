@@ -1,0 +1,26 @@
+# D1 Diagnostic Feedback Agent
+
+- id: `D1`
+- type: Loop Worker
+- owner: `src/debug_agent_system/agents/loop/diagnostic_feedback`
+- responsibility: convert read-side diagnostic transcripts/session traces into write-side review candidates.
+- entrypoint: `DiagnosticFeedbackAgent.build_candidate(transcript)`.
+- canonical ingress: `WriteSidePipeline.run_diagnostic_feedback(transcript)` and CLI `ingest-diagnostic-feedback`.
+- inputs:
+  - `transcript: dict` from eval/runtime containing `session_id`, `query`, turns, final status, checks presented, user feedback.
+  - Should include `top_error_id`, `which_check_solved`, `check_results`, `ruled_out` when available.
+- outputs:
+  - `{"type":"DiagnosticFeedback", "status":"pending_review", "transcript": ...}`.
+  - Output is review material only; it is not a KG patch.
+  - Canonical ingress wraps it as `source_type=diagnostic_feedback`, `knowledge_kind=evidence_only`; W4 routes it to W6 `v2_typed_candidates`.
+- failure_modes:
+  - Sparse transcript -> still pending_review with original transcript; W6/human decides usefulness.
+  - No solved check -> candidate represents unresolved evidence, not positive reinforcement.
+- observability:
+  - Preserve session id and top error in transcript.
+  - Downstream W6 queue status is the durable audit signal.
+- non_goals:
+  - No automatic occurrence_count increment.
+  - No automatic edge weight update.
+  - No direct KG write.
+  - No bypass of W4/W6 and no execution materialization.

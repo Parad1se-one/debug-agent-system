@@ -1,0 +1,898 @@
+[
+  {
+    "family_id": "family:61428cf6f7f1",
+    "label": "Buddy问题",
+    "summary": "附表1 中由 Buddy 负责人处理的主程序专题问题。",
+    "category": "系统与软件异常",
+    "subsystem": "Buddy/模板管理",
+    "scenario": "主程序专题",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师C",
+    "owner_domain": "附表1:Buddy问题"
+  },
+  {
+    "family_id": "family:b231d1b8a380",
+    "label": "主程序软件问题",
+    "summary": "附表1 中由主程序软件负责人处理的主程序专题问题。",
+    "category": "系统与软件异常",
+    "subsystem": "主程序/配置链路",
+    "scenario": "主程序专题",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师庚",
+    "owner_domain": "附表1:主程序软件问题"
+  },
+  {
+    "family_id": "family:3daaaf2e50b5",
+    "label": "复判站软件问题",
+    "summary": "附表1 中由复判站软件负责人处理的主程序专题问题。",
+    "category": "系统与软件异常",
+    "subsystem": "复判站/软件",
+    "scenario": "主程序专题",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师A",
+    "owner_domain": "附表1:复判站软件问题"
+  },
+  {
+    "family_id": "family:70a64345e97b",
+    "label": "模型优化问题",
+    "summary": "附表1 中由模型优化负责人处理的主程序专题问题。",
+    "category": "算法与程序调优",
+    "subsystem": "检测框/模型输出",
+    "scenario": "编程与检测框验证阶段",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师丙",
+    "owner_domain": "附表1:模型优化问题"
+  },
+  {
+    "family_id": "family:bc03a0555f1c",
+    "label": "硬件问题",
+    "summary": "附表1 中由硬件负责人处理的主程序专题问题。",
+    "category": "硬件与运控",
+    "subsystem": "光源/光控/ARM连接",
+    "scenario": "初始化阶段",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师甲",
+    "owner_domain": "附表1:硬件问题"
+  },
+  {
+    "family_id": "family:9a6b099c3c34",
+    "label": "软件使用及调试问题",
+    "summary": "附表1 中由软件使用及调试负责人处理的主程序专题问题。",
+    "category": "算法与程序调优",
+    "subsystem": "软件使用/调试",
+    "scenario": "主程序专题",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师丁",
+    "owner_domain": "附表1:软件使用及调试问题"
+  },
+  {
+    "family_id": "family:1b7e62026824",
+    "label": "运控问题",
+    "summary": "附表1 中由运控负责人处理的主程序专题问题。",
+    "category": "硬件与运控",
+    "subsystem": "运控/启动链路",
+    "scenario": "主程序专题",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师丑",
+    "owner_domain": "附表1:运控问题"
+  },
+  {
+    "family_id": "family:c2c7f1d1883b",
+    "label": "3D成像问题",
+    "summary": "附表1 中由3D成像负责人处理的相机专题问题。",
+    "category": "硬件与运控",
+    "subsystem": "3D相机/CXP链路",
+    "scenario": "拍摄过程中失败/卡顿",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师I",
+    "owner_domain": "附表1:3D成像问题"
+  },
+  {
+    "family_id": "family:684bba81b665",
+    "label": "工控机/复判站/编程站及操作系统问题",
+    "summary": "附表1 中由工控机与操作系统负责人处理的专题问题。",
+    "category": "系统与软件异常",
+    "subsystem": "Windows核心驱动/显卡驱动",
+    "scenario": "拍摄过程中失败/卡顿",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师乙",
+    "owner_domain": "附表1:工控机/复判站/编程站及操作系统问题"
+  },
+  {
+    "family_id": "family:fba7eb4346e5",
+    "label": "标定问题",
+    "summary": "附表1 中由标定负责人处理的相机专题问题。",
+    "category": "算法与程序调优",
+    "subsystem": "拼图/角度标定",
+    "scenario": "拍摄与拼图阶段",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师F",
+    "owner_domain": "附表1:标定问题"
+  },
+  {
+    "family_id": "family:faaa854ab003",
+    "label": "外部对接设备",
+    "summary": "附表1 中由外部对接设备负责人处理的上下道连接专题问题。",
+    "category": "硬件与运控",
+    "subsystem": "扫码枪/联网/外部触发",
+    "scenario": "进板前扫码阶段",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师A",
+    "owner_domain": "附表1:外部对接设备"
+  },
+  {
+    "family_id": "family:7240aaab5dcd",
+    "label": "SPC问题",
+    "summary": "附表1 中由SPC负责人处理的SPC专题问题。",
+    "category": "系统与软件异常",
+    "subsystem": "SPC/数据采集/导出",
+    "scenario": "数据导出阶段",
+    "keywords": [],
+    "source_kind": "sop",
+    "escalation_target": "工程师J",
+    "owner_domain": "附表1:SPC问题"
+  },
+  {
+    "family_id": "family:cpu-:5be0bd0bc055",
+    "label": "CPU温度异常",
+    "summary": "CPU温度异常",
+    "category": "硬件与运控",
+    "subsystem": "工控机/CPU散热",
+    "scenario": "",
+    "keywords": [
+      "CPU温度异常"
+    ],
+    "source_kind": "raw_doc",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/CPU温度过高问题处理指南.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family::ae3aa27ea945",
+    "label": "工控机无法开机",
+    "summary": "工控机无法开机",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/启动链路",
+    "scenario": "",
+    "keywords": [
+      "工控机无法开机"
+    ],
+    "source_kind": "raw_doc",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/工控机不开机手册.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family::2de959420b48",
+    "label": "工控机黑屏无显示",
+    "summary": "工控机黑屏无显示",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/显示链路",
+    "scenario": "",
+    "keywords": [
+      "工控机黑屏无显示"
+    ],
+    "source_kind": "raw_doc",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/工控机不开机手册.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family::d618be740693",
+    "label": "工控机异常重启",
+    "summary": "设备运行中无明确蓝屏界面，直接自动重启。",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/系统运行稳定性",
+    "scenario": "老版本模组电源输出线接口松动导致供电中断",
+    "keywords": [
+      "工控机异常重启",
+      "老版本模组电源输出线接口松动导致供电中断",
+      "客户052030T频繁自动关机",
+      "清理内存异物",
+      "重插后部线缆和内存后",
+      "设备仍不能稳定进入系统"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/工控机不开机手册.docx",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family::77f1b67eafb3",
+    "label": "工控机蓝屏",
+    "summary": "系统运行中出现蓝屏或等效停止界面。",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/Windows 内核",
+    "scenario": "INACCESSIBLE_BOOT_DEVICE启动蓝屏",
+    "keywords": [
+      "工控机蓝屏",
+      "INACCESSIBLE",
+      "BOOT",
+      "DEVICE启动蓝屏",
+      "T81蓝屏报错INACCESSIBLE",
+      "DEVICE",
+      "无法进入系统"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/工控机异常(蓝屏&重启&死机）手册.docx",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family::8455368e2812",
+    "label": "工控机死机",
+    "summary": "工控机死机",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/系统运行稳定性",
+    "scenario": "",
+    "keywords": [
+      "工控机死机"
+    ],
+    "source_kind": "raw_doc",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/工控机异常(蓝屏&重启&死机）手册.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family::5fa5249eb34a",
+    "label": "网络连接异常",
+    "summary": "网络连接异常",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/网络链路",
+    "scenario": "Realtek 2.5G扩展网卡反复重置并导致黑屏/断连",
+    "keywords": [
+      "网络连接异常",
+      "Realtek",
+      "5G扩展网卡反复重置并导致黑屏",
+      "断连",
+      "T81待机黑屏",
+      "查询系统日志有大量网卡重置报错"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/无法上网_显示_无Internet_.docx",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family::0c1b03524dac",
+    "label": "键盘输入异常",
+    "summary": "键盘输入异常",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/USB外设",
+    "scenario": "",
+    "keywords": [
+      "键盘输入异常"
+    ],
+    "source_kind": "raw_doc",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/键盘随机按键 _ 无响应.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family::efc23af9fc66",
+    "label": "用户配置加载失败",
+    "summary": "主程序或复判站初始化阶段加载用户配置失败。",
+    "category": "系统与软件异常",
+    "subsystem": "主程序配置/复判站配置",
+    "scenario": "更换工控机后user.cfg.toml为空或损坏导致配置加载失败",
+    "keywords": [
+      "用户配置加载失败",
+      "更换工控机后",
+      "user",
+      "cfg",
+      "toml",
+      "为空导致加载用户配置失败",
+      "控机后主程序报警加载用户配置失败",
+      "toml为空",
+      "现场存在两个备份文件"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family::2040d3e58778",
+    "label": "光源初始化失败",
+    "summary": "软件启动或通电测试阶段，光源模块初始化失败。",
+    "category": "硬件与运控",
+    "subsystem": "光源/光控链路",
+    "scenario": "离线安装通电测试后光源初始化失败，USB 重新拔插后恢复",
+    "keywords": [
+      "光源初始化失败",
+      "离线安装通电测试后光源初始化失败",
+      "USB",
+      "重新拔插后恢复",
+      "离线安装后通电测试时光源初始化失败",
+      "重新拔插",
+      "接口后恢复正常"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family:buddy-:61428cf6f7f1",
+    "label": "Buddy问题",
+    "summary": "Buddy问题",
+    "category": "系统与软件异常",
+    "subsystem": "Buddy/模板与冷存储",
+    "scenario": "D盘消失导致Buddy冷存储写入失败",
+    "keywords": [
+      "Buddy问题",
+      "D盘消失导致Buddy冷存储写入失败",
+      "约10点做完程序后保存报错",
+      "保存数据至buddy失败",
+      "网络请求失败",
+      "HTTP",
+      "status",
+      "500",
+      "导致只能重新编程",
+      "软件版本1"
+    ],
+    "source_kind": "case",
+    "escalation_target": "",
+    "_admission_target": "fault_execution",
+    "execution_materialize_allowed": true
+  },
+  {
+    "family_id": "family:5274d74078aa",
+    "label": "相机拍摄失败",
+    "summary": "检测界面拍照失败时，对相机、采集网络、驱动和主机链路进行分支排查。",
+    "category": "硬件与运控",
+    "subsystem": "相机/采集链路",
+    "scenario": "检测阶段采图失败",
+    "keywords": [],
+    "source_kind": "hybrid",
+    "escalation_target": "工程师甲",
+    "owner_domain": "硬件与运控/相机采集"
+  },
+  {
+    "family_id": "family:buddy-:d15431d307f6",
+    "label": "Buddy 模板缺失",
+    "summary": "Buddy 模板缺失导致相关流程无法继续。",
+    "category": "系统与软件异常",
+    "subsystem": "模板/Buddy",
+    "scenario": "",
+    "keywords": [
+      "Buddy 模板缺失"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:2d-:2b0537d84e32",
+    "label": "2D成像一致性异常",
+    "summary": "2D成像一致性异常",
+    "category": "硬件与运控",
+    "subsystem": "2D相机/光学链路",
+    "scenario": "",
+    "keywords": [
+      "2D成像一致性异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:a511a6f8dfb1",
+    "label": "复判站加载板卡异常",
+    "summary": "复判站加载板卡动作异常或失败。",
+    "category": "系统与软件异常",
+    "subsystem": "复判/板卡加载",
+    "scenario": "",
+    "keywords": [
+      "复判站加载板卡异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:7c1e30456fcd",
+    "label": "图像拼接错位",
+    "summary": "图像拼接错位",
+    "category": "系统与软件异常",
+    "subsystem": "相机/拼图链路",
+    "scenario": "",
+    "keywords": [
+      "图像拼接错位"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:84d11a829b33",
+    "label": "程序板卡加载失败",
+    "summary": "程序、板卡或跨设备导入加载失败。",
+    "category": "硬件与运控",
+    "subsystem": "程序/板卡加载",
+    "scenario": "",
+    "keywords": [
+      "程序板卡加载失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:cad-:6352d73d48bf",
+    "label": "CAD 角度不一致",
+    "summary": "CAD 导入后角度或方向与期望不一致。",
+    "category": "系统与软件异常",
+    "subsystem": "CAD/程序导入",
+    "scenario": "",
+    "keywords": [
+      "CAD 角度不一致"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:f90776bba1e0",
+    "label": "主程序无法打开",
+    "summary": "主程序启动失败或无法正常打开。",
+    "category": "系统与软件异常",
+    "subsystem": "主程序/启动链路",
+    "scenario": "",
+    "keywords": [
+      "主程序无法打开"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:cad-:49a762b3676b",
+    "label": "CAD 导入失败",
+    "summary": "CAD 文件导入 AOI 软件时解析失败或导入结果异常。",
+    "category": "硬件与运控",
+    "subsystem": "CAD/程序导入",
+    "scenario": "",
+    "keywords": [
+      "CAD 导入失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:mark-:1d9040816374",
+    "label": "Mark 点对齐失败",
+    "summary": "Mark 点识别或定位异常导致后续检测位置偏移。",
+    "category": "系统与软件异常",
+    "subsystem": "Mark/定位对齐",
+    "scenario": "",
+    "keywords": [
+      "Mark 点对齐失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:33100c12fa40",
+    "label": "光源异常",
+    "summary": "光源硬件或亮度表现异常。",
+    "category": "系统与软件异常",
+    "subsystem": "光源/硬件链路",
+    "scenario": "",
+    "keywords": [
+      "光源异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:927318bc8b11",
+    "label": "相机初始化失败",
+    "summary": "相机在初始化阶段无法完成枚举、连接或上电。",
+    "category": "硬件与运控",
+    "subsystem": "相机/初始化链路",
+    "scenario": "",
+    "keywords": [
+      "相机初始化失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:daa4ea023a66",
+    "label": "运控卡初始化异常",
+    "summary": "运控卡初始化失败或异常。",
+    "category": "硬件与运控",
+    "subsystem": "运控卡/初始化链路",
+    "scenario": "",
+    "keywords": [
+      "运控卡初始化异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:ct-:5f7ba751d7df",
+    "label": "CT 时间异常增加",
+    "summary": "检测或复判流程导致节拍时间明显增加。",
+    "category": "硬件与运控",
+    "subsystem": "节拍/CT",
+    "scenario": "",
+    "keywords": [
+      "CT 时间异常增加"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:cuda-:0ac1352623df",
+    "label": "CUDA 计算设备不可用",
+    "summary": "显卡/CUDA 计算设备不可用或资源异常。",
+    "category": "系统与软件异常",
+    "subsystem": "显卡/CUDA链路",
+    "scenario": "",
+    "keywords": [
+      "CUDA 计算设备不可用"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:722fa3bd621d",
+    "label": "相机成像模糊",
+    "summary": "相机成像模糊",
+    "category": "硬件与运控",
+    "subsystem": "相机/光学成像",
+    "scenario": "",
+    "keywords": [
+      "相机成像模糊"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:748771b2cb0d",
+    "label": "扫码枪异常",
+    "summary": "扫码枪识别或连接异常。",
+    "category": "系统与软件异常",
+    "subsystem": "扫码枪/外设链路",
+    "scenario": "",
+    "keywords": [
+      "扫码枪异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:3b4324be61af",
+    "label": "皮带运行异常",
+    "summary": "皮带运行异常影响输送。",
+    "category": "系统与软件异常",
+    "subsystem": "轨道/皮带机构",
+    "scenario": "",
+    "keywords": [
+      "皮带运行异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:0b838d745883",
+    "label": "轨道宽度无法调节",
+    "summary": "轨道宽度调节失败或异常。",
+    "category": "系统与软件异常",
+    "subsystem": "轨道/宽度调节",
+    "scenario": "",
+    "keywords": [
+      "轨道宽度无法调节"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:7a45649e5b6f",
+    "label": "进板失败",
+    "summary": "板卡进入设备流程失败。",
+    "category": "硬件与运控",
+    "subsystem": "进出板/轨道链路",
+    "scenario": "",
+    "keywords": [
+      "进板失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:204bff5a7f41",
+    "label": "挡块异常",
+    "summary": "挡块机构动作异常。",
+    "category": "系统与软件异常",
+    "subsystem": "轨道/挡块机构",
+    "scenario": "",
+    "keywords": [
+      "挡块异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:3c67bc5b5882",
+    "label": "出板失败",
+    "summary": "板卡出板流程失败。",
+    "category": "硬件与运控",
+    "subsystem": "进出板/轨道链路",
+    "scenario": "",
+    "keywords": [
+      "出板失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:acd11e269d00",
+    "label": "气压异常",
+    "summary": "气路或气压状态异常。",
+    "category": "系统与软件异常",
+    "subsystem": "气路/气压链路",
+    "scenario": "",
+    "keywords": [
+      "气压异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:i-o-:6a46a71c50d0",
+    "label": "磁盘 I/O 异常",
+    "summary": "磁盘空间、页面文件或 I/O 异常影响程序运行。",
+    "category": "系统与软件异常",
+    "subsystem": "磁盘/存储链路",
+    "scenario": "",
+    "keywords": [
+      "磁盘 I/O 异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:d618be740693",
+    "label": "工控机异常重启",
+    "summary": "设备运行中无明确蓝屏界面，直接自动重启。",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/系统运行稳定性",
+    "scenario": "",
+    "keywords": [
+      "工控机异常重启"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:bdf823afb64b",
+    "label": "软件卡死无响应",
+    "summary": "软件运行中卡死、闪退或无响应。",
+    "category": "系统与软件异常",
+    "subsystem": "主程序/运行稳定性",
+    "scenario": "",
+    "keywords": [
+      "软件卡死无响应"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:2de959420b48",
+    "label": "工控机黑屏无显示",
+    "summary": "设备上电后显示链路无输出或持续黑屏。",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/显示链路",
+    "scenario": "",
+    "keywords": [
+      "工控机黑屏无显示"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:bios-:80ddc170a9c6",
+    "label": "BIOS 启动配置异常",
+    "summary": "BIOS 启动项或配置异常导致系统无法正常启动。",
+    "category": "系统与软件异常",
+    "subsystem": "工控机/BIOS启动",
+    "scenario": "",
+    "keywords": [
+      "BIOS 启动配置异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:df6738dd9da0",
+    "label": "光控通信异常",
+    "summary": "光控链路通信异常。",
+    "category": "系统与软件异常",
+    "subsystem": "光源/通信链路",
+    "scenario": "",
+    "keywords": [
+      "光控通信异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:4812b0992257",
+    "label": "复判保存结果失败",
+    "summary": "复判结果无法正常保存。",
+    "category": "系统与软件异常",
+    "subsystem": "复判/结果保存",
+    "scenario": "",
+    "keywords": [
+      "复判保存结果失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:efc23af9fc66",
+    "label": "用户配置加载失败",
+    "summary": "主程序或复判站初始化阶段加载用户配置失败。",
+    "category": "系统与软件异常",
+    "subsystem": "主程序配置/复判站配置",
+    "scenario": "",
+    "keywords": [
+      "用户配置加载失败"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:e894b4c6d861",
+    "label": "坏板标记异常",
+    "summary": "坏板标记、跳过流程或 SN/结果联动异常。",
+    "category": "系统与软件异常",
+    "subsystem": "坏板标记/流程链路",
+    "scenario": "",
+    "keywords": [
+      "坏板标记异常"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:bfdbb6f800f1",
+    "label": "复判站出图慢",
+    "summary": "复判站加载图片、切板或显示刷新明显变慢。",
+    "category": "系统与软件异常",
+    "subsystem": "复判/显示性能",
+    "scenario": "",
+    "keywords": [
+      "复判站出图慢"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  },
+  {
+    "family_id": "family:462da49e0ecb",
+    "label": "运控程序无法打开",
+    "summary": "运控程序启动失败或无法正常打开。",
+    "category": "硬件与运控",
+    "subsystem": "运控程序/启动链路",
+    "scenario": "",
+    "keywords": [
+      "运控程序无法打开"
+    ],
+    "source_kind": "sop",
+    "escalation_target": "",
+    "source_ref": "data/raw/aoi_debug_agent_sources/异常处理 - 标准操作流程（SOP）.docx",
+    "_admission_target": "fault_support",
+    "execution_materialize_allowed": false
+  }
+]

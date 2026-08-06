@@ -1,0 +1,1331 @@
+{
+  "version": "2.8",
+  "description": "Debug Agent System KG v2 object schema. v2.8 separates electronic-component package types from inspected component objects.",
+  "object_types": {
+    "KnowledgeDocument": {
+      "pk": "document_id",
+      "properties": {
+        "document_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "title": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "document_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "fault_manual_numbered",
+            "troubleshooting_topic_doc",
+            "sop_fault_catalog_doc",
+            "repair_playbook_doc",
+            "procedure_doc",
+            "spec_doc",
+            "document_index_doc",
+            "validation_checklist_doc",
+            "faq_doc",
+            "overlay_process_doc",
+            "unclassified_doc"
+          ]
+        },
+        "source_path": {
+          "type": "string",
+          "required": true,
+          "max_length": 200
+        },
+        "content_hash": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "version": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        },
+        "owner": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        },
+        "approved": {
+          "type": "boolean",
+          "required": true
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "raw_doc",
+            "sop"
+          ]
+        },
+        "source_links": {
+          "type": "array",
+          "required": false,
+          "items": "object"
+        }
+      }
+    },
+    "MediaAsset": {
+      "pk": "media_id",
+      "properties": {
+        "media_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "media_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "image",
+            "attachment"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "content_hash": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "mime_type": {
+          "type": "string",
+          "required": true,
+          "max_length": 120
+        },
+        "asset_path": {
+          "type": "string",
+          "required": false,
+          "max_length": 500
+        },
+        "relative_path": {
+          "type": "string",
+          "required": false,
+          "max_length": 300
+        },
+        "source_occurrences": {
+          "type": "array",
+          "required": true,
+          "items": "object"
+        },
+        "document_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "section_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "procedure_step_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "source_chunk_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "context_labels": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "approved": {
+          "type": "boolean",
+          "required": true
+        }
+      }
+    },
+    "KnowledgeSection": {
+      "pk": "section_id",
+      "properties": {
+        "section_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "document_id": {
+          "type": "string",
+          "required": true
+        },
+        "heading": {
+          "type": "string",
+          "required": true,
+          "max_length": 100
+        },
+        "section_order": {
+          "type": "integer",
+          "required": true
+        },
+        "level": {
+          "type": "integer",
+          "required": true
+        },
+        "knowledge_role": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "intro",
+            "symptom",
+            "cause",
+            "procedure",
+            "reference",
+            "constraint",
+            "faq",
+            "policy",
+            "warning",
+            "support"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 240
+        },
+        "source_offsets": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "parent_section_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 200
+        }
+      }
+    },
+    "ProcedureStep": {
+      "pk": "procedure_step_id",
+      "properties": {
+        "procedure_step_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "section_id": {
+          "type": "string",
+          "required": true
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "instruction": {
+          "type": "string",
+          "required": true,
+          "max_length": 240
+        },
+        "details": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "step_order": {
+          "type": "integer",
+          "required": true
+        },
+        "expected_result": {
+          "type": "string",
+          "required": false,
+          "max_length": 240
+        },
+        "prerequisites": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "safety_level": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "safe",
+            "caution",
+            "human_confirmation"
+          ]
+        },
+        "high_cost": {
+          "type": "boolean",
+          "required": true
+        },
+        "destructive": {
+          "type": "boolean",
+          "required": true
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "raw_doc",
+            "sop"
+          ]
+        }
+      }
+    },
+    "FaultFamily": {
+      "pk": "family_id",
+      "properties": {
+        "family_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "max_length": 40
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "category": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "硬件与运控",
+            "算法与程序调优",
+            "系统与软件异常"
+          ]
+        },
+        "subsystem": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        },
+        "scenario": {
+          "type": "string",
+          "required": false,
+          "max_length": 60
+        },
+        "keywords": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "sop",
+            "case",
+            "raw_doc",
+            "hybrid"
+          ]
+        },
+        "escalation_target": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        }
+      }
+    },
+    "FaultVariant": {
+      "pk": "variant_id",
+      "properties": {
+        "variant_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "max_length": 60
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 180
+        },
+        "equipment_type": {
+          "type": "string",
+          "required": false,
+          "max_length": 32
+        },
+        "site": {
+          "type": "string",
+          "required": false,
+          "max_length": 60
+        },
+        "software_version": {
+          "type": "string",
+          "required": false,
+          "max_length": 60
+        },
+        "error_phase": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        },
+        "owner_context": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "escalation_target": {
+          "type": "string",
+          "required": false,
+          "max_length": 40
+        },
+        "keywords": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        }
+      }
+    },
+    "DiagnosticAction": {
+      "pk": "action_id",
+      "properties": {
+        "action_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "variant_id": {
+          "type": "string",
+          "required": false
+        },
+        "label": {
+          "type": "string",
+          "required": true,
+          "max_length": 60
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 180
+        },
+        "action_role": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "inspect",
+            "collect",
+            "compare",
+            "change",
+            "verify",
+            "observe",
+            "escalate"
+          ]
+        },
+        "step_order": {
+          "type": "integer",
+          "required": false
+        },
+        "destructive": {
+          "type": "boolean",
+          "required": false
+        },
+        "high_cost": {
+          "type": "boolean",
+          "required": false
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "sop",
+            "case",
+            "raw_doc",
+            "hybrid"
+          ]
+        },
+        "execution_status": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "actual",
+            "recommended"
+          ]
+        },
+        "evidence_scope": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "current_episode_direct",
+            "mixed_current_and_promoted",
+            "w7_promoted_only",
+            "human_reviewed",
+            "legacy_unspecified"
+          ]
+        },
+        "source_section_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "stage": {
+          "type": "string",
+          "required": false,
+          "max_length": 20
+        },
+        "safety_level": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "safe",
+            "caution",
+            "human_confirmation"
+          ]
+        },
+        "applicability_condition": {
+          "type": "string",
+          "required": false,
+          "max_length": 160
+        },
+        "expected_result": {
+          "type": "string",
+          "required": false,
+          "max_length": 200
+        },
+        "curated_image_refs": {
+          "type": "array",
+          "required": false,
+          "items": "object"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        }
+      }
+    },
+    "ActionOutcome": {
+      "pk": "outcome_id",
+      "properties": {
+        "outcome_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "variant_id": {
+          "type": "string",
+          "required": false
+        },
+        "action_id": {
+          "type": "string",
+          "required": true
+        },
+        "outcome_type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "verified_fix",
+            "ineffective",
+            "partial_temporary",
+            "mitigation_observed",
+            "recurred",
+            "pending_validation",
+            "diagnostic_method",
+            "context_not_root_cause"
+          ]
+        },
+        "outcome_origin": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "human_reviewed",
+            "source_extracted",
+            "rule_inferred",
+            "synthetic_fallback"
+          ]
+        },
+        "activation_mode": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "human_confirmed_runtime"
+          ]
+        },
+        "activation_requirements": {
+          "type": "object",
+          "required": false
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 200
+        },
+        "source_case_id": {
+          "type": "string",
+          "required": true
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "high_cost": {
+          "type": "boolean",
+          "required": false
+        },
+        "destructive": {
+          "type": "boolean",
+          "required": false
+        },
+        "root_cause_summary": {
+          "type": "string",
+          "required": false,
+          "max_length": 120
+        }
+      }
+    },
+    "RequiredInfoSpec": {
+      "pk": "required_info_id",
+      "properties": {
+        "required_info_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "variant_id": {
+          "type": "string",
+          "required": false
+        },
+        "slot": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "log_package",
+            "dmp_package",
+            "software_version",
+            "error_phase",
+            "error_message",
+            "device_model",
+            "site",
+            "ip_config",
+            "repro_steps",
+            "sample_image",
+            "program_file",
+            "environment",
+            "owner_context",
+            "memory_cpu_test",
+            "driver_context",
+            "production_constraint",
+            "other"
+          ]
+        },
+        "question": {
+          "type": "string",
+          "required": true,
+          "max_length": 100
+        },
+        "why_required": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "condition": {
+          "type": "string",
+          "required": true,
+          "max_length": 120
+        },
+        "condition_code": {
+          "type": "string",
+          "required": false,
+          "max_length": 100
+        },
+        "match_any": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "match_all": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "match_all_groups": {
+          "type": "array",
+          "required": false,
+          "items": "array"
+        },
+        "exclude_any": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "blocks": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "priority": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "DiagnosticTrace": {
+      "pk": "trace_id",
+      "properties": {
+        "trace_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "variant_id": {
+          "type": "string",
+          "required": false
+        },
+        "source_case_id": {
+          "type": "string",
+          "required": true
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "recommended_action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "actual_action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "TraceStep": {
+      "pk": "trace_step_id",
+      "properties": {
+        "trace_step_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "trace_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_case_id": {
+          "type": "string",
+          "required": true
+        },
+        "action_id": {
+          "type": "string",
+          "required": true
+        },
+        "ordinal": {
+          "type": "integer",
+          "required": true
+        },
+        "execution_status": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "actual",
+            "recommended"
+          ]
+        },
+        "attempt_index": {
+          "type": "integer",
+          "required": true
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "ExecutionObservation": {
+      "pk": "observation_id",
+      "properties": {
+        "observation_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "trace_step_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_case_id": {
+          "type": "string",
+          "required": true
+        },
+        "action_id": {
+          "type": "string",
+          "required": true
+        },
+        "attempt_index": {
+          "type": "integer",
+          "required": true
+        },
+        "observation_count": {
+          "type": "integer",
+          "required": true
+        },
+        "outcome_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "outcome_types": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "observation_window": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "BranchRule": {
+      "pk": "branch_rule_id",
+      "properties": {
+        "branch_rule_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "trace_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_case_id": {
+          "type": "string",
+          "required": true
+        },
+        "from_trace_step_id": {
+          "type": "string",
+          "required": true
+        },
+        "to_trace_step_id": {
+          "type": "string",
+          "required": false
+        },
+        "trigger_outcome_types": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "condition": {
+          "type": "string",
+          "required": true,
+          "max_length": 120
+        },
+        "branch_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "observed_transition",
+            "reviewed_recommendation"
+          ]
+        },
+        "terminal_status": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "continue",
+            "resolved",
+            "monitoring",
+            "unresolved",
+            "escalated"
+          ]
+        },
+        "priority": {
+          "type": "integer",
+          "required": true
+        },
+        "evidence_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "DecisionPolicy": {
+      "pk": "policy_id",
+      "properties": {
+        "policy_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "family_id": {
+          "type": "string",
+          "required": true
+        },
+        "source_trace_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "source_outcome_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "ordered_action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "ineffective_action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "high_cost_action_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "source_case_count": {
+          "type": "integer",
+          "required": false
+        },
+        "actual_execution_count": {
+          "type": "integer",
+          "required": false
+        },
+        "execution_stats": {
+          "type": "array",
+          "required": false
+        },
+        "observation_ids": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "branch_rule_ids": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "deterministic_recompute": {
+          "type": "boolean",
+          "required": true
+        }
+      }
+    },
+    "EvidenceItem": {
+      "pk": "evidence_id",
+      "properties": {
+        "evidence_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "chat_message",
+            "jira",
+            "attachment",
+            "tool_parse",
+            "sop",
+            "manual_review"
+          ]
+        },
+        "external_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 120
+        },
+        "title": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 500
+        },
+        "payload_ref": {
+          "type": "string",
+          "required": false,
+          "max_length": 200
+        }
+      }
+    },
+    "SourceCase": {
+      "pk": "case_id",
+      "properties": {
+        "case_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "source_kind": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "sop",
+            "chat_case",
+            "jira_case",
+            "raw_doc",
+            "manual_review"
+          ]
+        },
+        "title": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "summary": {
+          "type": "string",
+          "required": true,
+          "max_length": 240
+        },
+        "source_ref": {
+          "type": "string",
+          "required": false,
+          "max_length": 200
+        },
+        "approved": {
+          "type": "boolean",
+          "required": true
+        },
+        "trust_tier": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "gold",
+            "human_reviewed",
+            "curated",
+            "extracted"
+          ]
+        },
+        "annotation_set_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "annotation_case_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "annotation_sha256": {
+          "type": "string",
+          "required": false,
+          "max_length": 64
+        },
+        "review_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 200
+        },
+        "ingest_run_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 120
+        }
+      }
+    },
+    "DebugConcept": {
+      "pk": "concept_id",
+      "properties": {
+        "concept_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "canonical_name": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "concept_type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "symptom",
+            "fault_variant",
+            "operation",
+            "equipment",
+            "product_model",
+            "station",
+            "workstation",
+            "category",
+            "subsystem",
+            "component",
+            "software",
+            "driver",
+            "firmware",
+            "sdk",
+            "software_artifact",
+            "runtime_process",
+            "configuration_file",
+            "database_file",
+            "log_artifact",
+            "diagnostic_artifact",
+            "interface",
+            "connection",
+            "protocol",
+            "workpiece",
+            "external_system",
+            "inspection_object",
+            "package_type",
+            "data_artifact",
+            "identifier",
+            "material",
+            "phase",
+            "cause",
+            "outcome",
+            "tool",
+            "evidence_type"
+          ]
+        },
+        "definition": {
+          "type": "string",
+          "required": true,
+          "max_length": 500
+        },
+        "canonical_target_type": {
+          "type": "string",
+          "required": false,
+          "enum": [
+            "FaultFamily",
+            "FaultVariant",
+            "DiagnosticAction"
+          ]
+        },
+        "canonical_target_id": {
+          "type": "string",
+          "required": false,
+          "max_length": 160
+        },
+        "status": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "approved",
+            "legacy",
+            "candidate",
+            "deprecated"
+          ]
+        },
+        "terminology_version": {
+          "type": "string",
+          "required": true,
+          "max_length": 40
+        },
+        "category": {
+          "type": "string",
+          "required": false,
+          "max_length": 80
+        },
+        "subsystem": {
+          "type": "string",
+          "required": false,
+          "max_length": 120
+        },
+        "source_object_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "TermExpression": {
+      "pk": "term_id",
+      "properties": {
+        "term_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "surface_form": {
+          "type": "string",
+          "required": true,
+          "max_length": 200
+        },
+        "normalized_form": {
+          "type": "string",
+          "required": true,
+          "max_length": 200
+        },
+        "language": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "zh-CN",
+            "en",
+            "mixed",
+            "code"
+          ]
+        },
+        "expression_type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "canonical",
+            "keyword",
+            "alias",
+            "abbreviation",
+            "typo"
+          ]
+        },
+        "terminology_version": {
+          "type": "string",
+          "required": true,
+          "max_length": 40
+        },
+        "source_object_ids": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        }
+      }
+    },
+    "TermSense": {
+      "pk": "sense_id",
+      "properties": {
+        "sense_id": {
+          "type": "string",
+          "required": true,
+          "pk": true
+        },
+        "term_id": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "concept_id": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "relation_type": {
+          "type": "string",
+          "required": true,
+          "enum": [
+            "canonical",
+            "search_hint",
+            "exact_synonym",
+            "colloquial_alias",
+            "abbreviation",
+            "english_equivalent",
+            "historical_name",
+            "typo_variant"
+          ]
+        },
+        "approved": {
+          "type": "boolean",
+          "required": true
+        },
+        "source_object_type": {
+          "type": "string",
+          "required": true,
+          "max_length": 80
+        },
+        "source_object_id": {
+          "type": "string",
+          "required": true,
+          "max_length": 160
+        },
+        "source_object_ids": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "categories": {
+          "type": "array",
+          "required": false,
+          "items": "string"
+        },
+        "equipment_types": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "subsystems": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "phases": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "required_signals": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "excluded_signals": {
+          "type": "array",
+          "required": true,
+          "items": "string"
+        },
+        "terminology_version": {
+          "type": "string",
+          "required": true,
+          "max_length": 40
+        }
+      }
+    }
+  }
+}

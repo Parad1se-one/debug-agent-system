@@ -1,0 +1,24 @@
+# O-ESC Escalation Agent
+
+- id: `O-ESC`
+- type: Verifier/Router
+- owner: `src/debug_agent_system/agents/read/o_esc_escalation`
+- responsibility: choose escalation owner and package evidence when diagnosis reaches a dead end or low-confidence/failure path.
+- entrypoint: `EscalationAgent.escalate(state, subgraph, failure_type)`.
+- inputs:
+  - `SessionState` with query, checks presented, check results, ruled out checks.
+  - `LockedSubgraph` with category, label, escalation_target.
+  - `failure_type: str` from O0/B-D/C.
+- outputs:
+  - dict with `escalation_target`, `failure_type`, `evidence_pack`.
+  - `evidence_pack` includes `session_id`, `query`, `top_error_id`, `top_error_label`, `checks_presented`, `check_results`, `ruled_out`.
+- failure_modes:
+  - Missing explicit target -> category mapping.
+  - Unknown category -> default owner `@工程师午（其他问题及无法分类问题）`.
+  - Enum-style target aliases may map to human-readable owners.
+- observability:
+  - O0 copies target/failure_type into response and evidence pack into metadata.
+- non_goals:
+  - Does not send external messages.
+  - Does not create Jira tickets.
+  - Does not mutate KG/session except through O0.

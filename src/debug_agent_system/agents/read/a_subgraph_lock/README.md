@@ -1,0 +1,21 @@
+# A Subgraph Lock Agent
+
+- id: `A`
+- type: Orchestrator
+- owner: `src/debug_agent_system/agents/read/a_subgraph_lock`
+- responsibility: lock diagnosis to one candidate `Error` causal subgraph from KG so generation/traversal stays evidence-bound.
+- entrypoint: `SubgraphLockAgent.lock(candidate)`.
+- inputs:
+  - `Candidate` from O-KG with `error_id` present.
+  - Store implementing `load_locked_subgraph(error_id)`.
+- outputs:
+  - `LockedSubgraph` with `error_id`, `label`, `required_info`, `checks`, `solutions_by_check`, `next_edges_by_check`, `sources`, `payload`.
+- failure_modes:
+  - Unknown `error_id` -> `KeyError`; O0 records `lock_failed` and falls back to ask/escalation behavior.
+  - Thin top error may later be enriched by O0 from nearby candidates; A itself does not merge.
+- observability:
+  - O0 records `lock_status=locked|lock_failed`.
+- non_goals:
+  - No candidate reranking.
+  - No traversal or answer generation.
+  - No KG writes.

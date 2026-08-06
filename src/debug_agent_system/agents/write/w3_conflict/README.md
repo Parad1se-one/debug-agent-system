@@ -1,0 +1,30 @@
+# W3 Conflict Resolution Agent
+
+- id: `W3`
+- type: Verifier
+- owner: `src/debug_agent_system/agents/write/w3_conflict`
+- responsibility: classify legacy candidate conflicts and deterministically refine KG v2 bundles before quality review.
+- entrypoints:
+  - `ConflictResolutionAgent.resolve(candidate, existing=None)`.
+  - `resolve_required_info(required_info_candidate)`.
+  - `normalize_v2_bundle(bundle)`.
+- inputs:
+  - W2 candidate with nodes/edges/schema/evidence/matched_existing_error.
+  - Optional existing KG match dict.
+  - Required-info candidate with `slot`, `question`, `condition`, source request/evidence.
+  - W2 native-v2 or W10 section-case `objects + relations` bundle.
+- outputs:
+  - Conflict dict with `decision` (`Agree|Refine|Contradict|Insufficient`), `conflict_type`, `reason_codes`, `existing_error_id`, `requires_human`, `node_diff`.
+  - Required-info resolution may normalize `slot`, `condition`, `merge_policy`, and returns reason codes.
+  - V2 bundle refinement canonicalizes family/subsystem, cleans variant labels, exact-deduplicates variants/actions/required-info, rewrites references, and re-runs the v2 graph validator.
+- failure_modes:
+  - Invalid schema/missing evidence/no check/solution -> `Insufficient`.
+  - Condition-specific candidate for existing error -> `Refine/condition_branch`.
+  - Multiple candidate solutions -> `Contradict/solution_conflict`.
+- observability:
+  - `reason_codes`, `node_diff`, existing match evidence.
+- non_goals:
+  - Does not approve or reject; W6/human owns final decision.
+  - Does not mutate KG.
+  - Does not invent evidence, infer unobserved outcomes, or decide admission; W4 owns quality admission.
+  - Does not run LLM debate in current deterministic implementation.

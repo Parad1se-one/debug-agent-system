@@ -1,0 +1,319 @@
+{
+  "version": "2.6",
+  "description": "Debug Agent System KG v2 link schema with trace execution, document media bindings, typed noun topology, software/data relationships, and component package typing.",
+  "link_types": {
+    "has_section": {
+      "from": "KnowledgeDocument",
+      "to": "KnowledgeSection"
+    },
+    "has_child_document": {
+      "from": "KnowledgeDocument",
+      "to": "KnowledgeDocument"
+    },
+    "references_document": {
+      "from": "KnowledgeDocument",
+      "to": "KnowledgeDocument"
+    },
+    "has_media": {
+      "from": "KnowledgeDocument",
+      "to": "MediaAsset"
+    },
+    "section_media": {
+      "from": "KnowledgeSection",
+      "to": "MediaAsset"
+    },
+    "step_media": {
+      "from": "ProcedureStep",
+      "to": "MediaAsset"
+    },
+    "action_media": {
+      "from": "DiagnosticAction",
+      "to": "MediaAsset"
+    },
+    "has_subsection": {
+      "from": "KnowledgeSection",
+      "to": "KnowledgeSection"
+    },
+    "has_step": {
+      "from": "KnowledgeSection",
+      "to": "ProcedureStep"
+    },
+    "next_step": {
+      "from": "ProcedureStep",
+      "to": "ProcedureStep"
+    },
+    "applicable_to": {
+      "from": "KnowledgeSection",
+      "to": "FaultFamily"
+    },
+    "describes_variant": {
+      "from": "KnowledgeSection",
+      "to": "FaultVariant"
+    },
+    "candidate_action": {
+      "from": "ProcedureStep",
+      "to": "DiagnosticAction"
+    },
+    "has_variant": {
+      "from": "FaultFamily",
+      "to": "FaultVariant"
+    },
+    "has_required_info": {
+      "from": [
+        "FaultFamily",
+        "FaultVariant"
+      ],
+      "to": "RequiredInfoSpec"
+    },
+    "has_trace": {
+      "from": [
+        "FaultFamily",
+        "FaultVariant"
+      ],
+      "to": "DiagnosticTrace"
+    },
+    "has_outcome": {
+      "from": [
+        "FaultFamily",
+        "FaultVariant"
+      ],
+      "to": "ActionOutcome"
+    },
+    "used_action": {
+      "from": "DiagnosticTrace",
+      "to": "DiagnosticAction"
+    },
+    "has_trace_step": {
+      "from": "DiagnosticTrace",
+      "to": "TraceStep"
+    },
+    "step_action": {
+      "from": "TraceStep",
+      "to": "DiagnosticAction"
+    },
+    "next_trace_step": {
+      "from": "TraceStep",
+      "to": "TraceStep"
+    },
+    "has_observation": {
+      "from": "TraceStep",
+      "to": "ExecutionObservation"
+    },
+    "observed_outcome": {
+      "from": "ExecutionObservation",
+      "to": "ActionOutcome"
+    },
+    "has_branch_rule": {
+      "from": "DiagnosticTrace",
+      "to": "BranchRule"
+    },
+    "branch_from": {
+      "from": "BranchRule",
+      "to": "TraceStep"
+    },
+    "branch_to": {
+      "from": "BranchRule",
+      "to": "TraceStep"
+    },
+    "outcome_of": {
+      "from": "ActionOutcome",
+      "to": "DiagnosticAction"
+    },
+    "supports": {
+      "from": "SourceCase",
+      "to": [
+        "FaultVariant",
+        "DiagnosticTrace",
+        "TraceStep",
+        "ExecutionObservation",
+        "BranchRule",
+        "ActionOutcome",
+        "RequiredInfoSpec"
+      ]
+    },
+    "for_family": {
+      "from": "DecisionPolicy",
+      "to": "FaultFamily"
+    },
+    "evidences": {
+      "from": "EvidenceItem",
+      "to": [
+        "SourceCase",
+        "ActionOutcome",
+        "RequiredInfoSpec",
+        "KnowledgeDocument",
+        "KnowledgeSection",
+        "ProcedureStep"
+        ,"TraceStep"
+        ,"ExecutionObservation"
+        ,"BranchRule"
+      ]
+    },
+    "primary_concept": {
+      "from": [
+        "FaultFamily",
+        "FaultVariant",
+        "DiagnosticAction"
+      ],
+      "to": "DebugConcept"
+    },
+    "expression_has_sense": {
+      "from": "TermExpression",
+      "to": "TermSense"
+    },
+    "sense_denotes": {
+      "from": "TermSense",
+      "to": "DebugConcept"
+    },
+    "broader_concept": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "concept_context": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "is_a": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "has_package_type": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "model_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "part_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "has_component": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "runs_on": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "deployed_at": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "connected_to": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "has_interface": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "connected_via": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "installed_in": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "uses_protocol": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "powered_by": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "signals_to": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "endpoint_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "processed_by": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "communicates_with": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "identifies": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "input_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "output_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "associated_with": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "context_member": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "driver_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "firmware_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "sdk_for": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "compatible_with": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "artifact_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "process_instance_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "configuration_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "database_of": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "produced_by": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "collected_from": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "evidence_for": {
+      "from": "DebugConcept",
+      "to": "DebugConcept"
+    },
+    "mentions_concept": {
+      "from": [
+        "KnowledgeDocument",
+        "KnowledgeSection",
+        "ProcedureStep",
+        "EvidenceItem",
+        "SourceCase"
+      ],
+      "to": "DebugConcept"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# Interface QA Adapter Agent
+
+- id: `I-QA-ADAPTER`
+- type: Interface
+- owner: `src/debug_agent_system/adapters/qa_supervisor.py`
+- responsibility: adapt `debug_agent_system` responses to `qa_agentic_system`-style answer objects without coupling to any legacy runtime.
+- entrypoint: `DebugAgentSystemQARuntime.answer(query, history, context)`.
+- inputs:
+  - `query: str` user question/debug request.
+  - `history: list` prior QA messages; currently adapter-safe, not a hidden diagnosis controller.
+  - `context: dict`, especially `session_id` when caller wants continuity.
+- outputs:
+  - dict with `backend=debug_agent_system`, `agent=debug_agent`, `answer`, `confidence`, `observations`.
+  - `observations` must include read-side observability such as `top_error_id`, `kg_label`, `retrieval_route`, `lock_status` when available.
+- failure_modes:
+  - Runtime failure is surfaced as answer/observations; adapter must not fabricate successful diagnosis.
+  - Unknown session follows O0 `failed` response semantics.
+- observability:
+  - Adapter-level identity plus downstream O0 observability.
+- non_goals:
+  - Does not perform retrieval, scoring, traversal, or KG writes.
+  - Does not translate QA context into unstructured hidden prompts.

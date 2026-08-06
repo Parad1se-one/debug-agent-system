@@ -1,0 +1,25 @@
+schema_version: debug_agent_system.config.v1
+kg_root: data/kg
+session_store: data/sessions_v2_sag
+knowledge:
+  store: sqlite_sag_v2
+  kg_v2_root: data/kg_v2
+  kg_v2_sqlite_path: data/kg_v2_sag/debug_agent_v2.sqlite
+  raw_root: data/raw/aoi_debug_agent_sources
+  w1_root: data/results/w1_full_20260703_061455
+retrieval:
+  sag_max_hops: 1
+  sag_event_budget: 150
+  trace_enabled: true
+  sag_degree_penalty: true
+  sag_max_entity_degree: 240
+  sag_family_canonicalization: true
+  sag_llm_rerank: false
+thresholds:
+  graph_match_min_score: 4.0
+  graph_match_min_margin: 0.75
+  low_confidence: 0.35
+  ask_info_max_required_items: 3
+runtime:
+  max_turns: 12
+  destructive_action_requires_human_confirm: true

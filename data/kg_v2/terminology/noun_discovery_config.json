@@ -1,0 +1,1348 @@
+{
+  "schema_version": "kg_v2.noun_discovery_config.v1",
+  "description": "面向设备、部件、软件、接口、工件、数据对象和业务系统的名词候选目录。这里只定义需要从多源语料验证的候选，不代表已经批准进入 KG。",
+  "max_examples_per_candidate": 5,
+  "corpus_sources": {
+    "chat_jsonl": [
+      "imports/**/all_text_messages.jsonl"
+    ],
+    "document_chunks": [
+      "raw/aoi_debug_agent_sources/chunks/debug_chunks.json"
+    ],
+    "support_records": [
+      "raw/aoi_debug_agent_sources/技术支持记录表_*/base_records/*/records.json"
+    ]
+  },
+  "open_discovery": {
+    "enabled": true,
+    "description": "开放发现只提取高精度的设备机型、程序/配置/数据库/日志文件名和显式简称声明；所有结果仍需人工审核。",
+    "model_minimum_count": 3,
+    "artifact_minimum_count": 3,
+    "variant_minimum_count": 2,
+    "explicit_alias_minimum_count": 2,
+    "associations": {
+      "enabled": true,
+      "minimum_record_count": 8,
+      "minimum_source_kinds": 2,
+      "minimum_jaccard": 0.03,
+      "max_neighbors_per_concept": 3,
+      "max_candidates": 120,
+      "max_terms_per_record": 20,
+      "max_examples_per_candidate": 3
+    }
+  },
+  "candidate_terms": [
+    {
+      "canonical_name": "接驳台",
+      "concept_type": "equipment",
+      "definition": "与 AOI 设备前后连接、承担板件输送和握手的接驳设备。",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "收板机",
+      "concept_type": "equipment",
+      "definition": "位于检测设备下游、接收完成检测板件的设备。",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "上板机",
+      "concept_type": "equipment",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "下板机",
+      "concept_type": "equipment",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "回流焊",
+      "concept_type": "equipment",
+      "risk": "medium",
+      "minimum_count": 10
+    },
+    {
+      "canonical_name": "SPI设备",
+      "concept_type": "equipment",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "工业相机",
+      "concept_type": "equipment",
+      "definition": "用于工业检测、定位或采集的相机设备子类。",
+      "risk": "medium",
+      "minimum_count": 2,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "equipment:相机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "轨道",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "皮带",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "传感器",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "挡块",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "气缸",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "电机",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "顶升",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "滚轮",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "压块",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "调宽轴",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "光源控制器",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "运动控制卡",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "采集卡",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:相机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "光控板",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "急停",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "主板",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "显卡",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "网卡",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "无线网卡",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "component:网卡",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "M.2网卡",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "component:网卡",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "内存条",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "硬盘",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "机械硬盘",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "component:硬盘",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "固态硬盘",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "component:硬盘",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "CPU",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "GPU",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "电源",
+      "concept_type": "component",
+      "risk": "high",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "模组电源",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "component:电源",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "显示器",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "键盘",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "鼠标",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "风扇",
+      "concept_type": "component",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "主板电池",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "component:主板",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "加密狗",
+      "concept_type": "component",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "USB",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "CXP",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:相机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "网线",
+      "concept_type": "interface",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "网口",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "串口",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "PCIe",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "M.2",
+      "concept_type": "interface",
+      "risk": "medium",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "HDMI",
+      "concept_type": "interface",
+      "risk": "low",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "DP",
+      "concept_type": "interface",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "SDK",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "固件",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "驱动",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "数据库",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "BIOS",
+      "concept_type": "software",
+      "risk": "low",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "PE",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "WinRE",
+      "concept_type": "software",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "Dism++",
+      "concept_type": "software",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "Buddy",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "SPC",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "CUDA",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "Qt",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "MVS",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "DDU",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "Microsoft Defender",
+      "concept_type": "software",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "runs_on",
+        "target_key": "equipment:工控机",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "OCR",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "DL",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "ODA",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "ODB",
+      "concept_type": "software",
+      "risk": "high",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "PLC",
+      "concept_type": "component",
+      "risk": "high",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "SMEMA",
+      "concept_type": "interface",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "Jira",
+      "concept_type": "external_system",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "EAP",
+      "concept_type": "external_system",
+      "risk": "high",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "communicates_with",
+        "target_key": "equipment:aoi设备",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "器件",
+      "concept_type": "inspection_object",
+      "risk": "low",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "焊盘",
+      "concept_type": "inspection_object",
+      "risk": "low",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "Mark点",
+      "concept_type": "inspection_object",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "治具",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "connected_to",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "IC",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "LED",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "CHIP",
+      "concept_type": "inspection_object",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "BGA",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "QFN",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "QFP",
+      "concept_type": "inspection_object",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "板卡",
+      "concept_type": "workpiece",
+      "risk": "high",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "金板",
+      "concept_type": "workpiece",
+      "risk": "medium",
+      "minimum_count": 5,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "镂空板",
+      "concept_type": "workpiece",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "大板",
+      "concept_type": "workpiece",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "薄板",
+      "concept_type": "workpiece",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "弯板",
+      "concept_type": "workpiece",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "锡膏",
+      "concept_type": "material",
+      "risk": "low",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "MES",
+      "concept_type": "external_system",
+      "risk": "medium",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "communicates_with",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "料号",
+      "concept_type": "identifier",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "identifies",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "条码",
+      "concept_type": "identifier",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "identifies",
+        "target_key": "workpiece:pcb",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "SN",
+      "concept_type": "identifier",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "identifies",
+        "target_key": "workpiece:pcb",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "二维码",
+      "concept_type": "identifier",
+      "definition": "二维编码形式的条码标识，不与全部条码无条件等同。",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "is_a",
+        "target_key": "identifier:条码",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "Gerber",
+      "concept_type": "data_artifact",
+      "risk": "low",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "input_of",
+        "target_key": "station:编程站",
+        "risk": "low"
+      }
+    },
+    {
+      "canonical_name": "BOM",
+      "concept_type": "data_artifact",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "input_of",
+        "target_key": "station:编程站",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "CAD",
+      "concept_type": "data_artifact",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "input_of",
+        "target_key": "station:编程站",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "RGB图",
+      "concept_type": "data_artifact",
+      "risk": "medium",
+      "minimum_count": 5,
+      "relation": {
+        "relation": "output_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "PROJ",
+      "concept_type": "data_artifact",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "大图",
+      "concept_type": "data_artifact",
+      "risk": "high",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "output_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "high"
+      }
+    },
+    {
+      "canonical_name": "白图",
+      "concept_type": "data_artifact",
+      "risk": "medium",
+      "minimum_count": 10,
+      "minimum_source_kinds": 2,
+      "relation": {
+        "relation": "output_of",
+        "target_key": "equipment:aoi设备",
+        "risk": "medium"
+      }
+    },
+    {
+      "canonical_name": "日志",
+      "concept_type": "data_artifact",
+      "risk": "high",
+      "minimum_count": 20,
+      "minimum_source_kinds": 2
+    },
+    {
+      "canonical_name": "machine.toml",
+      "concept_type": "data_artifact",
+      "risk": "low",
+      "minimum_count": 3,
+      "relation": {
+        "relation": "part_of",
+        "target_key": "software:主程序",
+        "risk": "low"
+      }
+    }
+  ],
+  "variant_groups": [
+    {
+      "canonical_name": "AOI设备",
+      "concept_key": "equipment:aoi设备",
+      "surface_forms": [
+        "AOI"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "medium",
+      "minimum_count": 10
+    },
+    {
+      "canonical_name": "SPI设备",
+      "surface_forms": [
+        "SPI"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "medium",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "Microsoft Defender",
+      "surface_forms": [
+        "Defender"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "medium",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "SMEMA",
+      "surface_forms": [
+        "Smema"
+      ],
+      "suggested_relation_type": "exact_synonym",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "RGB图",
+      "surface_forms": [
+        "RGB"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "high",
+      "minimum_count": 5
+    },
+    {
+      "canonical_name": "复判站",
+      "concept_key": "station:复判站",
+      "surface_forms": [
+        "复盘站"
+      ],
+      "suggested_relation_type": "typo_variant",
+      "risk": "low",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "工控机",
+      "concept_key": "equipment:工控机",
+      "surface_forms": [
+        "工业电脑",
+        "工业计算机"
+      ],
+      "suggested_relation_type": "exact_synonym",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "工控机",
+      "concept_key": "equipment:工控机",
+      "surface_forms": [
+        "IPC"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "high",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "工控机",
+      "concept_key": "equipment:工控机",
+      "surface_forms": [
+        "主机"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "high",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "PCB",
+      "concept_key": "workpiece:pcb",
+      "surface_forms": [
+        "PCB板"
+      ],
+      "suggested_relation_type": "exact_synonym",
+      "risk": "low",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "PCB",
+      "concept_key": "workpiece:pcb",
+      "surface_forms": [
+        "板子",
+        "线路板"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "扫码枪",
+      "surface_forms": [
+        "码枪",
+        "条码枪",
+        "扫码器"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "运动控制卡",
+      "surface_forms": [
+        "运控卡"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "low",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "固态硬盘",
+      "surface_forms": [
+        "SSD"
+      ],
+      "suggested_relation_type": "abbreviation",
+      "risk": "low",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "传感器",
+      "surface_forms": [
+        "感应器"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "high",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "PE",
+      "surface_forms": [
+        "WinPE"
+      ],
+      "suggested_relation_type": "english_equivalent",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "USB",
+      "surface_forms": [
+        "USB接口",
+        "USB口"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "CXP",
+      "surface_forms": [
+        "CXP接口",
+        "CXP链路"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "Mark点",
+      "surface_forms": [
+        "Mark",
+        "MARK点"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "Mark点",
+      "surface_forms": [
+        "标记点"
+      ],
+      "suggested_relation_type": "exact_synonym",
+      "risk": "low",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "器件",
+      "surface_forms": [
+        "元器件",
+        "元件"
+      ],
+      "suggested_relation_type": "exact_synonym",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "料号",
+      "surface_forms": [
+        "产品料号",
+        "物料号"
+      ],
+      "suggested_relation_type": "colloquial_alias",
+      "risk": "medium",
+      "minimum_count": 2
+    },
+    {
+      "canonical_name": "条码",
+      "surface_forms": [
+        "Barcode"
+      ],
+      "suggested_relation_type": "english_equivalent",
+      "risk": "medium",
+      "minimum_count": 2
+    }
+  ]
+}
