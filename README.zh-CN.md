@@ -2,6 +2,11 @@
 
 **面向 AOI 设备的、以知识图谱驱动的多 Agent 故障诊断系统（含训练/评测闭环）。**
 
+![Python](https://img.shields.io/badge/python-3.11+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![CI](https://github.com/Parad1se-one/debug-agent-system/actions/workflows/ci.yml/badge.svg)
+[![English](https://img.shields.io/badge/README-English-blue)](README.md)
+
 本项目把 AOI（自动光学检测）设备现场排故工作流——工程师从群聊、日志和历史文档中快速定位问题并沉淀为标准化检查流程——重构为独立、确定性的多 Agent Python 包。
 
 系统接收故障描述、证据包（日志、转储、EVTX）与发生时间，输出**带建议顺序的分步排查计划**，并动态规划：解析日志并检索知识图谱、依据检查结果调整后续步骤、信息不足时补问、知识缺口时升级负责人。
