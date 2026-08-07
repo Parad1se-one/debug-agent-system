@@ -2,6 +2,11 @@
 
 **A knowledge-graph-driven multi-agent system for AOI equipment fault diagnosis, with a closed training/evaluation loop.**
 
+![Python](https://img.shields.io/badge/python-3.11+-blue)
+![License](https://img.shields.io/badge/license-MIT-green)
+![CI](https://github.com/Parad1se-one/debug-agent-system/actions/workflows/ci.yml/badge.svg)
+[![中文](https://img.shields.io/badge/README-中文-blue)](README.zh-CN.md)
+
 `debug-agent-system` reconstructs an AOI (Automated Optical Inspection) field-service diagnosis workflow — where engineers locate faults from group-chat records, logs, and historical documents, and turn them into standardized checklists — as a standalone, deterministic multi-agent Python package.
 
 The system ingests fault descriptions, evidence packages (logs, dumps, EVTX), and occurrence time, then produces **step-by-step troubleshooting plans with suggested ordering**. It plans dynamically: it parses logs and queries a knowledge graph, adapts later steps based on check results, asks for missing information, and escalates to the right owner when knowledge is insufficient.
@@ -18,6 +23,20 @@ The system ingests fault descriptions, evidence packages (logs, dumps, EVTX), an
 - **Read / write closed loop** — the read side consumes the KG for diagnosis; the write side (W1–W10 agents) ingests group chats, docs, Jira, expert corrections, and diagnostic feedback back into the graph, versioned and gated.
 
 > The full proprietary KG (built from internal field data) is **not distributed**. This repo ships the schema, a **sanitized graph subset**, and the public evaluation scenarios so the pipeline can be exercised end-to-end.
+
+---
+
+## Tech stack
+
+| Layer | Choice |
+|---|---|
+| Language / runtime | Python 3.11+ · stdlib + `sqlite3` · `markdown-it-py` |
+| Knowledge graph | JSON object store + SQLite serving index (SAG) + schema-validated execution view |
+| Orchestration | Deterministic O0 supervisor + 10 read-side agents (no LLM in core loop) |
+| Data pipeline | W1–W10 write-side agents (chat / doc / Jira ingestion, quality gate, review queue) |
+| Evaluation | Offline scenario runner + scorer + regression gates (no model needed) |
+| Optional LLM paths | Codex / DeepSeek read harnesses (opt-in, keys from local env only) |
+| Tests | `tests/run_tests.py` stdlib runner (offline, mocked, no network) |
 
 ---
 
@@ -64,6 +83,27 @@ Standard response schema:
   "sources": [],
   "observability": { "family_id": "...", "variant_id": "...", "retrieval_route": "...", "lock_status": "...", "which_check_solved": "..." }
 }
+```
+
+---
+
+## Demo (real output, this repo)
+
+```bash
+PYTHONPATH=src python3 -m debug_agent_system.adapters.cli diagnose \
+  "AOI主程序初始化失败，相机连接异常，请检查相机IP" --non-interactive
+```
+
+The runtime retrieves the fault variant, locks a subgraph, plans a trace, and
+returns a deterministic first step with its evidence sources:
+
+```text
+status: step · confidence: 0.98 · family: 相机/光源类 · variant: 相机初始化失败
+current_check: 确认弹窗报错为加载用户配置失败
+next (human-confirm): 备份并清空 conf 目录
+next: 检查日志与 user.cfg.toml 是否异常
+next: 用最近一次正常诊断日志中的 user.cfg.toml 替换验证
+sources: [evidence:9846bca31ef8, SOP 1.1.3.1.2, ...]
 ```
 
 ---
