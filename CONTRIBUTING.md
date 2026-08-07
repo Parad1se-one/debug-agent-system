@@ -18,6 +18,11 @@ PYTHONPATH=src python3 tests/run_tests.py
 - **Tests**: the suite uses `tests/run_tests.py` (stdlib runner, no network, no
   API keys). Keep new tests offline and mocked; tests that need proprietary
   data should fail gracefully with a clear message.
+- **CI offline subset**: the full suite includes tests that require proprietary
+  data (raw field docs, gold annotations, offline Jira exports) which is **not
+  distributed**. CI runs only the offline-safe subset listed in
+  `tests/offline_manifest.txt` (via `scripts/ci_offline_tests.py`). If you add
+  an offline-safe test, add its file to the manifest too.
 - **Data**: the raw proprietary corpus (field chats, tickets, internal docs) is
   **not** distributed. Do not commit it. Graph data under `data/kg_v2/` is a
   sanitized subset — keep it free of names, internal domains, and absolute

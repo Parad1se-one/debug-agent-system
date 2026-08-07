@@ -197,7 +197,10 @@ Requirements: Python ≥ 3.11. Optional extras: `incident` (python-evtx), plus y
 # install (core runtime only; no heavy deps)
 pip install -e .
 
-# run the test suite (stdlib runner; no network, no API keys required)
+# run the offline-safe test subset (CI, no proprietary data required)
+PYTHONPATH=src python3 scripts/ci_offline_tests.py
+
+# run the full suite locally (some tests need proprietary data not shipped)
 PYTHONPATH=src python3 tests/run_tests.py
 
 # CLI smoke: diagnose a fault

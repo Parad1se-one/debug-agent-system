@@ -162,7 +162,10 @@ PYTHONPATH=src python3 -m debug_agent_system.eval.debug_sim.runner \
 # 安装（核心运行时，无重型依赖）
 pip install -e .
 
-# 运行测试套件（stdlib runner；无需网络、无需 API key）
+# 运行离线安全测试子集（CI，无需专有数据）
+PYTHONPATH=src python3 scripts/ci_offline_tests.py
+
+# 本地跑全量（部分测试需要未随仓库分发的专有数据）
 PYTHONPATH=src python3 tests/run_tests.py
 
 # CLI 冒烟：诊断一条故障

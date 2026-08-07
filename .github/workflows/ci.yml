@@ -23,11 +23,11 @@ jobs:
       - name: Install
         run: |
           python -m pip install --upgrade pip
-          pip install -e .
+          pip install -e ".[dev]"
 
-      - name: Run stdlib test suite
+      - name: Run offline test subset (no proprietary data required)
         run: |
-          PYTHONPATH=src python3 tests/run_tests.py
+          PYTHONPATH=src python3 scripts/ci_offline_tests.py
 
       - name: CLI smoke
         run: |
